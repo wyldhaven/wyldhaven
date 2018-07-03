@@ -374,3 +374,17 @@ h2 {
     bottom: -18rem;
   }
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .logo {
+    bottom: -22rem;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  @media only screen and (min-width: 65.625rem) {
+    .logo {
+      bottom: -28rem;
+    }
+  }
+}
