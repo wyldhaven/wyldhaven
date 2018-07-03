@@ -1,0 +1,368 @@
+body {
+  background-image: none;
+  background-color: black;
+  margin: 0;
+}
+
+@media only screen and (min-width: 64.375rem) {
+  body {
+    background-image: url(/portfolio/madison.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+.mobile-background {
+    background-image: url(/portfolio/madison-mobile.jpg);
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: 50% 0;
+    display: inherit;
+}
+
+@media only screen and (min-width: 26.25rem) {
+  .mobile-background {
+    background-image: url(/portfolio/madison.jpg);
+  }
+}
+
+@media only screen and (min-width: 64.375rem) {
+  .mobile-background {
+    display: none;
+  }
+}
+
+.outer-wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.navigation {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: -.5rem 0 0;
+  z-index: 100;
+  height: 5rem;
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .navigation {
+    left: 3rem;
+    right: auto;
+    top: 2rem;
+  }
+}
+
+.navigation ul {
+  padding: 0;
+  list-style-type: none;
+  padding-top: 1.3rem;
+}
+
+.navigation li {
+  padding: .6rem .5rem;
+  font-size: 1.2rem;
+  display: inline;
+}
+
+@media only screen and (min-width: 23.75rem) {
+  .navigation li {
+    padding: .6rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .navigation li {
+    display: list-item;
+    padding: .6rem 0;
+  }
+}
+
+.navigation a:visited {
+  color: #fff;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.navigation a:hover {
+  text-decoration: none;
+}
+
+.home-section {
+  margin-bottom: 22rem;
+  position: relative;
+  padding-top: 82%;
+}
+
+@media only screen and (min-width: 20.3125rem) {
+  .home-section {
+    padding-top: 72%;
+  }
+}
+
+@media only screen and (min-width: 23.75rem) {
+  .home-section {
+    padding-top: 64%;
+  }
+}
+
+@media only screen and (min-width: 26.25rem) {
+  .home-section {
+    padding-top: 48%;
+  }
+}
+
+@media only screen and (min-width: 48.4375rem) {
+  .home-section {
+    padding-top: 34%;
+  }
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .home-section {
+    margin-bottom: 40rem;
+    padding-top: 47%;
+  }
+}
+
+@media only screen and (min-width: 85.375rem) {
+  .home-section {
+    padding-top: 23%;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: inherit;
+}
+
+@media only screen and (min-width: 46.875rem) {
+  h1 {
+   letter-spacing: 1.5rem;
+   padding-left: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 65.625rem) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  margin-top: 28%;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 20.3125rem) {
+  h2 {
+   margin-top: 46%;
+  }
+}
+
+@media only screen and (min-width: 23.75rem) {
+  h2 {
+   margin-top: 45%;
+  }
+}
+
+@media only screen and (min-width: 26.25rem) {
+  h2 {
+   margin-top: 53%;
+  }
+}
+
+@media only screen and (min-width: 48.4375rem) {
+  h2 {
+   margin-top: 20%;
+  }
+}
+
+@media only screen and (min-width: 65.625rem) {
+  h2 {
+   margin-top: 20%;
+  }
+}
+
+@media only screen and (min-width: 85.375rem) {
+  h2 {
+   margin-top: 14%;
+  }
+}
+
+.scroll {
+  margin-top: 3rem;
+  letter-spacing: 1.2rem;
+  padding-left: 1.4rem;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.arrow-container {
+  opacity: 0;
+}
+
+.arrow {
+  position: absolute;
+  display: none;
+  padding: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: -16rem;
+  opacity: .2;
+  z-index: -1;
+  opacity: 0;
+  -webkit-animation: pulse 5s infinite;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@media only screen and (min-width: 26.25rem) {
+  .arrow {
+    display: inline;
+  }
+}
+
+.music-section {
+  position: relative;
+  margin-bottom: 22rem;
+  padding: 6rem 1rem;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-section .wrapper {
+  z-index: 1;
+  position: relative;
+  display: block;
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .music-section {
+    display: flex;
+    margin-bottom: 40rem;
+  }
+
+  .music-section .wrapper {
+    display: flex;
+  }
+}
+
+.album {
+  max-width: 17rem;
+  box-shadow: 5px 5px 13px -1px black;
+}
+
+@media only screen and (min-width: 26.25rem) {
+  .album {
+    max-width: 24rem;
+  }
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .album {
+    max-width: 35rem;
+    max-height: 35rem;
+  }
+}
+
+.spotify-test {
+  background: grey;
+  margin-left: 0;
+  margin-top: 3rem;
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .spotify-test {
+    margin-left: 3rem;
+    margin-top: 0;
+  }
+}
+
+.music-section .cover {
+  background-color: #fff;
+  opacity: .3;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.about-section {
+  position: relative;
+  margin-bottom: 0;
+  padding: 8rem 1rem 17rem;
+}
+
+.about-section .wrapper {
+  z-index: 1;
+  position: relative;
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .about-section {
+    padding: 20rem 1rem;
+  }
+}
+
+.about-section .cover {
+  background-color: #000;
+  opacity: .5;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.about-section p {
+  width: 14rem;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 23.75rem) {
+  .about-section p {
+    width: 20rem;
+  }
+}
+
+.logo {
+  bottom: -18rem;
+  max-width: 10rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
