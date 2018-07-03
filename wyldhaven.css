@@ -381,8 +381,8 @@ h2 {
   }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  @media only screen and (min-width: 65.625rem) {
+@media only screen and (min-width: 65.625rem) {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .logo {
       bottom: -28rem;
     }
