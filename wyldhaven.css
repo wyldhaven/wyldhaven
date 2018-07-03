@@ -153,6 +153,18 @@ h1 {
   font-family: Hiragino Kaku Gothic Std;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  h1 {
+    font-family: adobe-heiti-std, sans-serif;
+  }
+}
+
+@-moz-document url-prefix() {
+  h1 {
+    font-family: adobe-heiti-std, sans-serif;
+  }
+}
+
 @media only screen and (min-width: 46.875rem) {
   h1 {
    letter-spacing: 1.5rem;
