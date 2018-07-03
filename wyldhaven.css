@@ -111,7 +111,7 @@ body {
 
 @media only screen and (min-width: 20.3125rem) {
   .home-section {
-    padding-top: 72%;
+    padding-top: 73%;
   }
 }
 
@@ -123,13 +123,13 @@ body {
 
 @media only screen and (min-width: 26.25rem) {
   .home-section {
-    padding-top: 48%;
+    padding-top: 49%;
   }
 }
 
 @media only screen and (min-width: 48.4375rem) {
   .home-section {
-    padding-top: 34%;
+    padding-top: 36%;
   }
 }
 
@@ -142,7 +142,7 @@ body {
 
 @media only screen and (min-width: 85.375rem) {
   .home-section {
-    padding-top: 23%;
+    padding-top: 24%;
   }
 }
 
@@ -167,14 +167,14 @@ h1 {
 }
 
 h2 {
-  margin-top: 28%;
+  margin-top: 18%;
   font-size: 2rem;
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 20.3125rem) {
   h2 {
-   margin-top: 46%;
+   margin-top: 35%;
   }
 }
 
@@ -186,13 +186,13 @@ h2 {
 
 @media only screen and (min-width: 26.25rem) {
   h2 {
-   margin-top: 53%;
+   margin-top: 48%;
   }
 }
 
 @media only screen and (min-width: 48.4375rem) {
   h2 {
-   margin-top: 20%;
+   margin-top: 15%;
   }
 }
 
@@ -204,7 +204,7 @@ h2 {
 
 @media only screen and (min-width: 85.375rem) {
   h2 {
-   margin-top: 14%;
+   margin-top: 10%;
   }
 }
 
@@ -322,7 +322,7 @@ h2 {
 .about-section {
   position: relative;
   margin-bottom: 0;
-  padding: 8rem 1rem 17rem;
+  padding: 8rem 1rem 12rem;
 }
 
 .about-section .wrapper {
@@ -361,10 +361,16 @@ h2 {
 }
 
 .logo {
-  bottom: -18rem;
+  bottom: -12rem;
   max-width: 10rem;
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .logo {
+    bottom: -18rem;
+  }
 }
