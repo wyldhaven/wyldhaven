@@ -161,7 +161,7 @@ h1 {
   font-size: 2rem;
   letter-spacing: inherit;
   font-family: 'Hiragino Kaku Gothic Std';
-  font-family: 'Adobe Heiti Std', sans-serif;
+  /* font-family: 'Adobe Heiti Std', sans-serif; */
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
