@@ -175,10 +175,15 @@ h1 {
   }
 }
 
-@media only screen and (min-width: 65.625rem) {
+@media only screen and (min-width: 46.875rem) {
   h1 {
    letter-spacing: 1.5rem;
    padding-left: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 65.625rem) {
+  h1 {
    font-family: 'Hiragino Kaku Gothic Std';
   }
 }
