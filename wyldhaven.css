@@ -1,8 +1,18 @@
+@font-face {
+    font-family: 'Hiragino Kaku Gothic Std';
+    src: /wyldhaven/hiragino-kaku-gothic-std-w8.otf;
+}
+
+@font-face {
+    font-family: 'Adobe Heiti Std', sans-serif;
+    src: /wyldhaven/AdobeHeitiStd-Regular.otf;
+}
+
 body {
   background-image: none;
   background-color: black;
   margin: 0;
-  font-family: adobe-heiti-std, sans-serif;
+  font-family: 'Adobe Heiti Std', sans-serif;
 }
 
 @media only screen and (min-width: 64.375rem) {
@@ -150,19 +160,19 @@ h1 {
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: inherit;
-  font-family: Hiragino Kaku Gothic Std;
-  font-family: adobe-heiti-std, sans-serif;
+  font-family: 'Hiragino Kaku Gothic Std';
+  font-family: 'Adobe Heiti Std', sans-serif;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   h1 {
-    font-family: adobe-heiti-std, sans-serif;
+    font-family: 'Adobe Heiti Std', sans-serif;
   }
 }
 
 @-moz-document url-prefix() {
   h1 {
-    font-family: adobe-heiti-std, sans-serif;
+    font-family: 'Adobe Heiti Std', sans-serif;
   }
 }
 
@@ -170,7 +180,7 @@ h1 {
   h1 {
    letter-spacing: 1.5rem;
    padding-left: 1.5rem;
-   font-family: Hiragino Kaku Gothic Std;
+   font-family: 'Hiragino Kaku Gothic Std';
   }
 }
 
