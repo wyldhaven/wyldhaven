@@ -380,11 +380,12 @@ h2 {
   width: 14rem;
   margin: 0 auto;
   font-size: 1.4rem;
+  line-height: 1.5;
 }
 
 @media only screen and (min-width: 23.75rem) {
   .about-section p {
-    width: 20rem;
+    width: 26rem;
   }
 }
 
