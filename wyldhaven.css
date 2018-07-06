@@ -150,9 +150,9 @@ body {
   }
 }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 66rem) {
   .home-section {
-    padding-top: 37%;
+    padding-top: 22%;
   }
 }
 
