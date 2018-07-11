@@ -26,7 +26,7 @@ var setupValues = function() {
 };
 
 var animateIntro = function() {
-  $(".scroll").delay(2900).animate({
+  $(".scroll").delay(2200).animate({
         opacity: .6
     }, 2600, function() {
         $(".arrow-container").animate({
