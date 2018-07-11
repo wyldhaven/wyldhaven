@@ -26,9 +26,9 @@ var setupValues = function() {
 };
 
 var animateIntro = function() {
-  $(".scroll").delay(3500).animate({
+  $(".scroll").delay(2900).animate({
         opacity: .6
-    }, 3000, function() {
+    }, 2600, function() {
         $(".arrow-container").animate({
             opacity: .6
         }, 1500);
