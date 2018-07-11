@@ -133,13 +133,13 @@ body {
 
 @media only screen and (min-width: 26.25rem) {
   .home-section {
-    padding-top: 49%;
+    padding-top: 83%;
   }
 }
 
 @media only screen and (min-width: 30.25rem) {
   .home-section {
-    padding-top: 49%;
+    padding-top: 57%;
   }
 }
 
@@ -172,6 +172,11 @@ body {
   .home-section {
     padding-top: 24%;
   }
+}
+
+@media only screen and (min-width: 86rem)
+.home-section {
+    padding-top: 38rem;
 }
 
 h1 {
