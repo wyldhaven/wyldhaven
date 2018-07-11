@@ -172,7 +172,7 @@ h1 {
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: inherit;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Hiragino Kaku Gothic Std';
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -208,7 +208,7 @@ h1 {
 
 h2 {
   margin-top: 18%;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 0;
 }
 
