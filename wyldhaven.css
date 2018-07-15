@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Hiragino Kaku Gothic Std';
-    src: /wyldhaven/hiragino-kaku-gothic-std-w8.otf;
+    src: url(/wyldhaven/hiragino-kaku-gothic-std-w8.otf);
 }
 
 @font-face {
     font-family: 'Adobe Heiti Std', sans-serif;
-    src: /wyldhaven/AdobeHeitiStd-Regular.otf;
+    src: url(/wyldhaven/AdobeHeitiStd-Regular.otf);
 }
 
 body {
