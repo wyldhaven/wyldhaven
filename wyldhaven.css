@@ -155,7 +155,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 65.625rem) {
+@media only screen and (min-width: 65.6999rem) {
   .home-section {
     margin-bottom: 40rem;
     padding-top: 47%;
@@ -181,7 +181,7 @@ body {
 
 h1 {
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   letter-spacing: 5px;
   font-family: 'Hiragino Kaku Gothic Std';
 }
@@ -195,6 +195,12 @@ h1 {
 @-moz-document url-prefix() {
   h1 {
     font-family: 'Hiragino Kaku Gothic Std';
+  }
+}
+
+@media only screen and (min-width: 25rem) {
+  h1 {
+   font-size: 2.2rem;
   }
 }
 
