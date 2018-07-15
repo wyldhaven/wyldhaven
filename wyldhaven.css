@@ -155,7 +155,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 65.6999rem) {
+@media only screen and (min-width: 66.699999rem) {
   .home-section {
     margin-bottom: 40rem;
     padding-top: 47%;
@@ -212,7 +212,7 @@ h1 {
   }
 }
 
-@media only screen and (min-width: 65.625rem) {
+@media only screen and (min-width: 66.699999rem) {
   h1 {
     font-size: 3.5rem;
   }
