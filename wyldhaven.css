@@ -183,18 +183,18 @@ h1 {
   text-transform: uppercase;
   font-size: 2.2rem;
   letter-spacing: 5px;
-  font-family: 'Francois One', sans-serif;
+  font-family: 'Hiragino Kaku Gothic Std';
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Hiragino Kaku Gothic Std';
   }
 }
 
 @-moz-document url-prefix() {
   h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Hiragino Kaku Gothic Std';
   }
 }
 
