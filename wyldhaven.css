@@ -188,7 +188,7 @@ h1 {
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   h1 {
-    font-family: 'Hiragino Kaku Gothic Std';
+    font-family: 'Roboto';
   }
 }
 
@@ -209,6 +209,12 @@ h1 {
    letter-spacing: 1.5rem;
    padding-left: 1.5rem;
    font-family: 'Hiragino Kaku Gothic Std';
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    h1 {
+      font-family: 'Roboto';
+    }
   }
 }
 
