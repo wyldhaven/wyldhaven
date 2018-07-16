@@ -315,6 +315,10 @@ h2 {
   }
 }
 
+.music {
+
+}
+
 .music-section {
   position: relative;
   margin-bottom: 22rem;
@@ -427,6 +431,25 @@ h2 {
   top: 0;
   left: 0;
   right: 0;
+}
+
+.social-music {
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  bottom: 1rem;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.social-music a {
+  margin: 0 .5rem;
+}
+
+.social-music img {
+  max-width: 3rem;
 }
 
 .about-section {
