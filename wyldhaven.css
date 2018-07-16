@@ -316,13 +316,13 @@ h2 {
 }
 
 .music {
-
+  position: relative;
 }
 
 .music-section {
   position: relative;
   margin-bottom: 22rem;
-  padding: 6rem 1rem;
+  padding: 6rem 1rem 8rem;
   display: block;
   align-items: center;
   justify-content: center;
@@ -492,6 +492,23 @@ h2 {
   .about-section p {
     width: 22rem;
   }
+}
+
+.social-about {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 2rem;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.social-about a {
+  margin: 0 .5rem;
+}
+
+.social-about img {
+  max-width: 3rem;
 }
 
 .logo {
