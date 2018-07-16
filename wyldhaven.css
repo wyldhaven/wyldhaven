@@ -398,11 +398,23 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 0;
   font-weight: bold;
+  display: none;
 }
 
 .spotify-test p {
   margin-top: 0;
   margin-bottom: 2rem;
+  display: none;
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .spotify-test h2 {
+    display: block;
+  }
+
+  .spotify-test p {
+    display: block;
+  }
 }
 
 .music-section .cover {
