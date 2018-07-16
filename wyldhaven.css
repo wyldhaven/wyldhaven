@@ -341,6 +341,28 @@ h2 {
   }
 }
 
+.music-section .mobile-music-headers h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.music-section .mobile-music-headers p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.music-section .mobile-music-headers {
+  display: block;
+}
+
+@media only screen and (min-width: 65.625rem) {
+  .music-section .mobile-music-headers {
+    display: none;
+  }
+}
+
 .album {
   max-width: 17rem;
   box-shadow: 5px 5px 13px -1px black;
@@ -360,7 +382,6 @@ h2 {
 }
 
 .spotify-test {
-  background: grey;
   margin-left: 0;
   margin-top: 3rem;
 }
@@ -370,6 +391,18 @@ h2 {
     margin-left: 3rem;
     margin-top: 0;
   }
+}
+
+.spotify-test h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.spotify-test p {
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 .music-section .cover {
