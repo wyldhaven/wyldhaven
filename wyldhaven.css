@@ -330,7 +330,7 @@ h2 {
   display: block;
 }
 
-@media only screen and (min-width: 65.625rem) {
+@media only screen and (min-width: 74.625rem) {
   .music-section {
     display: flex;
     margin-bottom: 40rem;
@@ -357,7 +357,7 @@ h2 {
   display: block;
 }
 
-@media only screen and (min-width: 65.625rem) {
+@media only screen and (min-width: 74.625rem) {
   .music-section .mobile-music-headers {
     display: none;
   }
@@ -374,7 +374,7 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 65.625rem) {
+@media only screen and (min-width: 74.625rem) {
   .album {
     max-width: 35rem;
     max-height: 35rem;
@@ -386,7 +386,7 @@ h2 {
   margin-top: 3rem;
 }
 
-@media only screen and (min-width: 65.625rem) {
+@media only screen and (min-width: 74.625rem) {
   .spotify-test {
     margin-left: 3rem;
     margin-top: 0;
@@ -407,7 +407,7 @@ h2 {
   display: none;
 }
 
-@media only screen and (min-width: 65.625rem) {
+@media only screen and (min-width: 74.625rem) {
   .spotify-test h2 {
     display: block;
   }
