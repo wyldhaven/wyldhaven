@@ -421,6 +421,30 @@ h2 {
   }
 }
 
+.physical {
+  color: white;
+}
+
+.physical-desk {
+  display: none;
+}
+
+@media only screen and (min-width: 74.625rem) {
+  .physical-desk {
+    display: block;
+  }
+}
+
+.physical-mobile {
+  display: block;
+}
+
+@media only screen and (min-width: 74.625rem) {
+  .physical-mobile {
+    display: none;
+  }
+}
+
 .music-section .cover {
   background-color: #fff;
   opacity: .3;
