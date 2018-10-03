@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Enter your monthly payment and calculate your 12 month interest total</h2>
+
+inputs
+
+<p id="rounded-number"></p>
+
+<p id="exact-number"></p>
+
+<p id="monthly-added"></p>
+
+<script>
+
+//interest
+var interest = .12;
+
+//monthly payment
+var payment = 100;
+
+//payment amounts
+var amounts = 12;
+
+var roundedtotal = ((payment * interest) + payment) * amounts;
+
+document.getElementById("rounded-number").innerHTML = roundedtotal.toFixed(0);
+
+
+</script>
+
+</body>
+</html>
