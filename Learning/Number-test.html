@@ -19,16 +19,19 @@
 
 function calculate() {
   var amounts = 12;
+  console.log("amounts " + amounts);
   var interest = .12;
+  console.log("interest " + interest);
   var payment = document.getElementById("monthly-input").value;
-  console.log("2 = " + payment);
+  console.log("payment " + payment);
 
   var total = ((payment * interest) + payment) * amounts;
+  console.log("total " + total);
 
   document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
   document.getElementById("exact-number").innerHTML = "Your exact payment = " + total;
 
-  console.log("total = " + total);
+  console.log("total1 = " + total);
 }
 
 
