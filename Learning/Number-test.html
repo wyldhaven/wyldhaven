@@ -26,7 +26,9 @@ function calculate() {
   console.log("payment " + payment);
 
   var total = ((payment * interest) + payment) * amounts;
-  console.log("total " + total);
+  console.log("parenthesis = " + (payment * interest));
+  console.log("parenthesis1 = " + ((payment * interest) + payment) );
+  console.log("parenthesis2 = " + ((payment * interest) + payment) * amounts);
 
   document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
   document.getElementById("exact-number").innerHTML = "Your exact payment = " + total;
