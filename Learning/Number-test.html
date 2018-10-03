@@ -23,16 +23,16 @@ var payment = "";
 //payment amounts
 var amounts = 12;
 
-console.log(payment);
+console.log("1 = " + payment);
 
 function calculate() {
   var payment = document.getElementById("monthly-input").value;
-  console.log(payment);
+  console.log("2 = " + payment);
 }
 
 //total
 var total = ((payment * interest) + payment) * amounts;
-
+console.log("total = " + total);
 
 
 document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
