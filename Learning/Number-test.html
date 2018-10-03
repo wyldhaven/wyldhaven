@@ -4,7 +4,9 @@
 
 <h2>Enter your monthly payment and calculate your 12 month interest total</h2>
 
-inputs
+<input type="number" id="monthly-input">
+
+<button onclick="calculate()">Calculate</button>
 
 <p id="rounded-number"></p>
 
@@ -16,14 +18,18 @@ inputs
 
 //interest
 var interest = .12;
-
 //monthly payment
-var payment = 100.1;
-
+var payment = "";
 //payment amounts
 var amounts = 12;
-
+//total
 var total = ((payment * interest) + payment) * amounts;
+
+function calculate() {
+  var payment = document.GetElementById("monthly-input").value
+}
+
+
 
 document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
 
