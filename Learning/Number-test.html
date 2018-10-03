@@ -23,9 +23,11 @@ var payment = 100;
 //payment amounts
 var amounts = 12;
 
-var roundedtotal = ((payment * interest) + payment) * amounts;
+var total = ((payment * interest) + payment) * amounts;
 
-document.getElementById("rounded-number").innerHTML = "Your total payment = " + roundedtotal.toFixed(0);
+document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
+
+document.getElementById("exact-number").innerHTML = "Your exact payment = " + total;
 
 
 </script>
