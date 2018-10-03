@@ -28,16 +28,14 @@ console.log("1 = " + payment);
 function calculate() {
   var payment = document.getElementById("monthly-input").value;
   console.log("2 = " + payment);
+
+  var total = ((payment * interest) + payment) * amounts;
+
+  document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
+  document.getElementById("exact-number").innerHTML = "Your exact payment = " + total;
+
+  console.log("total = " + total);
 }
-
-//total
-var total = ((payment * interest) + payment) * amounts;
-console.log("total = " + total);
-
-
-document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
-
-document.getElementById("exact-number").innerHTML = "Your exact payment = " + total;
 
 
 </script>
