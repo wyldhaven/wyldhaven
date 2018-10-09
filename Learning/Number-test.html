@@ -20,19 +20,19 @@
 
 <script> //timeout function
 
-  let timeleft = 10;
+  let timeleft = 600;
 
   let intervalTimer = setInterval(function() {
 
     document.onmousemove = function() {
-      timeleft = 10;
+      timeleft = 600;
       document.getElementById('timer').innerHTML = timeleft;
     }
 
     --timeleft;
     document.getElementById('timer').innerHTML = timeleft;
 
-    if (timeleft <= 0) {
+    if (timeleft = 0) {
       document.getElementById('timer').innerHTML = 0;
       alert("Please keep this session active");
     }
