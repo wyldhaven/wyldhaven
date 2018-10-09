@@ -28,8 +28,6 @@
 
     document.onmousemove = function() {
       clearInterval(intervalTimer);
-      --timeleft;
-      document.getElementById('timer').innerHTML = timeleft;
     }
 
     if (timeleft <= 0) {
