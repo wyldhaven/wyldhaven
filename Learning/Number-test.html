@@ -22,6 +22,10 @@
 
   let timeleft = 10;
 
+document.onmousemove = function(){
+  clearInterval(intervalTimer);
+  
+
   let intervalTimer = setInterval(function() {
     --timeleft;
     document.getElementById('timer').innerHTML = timeleft;
@@ -31,6 +35,8 @@
       document.getElementById('timer').innerHTML = 0;
     }
   }, 1000);
+
+}
 
 
 </script>
