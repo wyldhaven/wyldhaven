@@ -22,9 +22,16 @@
 
   let timeleft = 10;
 
+  document.onmousemove()
   let intervalTimer = setInterval(function() {
     document.getElementById('timer').innerHTML = timeleft - --timeleft;
+
+    if (timeleft <= 0) {
+      clearInterval(intervalTimer);
+      document.getElementById('timer').innerHTML = 0;
+    }
   }, 1000);
+
 
 </script>
 
