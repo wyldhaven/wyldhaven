@@ -16,17 +16,15 @@
 
 
 
-<p id="timer"></p>
+<p id="timer">10</p>
 
 <script> //timeout function
 
   let timeleft = 10;
 
-    let intervalTimer = setInterval(function() {
-      document.getElementById('timer').innerHTML = timeleft - --timeleft;
-    }, 1000);
-
-
+  let intervalTimer = setInterval(function() {
+    document.getElementById('timer').innerHTML = timeleft - --timeleft;
+  }, 1000);
 
 </script>
 
