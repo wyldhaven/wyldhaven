@@ -22,12 +22,9 @@
 
   let timeleft = 10;
 
-  document.onmousemove = function() {
     let interval = setInterval(function() {
       document.getElementById('timer').innerHTML = --timeleft;
     }, 1000);
-
-  }
 
 
 
