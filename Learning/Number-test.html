@@ -8,42 +8,59 @@
 
 <button onclick="calculate()">Calculate</button>
 
-<p id="rounded-number"></p>
+<p>Your total payment = <span id="rounded-number"></span></p>
 
-<p id="exact-number"></p>
+<p>Your exact payment = <span id="exact-number"></span></p>
 
-<p id="monthly-added"></p>
-
-<script>
+<p><span id="monthly-added"></span></p>
 
 
-function calculate() {
-  var amounts = 12;
-  console.log("amounts " + amounts);
-  var interest = .12;
-  console.log("interest " + interest);
-  var payment = document.getElementById("monthly-input").value;
-  console.log("payment " + payment);
 
-  var total = ((payment * interest) + payment) * amounts;
-  console.log("parenthesis = " + (payment * interest));
-  console.log("parenthesis1 = " + ((payment * interest) + payment) );
-  console.log("parenthesis2 = " + ((payment * interest) + payment) * amounts);
+<p id="timer">600</p>
 
-  document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
-  document.getElementById("exact-number").innerHTML = "Your exact payment = " + total;
+<script> //timeout function
 
-  console.log("total1 = " + total);
-}
+  let b = 7;
+  console.log(7 * b);
+
+  let timeleft = 600;
+
+  let intervalTimer = setInterval(function() {
+
+    document.onmousemove = function() {
+      timeleft = 600;
+      document.getElementById('timer').innerHTML = timeleft;
+    }
+
+    --timeleft;
+    document.getElementById('timer').innerHTML = timeleft;
+
+    if (timeleft <= 0) {
+      document.getElementById('timer').innerHTML = 0;
+      alert("Please keep this session active");
+    }
+  }, 1000);
 
 
 </script>
 
-<script>
+<script>//interest calculator
 
-let hello = 'hello!';
+function calculate() {
+  let amounts = 12;
+  console.log("amounts " + amounts);
+  const INTEREST = .12;
+  console.log("interest " + INTEREST);
+  let payment = document.getElementById("monthly-input").value;
+  console.log("payment " + payment);
 
-alert(hello);
+  let pretotal = payment * INTEREST;
+  let total = (+pretotal + +payment) * amounts;
+
+
+  document.getElementById("rounded-number").innerHTML = total.toFixed(0);
+  document.getElementById("exact-number").innerHTML = total;
+}
 
 </script>
 
