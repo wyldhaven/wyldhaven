@@ -15,7 +15,12 @@
 <p><span id="monthly-added"></span></p>
 
 <script>
+  let timerStart = Date.now();
+  alert(timerStart);
 
+</script>
+
+<script>
 
 function calculate() {
   let amounts = 12;
@@ -31,9 +36,7 @@ function calculate() {
 
   document.getElementById("rounded-number").innerHTML = total.toFixed(0);
   document.getElementById("exact-number").innerHTML = total;
-
 }
-
 
 </script>
 
