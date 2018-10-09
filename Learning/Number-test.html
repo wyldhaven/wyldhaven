@@ -18,17 +18,17 @@
 
 
 function calculate() {
-  var amounts = 12;
+  let amounts = 12;
   console.log("amounts " + amounts);
-  var interest = .12;
+  const interest = .12;
   console.log("interest " + interest);
-  var payment = document.getElementById("monthly-input").value;
+  let payment = document.getElementById("monthly-input").value;
   console.log("payment " + payment);
 
   var total = ((payment * interest) + payment) * amounts;
   console.log("parenthesis = " + (payment * interest));
   console.log("parenthesis1 = " + ((payment * interest) + payment) );
-  console.log("parenthesis2 = " + ((payment * interest) + payment) * amounts);
+  console.log("parenthesis2 = " + (((payment * interest) + payment) * amounts));
 
   document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
   document.getElementById("exact-number").innerHTML = "Your exact payment = " + total;
@@ -36,15 +36,6 @@ function calculate() {
   console.log("total1 = " + total);
 }
 
-
-</script>
-
-<script>
-
-let hello = 1;
-let bye = 2;
-
-alert(hello + bye);
 
 </script>
 
