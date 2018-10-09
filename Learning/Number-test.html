@@ -8,9 +8,11 @@
 
 <button onclick="calculate()">Calculate</button>
 
-<p>Your total payment = <span id="rounded-number"></span></p>
+<p>Your total payment = <span id="rounded-number"></span>.</p>
 
-<p>Your exact payment = <span id="exact-number"></span></p>
+<p>Your exact payment = <span id="exact-number"></span>.</p>
+
+<p>You are <span id="insurance"></span> by your insurance as of <span id="currentday"></span>.</p>
 
 <p><span id="monthly-added"></span></p>
 
@@ -43,11 +45,6 @@
     }
   }, 1000);
 
-
-</script>
-
-<script>//interest calculator
-
 function calculate() {
   let amounts = 12;
   console.log("amounts " + amounts);
@@ -58,10 +55,19 @@ function calculate() {
 
   let pretotal = payment * INTEREST;
   let total = (+pretotal + +payment) * amounts;
+  let date = new date();
 
 
   document.getElementById("rounded-number").innerHTML = total.toFixed(0);
   document.getElementById("exact-number").innerHTML = total;
+
+  if (total <= 1400) {
+    document.getElementById("insurance").innerHTML = 'covered';
+    document.getElementById("currentday").innerHTML = date;
+  } else {
+    document.getElementById("insurance").innerHTML = 'not covered';
+    document.getElementById("currentday").innerHTML = date;
+  }
 }
 
 </script>
