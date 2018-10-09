@@ -16,10 +16,20 @@
 
 <script>
 
-  setTimeout(function() {
+  let timeout;
+  document.onmousemove = function() {
+    clearTimeout(timeout);
+    timeout = setTimeout (function() {
+      alert("timeout!");
+    }, (1000 * 10));
+  }
+
+  let timerID = setTimeout(function() {
     alert("Timeout!" );
 
   }, (1000 * 240));
+
+
 
 </script>
 
