@@ -22,11 +22,6 @@
 
 <script> //timeout function
 
-  let x;
-  let y = true;
-  console.log(typeof x);
-  console.log(typeof y);
-
   let timeleft = 600;
 
   let intervalTimer = setInterval(function() {
@@ -55,7 +50,7 @@ function calculate() {
 
   let pretotal = payment * INTEREST;
   let total = (+pretotal + +payment) * amounts;
-  let date = new date();
+  let date = new Date();
 
 
   document.getElementById("rounded-number").innerHTML = total.toFixed(0);
