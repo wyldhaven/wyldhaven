@@ -16,10 +16,10 @@
 
 <script>
 
-  onload(function() {
+  setTimeout(function() {
     alert("Timeout!" );
 
-  });
+  }, (1000 * 240));
 
 </script>
 
@@ -29,11 +29,11 @@ function calculate() {
   let amounts = 12;
   console.log("amounts " + amounts);
   const INTEREST = .12;
-  console.log("interest " + interest);
+  console.log("interest " + INTEREST);
   let payment = document.getElementById("monthly-input").value;
   console.log("payment " + payment);
 
-  let pretotal = payment * interest;
+  let pretotal = payment * INTEREST;
   let total = (+pretotal + +payment) * amounts;
 
 
