@@ -22,8 +22,8 @@
 
   let timeleft = 10;
 
-    let interval = setInterval(function() {
-      document.getElementById('timer').innerHTML = --timeleft;
+    let intervalTimer = setInterval(function() {
+      document.getElementById('timer').innerHTML = timeleft - --timeleft;
     }, 1000);
 
 
