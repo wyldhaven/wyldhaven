@@ -8,11 +8,11 @@
 
 <button onclick="calculate()">Calculate</button>
 
-<p id="rounded-number"></p>
+<p>Your total payment = <span id="rounded-number"></span></p>
 
-<p id="exact-number"></p>
+<p>Your exact payment = <span id="exact-number"></span></p>
 
-<p id="monthly-added"></p>
+<p><span id="monthly-added"></span></p>
 
 <script>
 
@@ -25,15 +25,13 @@ function calculate() {
   let payment = document.getElementById("monthly-input").value;
   console.log("payment " + payment);
 
-  var total = ((payment * interest) + payment) * amounts;
-  console.log("parenthesis = " + (payment * interest));
-  console.log("parenthesis1 = " + ((payment * interest) + payment) );
-  console.log("parenthesis2 = " + (((payment * interest) + payment) * amounts));
+  let pretotal = payment * interest;
+  let total = (pretotal + payment) * amounts;
 
-  document.getElementById("rounded-number").innerHTML = "Your total payment = " + total.toFixed(0);
-  document.getElementById("exact-number").innerHTML = "Your exact payment = " + total;
 
-  console.log("total1 = " + total);
+  document.getElementById("rounded-number").innerHTML = total.toFixed(0);
+  document.getElementById("exact-number").innerHTML = total;
+
 }
 
 
