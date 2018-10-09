@@ -24,13 +24,6 @@
 
 <script> //timeout function
 
-  let buttprompt = document.getElementById('tryme');
-
-  buttprompt.onclick = function() {
-    let name = prompt('What do you like?');
-    alert('Hello Grayson, you like ' + name);
-  }
-
   let timeleft = 600;
 
   let intervalTimer = setInterval(function() {
@@ -56,6 +49,8 @@ function calculate() {
   let pretotal = payment * INTEREST;
   let total = (+pretotal + +payment) * amounts;
   let date = new Date();
+
+  console.log(typeof payment 'monthly input = ' + payment);
 
 
   document.getElementById("rounded-number").innerHTML = total.toFixed(0);
