@@ -25,11 +25,10 @@
   let intervalTimer = setInterval(function() {
 
     document.onmousemove = function() {
-      clearInterval(intervalTimer);
       timeleft = 10;
       document.getElementById('timer').innerHTML = timeleft;
     }
-    
+
     --timeleft;
     document.getElementById('timer').innerHTML = timeleft;
 
