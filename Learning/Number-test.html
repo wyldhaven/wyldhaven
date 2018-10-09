@@ -16,7 +16,7 @@
 
 
 
-<p id="timer">600</p>
+<p id="timer">10</p>
 
 <script> //timeout function
 
@@ -32,7 +32,7 @@
     --timeleft;
     document.getElementById('timer').innerHTML = timeleft;
 
-    if (timeleft = 0) {
+    if (timeleft <= 0) {
       document.getElementById('timer').innerHTML = 0;
       alert("Please keep this session active");
     }
