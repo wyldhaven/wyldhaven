@@ -26,9 +26,10 @@
     --timeleft;
     document.getElementById('timer').innerHTML = timeleft;
 
-    if (timeleft <= 0)
+    if (timeleft <= 0) {
       clearInterval(intervalTimer);
       document.getElementById('timer').innerHTML = 0;
+    }
   }, 1000);
 
 
