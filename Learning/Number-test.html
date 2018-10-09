@@ -26,7 +26,7 @@ function calculate() {
   console.log("payment " + payment);
 
   let pretotal = payment * interest;
-  let total = (pretotal + payment) * amounts;
+  let total = (+pretotal + +payment) * amounts;
 
 
   document.getElementById("rounded-number").innerHTML = total.toFixed(0);
