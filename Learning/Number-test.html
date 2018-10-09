@@ -14,15 +14,27 @@
 
 <p><span id="monthly-added"></span></p>
 
+
+
+<p id="timer"></p>
+
 <script> //timeout function
 
-  let timeout;
+  let timeleft = (6000);
+
   document.onmousemove = function() {
-    clearTimeout(timeout);
-    timeout = setTimeout (function() {
-      alert("timeout!");
-    }, (1000 * 240));
+    let interval = setInterval(function() {
+      document.getElementById('timer').innerHTML = --timeleft;
+
+      if (timeleft <= 0) {
+        document.getElementById('timer').innerHTML = 0;
+        alert("You have timed out");
+      }
+    });
+
   }
+
+
 
 </script>
 
