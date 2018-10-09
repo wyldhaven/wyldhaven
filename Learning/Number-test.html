@@ -20,16 +20,11 @@
 
 <script> //timeout function
 
-  let timeleft = (10);
+  let timeleft = 10;
 
   document.onmousemove = function() {
     let interval = setInterval(function() {
       document.getElementById('timer').innerHTML = --timeleft;
-
-      if (timeleft <= 0) {
-        document.getElementById('timer').innerHTML = 0;
-        alert("You have timed out");
-      }
     }, 1000);
 
   }
