@@ -23,14 +23,15 @@
   let timeleft = 10;
 
   let intervalTimer = setInterval(function() {
-    --timeleft;
-    document.getElementById('timer').innerHTML = timeleft;
 
     document.onmousemove = function() {
       clearInterval(intervalTimer);
       timeleft = 10;
       document.getElementById('timer').innerHTML = timeleft;
     }
+    
+    --timeleft;
+    document.getElementById('timer').innerHTML = timeleft;
 
     if (timeleft <= 0) {
       clearInterval(intervalTimer);
