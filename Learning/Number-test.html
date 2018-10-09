@@ -33,8 +33,8 @@
     document.getElementById('timer').innerHTML = timeleft;
 
     if (timeleft <= 0) {
-      clearInterval(intervalTimer);
       document.getElementById('timer').innerHTML = 0;
+      alert("Please keep this session active");
     }
   }, 1000);
 
