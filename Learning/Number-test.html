@@ -14,26 +14,19 @@
 
 <p><span id="monthly-added"></span></p>
 
-<script>
+<script> //timeout function
 
   let timeout;
   document.onmousemove = function() {
     clearTimeout(timeout);
     timeout = setTimeout (function() {
       alert("timeout!");
-    }, (1000 * 10));
+    }, (1000 * 240));
   }
-
-  let timerID = setTimeout(function() {
-    alert("Timeout!" );
-
-  }, (1000 * 240));
-
-
 
 </script>
 
-<script>
+<script>//interest calculator
 
 function calculate() {
   let amounts = 12;
