@@ -20,7 +20,7 @@
 
 <script> //timeout function
 
-  let timeleft = (6000);
+  let timeleft = (10);
 
   document.onmousemove = function() {
     let interval = setInterval(function() {
@@ -30,7 +30,7 @@
         document.getElementById('timer').innerHTML = 0;
         alert("You have timed out");
       }
-    });
+    }, 1000);
 
   }
 
