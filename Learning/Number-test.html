@@ -22,19 +22,21 @@
 
   let timeleft = 10;
 
-document.onmousemove = function(){
-
   let intervalTimer = setInterval(function() {
     --timeleft;
     document.getElementById('timer').innerHTML = timeleft;
+
+    document.onmousemove = function() {
+      clearInterval(intervalTimer);
+      --timeleft;
+      document.getElementById('timer').innerHTML = timeleft;
+    }
 
     if (timeleft <= 0) {
       clearInterval(intervalTimer);
       document.getElementById('timer').innerHTML = 0;
     }
   }, 1000);
-
-    clearInterval(intervalTimer);
 
 }
 
