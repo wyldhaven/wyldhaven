@@ -16,15 +16,20 @@
 
 <p><span id="monthly-added"></span></p>
 
+<button id="tryme">Try this!</button>
+
 
 
 <p id="timer">600</p>
 
 <script> //timeout function
 
-  let stringtest1 = 'This is ';
-  let stringtest2 = 'fun';
-  console.log(stringtest1 + stringtest2);
+  let buttprompt = document.getElementbyId('tryme');
+
+  button.onclick = function() {
+    let name = prompt('What do you like?');
+    alert('Hello Grayson, you like ' + name);
+  }
 
   let timeleft = 600;
 
