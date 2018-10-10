@@ -73,13 +73,13 @@ console.log('officedate ' + officedate);
 console.log('officehours ' + officehours);
 console.log('officeday ' + officeday);
 
-console.log('officehours ' + officehours > 10);
-console.log('officedate ' + officeday < 4);
+console.log(officehours > 9);
+console.log(officeday < 4);
 
-if (officehours < 8 && officehours > 10 && officeday < 4 && officeday > 5 ) {
-  document.getElementById("office").innerHTML = "closed";
-} else {
+if (officehours >= 8 && officehours <= 16 && officeday >= 1 && officeday <= 5 ) {
   document.getElementById("office").innerHTML = "open";
+} else {
+  document.getElementById("office").innerHTML = "closed";
 }
 
 
