@@ -67,10 +67,18 @@ function calculate() {
 
 let officedate = new Date();
 let officehours = officedate.getHours();
+let officeminutes = officedate.getMinutes();
 let officeday = officedate.getDay();
 console.log(officedate);
 console.log(officehours);
+console.log(officeminutes);
 console.log(officeday);
+
+if (officehours < 8 && officehours > 16 && officeday < 1 && officeday > 5 ) {
+  document.getElementById("office").innerHTML = "closed";
+} else {
+  document.getElementById("office").innerHTML = "open";
+}
 
 
 
