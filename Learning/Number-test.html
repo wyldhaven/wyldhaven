@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html>
+<body>
 
+<h2>Enter your monthly payment and calculate your 12 month interest total</h2>
+
+<input type="number" id="monthly-input">
+
+<button onclick="calculate()">Calculate</button>
+
+<p>Your total payment = <span id="rounded-number"></span>.</p>
+
+<p>Your exact payment = <span id="exact-number"></span>.</p>
+
+<p>You are <b><span id="insurance"></span></b> by your insurance as of <span id="currentday"></span>.</p>
+
+<p>If you have questions you can call us at 815-600-6611 from 9am-5pm, Monday - Friday</p>
+
+<p>The office is currently <b><span id="office"></span></b></p>
+
+<p><span id="monthly-added"></span></p>
+
+
+
+<p id="timer">600</p>
+
+<script> //timeout function
+
+  let timeleft = 600;
+
+  let intervalTimer = setInterval(function() {
+
+    document.onmousemove = function() {
+      timeleft = 600;
+      document.getElementById('timer').innerHTML = timeleft;
+    }
+
+    --timeleft;
+    document.getElementById('timer').innerHTML = timeleft;
+
+    if (timeleft <= 0) {
+      document.getElementById('timer').innerHTML = 0;
+      alert("Please keep this session active");
+    }
+  }, 1000);
+
+function calculate() {
+  let amounts = 12;
+  const INTEREST = .12;
+  let payment = document.getElementById("monthly-input").value;
+  let pretotal = payment * INTEREST;
+  let total = (+pretotal + +payment) * amounts;
+  let date = new Date();
+
+
+  document.getElementById("rounded-number").innerHTML = total.toFixed(0);
+  document.getElementById("exact-number").innerHTML = total;
+
+  if (total <= 1400 || total >= 1000000) {
+    document.getElementById("insurance").innerHTML = 'covered';
+    document.getElementById("currentday").innerHTML = date.toLocaleDateString("en-US");
+  } else {
+    document.getElementById("insurance").innerHTML = 'not covered';
+    document.getElementById("currentday").innerHTML = date.toLocaleDateString("en-US");
+  }
+}
+
+let officedate = new Date();
+let officehours = officedate.getHours();
+let officeminutes = officedate.getMinutes();
+let officeday = officedate.getDay();
+console.log(officedate);
+console.log(officehours);
+console.log(officeminutes);
+console.log(officeday);
+
+if (officehours < 8 && officehours > 16 && officeday < 4 && officeday > 5 ) {
+  document.getElementById("office").innerHTML = "closed";
+} else {
+  document.getElementById("office").innerHTML = "open";
+}
+
+
+
+
+</script>
+
+</body>
+</html>
