@@ -2,15 +2,14 @@
 <html>
 <body>
 
-<h2>Enter your monthly payment and calculate your 12 month interest total</h2>
-
 <label for="theme">Select color: </label>
 <select id="theme">
   <option value="">-Select one-</option>
   <option value="blue">Blue</option>
   <option value="red">Red</option>
-
 </select>
+
+<h2>Enter your monthly payment and calculate your 12 month interest total</h2>
 
 <input type="number" id="monthly-input">
 
@@ -94,7 +93,7 @@ theme.onchange = function() {
   if (theme.value === 'red') {
     update('red');
   } else if (theme.value === 'blue') {
-    update('blue');
+    update('#h3h3h3');
   } else {
     update('black');
   }
