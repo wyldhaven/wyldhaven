@@ -69,10 +69,12 @@ let officedate = new Date();
 let officehours = officedate.getHours();
 let officeminutes = officedate.getMinutes();
 let officeday = officedate.getDay();
-console.log(officedate);
-console.log(officehours);
-console.log(officeminutes);
-console.log(officeday);
+console.log('officedate ' + officedate);
+console.log('officehours ' + officehours);
+console.log('officeday ' + officeday);
+
+console.log('officehours ' + officehours > 10);
+console.log('officedate ' + officeday < 4);
 
 if (officehours < 8 && officehours > 10 && officeday < 4 && officeday > 5 ) {
   document.getElementById("office").innerHTML = "closed";
