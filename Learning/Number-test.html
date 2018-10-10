@@ -14,6 +14,10 @@
 
 <p>You are <b><span id="insurance"></span></b> by your insurance as of <span id="currentday"></span>.</p>
 
+<p>If you have questions you can call us at 815-600-6611 from 9am-5pm, Monday - Friday</p>
+
+<p>The office is currently <b><span id="office"></span></b></p>
+
 <p><span id="monthly-added"></span></p>
 
 
@@ -60,6 +64,16 @@ function calculate() {
     document.getElementById("currentday").innerHTML = date.toLocaleDateString("en-US");
   }
 }
+
+let officedate = new Date();
+let officehours = officedate.getHours();
+let officeday = officedate.getDay();
+console.log(officedate);
+console.log(officehours);
+console.log(officeday);
+
+
+
 
 </script>
 
