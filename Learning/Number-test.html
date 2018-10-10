@@ -22,11 +22,6 @@
 
 <script> //timeout function
 
-  let a = 0;
-  let b = '0';
-  console.log(a == b);
-  console.log(a === b);
-
   let timeleft = 600;
 
   let intervalTimer = setInterval(function() {
@@ -57,7 +52,7 @@ function calculate() {
   document.getElementById("rounded-number").innerHTML = total.toFixed(0);
   document.getElementById("exact-number").innerHTML = total;
 
-  if (total <= 1400) {
+  if (total <= 1400 || total >= 1000000) {
     document.getElementById("insurance").innerHTML = 'covered';
     document.getElementById("currentday").innerHTML = date.toLocaleDateString("en-US");
   } else {
