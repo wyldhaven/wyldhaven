@@ -35,7 +35,7 @@ function playerchoiceTrue() {
 function game() {
   let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
-  if (playerPrompt === 'Rock') {
+  if (playerPrompt === 'Rock' || playerPrompt === 'Paper' || playerPrompt === 'Scissors') {
     console.log('player choice = ' + playerPrompt);
     playerchoiceTrue();
   } else {
