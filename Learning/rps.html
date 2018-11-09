@@ -8,12 +8,10 @@
 let rpsArray = ['rock' , 'paper' , 'scissors'];
 console.log('rpsArray = ' + rpsArray);
 
-function playArray() {
-  let playArray = [Math.floor(Math.random() * rpsArray.length )];
-}
+let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
 function computerPlay() {
-  return playArray;
+
 
   if (playArray == '0') {
     playArray = 'Rock';
@@ -26,7 +24,7 @@ function computerPlay() {
     console.log(playArray);
   }
 
-  playArray()
+  return playArray;
 }
 
 computerPlay();
