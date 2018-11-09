@@ -33,6 +33,10 @@
 
 <script> //timeout function
 
+  let textTest = 'I can\'t do this';
+  let yestext = textTest.replace('can\'t' , 'can');
+  alert(yestext);
+
   let timeleft = 600;
 
   let intervalTimer = setInterval(function() {
@@ -98,13 +102,6 @@ theme.onchange = function() {
     update('black');
   }
 }
-
-function testFunction() {
-  alert('test function');
-}
-
-testFunction()
-
 
 </script>
 
