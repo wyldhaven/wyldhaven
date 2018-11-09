@@ -5,15 +5,18 @@
 
 <script>
 
+let rpsArray = ['rock' , 'paper' , 'scissors'];
+console.log('rpsArray = ' + rpsArray);
+
+let playArray = [Math.floor(Math.random() * rpsArray.length )];
+
 function computerPlay() {
-  let rpsArray = ['rock' , 'paper' , 'scissors'];
-  console.log(rpsArray);
-  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+  return playArray;
 }
 
 
 computerPlay();
-console.log(playArray);
+console.log(computerPlay());
 
 
 
