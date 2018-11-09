@@ -40,9 +40,10 @@
 
   let age = document.getElementById('age-input').value;
   let insPlan = document.getElementById('agePlan');
-
+  console.log(age);
 
   age.onchange = function() {
+    console.log(age);
     let parentsPlan = (age >= 18) ? 'Yes' : 'No';
     insPlan.innerHTML = parentsPlan;
   }
