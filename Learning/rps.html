@@ -26,18 +26,22 @@ function computerPlay() {
 // computerPlay();
 // console.log('playArray = ' + playArray);
 
+function playerchoiceTrue() {
+  computerPlay();
+  console.log('computerChoice = ' + playArray);
+  let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
+}
+
 function game() {
   let playerPrompt = prompt('Rock, Paper, or Scissors?');
+
   if (playerPrompt === 'Rock' || 'Paper' || 'Scissors') {
+    playerchoiceTrue();
 
   } else {
     alert('You must choose between Rock, Paper, or Scissors!' );
   }
   console.log('player choice = ' + playerPrompt);
-
-  computerPlay();
-  console.log('computerChoice = ' + playArray);
-  let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
 
 }
 
