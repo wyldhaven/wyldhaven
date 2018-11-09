@@ -23,9 +23,6 @@ function computerPlay() {
   return playArray;
 }
 
-// computerPlay();
-// console.log('playArray = ' + playArray);
-
 function playerchoiceTrue() {
   computerPlay();
   console.log('computerChoice = ' + playArray);
@@ -33,6 +30,7 @@ function playerchoiceTrue() {
 }
 
 function game() {
+  for ( var i = 0; i < 4; i++ ) {
   let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
   if (playerPrompt === 'Rock' || playerPrompt === 'Paper' || playerPrompt === 'Scissors') {
@@ -40,7 +38,10 @@ function game() {
     playerchoiceTrue();
   } else {
     alert('You must choose between Rock, Paper, or Scissors!' );
+    console.log('player incorrect choice = ' + playerPrompt);
   }
+
+}
 
 }
 
