@@ -12,21 +12,32 @@ let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
 function computerPlay() {
   return playArray;
+
+  if (playArray == '0') {
+    playArray = 'Rock';
+    console.log(playArray);
+  } else if (playArray == '1') {
+    playArray = 'Paper';
+    console.log(playArray);
+  } else if (playArray == '2') {
+    playArray = 'Scissors';
+    console.log(playArray);
+  }
 }
 
 computerPlay();
 console.log('playArray = ' + playArray);
 
-if (playArray == '0') {
-  playArray = 'Rock';
-  console.log(playArray);
-} else if (playArray == '1') {
-  playArray = 'Paper';
-  console.log(playArray);
-} else if (playArray == '2') {
-  playArray = 'Scissors';
-  console.log(playArray);
-}
+// if (playArray == '0') {
+//   playArray = 'Rock';
+//   console.log(playArray);
+// } else if (playArray == '1') {
+//   playArray = 'Paper';
+//   console.log(playArray);
+// } else if (playArray == '2') {
+//   playArray = 'Scissors';
+//   console.log(playArray);
+// }
 
 // function game() {
 //   let playerPrompt = prompt('Rock, Paper, or Scissors?');
