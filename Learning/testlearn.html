@@ -18,6 +18,24 @@
   <script>
     var input = document.querySelector('.numberInput');
     var para = document.querySelector('p');
+
+    function squared() {
+      return num * num;
+    }
+
+    function cubed() {
+      return num * num * num;
+    }
+
+    function factorial() {
+      let x = num;
+      while (x > 1) {
+        num *= x-1;
+        x--;
+      }
+      return num;
+    }
+    
   </script>
 </body>
 </html>
