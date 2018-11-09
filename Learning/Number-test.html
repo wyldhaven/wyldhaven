@@ -28,22 +28,26 @@
 <p><span id="monthly-added"></span></p>
 
 
+<p>Can I be on my parents plan?</p>
+
+<input type="number" id="age-input">
+<p id="agePlan"></p>
+
 
 <p id="timer">600</p>
 
 <script> //timeout function
 
-  let name1 = 'John';
+  let age = document.getElementById('age-input').value;
+  let insPlan = document.getElementById('agePlan');
 
-  function showName() {
-    name1 = 'Bob';
 
-    let message = name1 + ' is a bitch!!!';
+  age.onchange = function () {
+    let parentsPlan = (age >= 18) ? 'Yes' : 'No';
+    insPlan.innerHTML = parentsPlan;
   }
 
-  alert(name1 + ' is a bitch!');
-  showName();
-  alert(name1 + ' is a bitch!!!');
+
 
   let timeleft = 600;
 
