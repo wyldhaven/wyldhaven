@@ -30,7 +30,7 @@
 
 <p>Can I be on my parents plan?</p>
 
-<input type="text" id="age-input">
+<input type="number" id="age-input">
 <p id="agePlan"></p>
 
 
@@ -40,11 +40,11 @@
 
   let age = document.getElementById("age-input").value;
   let insPlan = document.getElementById("agePlan");
-  console.log('age');
+  console.log(age);
 
   age.onchange = function() {
     console.log(age);
-    let parentsPlan = (age >= 18) ? 'Yes' : 'No';
+    let parentsPlan = (age >= 18) ? "Yes" : "No";
     insPlan.innerHTML = parentsPlan;
   }
 
