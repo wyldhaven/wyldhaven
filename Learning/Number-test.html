@@ -43,6 +43,7 @@
   console.log(age);
 
   age.onchange = function() {
+    let age = document.getElementById("age-input").value;
     console.log(age);
     let parentsPlan = (age >= 18) ? "Yes" : "No";
     insPlan.innerHTML = parentsPlan;
@@ -72,6 +73,7 @@ function calculate() {
   let amounts = 12;
   const INTEREST = .12;
   let payment = document.getElementById("monthly-input").value;
+  console.log(payment);
   let pretotal = payment * INTEREST;
   let total = (+pretotal + +payment) * amounts;
   let date = new Date();
