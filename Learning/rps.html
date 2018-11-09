@@ -32,9 +32,9 @@ function playerchoiceTrue() {
 function game() {
   //for ( var i = 0; i < 5; i++ ) {
   let playerScore = 0;
-  console.log('Player Score = ' + playerScore);
+  console.log('Initial Player Score = ' + playerScore);
   let computerScore = 0;
-  console.log('Computer Score = ' + computerScore);
+  console.log('Initial Computer Score = ' + computerScore);
 
   let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
@@ -50,6 +50,7 @@ function game() {
       alert('Rock to Rock is a Tie! No points awarded');
   } else if (playerPrompt === 'Rock' && playArray === 'Paper') {
       alert('Paper covers Rock! Computer wins a point');
+      computerScore = computerScore + 1;
   } else if (playerPrompt === 'Rock' && playArray === 'Scissors') {
       alert('Rock beats Scissors! You win a point');
   } else if (playerPrompt === 'Paper' && playArray === 'Rock') {
@@ -65,6 +66,8 @@ function game() {
   } else if (playerPrompt === 'Scissors' && playArray === 'Scissors') {
       alert('Scissors to Scissors is a Tie! No points awarded');
   }
+
+  alert('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
 //}
 
