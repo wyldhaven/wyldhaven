@@ -25,10 +25,20 @@
 
 <p>The office is currently <b><span id="office"></span></b></p>
 
+<hr>
+
+
 <p><span id="state"></span></p>
 
-<p><span id="monthly-added"></span></p>
+<label for="city-input">Search for your city: </label>
+<input type="text" id="city-input">
 
+<button id="citysearch">Search</button>
+
+<p class="citydisplay"></p>
+
+
+<hr>
 
 <p>Can I be on my parents plan?</p>
 
@@ -40,7 +50,7 @@
 
 <script> //timeout function
 
-let states = ['Illinois', 'Wisconsin', 'New York', 'Boston', 'California'];
+let states = ['Illinois', 'Wisconsin', 'New York', 'Mass', 'California'];
 
 window.onload = function() {
   let statesSentence = document.getElementById("state").innerHTML = ' or ';
@@ -48,13 +58,10 @@ window.onload = function() {
 
   for (let i = 0; i < states.length; i++ ) {
 
-    console.log(i);
     if (i === states.length - 1 ) {
       info += states[i] + ', USA?';
-      console.log('if ' + info);
     } else {
       info += states[i] + statesSentence + ' ';
-      console.log('else ' + info);
     }
   }
 
@@ -140,6 +147,28 @@ theme.onchange = function() {
     update('black');
   }
 }
+
+
+let cityOptions = ['Chicago', 'Madison', 'New York', 'San Franciso', 'Los Angeles', 'Boston'];
+let cityInput = document.getElementById("city-input");
+let cityBtn = document.getElementById("citysearch");
+let cityPara = document.querySelector("citydisplay");
+
+cityBtn.addEventListener('click', function() {
+  let searchName = cityInput.value;
+  cityInput.value = '';
+  cityInput.focus();
+
+  for (i = 0; i < cityOptions.length; i++) {
+    if (cityOptions[i] === searchName ) {
+      cityPara.textContent = searchName + ' is a serviced city. Congrats!';
+    } else {
+      cityPara.textContent = searchName + ' is not a serviced city. Sorry!';
+    }
+  }
+
+
+});
 
 </script>
 
