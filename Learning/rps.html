@@ -10,13 +10,13 @@ console.log('rpsArray = ' + rpsArray);
 
 let playerScore = 0;
 let computerScore = 0;
+console.log('The initial score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
 do {
 
 let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
 function computerPlay() {
-  console.log('Random Choice = ' + playArray);
   return playArray;
 }
 
@@ -37,7 +37,6 @@ function playerchoiceTrue() {
 
 
 function game() {
-  console.log('The initial score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
   let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
@@ -87,7 +86,6 @@ if (computerScore >= 5 || playerScore >= 5) {
   alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 } else {
 game();
-console.log('Game over score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 }
 
 } while ( playerScore <= 4 && computerScore <= 4 );
