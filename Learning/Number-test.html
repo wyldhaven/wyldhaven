@@ -47,6 +47,8 @@ window.onload = function() {
   let info;
 
   for (let i = 0; i < states.length; i++ ) {
+    console.log(states.length);
+    console.log(i);
     if (i === states.length ) {
       info = states[i];
     } else {
@@ -55,6 +57,7 @@ window.onload = function() {
   }
 
   document.getElementById("state").innerHTML = info;
+  console.log(info);
 
 }
 
