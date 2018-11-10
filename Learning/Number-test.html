@@ -25,7 +25,7 @@
 
 <p>The office is currently <b><span id="office"></span></b></p>
 
-<p><span id="state"></span>, USA?</p>
+<p><span id="state"></span></p>
 
 <p><span id="monthly-added"></span></p>
 
@@ -46,11 +46,11 @@ window.onload = function() {
   let statesSentence = document.getElementById("state").innerHTML = ' or ';
   let info = 'Are you in ';
 
-  for (let i = 0; i <= states.length; i++ ) {
+  for (let i = 0; i < states.length; i++ ) {
 
     console.log(i);
     if (i === states.length ) {
-      info += states[i];
+      info += states[i] + ', USA?';
       console.log('if ' + info);
     } else {
       info += states[i] + statesSentence + ' ';
