@@ -47,12 +47,12 @@ window.onload = function() {
   let info;
 
   for (let i = 0; i < states.length; i++ ) {
-    console.log(states.length);
+
     console.log(i);
     if (i === states.length ) {
-      info = states[i];
+      info += states[i];
     } else {
-      info = states[i] + statesSentence + ' ';
+      info += states[i] + statesSentence + ' ';
     }
   }
 
