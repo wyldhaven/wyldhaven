@@ -11,6 +11,13 @@ console.log('rpsArray = ' + rpsArray);
 let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
 function computerPlay() {
+  return playArray;
+  console.log('Random Choice = ' + playArray);
+}
+
+function playerchoiceTrue() {
+  computerPlay();
+  console.log('computerChoice = ' + playArray);
 
   if (playArray == '0') {
     playArray = 'Rock';
@@ -20,12 +27,6 @@ function computerPlay() {
     playArray = 'Scissors';
   }
 
-  return playArray;
-  console.log('Random Choice = ' + playArray);
-}
-
-function playerchoiceTrue() {
-  computerPlay();
   console.log('computerChoice = ' + playArray);
   let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
 }
@@ -53,7 +54,7 @@ function game() {
     } else if (playerPrompt === 'Rock' && playArray === 'Scissors') {
         alert('Rock beats Scissors! You win a point');
         playerScore = playerScore + 1;
-    } else if (playerPrompt === 'Paper' && playArray === 'Rock') {
+    } else if (playerPrompt === 'Paper' && playArray === 'Paper') {
         alert('Paper covers Rock! You win a point');
         playerScore = playerScore + 1;
     } else if (playerPrompt === 'Paper' && playArray === 'Paper') {
