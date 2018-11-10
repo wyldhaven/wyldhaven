@@ -35,10 +35,8 @@ let computerScore = 0;
 
 function game() {
   playerScore = 0;
-  console.log('Initial Player Score = ' + playerScore);
   computerScore = 0;
-  console.log('Initial Computer Score = ' + computerScore);
-
+  console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
   do {
   let playerPrompt = prompt('Rock, Paper, or Scissors?');
@@ -74,7 +72,7 @@ function game() {
     }
 
     alert('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-
+    console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
   } else {
     alert('You must choose between Rock, Paper, or Scissors!' );
@@ -82,7 +80,7 @@ function game() {
   }
 
 } while ( playerScore <= 4 && computerScore <= 4 );
-console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+
 
 }
 
