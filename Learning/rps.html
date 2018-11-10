@@ -80,13 +80,11 @@ function game() {
 
 }
 
-if (computerScore == 5 || playerScore == 5) {
-  alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-} else {
 game();
-}
 
 } while ( playerScore <= 4 && computerScore <= 4 );
+
+alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
 
 
