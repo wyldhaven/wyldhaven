@@ -29,10 +29,13 @@ function playerchoiceTrue() {
   let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
 }
 
+let playerScore = 0;
+let computerScore = 0;
+
 function game() {
-  let playerScore = 0;
+  playerScore = 0;
   console.log('Initial Player Score = ' + playerScore);
-  let computerScore = 0;
+  computerScore = 0;
   console.log('Initial Computer Score = ' + computerScore);
 
 
@@ -81,11 +84,11 @@ function game() {
 
 }
 
-// if (computerScore >= 5 || playerScore >= 5) {
-//   alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-// } else {
+if (computerScore >= 5 || playerScore >= 5) {
+  alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+} else {
 game();
-//}
+}
 
 
 
