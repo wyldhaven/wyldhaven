@@ -39,7 +39,7 @@ function game() {
   computerScore = 0;
   console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
-  //do {
+  do {
   let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
   if (playerPrompt === 'Rock' || playerPrompt === 'Paper' || playerPrompt === 'Scissors') {
@@ -80,7 +80,7 @@ function game() {
     console.log('player incorrect choice = ' + playerPrompt);
   }
 
-//} while ( playerScore <= 4 && computerScore <= 4 );
+} while ( playerScore <= 4 && computerScore <= 4 );
 
 
 }
