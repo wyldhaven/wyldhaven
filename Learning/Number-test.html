@@ -44,9 +44,10 @@ let states = ['Illinois', 'Wisconsin', 'Marrakech'];
 states[2] = 'Illinois';
 
 window.onload = function() {
-  document.getElementById("state").innerHTML = states[2];
+  states.push('Apple');
+  document.getElementById("state").innerHTML = states[3];
   console.log(states.length);
-  
+
 }
 
   let input = document.getElementById("age-input");
