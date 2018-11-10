@@ -8,10 +8,12 @@
 let playerScore;
 let computerScore;
 
-//do {
+
 
 let rpsArray = ['rock' , 'paper' , 'scissors'];
 console.log('rpsArray = ' + rpsArray);
+
+//do {
 
 let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
@@ -34,6 +36,7 @@ function playerchoiceTrue() {
   console.log('computerChoice = ' + playArray);
   let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
 }
+
 
 function game() {
   playerScore = 0;
@@ -82,12 +85,12 @@ function game() {
 
 }
 
-if (computerScore >= 4 || playerScore >= 4) {
-  alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-} else {
-game();
-console.log('Game over score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-}
+// if (computerScore >= 4 || playerScore >= 4) {
+//   alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+// } else {
+// game();
+// console.log('Game over score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+// }
 
 //} while ( playerScore <= 4 && computerScore <= 4 );
 
