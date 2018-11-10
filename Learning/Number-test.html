@@ -156,11 +156,12 @@ let cityPara = document.querySelector('.citydisplay');
 
 cityBtn.addEventListener('click', function() {
   let searchName = cityInput.value;
-  //cityInput.value = '';
+  cityInput.value = '';
   cityInput.focus();
 
   for (i = 0; i < cityOptions.length; i++) {
-    if (cityOptions[i] === searchName ) {
+    let choice = cityOptions[i];
+    if (choice === searchName ) {
       cityPara.textContent = searchName + ' is a serviced city. Congrats!';
     } else {
       cityPara.textContent = searchName + ' is not a serviced city. Sorry!';
