@@ -25,7 +25,7 @@
 
 <p>The office is currently <b><span id="office"></span></b></p>
 
-<p>State and country: <span id="state"></span>, USA</p>
+<p>Are you in <span id="state"></span>, USA?</p>
 
 <p><span id="monthly-added"></span></p>
 
@@ -40,14 +40,21 @@
 
 <script> //timeout function
 
-let states = ['Illinois', 'Wisconsin', 'Marrakech'];
+let states = ['Illinois', 'Wisconsin', 'New York', 'Boston', 'California'];
 
 window.onload = function() {
-  console.log(states.length);
-  states.splice(1, 0, 'ILSTU', 'UW')
-  document.getElementById("state").innerHTML = states[2];
-  console.log(states);
-  console.log(states.length);
+  let statesSentence = document.getElementById("state").innerHTML = 'or ';
+  let info;
+
+  for (let i = 0; i < states.length; i++; ) {
+    if (i === states.length ) {
+      info = states[i];
+    } else {
+      info = states[i] + statesSentence + ' ';
+    }
+  }
+
+  document.getElementById("state").innerHTML = info;
 
 }
 
