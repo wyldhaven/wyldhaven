@@ -40,8 +40,11 @@
 
 <script> //timeout function
 
-let statePick = ['Illinois', 'Wisconsin', 'New York']
-document.getElementById("state").innerHTML = statePick(2);
+let states = ['Illinois', 'Wisconsin', 'New York']
+
+let statePick = function() {
+  document.getElementById("state").innerHTML = states(2);
+}
 
   let input = document.getElementById("age-input");
   let insPlan = document.getElementById("agePlan");
