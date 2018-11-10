@@ -5,6 +5,8 @@
 
 <script>
 
+do {
+
 let rpsArray = ['rock' , 'paper' , 'scissors'];
 console.log('rpsArray = ' + rpsArray);
 
@@ -13,12 +15,10 @@ let playArray = [Math.floor(Math.random() * rpsArray.length )];
 function computerPlay() {
   console.log('Random Choice = ' + playArray);
   return playArray;
-  console.log('Random Choice = ' + playArray);
 }
 
 function playerchoiceTrue() {
   computerPlay();
-  console.log('computerChoice = ' + playArray);
 
   if (playArray == '0') {
     playArray = 'Rock';
@@ -40,7 +40,6 @@ function game() {
   computerScore = 0;
   console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
-  //do {
   let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
   if (playerPrompt === 'Rock' || playerPrompt === 'Paper' || playerPrompt === 'Scissors') {
@@ -81,9 +80,6 @@ function game() {
     console.log('player incorrect choice = ' + playerPrompt);
   }
 
-//} while ( playerScore <= 4 && computerScore <= 4 );
-
-
 }
 
 if (computerScore >= 4 || playerScore >= 4) {
@@ -92,6 +88,8 @@ if (computerScore >= 4 || playerScore >= 4) {
 game();
 console.log('Gave over score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 }
+
+} while ( playerScore <= 4 && computerScore <= 4 );
 
 
 
