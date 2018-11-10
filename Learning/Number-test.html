@@ -44,17 +44,15 @@ let states = ['Illinois', 'Wisconsin', 'New York', 'Boston', 'California'];
 
 window.onload = function() {
   let statesSentence = document.getElementById("state").innerHTML = ' or ';
-  let info;
-  console.log(info);
 
-  for (let i = 0; i < states.length; i++ ) {
+  for (let i = 0; i <= states.length; i++ ) {
 
     console.log(i);
     if (i === states.length ) {
-      info += states[i];
+      let info += states[i];
       console.log('if ' + info);
     } else {
-      info += states[i] + statesSentence + ' ';
+      let info += states[i] + statesSentence + ' ';
       console.log('else ' + info);
     }
   }
