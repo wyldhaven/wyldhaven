@@ -41,12 +41,11 @@
 <script> //timeout function
 
 let states = ['Illinois', 'Wisconsin', 'Marrakech'];
-states[2] = 'Illinois';
+states[2] = 'Poo poo';
 
 window.onload = function() {
   states.push('Apple');
-  document.getElementById("state").innerHTML = states[3];
-  console.log(Array.isArray(states));
+  document.getElementById("state").innerHTML = states.toString();
 
 }
 
