@@ -45,6 +45,8 @@ states[2] = 'Illinois';
 
 window.onload = function() {
   document.getElementById("state").innerHTML = states[2];
+  console.log(states.length);
+  
 }
 
   let input = document.getElementById("age-input");
@@ -84,7 +86,6 @@ function calculate() {
   let pretotal = payment * INTEREST;
   let total = (+pretotal + +payment) * amounts;
   let date = new Date();
-  console.log(typeof amounts);
 
 
   document.getElementById("rounded-number").innerHTML = total.toFixed(0);
