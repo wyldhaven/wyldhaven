@@ -25,7 +25,7 @@
 
 <p>The office is currently <b><span id="office"></span></b></p>
 
-<p>Are you in <span id="state"></span>, USA?</p>
+<p><span id="state"></span>, USA?</p>
 
 <p><span id="monthly-added"></span></p>
 
@@ -44,15 +44,16 @@ let states = ['Illinois', 'Wisconsin', 'New York', 'Boston', 'California'];
 
 window.onload = function() {
   let statesSentence = document.getElementById("state").innerHTML = ' or ';
+  let info = 'Are you in ';
 
   for (let i = 0; i <= states.length; i++ ) {
 
     console.log(i);
     if (i === states.length ) {
-      let info += states[i];
+      info += states[i];
       console.log('if ' + info);
     } else {
-      let info += states[i] + statesSentence + ' ';
+      info += states[i] + statesSentence + ' ';
       console.log('else ' + info);
     }
   }
