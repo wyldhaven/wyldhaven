@@ -156,16 +156,18 @@ let cityPara = document.querySelector("citydisplay");
 
 cityBtn.addEventListener('click', function() {
   let searchName = cityInput.value;
-  //cityInput.value = '';
+  cityInput.value = '';
   cityInput.focus();
 
-  for (i = 0; i < cityOptions.length; i++) {
-    if (cityOptions[i] === searchName ) {
-      cityPara.textContent = searchName + ' is a serviced city. Congrats!';
-    } else {
-      cityPara.textContent = searchName + ' is not a serviced city. Sorry!';
-    }
-  }
+  cityPara.textContent = Test;
+
+  // for (i = 0; i < cityOptions.length; i++) {
+  //   if (cityOptions[i] === searchName ) {
+  //     cityPara.textContent = searchName + ' is a serviced city. Congrats!';
+  //   } else {
+  //     cityPara.textContent = searchName + ' is not a serviced city. Sorry!';
+  //   }
+  // }
 
 
 });
