@@ -53,10 +53,10 @@ function game() {
         alert('Rock beats Scissors! You win a point');
         playerScore = playerScore + 1;
     } else if (playerPrompt === 'Paper' && playArray === 'Paper') {
-        alert('Paper covers Rock! You win a point');
-        playerScore = playerScore + 1;
-    } else if (playerPrompt === 'Paper' && playArray === 'Paper') {
         alert('Paper to Paper is a Tie! No points awarded');
+    } else if (playerPrompt === 'Paper' && playArray === 'Rock') {
+        alert('Paper covers Rock! Yay!');
+        playerScore = playerScore + 1;
     } else if (playerPrompt === 'Paper' && playArray === 'Scissors') {
         alert('Scissors cut Paper! Computer wins a point');
         computerScore = computerScore + 1;
