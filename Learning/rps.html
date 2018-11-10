@@ -5,15 +5,8 @@
 
 <script>
 
-let playerScore;
-let computerScore;
-
-
-
 let rpsArray = ['rock' , 'paper' , 'scissors'];
 console.log('rpsArray = ' + rpsArray);
-
-//do {
 
 let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
@@ -39,8 +32,8 @@ function playerchoiceTrue() {
 
 
 function game() {
-  playerScore = 0;
-  computerScore = 0;
+  let playerScore = 0;
+  let computerScore = 0;
   console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
   let playerPrompt = prompt('Rock, Paper, or Scissors?');
@@ -84,6 +77,8 @@ function game() {
   }
 
 }
+
+game();
 
 // if (computerScore >= 4 || playerScore >= 4) {
 //   alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
