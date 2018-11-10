@@ -44,8 +44,9 @@ let states = ['Illinois', 'Wisconsin', 'Marrakech'];
 states[2] = 'Poo poo';
 
 window.onload = function() {
-  states.push('Apple');
-  document.getElementById("state").innerHTML = states.join(', ');
+  states.pop(2);
+  document.getElementById("state").innerHTML = states[1];
+  console.log(states.length);
 
 }
 
