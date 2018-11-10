@@ -5,6 +5,9 @@
 
 <script>
 
+let playerScore = 0;
+let computerScore = 0;
+
 do {
 
 let rpsArray = ['rock' , 'paper' , 'scissors'];
@@ -31,9 +34,6 @@ function playerchoiceTrue() {
   console.log('computerChoice = ' + playArray);
   let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
 }
-
-let playerScore = 0;
-let computerScore = 0;
 
 function game() {
   playerScore = 0;
@@ -86,7 +86,7 @@ if (computerScore >= 4 || playerScore >= 4) {
   alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 } else {
 game();
-console.log('Gave over score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+console.log('Game over score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 }
 
 } while ( playerScore <= 4 && computerScore <= 4 );
