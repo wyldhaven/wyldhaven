@@ -164,8 +164,9 @@ cityBtn.addEventListener('click', function() {
     console.log(cityOptions[i]);
     console.log(searchName);
 
-    if (choice == searchName ) {
+    if (choice === searchName ) {
       cityPara.textContent = searchName + ' is a serviced city. Congrats!';
+      break;
     } else {
       cityPara.textContent = searchName + ' is not a serviced city. Sorry!';
     }
