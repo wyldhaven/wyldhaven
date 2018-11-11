@@ -36,16 +36,13 @@ function computerPlay() {
   return playArray;
   console.log(playArray);
 
-  if (playArray == '0') {
-      playArray = 'Rock';
-    } else if (playArray == '1') {
-      playArray = 'Paper';
-    } else if (playArray == '2') {
-      playArray = 'Scissors';
-    }
-
-    return playArray;
-    console.log(playArray);
+  // if (playArray == '0') {
+  //     playArray = 'Rock';
+  //   } else if (playArray == '1') {
+  //     playArray = 'Paper';
+  //   } else if (playArray == '2') {
+  //     playArray = 'Scissors';
+  //   }
 }
 
 // function playerchoiceTrue() {
@@ -67,16 +64,17 @@ function computerPlay() {
 function gameRock() {
 
   computerPlay();
+  console.log(playArray);
 
 
     //let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
-    if (playArray === 'Rock') {
+    if (playArray === '1') {
         alert('Rock to Rock is a Tie! No points awarded');
-    } else if (playArray === 'Paper') {
+    } else if (playArray === '2') {
         alert('Paper covers Rock! Computer wins a point');
         computerScore = computerScore + 1;
-    } else if (playArray === 'Scissors') {
+    } else if (playArray === '3') {
         alert('Rock beats Scissors! You win a point');
         playerScore = playerScore + 1;
     }
@@ -92,12 +90,12 @@ function gamePaper() {
 
     //let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
-    if (playArray === 'Paper') {
+    if (playArray === '2') {
         alert('Paper to Paper is a Tie! No points awarded');
-    } else if (playArray === 'Rock') {
+    } else if (playArray === '1') {
         alert('Paper covers Rock! Yay!');
         playerScore = playerScore + 1;
-    } else if (playArray === 'Scissors') {
+    } else if (playArray === '3') {
         alert('Scissors cut Paper! Computer wins a point');
         computerScore = computerScore + 1;
     }
@@ -113,13 +111,13 @@ function gameScissors() {
 
     //let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
-    if (playArray === 'Rock') {
+    if (playArray === '1') {
         alert('Rock beats Scissors! Computer wins a point');
         computerScore = computerScore + 1;
-    } else if (playArray === 'Paper') {
+    } else if (playArray === '2') {
         alert('Scissors cut Paper! You win a point');
         playerScore = playerScore + 1;
-    } else if (playArray === 'Scissors') {
+    } else if (playArray === '3') {
         alert('Scissors to Scissors is a Tie! No points awarded');
     }
 
@@ -134,7 +132,7 @@ paperBtn.addEventListener('click', gamePaper);
 scissorsBtn.addEventListener('click', gameScissors);
 
 
-alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+//alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
 
 
