@@ -32,6 +32,8 @@
     </div>
   </div>
 
+  <button id="textbutton">DO IT BITCH</button>
+
   <script>
     var input = document.querySelector('.numberInput');
     var para = document.querySelector('p');
@@ -95,6 +97,13 @@
     colordiv.appendChild(innerpara);
 
   }
+
+  let newButton = document.getElementsByName('textbutton');
+
+  newButton.addEventListener(click, function() {
+    alert('You made it happen');
+
+  });
 
 
   </script>
