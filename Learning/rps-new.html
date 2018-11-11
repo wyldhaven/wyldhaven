@@ -28,11 +28,13 @@ function playArray(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
+function computerPlay() {
+  playArray(3);
+  console.log(playArray);
+}
+
 
 function gameRock() {
-
-  return playArray(3);
-  console.log(playArray);
 
     if (playArray === '0') {
         alert('Rock to Rock is a Tie! No points awarded');
@@ -43,7 +45,6 @@ function gameRock() {
         alert('Rock beats Scissors! You win a point');
         playerScore = playerScore + 1;
     }
-
 
 }
 
