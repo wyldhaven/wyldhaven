@@ -155,7 +155,7 @@ let cityBtn = document.getElementById("citysearch");
 let cityPara = document.querySelector('.citydisplay');
 
 cityBtn.addEventListener('click', function() {
-  let searchName = cityInput.value.charAt(0).toUpperCase();
+  let searchName = cityInput.value.toUpperCase();
   cityInput.value = '';
   cityInput.focus();
   console.log(searchName);
