@@ -98,12 +98,13 @@
 
   }
 
+  function clickfunction() {
+    alert('You made it happen');
+  }
+
   let newButton = document.getElementsByName('textbutton');
 
-  newButton.addEventListener(click, function() {
-    alert('You made it happen');
-
-  });
+  newButton.addEventListener('click', clickfunction);
 
 
   </script>
