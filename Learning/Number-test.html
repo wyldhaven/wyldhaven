@@ -89,8 +89,10 @@ window.onload = function() {
 
     if (age == 21) {
       pootest.style.cssText = 'background-color: red;';
+      pootest.classList.add('new-class');
     } else {
       pootest.style.cssText = '';
+      pootest.classList.remove('new-class');
     }
 
     poodiv.appendChild(pootest);
