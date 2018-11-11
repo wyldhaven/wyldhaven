@@ -29,7 +29,6 @@ let contentPlay = document.getElementById('contentPlay');
 let contentScore = document.getElementById('contentScore');
 console.log('The initial score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
-//do {
 
 let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
@@ -72,12 +71,12 @@ function gameRock() {
 
     //let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
-    if (playerPrompt === 'Rock' && playArray === 'Rock') {
+    if (playArray === 'Rock') {
         alert('Rock to Rock is a Tie! No points awarded');
-    } else if (playerPrompt === 'Rock' && playArray === 'Paper') {
+    } else if (playArray === 'Paper') {
         alert('Paper covers Rock! Computer wins a point');
         computerScore = computerScore + 1;
-    } else if (playerPrompt === 'Rock' && playArray === 'Scissors') {
+    } else if (playArray === 'Scissors') {
         alert('Rock beats Scissors! You win a point');
         playerScore = playerScore + 1;
     }
@@ -93,12 +92,12 @@ function gamePaper() {
 
     //let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
-    if (playerPrompt === 'Paper' && playArray === 'Paper') {
+    if (playArray === 'Paper') {
         alert('Paper to Paper is a Tie! No points awarded');
-    } else if (playerPrompt === 'Paper' && playArray === 'Rock') {
+    } else if (playArray === 'Rock') {
         alert('Paper covers Rock! Yay!');
         playerScore = playerScore + 1;
-    } else if (playerPrompt === 'Paper' && playArray === 'Scissors') {
+    } else if (playArray === 'Scissors') {
         alert('Scissors cut Paper! Computer wins a point');
         computerScore = computerScore + 1;
     }
@@ -114,13 +113,13 @@ function gameScissors() {
 
     //let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
-    if (playerPrompt === 'Scissors' && playArray === 'Rock') {
+    if (playArray === 'Rock') {
         alert('Rock beats Scissors! Computer wins a point');
         computerScore = computerScore + 1;
-    } else if (playerPrompt === 'Scissors' && playArray === 'Paper') {
+    } else if (playArray === 'Paper') {
         alert('Scissors cut Paper! You win a point');
         playerScore = playerScore + 1;
-    } else if (playerPrompt === 'Scissors' && playArray === 'Scissors') {
+    } else if (playArray === 'Scissors') {
         alert('Scissors to Scissors is a Tie! No points awarded');
     }
 
@@ -134,7 +133,6 @@ rockBtn.addEventListener('click', gameRock);
 paperBtn.addEventListener('click', gamePaper);
 scissorsBtn.addEventListener('click', gameScissors);
 
-//} while ( playerScore <= 4 && computerScore <= 4 );
 
 alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
