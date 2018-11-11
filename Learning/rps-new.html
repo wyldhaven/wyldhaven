@@ -2,6 +2,18 @@
 <html>
 <body>
 
+<h1>Rock, Paper, Scissors</h1>
+
+<button id="rockBtn">Rock</button>
+
+<button id="paperBtn">Paper</button>
+
+<button id="scissorsBtn">Scissors</button>
+
+<div id="contentPlay"></div>
+
+<div id="contentScore"></div>
+
 
 <script>
 
@@ -10,39 +22,52 @@ console.log('rpsArray = ' + rpsArray);
 
 let playerScore = 0;
 let computerScore = 0;
+let rockBtn = document.getElementById('rockBtn');
+let paperBtn = document.getElementById('paperBtn');
+let scissorsBtn = document.getElementById('scissorsBtn');
+let contentPlay = document.getElementById('contentPlay');
+let contentPlay = document.getElementById('contentScore');
 console.log('The initial score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
-do {
+//do {
 
 let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
 function computerPlay() {
   return playArray;
-}
-
-function playerchoiceTrue() {
-  computerPlay();
 
   if (playArray == '0') {
-    playArray = 'Rock';
-  } else if (playArray == '1') {
-    playArray = 'Paper';
-  } else if (playArray == '2') {
-    playArray = 'Scissors';
-  }
+      playArray = 'Rock';
+    } else if (playArray == '1') {
+      playArray = 'Paper';
+    } else if (playArray == '2') {
+      playArray = 'Scissors';
+    }
 
-  console.log('computerChoice = ' + playArray);
-  let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
+    return playArray;
 }
 
+// function playerchoiceTrue() {
+//   computerPlay();
+//
+//   if (playArray == '0') {
+//     playArray = 'Rock';
+//   } else if (playArray == '1') {
+//     playArray = 'Paper';
+//   } else if (playArray == '2') {
+//     playArray = 'Scissors';
+//   }
+//
+//   console.log('computerChoice = ' + playArray);
+//   let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
+// }
 
-function game() {
 
-  let playerPrompt = prompt('Rock, Paper, or Scissors?');
+function gameRock() {
 
-  if (playerPrompt === 'Rock' || playerPrompt === 'Paper' || playerPrompt === 'Scissors') {
-    console.log('player choice = ' + playerPrompt);
-    playerchoiceTrue();
+  computerPlay();
+
+    //let playerPrompt = prompt('Rock, Paper, or Scissors?');
 
     if (playerPrompt === 'Rock' && playArray === 'Rock') {
         alert('Rock to Rock is a Tie! No points awarded');
@@ -52,7 +77,20 @@ function game() {
     } else if (playerPrompt === 'Rock' && playArray === 'Scissors') {
         alert('Rock beats Scissors! You win a point');
         playerScore = playerScore + 1;
-    } else if (playerPrompt === 'Paper' && playArray === 'Paper') {
+    }
+
+    alert('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+    console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+
+}
+
+function gamePaper() {
+
+  computerPlay();
+
+    //let playerPrompt = prompt('Rock, Paper, or Scissors?');
+
+    if (playerPrompt === 'Paper' && playArray === 'Paper') {
         alert('Paper to Paper is a Tie! No points awarded');
     } else if (playerPrompt === 'Paper' && playArray === 'Rock') {
         alert('Paper covers Rock! Yay!');
@@ -60,7 +98,20 @@ function game() {
     } else if (playerPrompt === 'Paper' && playArray === 'Scissors') {
         alert('Scissors cut Paper! Computer wins a point');
         computerScore = computerScore + 1;
-    } else if (playerPrompt === 'Scissors' && playArray === 'Rock') {
+    }
+
+    alert('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+    console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
+
+}
+
+function gameScissors() {
+
+  computerPlay();
+
+    //let playerPrompt = prompt('Rock, Paper, or Scissors?');
+
+    if (playerPrompt === 'Scissors' && playArray === 'Rock') {
         alert('Rock beats Scissors! Computer wins a point');
         computerScore = computerScore + 1;
     } else if (playerPrompt === 'Scissors' && playArray === 'Paper') {
@@ -73,20 +124,16 @@ function game() {
     alert('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
     console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
-  } else {
-    alert('You must choose between Rock, Paper, or Scissors!' );
-    console.log('player incorrect choice = ' + playerPrompt);
-  }
-
 }
 
-game();
 
-} while ( playerScore <= 4 && computerScore <= 4 );
+rockBtn.addEventListener('click', gameRock);
+paperBtn.addEventListener('click', gamePaper);
+scissorsBtn.addEventListener('click', gameScissors);
+
+//} while ( playerScore <= 4 && computerScore <= 4 );
 
 alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-
-
 
 
 
