@@ -40,11 +40,12 @@
 
 <hr>
 
+<div class="poodiv">
 <p>Can I be on my parents plan?</p>
 
 <input type="number" id="age-input">
 <p id="agePlan"></p>
-
+</div>
 
 <p id="timer">600</p>
 
@@ -77,6 +78,7 @@ window.onload = function() {
   let input = document.getElementById("age-input");
   let insPlan = document.getElementById("agePlan");
   let pootest = document.createElement('p');
+  let poodiv = document.querySelector('.poodiv');
 
   input.onchange = function() {
     let age = input.value;
@@ -85,7 +87,7 @@ window.onload = function() {
     insPlan.innerHTML = parentsPlan;
     pootest.innerHTML = 'Poo Butter!';
 
-    document.insertBefore(pootest, input);
+    poodiv.insertBefore(pootest, input);
   }
 
 
