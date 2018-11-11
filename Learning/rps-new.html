@@ -24,9 +24,22 @@ let scissorsBtn = document.getElementById('scissorsBtn');
 let contentPlay = document.getElementById('contentPlay');
 let contentScore = document.getElementById('contentScore');
 
-
 function gameRock() {
-  contentPlay.innerHtml = '<p>Player Chooses Rock</p>';
+  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+
+  function computerPlay() {
+    return playArray;
+  }
+
+  computerPlay();
+
+  if (playArray == 0) {
+    contentPlay.textContent = 'Rock to Rock is a tie';
+  } else if (playArray == 1) {
+    contentPlay.textContent = 'Paper beats Rock';
+  } else if (playArray == 2) {
+    contentPlay.textContent = 'Rock Beats Scissors';
+  }
 }
 
 function gamePaper() {
