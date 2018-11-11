@@ -17,123 +17,31 @@
 
 <script>
 
-let rpsArray = ['rock' , 'paper' , 'scissors'];
-console.log('rpsArray = ' + rpsArray);
-
-let playerScore = 0;
-let computerScore = 0;
 let rockBtn = document.getElementById('rockBtn');
 let paperBtn = document.getElementById('paperBtn');
 let scissorsBtn = document.getElementById('scissorsBtn');
+
 let contentPlay = document.getElementById('contentPlay');
 let contentScore = document.getElementById('contentScore');
-console.log('The initial score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-
-
-let playArray = [Math.floor(Math.random() * rpsArray.length )];
-console.log(playArray + 'first playArray');
-
-function computerPlay() {
-  return playArray;
-  console.log('test');
-
-  // if (playArray == '0') {
-  //     playArray = 'Rock';
-  //   } else if (playArray == '1') {
-  //     playArray = 'Paper';
-  //   } else if (playArray == '2') {
-  //     playArray = 'Scissors';
-  //   }
-}
-
-// function playerchoiceTrue() {
-//   computerPlay();
-//
-//   if (playArray == '0') {
-//     playArray = 'Rock';
-//   } else if (playArray == '1') {
-//     playArray = 'Paper';
-//   } else if (playArray == '2') {
-//     playArray = 'Scissors';
-//   }
-//
-//   console.log('computerChoice = ' + playArray);
-//   let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
-// }
 
 
 function gameRock() {
-
-  computerPlay();
-  console.log(playArray);
-
-
-    //let playerPrompt = prompt('Rock, Paper, or Scissors?');
-
-    if (playArray === '0') {
-        alert('Rock to Rock is a Tie! No points awarded');
-    } else if (playArray === '1') {
-        alert('Paper covers Rock! Computer wins a point');
-        computerScore = computerScore + 1;
-    } else if (playArray === '2') {
-        alert('Rock beats Scissors! You win a point');
-        playerScore = playerScore + 1;
-    }
-
-    alert('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-    console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-
+  contentPlay.innerHtml = '<p>Player Chooses Rock</p>';
 }
 
 function gamePaper() {
-
-  computerPlay();
-
-    //let playerPrompt = prompt('Rock, Paper, or Scissors?');
-
-    if (playArray === '1') {
-        alert('Paper to Paper is a Tie! No points awarded');
-    } else if (playArray === '0') {
-        alert('Paper covers Rock! Yay!');
-        playerScore = playerScore + 1;
-    } else if (playArray === '2') {
-        alert('Scissors cut Paper! Computer wins a point');
-        computerScore = computerScore + 1;
-    }
-
-    alert('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-    console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-
+  contentPlay.textContent = 'Player Chooses Paper';
 }
 
 function gameScissors() {
-
-  computerPlay();
-
-    //let playerPrompt = prompt('Rock, Paper, or Scissors?');
-
-    if (playArray === '0') {
-        alert('Rock beats Scissors! Computer wins a point');
-        computerScore = computerScore + 1;
-    } else if (playArray === '1') {
-        alert('Scissors cut Paper! You win a point');
-        playerScore = playerScore + 1;
-    } else if (playArray === '2') {
-        alert('Scissors to Scissors is a Tie! No points awarded');
-    }
-
-    alert('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-    console.log('The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
-
+  contentPlay.textContent = 'Player Chooses Scissors';
 }
+
 
 
 rockBtn.addEventListener('click', gameRock);
 paperBtn.addEventListener('click', gamePaper);
 scissorsBtn.addEventListener('click', gameScissors);
-
-
-//alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
 
 
