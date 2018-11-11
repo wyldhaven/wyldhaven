@@ -45,15 +45,52 @@ function gameRock() {
     playerScore = playerScore + 1;
   }
 
-  contentScore.textContent = 'Computer: ' + computerScore + '! Player: ' + playerScore;
+  contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
 }
 
 function gamePaper() {
-  contentPlay.textContent = 'Player Chooses Paper';
+  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+
+  function computerPlay() {
+    return playArray;
+  }
+
+  computerPlay();
+
+  if (playArray == '0') {
+    contentPlay.textContent = 'Paper beats Rock';
+    playerScore = playerScore + 1;
+  } else if (playArray == '1') {
+    contentPlay.textContent = 'Paper to Paper is a tie';
+  } else if (playArray == '2') {
+    contentPlay.textContent = 'Scissors Beat Paper';
+    computerScore = computerScore + 1;
+
+  }
+
+  contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
 }
 
 function gameScissors() {
-  contentPlay.textContent = 'Player Chooses Scissors';
+  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+
+  function computerPlay() {
+    return playArray;
+  }
+
+  computerPlay();
+
+  if (playArray == '0') {
+    contentPlay.textContent = 'Rock beats Scissors';
+    computerScore = computerScore + 1;
+  } else if (playArray == '1') {
+    contentPlay.textContent = 'Scissors beat Paper';
+    playerScore = playerScore + 1;
+  } else if (playArray == '2') {
+    contentPlay.textContent = 'Scissors to Scissors is a tie';
+  }
+
+  contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
 }
 
 
