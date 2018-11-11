@@ -28,9 +28,6 @@ let contentScore = document.getElementById('contentScore');
 //console.log('The initial score is: Computer = ' + computerScore + ' , You = ' + playerScore);
 
 
-let playArray = [Math.floor(Math.random() * rpsArray.length )];
-console.log(playArray + 'first playArray');
-
 function computerPlay() {
   return playArray;
   console.log('test');
@@ -43,21 +40,6 @@ function computerPlay() {
   //     playArray = 'Scissors';
   //   }
 }
-
-// function playerchoiceTrue() {
-//   computerPlay();
-//
-//   if (playArray == '0') {
-//     playArray = 'Rock';
-//   } else if (playArray == '1') {
-//     playArray = 'Paper';
-//   } else if (playArray == '2') {
-//     playArray = 'Scissors';
-//   }
-//
-//   console.log('computerChoice = ' + playArray);
-//   let computerPrompt = alert('Computer chooses ' + '\"' + playArray + '\"');
-// }
 
 
 function gameRock() {
@@ -126,9 +108,18 @@ function gameScissors() {
 }
 
 
-rockBtn.addEventListener('click', gameRock);
-paperBtn.addEventListener('click', gamePaper);
-scissorsBtn.addEventListener('click', gameScissors);
+rockBtn.addEventListener('click', function() {
+  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+  gameRock();
+});
+paperBtn.addEventListener('click', function() {
+  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+  gamePaper();
+});
+scissorsBtn.addEventListener('click', function() {
+  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+  gameScissors();
+});
 
 
 //alert('GAME OVER! The score is: Computer = ' + computerScore + ' , You = ' + playerScore);
