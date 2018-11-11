@@ -1,96 +1,198 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Function library example</title>
-  <style>
-    input {
-      font-size: 2em;
-      margin: 10px 1px 0;
-    }
-  </style>
-</head>
 <body>
 
-  <input class="numberInput" type="text">
-  <p></p>
+<label for="theme">Select color: </label>
+<select id="theme">
+  <option value="">-Select one-</option>
+  <option value="blue">Blue</option>
+  <option value="red">Red</option>
+</select>
 
-  <br>
-  <br>
-  <br>
-  <hr>
-  <br>
-  <br>
-  <br>
+<h2>Enter your monthly payment and calculate your 12 month interest total</h2>
 
-  <h1>
-    THE TITLE OF YOUR WEBPAGE
-  </h1>
-  <div id="container">
-  	<div class="content">
-      <p>Glorious Content</p>
-    </div>
-  </div>
+<input type="number" id="monthly-input">
 
-  <script>
-    var input = document.querySelector('.numberInput');
-    var para = document.querySelector('p');
+<button onclick="calculate()">Calculate</button>
 
-    function squared(num) {
-      return num * num;
+<p>Your total payment = <span id="rounded-number"></span>.</p>
+
+<p>Your exact payment = <span id="exact-number"></span>.</p>
+
+<p>You are <b><span id="insurance"></span></b> by your insurance as of <span id="currentday"></span>.</p>
+
+<p>If you have questions you can call us at 815-600-6611 from 9am-5pm, Monday - Friday</p>
+
+<p>The office is currently <b><span id="office"></span></b></p>
+
+<hr>
+
+
+<p><span id="state"></span></p>
+
+<label for="city-input">Search for your city: </label>
+<input type="text" id="city-input">
+
+<button id="citysearch">Search</button>
+
+<p class="citydisplay"></p>
+
+
+<hr>
+
+<div class="poodiv">
+<p>Can I be on my parents plan?</p>
+
+<input type="number" id="age-input">
+<p id="agePlan"></p>
+</div>
+
+<p id="timer">600</p>
+
+<script> //timeout function
+
+let domtest = document.querySelectorAll('p');
+console.log(domtest);
+
+
+let states = ['Illinois', 'Wisconsin', 'New York', 'Mass', 'California'];
+
+window.onload = function() {
+  let statesSentence = document.getElementById("state").innerHTML = ' or ';
+  let info = 'Are you in ';
+
+  for (let i = 0; i < states.length; i++ ) {
+
+    if (i === states.length - 1 ) {
+      info += states[i] + ', USA?';
+    } else {
+      info += states[i] + statesSentence + ' ';
+    }
+  }
+
+  document.getElementById("state").innerHTML = info;
+  console.log(info);
+
+}
+
+  let input = document.getElementById("age-input");
+  let insPlan = document.getElementById("agePlan");
+  let pootest = document.createElement('p');
+  let poodiv = document.querySelector('.poodiv');
+
+  input.onchange = function() {
+    let age = input.value;
+    console.log(age);
+    let parentsPlan = (age >= 18) ? "Yes" : "No";
+    insPlan.innerHTML = parentsPlan;
+    pootest.textContent = 'Poo Butter!';
+
+    if (age == 21) {
+      pootest.style.cssText = 'background-color: red;';
+      pootest.classList.add('new-class');
+    } else {
+      pootest.style.cssText = '';
+      pootest.classList.remove('new-class');
     }
 
-    function cubed(num) {
-      return num * num * num;
-    }
-
-    function factorial(num) {
-      let x = num;
-      while (x > 1) {
-        num *= x-1;
-        x--;
-      }
-      return num;
-    }
-
-    input.onchange = function() {
-      let num = input.value;
-      console.log(num);
-
-      if (isNaN(num)) {
-        para.textContent = 'You need to enter a number, idiot!'
-      } else {
-        para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                           num + ' cubed is ' + cubed(num) + '. ' +
-                           num + ' factorial is ' + factorial(num) + '. ';
-      }
-    }
-
-  </script>
-
-  <script>
-
-  let content = document.querySelector('.content');
-  let newpara = document.createElement('p');
-  let newheader = document.createElement('h3');
-  let colordiv = document.createElement('div');
-  let newheadone = document.createElement('h1');
-  let innerpara = document.createElement('p');
-
-  window.onload = function() {
-    newpara.textContent = 'Hey im red';
-    content.appendChild(newpara);
-    newheader.textContent = 'I\'m blue h3';
-    content.appendChild(newheader);
-    content.appendChild(colordiv);
-    newheadone.textContent = 'I\'m in a div';
-    colordiv.appendChild(newheadone);
-    innerpara.textContent = '#metoo';
-    colordiv.appendChild(innerpara);
-
+    poodiv.appendChild(pootest);
   }
 
 
-  </script>
+
+  let timeleft = 600;
+
+  let intervalTimer = setInterval(function() {
+
+    document.onmousemove = function() {
+      timeleft = 600;
+      document.getElementById('timer').innerHTML = timeleft;
+    }
+
+    --timeleft;
+    document.getElementById('timer').innerHTML = timeleft;
+
+    if (timeleft <= 0) {
+      document.getElementById('timer').innerHTML = 0;
+      alert("Please keep this session active");
+    }
+  }, 1000);
+
+function calculate() {
+  let amounts = 12;
+  const INTEREST = .12;
+  let payment = document.getElementById("monthly-input").value;
+  let pretotal = payment * INTEREST;
+  let total = (+pretotal + +payment) * amounts;
+  let date = new Date();
+
+
+  document.getElementById("rounded-number").innerHTML = total.toFixed(0);
+  document.getElementById("exact-number").innerHTML = total;
+
+  if (total <= 1400 || total >= 1000000) {
+    document.getElementById("insurance").innerHTML = 'covered';
+    document.getElementById("currentday").innerHTML = date.toLocaleDateString("en-US");
+  } else {
+    document.getElementById("insurance").innerHTML = 'not covered';
+    document.getElementById("currentday").innerHTML = date.toLocaleDateString("en-US");
+  }
+}
+
+let officedate = new Date();
+let officehours = officedate.getHours();
+let officeday = officedate.getDay();
+
+if (officehours >= 8 && officehours <= 16 && officeday >= 1 && officeday <= 5 ) {
+  document.getElementById("office").innerHTML = "open";
+} else {
+  document.getElementById("office").innerHTML = "closed";
+}
+
+let theme = document.getElementById("theme");
+let header = document.querySelector("h2");
+
+function update(textColor) {
+  header.style.color = textColor;
+}
+
+theme.onchange = function() {
+  if (theme.value === 'red') {
+    update('red');
+  } else if (theme.value === 'blue') {
+    update('blue');
+  } else {
+    update('black');
+  }
+}
+
+
+let cityOptions = ['Chicago', 'Madison', 'New York', 'San Franciso', 'Los Angeles', 'Boston'];
+let cityInput = document.getElementById("city-input");
+let cityBtn = document.getElementById("citysearch");
+let cityPara = document.querySelector('.citydisplay');
+
+cityBtn.addEventListener('click', function() {
+  let searchName = cityInput.value;
+  cityInput.value = '';
+  cityInput.focus();
+  console.log(searchName);
+
+  for (i = 0; i < cityOptions.length; i++) {
+    let choice = cityOptions[i];
+
+    if (choice === searchName ) {
+      cityPara.textContent = searchName + ' is a serviced city. Congrats!';
+      break;
+    } else {
+      cityPara.textContent = searchName + ' is not a serviced city. Sorry!';
+    }
+  }
+
+
+});
+
+</script>
+
 </body>
 </html>
