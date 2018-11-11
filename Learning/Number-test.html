@@ -149,13 +149,13 @@ theme.onchange = function() {
 }
 
 
-let cityOptions = ['chicago', 'madison', 'new york', 'san franciso', 'los angeles', 'boston'];
+let cityOptions = ['Chicago', 'Madison', 'New York', 'San Franciso', 'Los Angeles', 'Boston'];
 let cityInput = document.getElementById("city-input");
 let cityBtn = document.getElementById("citysearch");
 let cityPara = document.querySelector('.citydisplay');
 
 cityBtn.addEventListener('click', function() {
-  let searchName = cityInput.value.toLowerCase();
+  let searchName = cityInput.value.charAt(0).toUpperCase();
   cityInput.value = '';
   cityInput.focus();
   console.log(searchName);
