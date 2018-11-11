@@ -17,6 +17,8 @@
 
 <script>
 let rpsArray = ['rock' , 'paper' , 'scissors'];
+let playerScore = 0;
+let computerScore = 0;
 let rockBtn = document.getElementById('rockBtn');
 let paperBtn = document.getElementById('paperBtn');
 let scissorsBtn = document.getElementById('scissorsBtn');
@@ -37,9 +39,13 @@ function gameRock() {
     contentPlay.textContent = 'Rock to Rock is a tie';
   } else if (playArray == '1') {
     contentPlay.textContent = 'Paper beats Rock';
+    computerScore = computerScore + 1;
   } else if (playArray == '2') {
     contentPlay.textContent = 'Rock Beats Scissors';
+    playerScore = playerScore + 1;
   }
+
+  contentScore.textContent = 'Computer: ' + computerScore + '! Player: ' + playerScore;
 }
 
 function gamePaper() {
