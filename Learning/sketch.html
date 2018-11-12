@@ -42,7 +42,8 @@ let allDivs = Array.from(document.querySelectorAll('div:not(.main-container)'));
 console.log(allDivs.length);
 
 for (var i = 0; i < allDivs.length; i++) {
-  allDivs[i].classList.add("hover");
+  allDivs[i].classList.add("selector");
+  console.log(document.querySelector('.selector'))
 }
 
 allDivs.onmouseover = function() {
