@@ -17,18 +17,16 @@ let divs = document.createElement('div');
 let boxAmount = [];
 let setBoxAmount = 16;
 
+for (var i = 0; i < setBoxAmount; i++) {
+  boxAmount.push('1');
+  console.log(boxAmount);
+}
+
 divs.style.cssText = 'border: 1px solid black;';
 
 let createBoxes = mainContainer.appendChild(divs);
 
-let totalBoxes = createBoxes * setBoxAmount;
-console.log(totalBoxes);
-console.log(boxAmount);
 
-boxAmount.forEach(function(totalBoxes) {
-  totalBoxes;
-
-});
 
 </script>
 
