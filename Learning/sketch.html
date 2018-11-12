@@ -42,18 +42,24 @@ console.log(boxSize);
 divs.style.cssText = 'background-color: #ccc; float: left; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
 mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
 
-loop1:
+button.addEventListener('click' , function() {
+  input.value = '';
+  boxAmount = [];
+  boxAmount.push(0);
+
+  document.querySelectorAll('div').forEach(function(el) {
+    el.classList.remove("hover");
+  });
+
+  });
+
 for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   boxAmount.push(i);
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
 
   if (button.clicked == true) {
-    console.log('click');
-    boxAmount = [];
-    boxAmount.push(0);
-    console.log(boxAmount);
-    continue loop1;
+    mainContainer.removeChild(cln);
   }
 }
 
@@ -70,17 +76,7 @@ function poodickfunction(evt) {
   el.classList.add("hover");
 }
 
-button.addEventListener('click' , function() {
-  input.value = '';
-  boxAmount = [];
-  boxAmount.push(0);
-  mainContainer.removeChild(divs);
 
-  document.querySelectorAll('div').forEach(function(el) {
-    el.classList.remove("hover");
-  });
-
-  });
 
 }
 
