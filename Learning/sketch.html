@@ -43,10 +43,11 @@ console.log(allDivs.length);
 
 for (var i = 0; i < allDivs.length; i++) {
   allDivs[i].classList.add("selector");
-  console.log(document.querySelector('.selector'))
 }
 
-allDivs.onmouseover = function() {
+let selectedDivs = document.querySelector('.selector');
+
+selectedDivs.onmouseover = function() {
   allDivs.classList.add("hover");
 }
 
