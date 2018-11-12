@@ -19,9 +19,10 @@ let boxAmount = 16;
 divs.style.cssText = 'border: 1px solid black;';
 
 for (i = 0; i < boxAmount; i++) {
-  mainContainer.innerHTML = 'i';
-  mainContainer.appendChild(divs);
+  mainContainer.appendChild(divs * boxAmount);
   console.log(mainContainer);
+  console.log(boxAmount);
+  console.log(divs);
 }
 
 </script>
