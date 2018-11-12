@@ -41,8 +41,10 @@ console.log(boxAmount);
 let allDivs = Array.from(document.querySelectorAll('div:not(.main-container)'));
 
 allDivs.forEach(function(el) {
-  el.classList.add("hover");
+  el.onmouseover = el.classList.add("hover");
 });
+
+
 //console.log(allDivs.length);
 
 // for (var i = 0; i < allDivs.length; i++) {
