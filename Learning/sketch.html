@@ -38,6 +38,11 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
 
 console.log(boxAmount);
 
+let divAddClass = document.querySelectorAll('div:not(.main-container)');
+
+for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
+  divAddClass.classList.add("hover");
+}
 
 </script>
 
