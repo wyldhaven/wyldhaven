@@ -22,7 +22,6 @@
 
 let mainContainer = document.querySelector('.main-container');
 let divs = document.createElement('div');
-let divAddClass = document.querySelectorAll('div:not(.main-container)');
 let boxAmount = [];
 let setBoxAmount = 16;
 let boxSize = 700 / setBoxAmount;
@@ -36,6 +35,8 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
 }
+
+let divAddClass = document.querySelectorAll('div:not(.main-container)');
 
 console.log(boxAmount);
 
