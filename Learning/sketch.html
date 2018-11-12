@@ -74,6 +74,7 @@ button.addEventListener('click' , function() {
   input.value = '';
   boxAmount = [];
   boxAmount.push(0);
+  mainContainer.removeChild(divs);
 
   document.querySelectorAll('div').forEach(function(el) {
     el.classList.remove("hover");
