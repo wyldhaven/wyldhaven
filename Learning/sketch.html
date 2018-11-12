@@ -30,20 +30,13 @@ console.log(boxSize);
 divs.style.cssText = 'background-color: #ccc; float: left; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
 mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
 
-for (var i = 0; i <= (setBoxAmount * setBoxAmount); i++) {
+for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   boxAmount.push(i);
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
-  divs.classList.add("hover");
 }
 
 console.log(boxAmount);
-
-// let divAddClass = document.querySelectorAll('div:not(.main-container)');
-// console.log(divAddClass);
-//
-//
-// divAddClass.classList.add("hover");
 
 
 </script>
