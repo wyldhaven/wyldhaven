@@ -2,6 +2,14 @@
 <html>
 <body>
 
+<style>
+
+.hover {
+  background-color: grey;
+}
+
+</style>
+
 <div id="main-container">
 
 
@@ -24,9 +32,14 @@ mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; disp
 
 for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   boxAmount.push(i);
-  console.log(boxAmount);
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
+}
+
+console.log(boxAmount);
+
+divs.mouseover = function() {
+  divs.classList.add('hover');
 }
 
 
