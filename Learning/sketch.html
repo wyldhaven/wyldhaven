@@ -53,6 +53,7 @@ button.addEventListener('click' , function() {
 
   });
 
+loop1:
 for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   boxAmount.push(i);
   let cln = divs.cloneNode(true);
@@ -61,6 +62,8 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   button.onclick = function() {
     console.log('click');
     mainContainer.removeChild(cln);
+    boxAmount.push(0);
+    continue loop1;
   };
 }
 
