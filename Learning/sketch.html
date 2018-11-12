@@ -28,11 +28,8 @@
 let button = document.getElementById('thisbuttonsucks');
 let input = document.querySelector('.cell');
 
-let setBoxAmount;
-
 input.onchange = function() {
-  setBoxAmount = input.value;
-}
+  let setBoxAmount = input.value;
 
 let mainContainer = document.querySelector('.main-container');
 let divs = document.createElement('div');
@@ -72,6 +69,8 @@ button.addEventListener('click' , function() {
   });
 
 });
+
+}
 
 //console.log(allDivs.length);
 
