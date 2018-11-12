@@ -63,6 +63,7 @@ function poodickfunction(evt) {
 
 button.addEventListener('click' , function() {
   console.log('click');
+  input.value = '';
 
   document.querySelectorAll('hover').forEach(function(el) {
     el.classList.remove("hover");
