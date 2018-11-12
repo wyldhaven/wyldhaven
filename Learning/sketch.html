@@ -39,19 +39,23 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
 console.log(boxAmount);
 
 let allDivs = Array.from(document.querySelectorAll('div:not(.main-container)'));
-console.log(allDivs.length);
 
-for (var i = 0; i < allDivs.length; i++) {
-  allDivs[i].classList.add("selector");
-}
+allDivs.forEach(function(el) {
+  el.classList.add("hover");
+});
+//console.log(allDivs.length);
 
-document.querySelector('.selector').onmouseover = function() { mouseOver() };
+// for (var i = 0; i < allDivs.length; i++) {
+//   allDivs[i].classList.add("selector");
+// }
 
-
-function mouseOver() {
-  console.log('mouse');
-  document.querySelector('.selector').classList.add("hover");
-}
+// document.querySelector('.selector').onmouseover = function() { mouseOver() };
+//
+//
+// function mouseOver() {
+//   console.log('mouse');
+//   document.querySelector('.selector').classList.add("hover");
+// }
 
 
 </script>
