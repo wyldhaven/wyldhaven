@@ -47,7 +47,8 @@ document.querySelectorAll('div:not(.main-container)').forEach(function(el) {
   el.onmouseover = poodickfunction;
 });
 
-function poodickfunction(el) {
+function poodickfunction(evt) {
+  var el = evt.target;
   el.classList.add("hover");
 }
 
