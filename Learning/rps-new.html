@@ -33,6 +33,7 @@ let contentPlay = document.getElementById('contentPlay');
 let contentScore = document.getElementById('contentScore');
 let computer = document.getElementById('coomputerPlay');
 
+
 function gameRock() {
   let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
@@ -40,7 +41,7 @@ function gameRock() {
     return playArray;
   }
 
-  if (playerScore == 5 && computerScore == 5 ) {
+  if (playerScore <= 4 && computerScore <= 4 ) {
   computerPlay();
   computer.textContent = '';
 
@@ -74,7 +75,7 @@ function gamePaper() {
     return playArray;
   }
 
-  if (playerScore == 5 && computerScore == 5 ) {
+  if (playerScore <= 4 && computerScore <= 4 ) {
   computerPlay();
   computer.textContent = '';
 
@@ -108,7 +109,7 @@ function gameScissors() {
     return playArray;
   }
 
-  if (playerScore == 5 && computerScore == 5 ) {
+  if (playerScore <= 4 && computerScore <= 4 ) {
   computerPlay();
   computer.textContent = '';
 
