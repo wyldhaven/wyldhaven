@@ -34,8 +34,6 @@ let contentScore = document.getElementById('contentScore');
 let computer = document.getElementById('coomputerPlay');
 
 
-mainGame = function() {
-
 function gameRock() {
   let playArray = [Math.floor(Math.random() * rpsArray.length )];
 
@@ -115,16 +113,13 @@ function gameScissors() {
   contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
 }
 
-}
-
 
 if (playerScore <= 4 && computerScore <= 4 ) {
-  mainGame();
 
   rockBtn.addEventListener('click', gameRock);
   paperBtn.addEventListener('click', gamePaper);
   scissorsBtn.addEventListener('click', gameScissors);
-  
+
 } else {
   alert('Game over!');
   playerScore = 0;
