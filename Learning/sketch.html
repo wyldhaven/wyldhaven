@@ -65,9 +65,12 @@ button.addEventListener('click' , function() {
   console.log('click');
   input.value = '';
   boxAmount = [];
+  boxAmount.push(0);
   console.log(boxAmount);
-  document.getElementsByClassName('hover');
-  console.log(document.getElementsByClassName('hover'));
+  document.getElementsByClassName('hover').forEach(function(el) {
+    el.classList.remove('hover');
+
+  });
 
 
   });
