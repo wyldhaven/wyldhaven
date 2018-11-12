@@ -45,12 +45,12 @@ for (var i = 0; i < allDivs.length; i++) {
   allDivs[i].classList.add("selector");
 }
 
-document.querySelectorAll('div:not(.main-container)').onmouseover = function() { mouseOver() };
+document.querySelector('.selector').onmouseover = function() { mouseOver() };
 
 
 function mouseOver() {
   console.log('mouse');
-  document.querySelectorAll('div:not(.main-container)').classList.add("hover");
+  document.querySelector('.selector').classList.add("hover");
 }
 
 
