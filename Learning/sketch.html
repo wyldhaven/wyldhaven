@@ -13,6 +13,8 @@
 <label for="cell">Pick Grid size:</label>
 <input type="number" id="cell"></input>
 
+<button id="thisbuttonsucks">Reset</button>
+
 <div class="main-container">
 
 
@@ -23,11 +25,16 @@
 
 <script>
 
+let button = document.getElementById('thisbuttonsucks');
+let input = document.getElementById('cell');
+
 let mainContainer = document.querySelector('.main-container');
 let divs = document.createElement('div');
 let boxAmount = [];
-let setBoxAmount = 16;
+let setBoxAmount = input.value;
+console.log(input.value);
 let boxSize = 700 / setBoxAmount;
+
 console.log(boxSize);
 
 divs.style.cssText = 'background-color: #ccc; float: left; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
@@ -51,6 +58,15 @@ function poodickfunction(evt) {
   var el = evt.target;
   el.classList.add("hover");
 }
+
+button.addEventListener('click' , function() {
+  console.log('click');
+
+  document.querySelectorAll('hover').forEach(function(el) {
+    el.classList.remove("hover");
+  });
+
+});
 
 //console.log(allDivs.length);
 
