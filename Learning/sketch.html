@@ -16,6 +16,8 @@ let mainContainer = document.getElementById('main-container');
 let divs = document.createElement('div');
 let boxAmount = [];
 let setBoxAmount = 16;
+let boxSize = 70 / setBoxAmount;
+console.log(boxSize);
 
 divs.style.cssText = 'border: 1px solid black; display: inline-block; margin: 0; width: -webkit-fill-available; height: -webkit-fill-available;';
 mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
