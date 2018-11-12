@@ -11,7 +11,7 @@
 </style>
 
 <label for="cell">Pick Grid size:</label>
-<input type="number" id="cell"></input>
+<input type="number" class="cell"></input>
 
 <button id="thisbuttonsucks">Reset</button>
 
@@ -26,7 +26,7 @@
 <script>
 
 let button = document.getElementById('thisbuttonsucks');
-let input = document.getElementById('cell');
+let input = document.querySelector('.cell');
 
 let mainContainer = document.querySelector('.main-container');
 let divs = document.createElement('div');
