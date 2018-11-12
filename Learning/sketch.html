@@ -28,10 +28,15 @@
 let button = document.getElementById('thisbuttonsucks');
 let input = document.querySelector('.cell');
 
+let setBoxAmount = input.value;
+
+input.onchange = function() {
+  setBoxAmount = input.value;
+}
+
 let mainContainer = document.querySelector('.main-container');
 let divs = document.createElement('div');
 let boxAmount = [];
-let setBoxAmount = input.value;
 console.log(input.value);
 let boxSize = 700 / setBoxAmount;
 
