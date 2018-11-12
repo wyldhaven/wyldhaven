@@ -42,6 +42,20 @@ console.log(boxSize);
 divs.style.cssText = 'background-color: #ccc; float: left; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
 mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
 
+button.addEventListener('click' , function() {
+  console.log('click');
+  input.value = '';
+  boxAmount = [];
+  boxAmount.push(0);
+  console.log(boxAmount);
+
+  document.querySelectorAll('div').forEach(function(el) {
+    el.classList.remove("hover");
+  });
+
+
+  });
+
 for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   boxAmount.push(i);
   let cln = divs.cloneNode(true);
@@ -60,19 +74,6 @@ function poodickfunction(evt) {
   var el = evt.target;
   el.classList.add("hover");
 }
-
-button.addEventListener('click' , function() {
-  console.log('click');
-  input.value = '';
-  boxAmount = [];
-  boxAmount.push(0);
-  console.log(boxAmount);
-  document.querySelectorAll('div').forEach(function(el) {
-    el.classList.remove("hover");
-  });
-
-
-  });
 
 }
 
