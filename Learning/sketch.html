@@ -58,10 +58,10 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
 
-  if (button.clicked == true) {
+  button.onclick = function() {
     console.log('click');
     mainContainer.removeChild(cln);
-  }
+  };
 }
 
 console.log(boxAmount);
