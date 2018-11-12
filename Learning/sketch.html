@@ -45,10 +45,11 @@ for (var i = 0; i < allDivs.length; i++) {
   allDivs[i].classList.add("selector");
 }
 
-document.querySelector('.selector').onmouseover = function(mouseOver) { };
+document.querySelector('.selector').onmouseover = function() { mouseOver() };
 
 
 function mouseOver() {
+  console.log('mouse');
   document.querySelector('.selector').classList.add("hover");
 }
 
