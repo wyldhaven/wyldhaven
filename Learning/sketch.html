@@ -10,6 +10,9 @@
 
 </style>
 
+<label for="cell">Pick Grid size:</label>
+<input type="number" id="cell"></input>
+
 <div class="main-container">
 
 
@@ -38,9 +41,9 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
 
 console.log(boxAmount);
 
-let allDivs = Array.from(document.querySelectorAll('div:not(.main-container)'));
+//let allDivs = Array.from(document.querySelectorAll('div:not(.main-container)'));
 
-allDivs.forEach(function(el) {
+document.querySelectorAll('div:not(.main-container)').forEach(function(el) {
   el.onmouseover = el.classList.add("hover");
 });
 
