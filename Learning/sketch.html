@@ -16,10 +16,10 @@ let mainContainer = document.getElementById('main-container');
 let divs = document.createElement('div');
 let boxAmount = [];
 let setBoxAmount = 16;
-let boxSize = 700 / setBoxAmount;
+let boxSize = 700 / (setBoxAmount/4);
 console.log(boxSize);
 
-divs.style.cssText = 'border: 1px solid black; display: inline-block; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
+divs.style.cssText = 'background-color: grey; display: inline-block; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
 mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
 
 for (var i = 0; i < setBoxAmount; i++) {
