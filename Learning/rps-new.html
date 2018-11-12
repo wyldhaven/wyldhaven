@@ -115,13 +115,7 @@ function gameScissors() {
   contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
 }
 
-rockBtn.addEventListener('click', gameRock);
-paperBtn.addEventListener('click', gamePaper);
-scissorsBtn.addEventListener('click', gameScissors);
-
 }
-
-
 
 
 if (playerScore <= 4 && computerScore <= 4 ) {
@@ -132,6 +126,10 @@ if (playerScore <= 4 && computerScore <= 4 ) {
   computerScore = 0;
   contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
 }
+
+rockBtn.addEventListener('click', gameRock);
+paperBtn.addEventListener('click', gamePaper);
+scissorsBtn.addEventListener('click', gameScissors);
 
 
 
