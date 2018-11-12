@@ -20,14 +20,15 @@ let setBoxAmount = 16;
 for (var i = 0; i < setBoxAmount; i++) {
   boxAmount.push(i);
   console.log(boxAmount);
+  let cln = divs.cloneNode(true);
+  mainContainer.appendChild(cln);
 }
 
 divs.style.cssText = 'border: 1px solid black;';
 
-boxAmount.forEach(function(element) {
-  //mainContainer.appendChild(divs);
-  console.log(element);
-});
+// boxAmount.forEach(function(element) {
+//   mainContainer.appendChild(divs);
+// });
 
 
 
