@@ -16,13 +16,13 @@ let mainContainer = document.getElementById('main-container');
 let divs = document.createElement('div');
 let boxAmount = [];
 let setBoxAmount = 21;
-let boxSize = 700 / ((setBoxAmount/2)/2);
+let boxSize = 700 / setBoxAmount;
 console.log(boxSize);
 
 divs.style.cssText = 'background-color: grey; float: left; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
 mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
 
-for (var i = 0; i < setBoxAmount; i++) {
+for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   boxAmount.push(i);
   console.log(boxAmount);
   let cln = divs.cloneNode(true);
