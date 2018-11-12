@@ -49,6 +49,7 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   mainContainer.appendChild(cln);
 
   if (button.clicked == true) {
+    boxAmount = [];
     boxAmount.push(0);
     console.log(boxAmount);
     continue loop1;
@@ -73,7 +74,6 @@ button.addEventListener('click' , function() {
   input.value = '';
   boxAmount = [];
   boxAmount.push(0);
-  console.log(boxAmount);
 
   document.querySelectorAll('div').forEach(function(el) {
     el.classList.remove("hover");
