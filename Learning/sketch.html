@@ -38,7 +38,7 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
 
 console.log(boxAmount);
 
-let divAddClass = document.querySelectorAll('div');
+let divAddClass = document.querySelectorAll('div:not(.main-container)');
 console.log(divAddClass);
 
 divAddClass.classList.add("hover");
