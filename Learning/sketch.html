@@ -45,7 +45,7 @@ for (var i = 0; i < allDivs.length; i++) {
   allDivs[i].classList.add("selector");
 }
 
-document.querySelectorAll('.selector').onmouseover = function() { mouseOver() };
+document.querySelectorAll('div:not(.main-container)').onmouseover = function() { mouseOver() };
 
 
 function mouseOver() {
