@@ -34,7 +34,7 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   boxAmount.push(i);
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
-  divs[i].classList.add("hover");
+  divs.classList.add("hover");
 }
 
 console.log(boxAmount);
