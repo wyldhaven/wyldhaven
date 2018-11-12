@@ -49,6 +49,7 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   mainContainer.appendChild(cln);
 
   if (button.clicked == true) {
+    console.log('click');
     boxAmount = [];
     boxAmount.push(0);
     console.log(boxAmount);
@@ -70,7 +71,6 @@ function poodickfunction(evt) {
 }
 
 button.addEventListener('click' , function() {
-  console.log('click');
   input.value = '';
   boxAmount = [];
   boxAmount.push(0);
