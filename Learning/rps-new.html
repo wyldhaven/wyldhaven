@@ -120,6 +120,11 @@ function gameScissors() {
 
 if (playerScore <= 4 && computerScore <= 4 ) {
   mainGame();
+
+  rockBtn.addEventListener('click', gameRock);
+  paperBtn.addEventListener('click', gamePaper);
+  scissorsBtn.addEventListener('click', gameScissors);
+  
 } else {
   alert('Game over!');
   playerScore = 0;
@@ -127,9 +132,7 @@ if (playerScore <= 4 && computerScore <= 4 ) {
   contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
 }
 
-rockBtn.addEventListener('click', gameRock);
-paperBtn.addEventListener('click', gamePaper);
-scissorsBtn.addEventListener('click', gameScissors);
+
 
 
 
