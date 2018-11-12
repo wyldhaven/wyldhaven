@@ -34,18 +34,20 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   boxAmount.push(i);
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
+  divs[i].classList.add("hover");
 }
 
 console.log(boxAmount);
 
-let divAddClass = document.querySelectorAll('div:not(.main-container)');
-console.log(divAddClass);
-
-divAddClass.classList.add("hover");
-
+// let divAddClass = document.querySelectorAll('div:not(.main-container)');
+// console.log(divAddClass);
+//
+//
+// divAddClass.classList.add("hover");
 
 
 </script>
+
 
 </body>
 </html>
