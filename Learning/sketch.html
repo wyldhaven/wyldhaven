@@ -34,10 +34,8 @@ input.onchange = function() {
 let mainContainer = document.querySelector('.main-container');
 let divs = document.createElement('div');
 let boxAmount = [];
-console.log(setBoxAmount);
 let boxSize = 700 / setBoxAmount;
 
-console.log(boxSize);
 
 divs.style.cssText = 'background-color: #ccc; float: left; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
 mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
@@ -66,7 +64,6 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
 
 }
 
-console.log(boxAmount);
 
 //let allDivs = Array.from(document.querySelectorAll('div:not(.main-container)'));
 
