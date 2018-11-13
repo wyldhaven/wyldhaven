@@ -50,8 +50,8 @@ input.onchange = function() {
         el.classList.remove("hover");
       });
 
-      document.querySelectorAll('div').forEach(function(mainContainer) {
-        mainContainer.removeChild("selector");
+      document.querySelectorAll('div').forEach(function(el) {
+        el.removeChild("selector");
       });
 
   });
