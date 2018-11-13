@@ -71,6 +71,8 @@ input.onchange = function() {
 
   }
 
+  console.log(typeof document.querySelectorAll('div:not(.main-container)'));
+
   document.querySelectorAll('div:not(.main-container)').forEach(function(el) {
     el.onmouseover = poodickfunction;
   });
