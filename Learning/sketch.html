@@ -43,16 +43,16 @@ input.onchange = function() {
   button.addEventListener('click' , function() {
     input.value = '';
     let boxAmount = [];
-    let boxSelected = document.querySelectorAll(".selector");
-    console.log('boxSelected');
+    let boxSelected = document.getElementsByClassName('selector');
+    console.log(boxSelected);
 
       document.querySelectorAll('div').forEach(function(el) {
         el.classList.remove("hover");
       });
 
-      document.querySelectorAll('div').forEach(function(mainContainer) {
-        mainContainer.removeChild(boxSelected);
-      });
+      for(var i = 0; i < boxSelected; i++){
+        boxSelected[i].parentNode.removeChild(boxSelected[i]);
+      }
 
   });
 
