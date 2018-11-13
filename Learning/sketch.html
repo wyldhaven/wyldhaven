@@ -50,6 +50,10 @@ input.onchange = function() {
         el.classList.remove("hover");
       });
 
+      document.querySelectorAll('div').forEach(function(mainContainer) {
+        mainContainer.removeChild("selector");
+      });
+
   });
 
   // for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
@@ -61,13 +65,9 @@ input.onchange = function() {
 
   for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
     boxAmount.push(i);
-
-    if (boxAmount.length > 0) {
-      let cln = divs.cloneNode(true);
-      mainContainer.appendChild(cln);
-    } if else
-
-    console.log('for' + boxAmount.length);
+    let cln = divs.cloneNode(true);
+    mainContainer.appendChild(cln);
+    cln.classList.add('selector');
 
   }
 
