@@ -43,15 +43,15 @@ input.onchange = function() {
   button.addEventListener('click' , function() {
     input.value = '';
     let boxAmount = [];
-    console.log('clickbtn');
-    console.log(boxAmount.length);
+    let boxSelected = document.querySelectorAll(".selector");
+    console.log('boxSelected');
 
       document.querySelectorAll('div').forEach(function(el) {
         el.classList.remove("hover");
       });
 
-      document.querySelectorAll('div').forEach(function(el) {
-        el.removeChild("selector");
+      document.querySelectorAll('div').forEach(function(mainContainer) {
+        mainContainer.removeChild(boxSelected);
       });
 
   });
