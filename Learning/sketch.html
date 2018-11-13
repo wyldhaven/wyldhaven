@@ -59,11 +59,11 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
 
-  // if (boxAmount == 0) {
-  //   mainContainer.removeChild(cln);
-  // } else{
-  //   continue;
-  // }
+  if (boxAmount.length == 0) {
+    mainContainer.removeChild(cln);
+  } else{
+    continue;
+  }
 
 }
 
