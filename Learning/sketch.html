@@ -44,6 +44,8 @@ button.addEventListener('click' , function() {
   input.value = '';
   boxAmount = [];
   boxAmount.push(0);
+  console.log(boxAmount);
+
 
   document.querySelectorAll('div').forEach(function(el) {
     el.classList.remove("hover");
@@ -52,7 +54,7 @@ button.addEventListener('click' , function() {
   });
 
 for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
-  console.log(boxAmount);
+  console.log('for ' + boxAmount);
   boxAmount.push(i);
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
