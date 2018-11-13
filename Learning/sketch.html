@@ -44,7 +44,7 @@ button.addEventListener('click' , function() {
   input.value = '';
   boxAmount = [];
   boxAmount.push(0);
-  console.log(boxAmount);
+  console.log('click ' + boxAmount);
 
 
   document.querySelectorAll('div').forEach(function(el) {
@@ -61,6 +61,7 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   if (boxAmount.length == 1) {
     //mainContainer.removeChild(cln);
     console.log('fuck');
+    break;
   } else{
     mainContainer.appendChild(cln);
   }
