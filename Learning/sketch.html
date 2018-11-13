@@ -44,14 +44,15 @@ input.onchange = function() {
     input.value = '';
     let boxAmount = [];
     let boxSelected = document.getElementsByClassName('selector');
-    console.log(boxSelected);
+
 
       document.querySelectorAll('div').forEach(function(el) {
         el.classList.remove("hover");
       });
 
       for(var i = 0; i < boxSelected; i++){
-        boxSelected[i].parentNode.removeChild(boxSelected[i]);
+        boxSelected[i].mainContainer.removeChild(boxSelected[i]);
+        console.log('test');
       }
 
   });
