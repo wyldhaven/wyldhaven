@@ -54,6 +54,7 @@ input.onchange = function() {
       // });
 
       for(var i = 0; i < (setBoxAmount * setBoxAmount); i++){
+        console.log('setBoxAmount * setBoxAmount' + (setBoxAmount * setBoxAmount));
         boxSelected[i].parentNode.removeChild(boxSelected[i]);
         console.log('i = ' + i);
       }
@@ -65,7 +66,7 @@ input.onchange = function() {
     let cln = divs.cloneNode(true);
     mainContainer.appendChild(cln);
     cln.classList.add('selector');
-    console.log('cln length = ' + cln.length);
+    console.log('cln length');
 
   }
 
