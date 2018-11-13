@@ -57,12 +57,12 @@ for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
   console.log('for ' + boxAmount.length);
   boxAmount.push(i);
   let cln = divs.cloneNode(true);
-  mainContainer.appendChild(cln);
 
   if (boxAmount.length == 0) {
     mainContainer.removeChild(cln);
+    console.log('fuck');
   } else{
-    continue;
+    mainContainer.appendChild(cln);
   }
 
 }
