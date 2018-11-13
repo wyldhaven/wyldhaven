@@ -44,8 +44,7 @@ input.onchange = function() {
     //input.value = '';
     //let boxAmount = [];
     console.log('click');
-    let boxSelected = document.getElementsByClassName('selector');
-    console.log(typeof document.getElementsByClassName('selector'));
+    let boxSelected = document.querySelectorAll('div:not(.main-container)');
     console.log('boxselected length = ' + boxSelected.length);
 
 
@@ -70,8 +69,6 @@ input.onchange = function() {
     console.log('cln length');
 
   }
-
-  console.log(typeof document.querySelectorAll('div:not(.main-container)'));
 
   document.querySelectorAll('div:not(.main-container)').forEach(function(el) {
     el.onmouseover = poodickfunction;
