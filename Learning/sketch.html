@@ -52,7 +52,7 @@ input.onchange = function() {
 
       for(var i = 0; i < boxSelected.length; i++){
         boxSelected[i].parentNode.removeChild(boxSelected[i]);
-        console.log('test');
+        console.log('boxSelected.length ' + boxSelected.length);
       }
 
   });
@@ -62,6 +62,7 @@ input.onchange = function() {
     let cln = divs.cloneNode(true);
     mainContainer.appendChild(cln);
     cln.classList.add('selector');
+    console.log('setBoxAmount' + setBoxAmount);
 
   }
 
