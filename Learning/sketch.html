@@ -50,7 +50,7 @@ input.onchange = function() {
         el.classList.remove("hover");
       });
 
-      for(var i = 0; i < boxSelected; i++){
+      for(var i = 0; i < boxSelected.length; i++){
         boxSelected[i].mainContainer.removeChild(boxSelected[i]);
         console.log('test');
       }
