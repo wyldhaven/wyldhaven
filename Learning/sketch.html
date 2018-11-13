@@ -44,7 +44,7 @@ button.addEventListener('click' , function() {
   input.value = '';
   boxAmount = [];
   boxAmount.push(0);
-  console.log(boxAmount);
+  console.log(boxAmount.length);
 
 
   document.querySelectorAll('div').forEach(function(el) {
@@ -54,16 +54,16 @@ button.addEventListener('click' , function() {
   });
 
 for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
-  console.log('for ' + boxAmount);
+  console.log('for ' + boxAmount.length);
   boxAmount.push(i);
   let cln = divs.cloneNode(true);
   mainContainer.appendChild(cln);
 
-  if (boxAmount == 0) {
-    mainContainer.removeChild(cln);
-  } else{
-    continue;
-  }
+  // if (boxAmount == 0) {
+  //   mainContainer.removeChild(cln);
+  // } else{
+  //   continue;
+  // }
 
 }
 
