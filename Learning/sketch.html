@@ -43,7 +43,10 @@ input.onchange = function() {
   button.addEventListener('click' , function() {
     //input.value = '';
     //let boxAmount = [];
+    console.log('click');
     let boxSelected = document.getElementsByClassName('selector');
+    console.log('boxselected length = ' + boxSelected.length);
+
 
 
       // document.querySelectorAll('div').forEach(function(el) {
@@ -52,6 +55,7 @@ input.onchange = function() {
 
       for(var i = 0; i < (setBoxAmount * setBoxAmount); i++){
         boxSelected[i].parentNode.removeChild(boxSelected[i]);
+        console.log('i = ' + i);
       }
 
   });
@@ -61,6 +65,7 @@ input.onchange = function() {
     let cln = divs.cloneNode(true);
     mainContainer.appendChild(cln);
     cln.classList.add('selector');
+    console.log('cln length = ' + cln.length);
 
   }
 
