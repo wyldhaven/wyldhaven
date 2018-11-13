@@ -41,7 +41,7 @@ input.onchange = function() {
   mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
 
   button.addEventListener('click' , function() {
-    //input.value = '';
+    input.value = '';
     //let boxAmount = [];
     console.log('click');
     let boxSelected = document.querySelectorAll('div:not(.main-container)');
