@@ -31,62 +31,56 @@ let input = document.querySelector('.cell');
 input.onchange = function() {
   let setBoxAmount = input.value;
 
-let mainContainer = document.querySelector('.main-container');
-let divs = document.createElement('div');
-let boxAmount = [];
-let boxSize = 700 / setBoxAmount;
+  let mainContainer = document.querySelector('.main-container');
+  let divs = document.createElement('div');
+  let boxAmount = [];
+  let boxSize = 700 / setBoxAmount;
 
 
-divs.style.cssText = 'background-color: #ccc; float: left; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
-mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
+  divs.style.cssText = 'background-color: #ccc; float: left; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
+  mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
 
-button.addEventListener('click' , function() {
-  input.value = '';
+  button.addEventListener('click' , function() {
+    input.value = '';
+    let boxAmount = [];
+    console.log('clickbtn');
+    console.log(boxAmount);
+    console.log(boxAmount.length);
 
+      document.querySelectorAll('div').forEach(function(el) {
+        el.classList.remove("hover");
+      });
 
-  document.querySelectorAll('div').forEach(function(el) {
-    el.classList.remove("hover");
   });
 
+  // for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
+  //   boxAmount.push(i);
+  //   let cln = divs.cloneNode(true);
+  //   mainContainer.appendChild(cln);
+  //
+  // }
+
+  for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
+    boxAmount.push(i);
+    let cln = divs.cloneNode(true);
+    mainContainer.appendChild(cln);
+
+  }
+
+  console.log('clickbtn');
+  console.log(boxAmount);
+  console.log(boxAmount.length);
+
+  document.querySelectorAll('div:not(.main-container)').forEach(function(el) {
+    el.onmouseover = poodickfunction;
   });
 
-for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
-  console.log('for ' + boxAmount.length);
-  boxAmount.push(i);
-  let cln = divs.cloneNode(true);
-  mainContainer.appendChild(cln);
+  function poodickfunction(evt) {
+    var el = evt.target;
+    el.classList.add("hover");
+  }
 
 }
-
-
-//let allDivs = Array.from(document.querySelectorAll('div:not(.main-container)'));
-
-document.querySelectorAll('div:not(.main-container)').forEach(function(el) {
-  el.onmouseover = poodickfunction;
-});
-
-function poodickfunction(evt) {
-  var el = evt.target;
-  el.classList.add("hover");
-}
-
-
-
-}
-
-//console.log(allDivs.length);
-
-// for (var i = 0; i < allDivs.length; i++) {
-//   allDivs[i].classList.add("selector");
-// }
-
-// document.querySelector('.selector').onmouseover = function() { mouseOver() };
-//
-//
-// function mouseOver() {
-//   console.log('mouse');
-//   document.querySelector('.selector').classList.add("hover");
-// }
 
 
 </script>
