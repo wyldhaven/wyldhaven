@@ -44,7 +44,6 @@ input.onchange = function() {
     input.value = '';
     let boxAmount = [];
     console.log('clickbtn');
-    console.log(boxAmount);
     console.log(boxAmount.length);
 
       document.querySelectorAll('div').forEach(function(el) {
@@ -66,15 +65,11 @@ input.onchange = function() {
     if (boxAmount.length > 0) {
       let cln = divs.cloneNode(true);
       mainContainer.appendChild(cln);
-    }
+    } if else
 
-
+    console.log('for' + boxAmount.length);
 
   }
-
-  console.log('click2');
-  console.log(boxAmount);
-  console.log(boxAmount.length);
 
   document.querySelectorAll('div:not(.main-container)').forEach(function(el) {
     el.onmouseover = poodickfunction;
