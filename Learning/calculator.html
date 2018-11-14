@@ -28,6 +28,7 @@ let subBtn = document.getElementById('subBtn');
 let divBtn = document.getElementById('divBtn');
 let mxBtn = document.getElementById('mxBtn');
 let powBtn = document.getElementById('powBtn');
+let answerP = document.getElementById('answer');
 
 let allButtons = document.querySelectorAll('button');
 let allInputs = document.querySelectorAll('input');
@@ -39,6 +40,8 @@ for (z = 0; z < allInputs.length; z++) {
   let calInputValue = calcInput.value;
   let calInput2Value = calcInput2.value;
 
+  //calInputValue = Number(calInputValue);
+  //calInput2Value
 
 // let buttons = {
 //   addBtn: [addBtn],
@@ -51,7 +54,7 @@ for (z = 0; z < allInputs.length; z++) {
 
 
 function add () {
-  let answer = number(calInputValue) + number(calInput2Value);
+  let answer = Number(calInputValue) + Number(calInput2Value);
   console.log(answer);
 }
 
