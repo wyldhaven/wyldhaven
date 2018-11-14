@@ -71,7 +71,7 @@ function power() {
 for (i = 0; i < allButtons.length; i++) {
   allButtons[i].addEventListener('click' , function() {
 
-    if (allButtons[i] == allButtons[0]) {
+    if (this.id == 'addBtn') {
       console.log('clicked add');
       add();
 
