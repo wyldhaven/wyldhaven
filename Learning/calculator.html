@@ -31,15 +31,9 @@ let powBtn = document.getElementById('powBtn');
 
 let allButtons = document.querySelectorAll('button');
 
-calcInput.onchange = function newNumber1(calInputValue) {
+document.querySelectorAll('input').onchange = function newNumber1() {
   let calInputValue = calcInput.value;
-  return calInputValue;
-}
-
-calcInput2.onchange = function newNumber2(calInput2Value) {
   let calInput2Value = calcInput2.value;
-  return calInput2Value;
-}
 
 // let buttons = {
 //   addBtn: [addBtn],
@@ -48,9 +42,6 @@ calcInput2.onchange = function newNumber2(calInput2Value) {
 //   mxBtn: [mxBtn],
 //   powBtn: [powBtn]
 // };
-
-
-console.log(newNumber1(calInputValue) + ' ' + newNumber2(calInput2Value));
 
 
 
@@ -97,6 +88,8 @@ for (i = 0; i < allButtons.length; i++) {
 
   });
 }
+
+};
 
 // module.exports = {
 // 	add,
