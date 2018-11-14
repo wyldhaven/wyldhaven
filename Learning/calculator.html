@@ -30,12 +30,17 @@ let mxBtn = document.getElementById('mxBtn');
 let powBtn = document.getElementById('powBtn');
 
 let allButtons = document.querySelectorAll('button');
+let allInputs = document.querySelectorAll('input');
 
-document.querySelectorAll('input').onchange = function() {
+for (z = 0; z < allInputs.length; z++) {
+  console.log('all inputs length = ' + allInputs.length);
+
+  allInputs[i].onchange = function() {
   let calInputValue = calcInput.value;
   console.log(calInputValue);
   let calInput2Value = calcInput2.value;
   console.log(calInput2Value);
+}
 
 // let buttons = {
 //   addBtn: [addBtn],
@@ -91,7 +96,7 @@ for (i = 0; i < allButtons.length; i++) {
   });
 }
 
-};
+}
 
 // module.exports = {
 // 	add,
