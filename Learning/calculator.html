@@ -31,9 +31,15 @@ let powBtn = document.getElementById('powBtn');
 
 let allButtons = document.querySelectorAll('button');
 
+calcInput.onchange = function() {
+  let calInputValue = calcInput.value;
+  console.log(calInputValue + typeof calInputValue);
+}
 
-let calInputValue = calcInput.value;
-let calInput2Value = calcInput2.value;
+calcInput2.onchange = function() {
+  let calInput2Value = calcInput2.value;
+  console.log(calInput2Value + typeof calInput2Value);
+}
 
 // let buttons = {
 //   addBtn: [addBtn],
