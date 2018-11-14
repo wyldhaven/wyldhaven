@@ -49,11 +49,11 @@ let buttons = {
 
 
 function add () {
-
+  console.log('function add');
 }
 
 function subtract () {
-
+  console.log('function sub');
 }
 
 function sum () {
@@ -70,7 +70,11 @@ function power() {
 
 for (i = 0; i < allButtons.length; i++) {
   allButtons[i].addEventListener('click' , function() {
-    console.log('click ' + allButtons[i]);
+
+    if (buttons[key] == addBtn) {
+      add();
+    }
+
 
   });
 }
