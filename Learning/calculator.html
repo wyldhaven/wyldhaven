@@ -29,6 +29,9 @@ let sumBtn = document.getElementById('sumBtn');
 let mxBtn = document.getElementById('mxBtn');
 let powBtn = document.getElementById('powBtn');
 
+let allButtons = document.querySelectorAll('button');
+console.log(allButtons.length);
+
 let calInputValue = calcInput.value;
 let calInput2Value = calcInput2.value;
 
@@ -40,11 +43,8 @@ let buttons = {
   powBtn: [powBtn]
 };
 
-console.log(buttons.addBtn);
-console.log(buttons.subBtn);
-console.log(buttons.sumBtn);
-console.log(buttons.mxBtn);
-console.log(buttons.powBtn);
+
+
 
 
 
