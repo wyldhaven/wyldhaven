@@ -37,9 +37,7 @@ for (z = 0; z < allInputs.length; z++) {
 
   allInputs[z].onchange = function() {
   let calInputValue = calcInput.value;
-  console.log('calInputValue = ' + calInputValue);
   let calInput2Value = calcInput2.value;
-  console.log('calInput2Value = ' + calInput2Value);
 
 
 // let buttons = {
@@ -53,7 +51,7 @@ for (z = 0; z < allInputs.length; z++) {
 
 
 function add () {
-  let answer = calInputValue + calInput2Value;
+  let answer = number(calInputValue) + number(calInput2Value);
   console.log(answer);
 }
 
