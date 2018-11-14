@@ -3,13 +3,16 @@
 
   <body>
 
-  <label for="calc-input">Enter a Value</label>
+  <label for="calc-input">Enter 2 Values</label>
   <input type="number" id="calc-input"></input>
+  <input type="number" id="calc-input2"></input>
   <button id="addBtn">Add</button>
   <button id="subBtn">Subtract</button>
   <button id="sumBtn">Sum</button>
   <button id="mxBtn">Multiply</button>
   <button id="powBtn">Power</button>
+
+  <p id="answer"></p>
 
 
 
@@ -19,19 +22,24 @@
 <script>
 
 let calcInput = document.getElementById('calc-input');
+let calcInput2 = document.getElementById('calc-input2');
 let addBtn = document.getElementById('addBtn');
 let subBtn = document.getElementById('subBtn');
 let sumBtn = document.getElementById('sumBtn');
 let mxBtn = document.getElementById('mxBtn');
 let powBtn = document.getElementById('powBtn');
+
 let calInputValue = calcInput.value;
+let calInput2Value = calcInput2.value;
 
 let buttons = {
-  [addBtn]: addBtn,
+  addBtn: [addBtn],
 
 };
 
 console.log(buttons.addBtn);
+
+
 function add () {
 
 }
@@ -52,10 +60,10 @@ function power() {
 
 }
 
-// buttons[key].addEventListener('click' , function() {
-//
-//
-// });
+buttons.addEventListener('click' , function() {
+
+
+});
 
 // module.exports = {
 // 	add,
