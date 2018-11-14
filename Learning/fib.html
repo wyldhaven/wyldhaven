@@ -8,7 +8,6 @@
 
 <script>
 
-
 let fibInput = document.getElementById('fibInput');
 
 fibInput.onchange = function() {
@@ -22,11 +21,12 @@ let fibArray = [];
 for (i = 0; i < 200; i++) {
 
   let fibSeq = x + x;
-  console.log(fibSeq);
+  fibArray.push(i);
 
-  //fibSeq.push(i);
 
 }
+
+console.log(fibArray);
 
 }
 
