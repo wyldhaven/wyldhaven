@@ -56,27 +56,31 @@ for (z = 0; z < allInputs.length; z++) {
 function add () {
   let answer = calInputValue + calInput2Value;
   console.log(answer);
-  answerP.textContent = answer;
+  answerP.textContent = 'answer = ' + answer;
 }
 
 function subtract () {
   let answer = calInputValue - calInput2Value;
   console.log(answer);
+  answerP.textContent = 'answer = ' + answer;
 }
 
 function div () {
   let answer = calInputValue / calInput2Value;
   console.log(answer);
+  answerP.textContent = 'answer = ' + answer;
 }
 
 function multiply () {
   let answer = calInputValue * calInput2Value;
   console.log(answer);
+  answerP.textContent = 'answer = ' + answer;
 }
 
 function power() {
   let answer = Math.pow(calInputValue, calInput2Value);
   console.log(answer);
+  answerP.textContent = 'answer = ' + answer;
 }
 
 for (i = 0; i < allButtons.length; i++) {
