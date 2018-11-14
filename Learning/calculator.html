@@ -30,7 +30,7 @@ let mxBtn = document.getElementById('mxBtn');
 let powBtn = document.getElementById('powBtn');
 
 let allButtons = document.querySelectorAll('button');
-console.log(allButtons.length);
+
 
 let calInputValue = calcInput.value;
 let calInput2Value = calcInput2.value;
@@ -68,8 +68,8 @@ function power() {
 
 }
 
-buttons.addEventListener('click' , function() {
-
+allButtons.addEventListener('click' , function() {
+console.log('click');
 
 });
 
