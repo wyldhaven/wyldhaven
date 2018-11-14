@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<label type="number" for="fibInput">Enter a value:</label>
+<input id="fibInput"></input>
+
+<script>
+
+let fibInput = document.getElementById('fibInput');
+
+fibInput.onchange = function() {
+
+let userNumber = fibInput.value;
+userNumber = Number(userNumber);
+console.log('userNumber = ' + userNumber);
+let x = 1;
+let fibSeq = [];
+
+for (i = 0; i < 199; i++) {
+  fibSeq.push(i);
+
+}
+
+console.log(fibSeq.length);
+
+}
+
+</script>
+
+</body>
+
+</html>
