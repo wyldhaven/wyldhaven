@@ -15,18 +15,23 @@ fibInput.onchange = function() {
 let userNumber = fibInput.value;
 userNumber = Number(userNumber);
 console.log('userNumber = ' + userNumber);
-let x = 1;
 let fibArray = [];
+var a = 1, b = 0, temp;
 
-for (i = 0; i < 200; i++) {
+while (num >= 0) {
 
-  let fibSeq = x + x;
-  fibArray.push(i);
+  temp = a;
+  a = a + b;
+  b = temp;
+  num--;
 
+  //fibArray.push(fibSeq);
+  console.log('inside loop ' + b);
 
 }
+return b;
 
-console.log(fibArray);
+console.log('outside loop ' + b);
 
 }
 
