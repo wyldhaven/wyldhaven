@@ -35,13 +35,13 @@ let allButtons = document.querySelectorAll('button');
 let calInputValue = calcInput.value;
 let calInput2Value = calcInput2.value;
 
-let buttons = {
-  addBtn: [addBtn],
-  subBtn: [subBtn],
-  sumBtn: [sumBtn],
-  mxBtn: [mxBtn],
-  powBtn: [powBtn]
-};
+// let buttons = {
+//   addBtn: [addBtn],
+//   subBtn: [subBtn],
+//   sumBtn: [sumBtn],
+//   mxBtn: [mxBtn],
+//   powBtn: [powBtn]
+// };
 
 
 
@@ -72,9 +72,15 @@ for (i = 0; i < allButtons.length; i++) {
   allButtons[i].addEventListener('click' , function() {
 
     if (this.id == 'addBtn') {
-      console.log('clicked add');
       add();
-
+    } else if (this.id == 'subBtn') {
+      subtract();
+    } else if (this.id == 'sumBtn') {
+      sum();
+    } else if (this.id == 'mxBtn') {
+      multiply();
+    } else if (this.id == 'powBtn') {
+      power();
     }
 
 
