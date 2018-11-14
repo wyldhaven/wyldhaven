@@ -40,8 +40,8 @@ for (z = 0; z < allInputs.length; z++) {
   let calInputValue = calcInput.value;
   let calInput2Value = calcInput2.value;
 
-  //calInputValue = Number(calInputValue);
-  //calInput2Value
+  calInputValue = Number(calInputValue);
+  calInput2Value = Number(calInput2Value);
 
 // let buttons = {
 //   addBtn: [addBtn],
@@ -54,7 +54,7 @@ for (z = 0; z < allInputs.length; z++) {
 
 
 function add () {
-  let answer = Number(calInputValue) + Number(calInput2Value);
+  let answer = calInputValue + calInput2Value;
   console.log(answer);
 }
 
