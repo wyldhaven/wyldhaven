@@ -8,7 +8,7 @@
   <input type="number" id="calc-input2"></input>
   <button id="addBtn">Add</button>
   <button id="subBtn">Subtract</button>
-  <button id="sumBtn">Sum</button>
+  <button id="divBtn">Sum</button>
   <button id="mxBtn">Multiply</button>
   <button id="powBtn">Power</button>
 
@@ -25,7 +25,7 @@ let calcInput = document.getElementById('calc-input');
 let calcInput2 = document.getElementById('calc-input2');
 let addBtn = document.getElementById('addBtn');
 let subBtn = document.getElementById('subBtn');
-let sumBtn = document.getElementById('sumBtn');
+let divBtn = document.getElementById('divBtn');
 let mxBtn = document.getElementById('mxBtn');
 let powBtn = document.getElementById('powBtn');
 
@@ -49,23 +49,23 @@ let calInput2Value = calcInput2.value;
 
 
 function add () {
-  console.log('function add');
+  calInputValue + calInput2Value;
 }
 
 function subtract () {
-  console.log('function sub');
+  calInputValue - calInput2Value;
 }
 
-function sum () {
-
+function div () {
+  calInputValue / calInput2Value;
 }
 
 function multiply () {
-
+  calInputValue * calInput2Value;
 }
 
 function power() {
-
+  Math.pow(calInputValue, calInput2Value);
 }
 
 for (i = 0; i < allButtons.length; i++) {
@@ -75,8 +75,8 @@ for (i = 0; i < allButtons.length; i++) {
       add();
     } else if (this.id == 'subBtn') {
       subtract();
-    } else if (this.id == 'sumBtn') {
-      sum();
+    } else if (this.id == 'divBtn') {
+      div();
     } else if (this.id == 'mxBtn') {
       multiply();
     } else if (this.id == 'powBtn') {
