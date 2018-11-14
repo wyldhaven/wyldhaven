@@ -26,14 +26,15 @@
 
     };
 
-    let user = {
-      name: 'John',
-      age: 30,
+    let fruit = prompt("Which fruit to buy?", "apple");
+
+    let bag = {
+      [fruit]: 5, // the name of the property is taken from the variable fruit
     };
 
-    let key = 50;
+    console.log(bag[fruit]);
+    alert( bag.apple ); // 5 if fruit="apple"
 
-    alert(user[key]);
 
     </script>
 </html>
