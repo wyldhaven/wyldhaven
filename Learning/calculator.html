@@ -68,11 +68,12 @@ function power() {
 
 }
 
+for (i = 0; i < allButtons.length; i++) {
+  allButtons[i].addEventListener('click' , function() {
+  console.log('click' + [i]);
 
-allButtons[0].addEventListener('click' , function() {
-console.log('click');
-
-});
+  });
+}
 
 // module.exports = {
 // 	add,
