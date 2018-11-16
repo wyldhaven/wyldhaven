@@ -48,29 +48,34 @@ for (z = 0; z < allInputs.length; z++) {
     x = Number(x);
     var y = input2.value;
     y = Number(y);
+
+    console.log(x + ' , ' + y);
+
+    class Rectangle {
+      constructor(height, width) {
+        this.height = height;
+        this.width = width;
+      }
+
+      get area() {
+        return this.calcArea();
+      }
+
+      calcArea() {
+        return this.height * this.width;
+      }
+    }
+
+    const newRect = new Rectangle(x, y);
+    console.log(newRect.area)
+
   }
 
-  console.log(x + ' , ' + y);
-
-  class Rectangle {
-    constructor(height, width) {
-      this.height = height;
-      this.width = width;
-    }
-
-    get area() {
-      return this.calcArea();
-    }
-
-    calcArea() {
-      return this.height * this.width;
-    }
-  }
 
 
 
-  //const newRect = new Rectangle(x, y);
-  console.log(newRect.area)
+
+
 }
 
 
