@@ -32,20 +32,26 @@ let admin = user;
 
 admin.name = 'Pete'; // changed by the "admin" reference
 
-alert(user.name);
+//alert(user.name);
 
-
-class testClass {
-  constructor(x) {
-    this.x = x;
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
   }
 
+  get area() {
+    return calcArea();
+  }
+
+  calcArea() {
+    return this.height * this.width;
+  }
 }
 
-const person1 = new testClass('1');
-const person2 = new testClass('2');
-const person3 = new testClass('3');
-console.log(person1, person2, person3);
+const newRect = new Rectangle(10, 10);
+console.log(newRect.area)
+
 
 
 
