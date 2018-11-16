@@ -26,18 +26,22 @@
 
     };
 
-    let user = {
-  name: "John",
-  age: 30,
-  isAdmin: true
-};
+    let user = { name: 'John' };
 
-for(let key in user) {
-  // keys
-  alert( key );  // name, age, isAdmin
-  // values for the keys
-  alert( user[key] ); // John, 30, true
+let admin = user;
+
+admin.name = 'Pete'; // changed by the "admin" reference
+
+alert(user.name);
+
+
+class testClass {
+  x = 1;
+
 }
+
+console.log(x);
+
 
 
     </script>
