@@ -11,6 +11,8 @@
     <input type="number" id="input1"></input>
     <input type="number" id="input2"></input>
 
+    <p id="final"></p>
+
   </body>
 
     <script>
@@ -49,7 +51,7 @@ for (z = 0; z < allInputs.length; z++) {
     var y = input2.value;
     y = Number(y);
 
-    console.log(x + ' , ' + y);
+    //console.log(x + ' , ' + y);
 
     class Rectangle {
       constructor(height, width) {
@@ -67,7 +69,7 @@ for (z = 0; z < allInputs.length; z++) {
     }
 
     const newRect = new Rectangle(x, y);
-    console.log(newRect.area)
+    document.getElementById('final').textContent = newRect;
 
   }
 
