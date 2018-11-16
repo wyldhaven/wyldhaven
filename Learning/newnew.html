@@ -37,12 +37,16 @@ alert(user.name);
 
 class testClass {
   constructor(x) {
-    this.x = 1;
+    this.x = x;
   }
+
+  console.log(this.x);
 
 }
 
-console.log(this.x);
+const person1 = new testClass('1');
+console.log(person1);
+
 
 
 
