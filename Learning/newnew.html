@@ -41,6 +41,16 @@ let input1 = document.getElementById('input1');
 let input2 = document.getElementById('input2');
 let allInputs = document.querySelectorAll('input');
 
+for (z = 0; z < allInputs.length; z++) {
+
+  allInputs[z].onchange = function() {
+    var x = input1.value;
+    x = Number(x);
+    var y = input2.value;
+    y = Number(y);
+  }
+}
+
 class Rectangle {
   constructor(height, width) {
     this.height = height;
@@ -53,16 +63,6 @@ class Rectangle {
 
   calcArea() {
     return this.height * this.width;
-  }
-}
-
-for (z = 0; z < allInputs.length; z++) {
-
-  allInputs[z].onchange = function() {
-    var x = input1.value;
-    x = Number(x);
-    var y = input2.value;
-    y = Number(y);
   }
 }
 
