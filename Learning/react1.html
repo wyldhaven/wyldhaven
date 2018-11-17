@@ -20,8 +20,12 @@ class CowClicker extends React.Component {
 
   newClick(evt) {
     this.setState({
-      clicks: this.state.clicks + 1
+      return ({clicks: this.state.clicks + 1});
     })
+
+    // this.setState((state, props) => {
+    //   return {counter: state.counter + props.step};
+    // });
   }
 
   render() {
