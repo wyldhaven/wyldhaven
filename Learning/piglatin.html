@@ -20,7 +20,8 @@
     var calcButton = document.getElementById('calcButton');
     var result = document.getElementById('result');
 
-    calcButton.onClick = function() {
+    calcButton.onclick = function() {
+      console.log('click');
       inputValue = mainInput.value;
 
       result.textContent = inputValue;
