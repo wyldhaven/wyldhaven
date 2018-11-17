@@ -21,14 +21,14 @@ class NameChanger extends React.Component {
     };
   }
 
-  handleChange() {
+  handleChange(evt) {
     this.setState({inputValue: evt.target.value});
   }
 
   render() {
     return (
       <div>
-        <input value={this.state.inputValue} type="text" onChange={evt => this.updateInputValue(evt)}></input>
+        <input value={this.state.inputValue} type="text" onChange={evt => this.handleChange(evt)}></input>
         <p>{this.state.name} sucks ass</p>
       </div>
 
