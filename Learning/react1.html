@@ -27,7 +27,7 @@ class CowClicker extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.newClick}>Click</button>
+        <button onClick={this.newClick.bind(this)}>Click</button>
         <p>clicks = {this.state.clicks}</p>
       </div>
 
