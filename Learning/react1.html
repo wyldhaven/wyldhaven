@@ -13,12 +13,16 @@
 <script type="text/babel">
 
 class CowClicker extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {clicks: 0};
+  }
 
   render() {
     return (
       <div>
         <button>Click</button>
-        <p>clicks = </p>
+        <p>clicks = {this.state.clicks}</p>
       </div>
 
     );
