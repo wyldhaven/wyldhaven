@@ -13,11 +13,22 @@
 <script type="text/babel">
 
 class CowClicker extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state.clicks = 0;
+  }
+
+  function NewClick() {
+    this.setState({
+      clicks: this.state.clicks + 1
+    });
+  }
 
   render() {
     return (
       <div>
-        <p>Test {this.props.name}</p>
+        <button onclick={this.NewClick}>Click for name</button>
+        <p>clicks = {this.state.clicks}</p>
       </div>
 
     );
@@ -28,7 +39,7 @@ class CowClicker extends React.Component {
 
 
 ReactDOM.render(
-  <CowClicker name="poop"/>,
+  <CowClicker />,
   document.getElementById('root')
 );
 
