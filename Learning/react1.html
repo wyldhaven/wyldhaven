@@ -12,14 +12,24 @@
 
 <script type="text/babel">
 
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+class CowClicker extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <p>Test</p>
+      </div>
+
+    );
+  }
+
 }
 
-const element = <Welcome name="Sara" />;
+
+
 ReactDOM.render(
-  element,
-  document.getElementById('root')
+  <CowClicker />,
+  document.getElementById('root');
 );
 
 </script>
