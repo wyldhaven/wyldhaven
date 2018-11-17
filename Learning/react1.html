@@ -18,7 +18,7 @@ class CowClicker extends React.Component {
     this.state = {clicks: 0};
   }
 
-  function newClick() {
+  newClick() {
     this.setState({
       clicks: this.state.clicks + 1
     });
@@ -27,7 +27,7 @@ class CowClicker extends React.Component {
   render() {
     return (
       <div>
-        <button onclick={this.newClick}>Click for name</button>
+        <button onClick={this.newClick}>Click for name</button>
         <p>clicks = {this.state.clicks}</p>
       </div>
 
