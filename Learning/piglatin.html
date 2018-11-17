@@ -21,10 +21,12 @@
     var result = document.getElementById('result');
 
     calcButton.onclick = function() {
-      console.log('click');
       inputValue = mainInput.value;
+      var string = inputValue.substr(0, 1);
+      console.log(string):
+      var ending = inputValue.atChar(inputValue.length - 1);
 
-      result.textContent = inputValue;
+      result.textContent = ending + string;
     }
 
 
