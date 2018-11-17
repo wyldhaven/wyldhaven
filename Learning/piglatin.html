@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+
+  <body>
+
+    <label for="mainInput">Enter a word:</label>
+    <input type="text" id="mainInput"></input>
+    <button id="calcButton">Show Pig Latin</button>
+    <p id="result"></p>
+
+
+  </body>
+
+    <script>
+
+    var mainInput = document.getElementById('mainInput');
+    var calcButton = document.getElementById('calcButton');
+    var result = document.getElementById('result');
+
+    calcButton.onClick = function() {
+      inputValue = mainInput.value;
+
+      result.textContent = inputValue;
+    }
+
+
+
+
+    </script>
+</html>
