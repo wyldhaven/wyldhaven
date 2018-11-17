@@ -17,7 +17,7 @@ class CowClicker extends React.Component {
   render() {
     return (
       <div>
-        <p>Test</p>
+        <p>Test {this.props.name}</p>
       </div>
 
     );
@@ -28,7 +28,7 @@ class CowClicker extends React.Component {
 
 
 ReactDOM.render(
-  <CowClicker />,
+  <CowClicker name="poop"/>,
   document.getElementById('root')
 );
 
