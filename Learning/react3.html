@@ -15,14 +15,14 @@
 var numbers = [1, 2, 3, 4, 5];
 
 var listitems = numbers.map((numbers) =>
-  console.log(numbers);
+  <li>{numbers}</li>
 );
 
 
-// ReactDOM.render(
-//   <ListBuilder />,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
+  <ul>{listitems}</ul>,
+  document.getElementById('root')
+);
 
 </script>
 
