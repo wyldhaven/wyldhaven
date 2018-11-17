@@ -12,21 +12,14 @@
 
 <script type="text/babel">
 
-const rootElement = document.getElementById('root');
-
-class MyElement extends React.Component {
-  render() {
-    return (
-    <div>
-        <p>Hello World</p>
-    </div>
-    );
-  }
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
 }
 
+const element = <Welcome name="Sara" />;
 ReactDOM.render(
-  <MyElement />,
-  rootElement,
+  element,
+  document.getElementById('root')
 );
 
 </script>
