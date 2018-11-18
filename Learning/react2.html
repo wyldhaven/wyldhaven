@@ -126,9 +126,6 @@ class ButtonMultiplier extends React.Component {
 
   render() {
     let equation = (this.state.clicks * this.state.answer);
-    console.log('this.state.clicks = ' + this.state.clicks);
-    console.log('this.state.initnum = ' + this.state.initnum);
-    console.log('this.state.answer = ' + this.state.answer);
 
 
     return (
@@ -143,14 +140,28 @@ class ButtonMultiplier extends React.Component {
 
 class NumberMaker extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      numbers: 0
+    };
+  }
+
+  wasClicked() {
+    this.setState((prevState) => ({
+      numbers: prevState.numbers + 1
+    }));
+  }
+
   render() {
     return (
       <div className="reactdiv">
-        <label for="inputr">Type minimum 3 numbers</label>
+        <label for="inputr">Type minimum 3 numbers:</label>
         <input id="inputr" type="number"></input>
-        <button></button>
-        <p></p>
-        <p></p>
+        <button>Add</button>
+        <p>Total Numbers: {numbers}</p>
+        <p>Which Numbers:</p>
+        <p>Multiplied by 2: </p>
       </div>
     );
   }
