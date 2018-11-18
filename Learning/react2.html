@@ -158,7 +158,7 @@ class NumberMaker extends React.Component {
       <div className="reactdiv">
         <label for="inputr">Type minimum 3 numbers:</label>
         <input id="inputr" type="number"></input>
-        <button>Add</button>
+        <button onClick={this.wasClicked.bind(this)}>Add</button>
         <p>Total Numbers: {this.state.numbers}</p>
         <p>Which Numbers:</p>
         <p>Multiplied by 2: </p>
