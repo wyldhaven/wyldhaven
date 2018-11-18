@@ -151,14 +151,15 @@ class NumberMaker extends React.Component {
     this.setState((prevState) => ({
       numbers: prevState.numbers + 1
     }));
-
-    input = document.getElementById('inputr');
-    input.value = '';
+    // input.value = '';
 
 
   }
 
   render() {
+    input = document.getElementById('inputr');
+    console.log(input);
+
     return (
       <div className="reactdiv">
         <label for="inputr">Type minimum 3 numbers:</label>
