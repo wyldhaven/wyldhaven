@@ -20,22 +20,43 @@
 <script type="text/babel">
 
 
-var WholeThing = React.createClass ({
+class WholeThing extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputValue: ''
+    };
+  }
+
+  handleChange(evt) {
+    this.setState({inputValue: evt.target.value});
+  }
+
   render() {
+    let myName;
 
-
-    return (
-      <div>
+    if (this.state.inputValue === 'Grayson') {
+      myName = <div>
         <Newday name='Grayson' />
         <NameChanger />
         <p>Theres another one!</p>
         <ButtonMultiplier />
         <NumberMaker />
       </div>
+    } else {
+      myName = <div></div>
+    }
+
+    return (
+      <input onChange={evt => this.handleChange(evt)}></input>
+      <div>
+        {myName}
+      </div>
     );
   }
 
-});
+}
 
 class Newday extends React.Component {
 
@@ -90,7 +111,7 @@ class NameChanger extends React.Component {
     if (this.state.inputValue === 'Grayson') {
       isCool = <span>is Cool!</span>
     } else if (this.state.inputValue === '') {
-      isCool = <span></span>
+      isCool = <span>Who?</span>
     } else {
       isCool = <span>sucks ass!</span>
     }
