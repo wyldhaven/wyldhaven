@@ -151,6 +151,11 @@ class NumberMaker extends React.Component {
     this.setState((prevState) => ({
       numbers: prevState.numbers + 1
     }));
+
+    input = document.getElementById('inputr');
+    input.value = '';
+
+
   }
 
   render() {
