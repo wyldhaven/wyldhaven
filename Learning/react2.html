@@ -19,6 +19,7 @@ var WholeThing = React.createClass ({
       <div>
         <NameChanger />
         <p>Theres another one!</p>
+        <ButtonMultiplier />
       </div>
     );
   }
@@ -60,6 +61,30 @@ class NameChanger extends React.Component {
 
     );
   }
+}
+
+class ButtonMultiplier extends React.Component {
+
+  constructor(super) {
+    super(props);
+    this.state = {clicks: 0};
+  }
+
+  wasClicked() {
+    this.setState((prevState) => ({
+      clicks: prevState.clicks + 1
+    }));
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.wasClicked.bind(this)}>Click me!</button>
+        <p>{this.state.clicks}</p>
+      </div>
+    );
+  }
+
 }
 
 
