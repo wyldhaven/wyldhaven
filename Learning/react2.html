@@ -77,17 +77,15 @@ class ButtonMultiplier extends React.Component {
   wasClicked() {
     this.setState((prevState) => ({
       clicks: prevState.clicks + 1,
-      answer: (this.state.clicks * prevState.initnum),
-      initnum: this.state.answer
+      answer: (this.state.clicks * this.state.answer),
     }));
   }
 
   render() {
-    let equation = (this.state.clicks * this.state.initnum);
+    let equation = (this.state.clicks * this.state.answer);
     console.log('this.state.clicks = ' + this.state.clicks);
     console.log('this.state.initnum = ' + this.state.initnum);
     console.log('this.state.answer = ' + this.state.answer);
-    console.log('equation' + equation);
 
 
     return (
@@ -111,4 +109,3 @@ ReactDOM.render(
 </body>
 
 </html>
- 
