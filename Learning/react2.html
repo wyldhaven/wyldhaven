@@ -12,6 +12,19 @@
 
 <script type="text/babel">
 
+
+var WholeThing = React.createClass ({
+  render() {
+    return (
+      <NameChanger />
+      <p>Theres another one!</p>
+    );
+  }
+
+});
+
+
+
 class NameChanger extends React.Component {
 
   constructor(props) {
@@ -26,19 +39,28 @@ class NameChanger extends React.Component {
   }
 
   render() {
+    let isCool;
+
+    if (this.state.inputValue === 'Grayson') {
+      isCool = <span>is Cool!</span>
+    } else {
+      isCool = <span>sucks ass!</span>
+    }
+
+
     return (
       <div>
         <input value={this.state.inputValue} type="text" onChange={evt => this.handleChange(evt)}></input>
-        <p>{this.state.inputValue} sucks ass</p>
+        <p>{this.state.inputValue} {isCool}</p>
       </div>
 
     );
   }
-
 }
 
+
 ReactDOM.render(
-  <NameChanger />,
+  <WholeThing />,
   document.getElementById('root')
 );
 
