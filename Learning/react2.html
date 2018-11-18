@@ -37,7 +37,9 @@ var WholeThing = React.createClass ({
 
 });
 
-var todaynow = new Date().toLocaleTimeString("en-US");
+var todaynow = setInterval( function() {
+  new Date().toLocaleTimeString("en-US");
+}, 1000);
 
 class Newday extends React.Component {
 
