@@ -41,11 +41,13 @@ var todaynow = setInterval( function() {
   new Date();
 }, 1000);
 
+todaynow = todaynow.toLocaleTimeString();
+
 class Newday extends React.Component {
 
   render() {
     return (
-      <h1>Hello {this.props.name}. It is {todaynow.toLocaleTimeString()}.</h1>
+      <h1>Hello {this.props.name}. It is {todaynow}.</h1>
     );
   }
 
