@@ -35,7 +35,7 @@ var WholeThing = React.createClass ({
 
 });
 
-var Newday = React.createClass ({
+class Newday extends React.Component {
   var Mydate = new Date().toLocaleTimeString();
 
   render() {
@@ -44,7 +44,7 @@ var Newday = React.createClass ({
     );
   }
 
-});
+}
 
 
 
