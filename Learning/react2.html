@@ -3,6 +3,13 @@
 
 <body>
 
+<style>
+.reactdiv {
+  background-color: grey;
+}
+
+</style>
+
 <div id="root"></div>
 
 
@@ -17,14 +24,27 @@ var WholeThing = React.createClass ({
   render() {
     return (
       <div>
+        <Newday name='Grayson' >
         <NameChanger />
         <p>Theres another one!</p>
         <ButtonMultiplier />
+        <NumberMaker />
       </div>
     );
   }
 
 });
+
+var Newday = React.createClass {
+  let date = new Date().toLocaleTimeString();
+
+  render() {
+    return (
+      <h1>Hello {this.props.name}. It is {date}</h1>
+    );
+  }
+
+}
 
 
 
@@ -96,6 +116,21 @@ class ButtonMultiplier extends React.Component {
     );
   }
 
+}
+
+class NumberMaker extends React.Component {
+
+  render() {
+    return (
+      <div className="reactdiv">
+        <label for="inputr">Type minimum 3 numbers</label>
+        <input id="inputr" type="number"></input>
+        <button></button>
+        <p></p>
+        <p></p>
+      </div>
+    );
+  }
 }
 
 
