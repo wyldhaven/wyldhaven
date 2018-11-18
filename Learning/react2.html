@@ -37,17 +37,28 @@ var WholeThing = React.createClass ({
 
 });
 
-function Newday() {
+class Newday extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = date: {new Date()};
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
 
   render() {
     return (
-      <h1>Hello {this.props.name}. It is {new Date().toLocaleTimeString()}.</h1>
+      <h1>Hello {this.props.name}. It is {this.state.date.toLocaleTimeString()}.</h1>
     );
   }
 
-}
+  setInterval(tick, 1000);
 
-setInterval(Newday, 1000);
+}
 
 
 
