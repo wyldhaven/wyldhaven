@@ -19,7 +19,7 @@ var WholeThing = React.createClass ({
       <div>
         <NameChanger />
         <p>Theres another one!</p>
-        <ButtonMultiplier initnum='2' />
+        <ButtonMultiplier />
       </div>
     );
   }
@@ -69,21 +69,26 @@ class ButtonMultiplier extends React.Component {
     super(props);
     this.state = {
       clicks: 0,
-      initnum: ''
+      initnum: 1,
+      answer: ''
     };
   }
 
   wasClicked() {
     this.setState((prevState) => ({
-      clicks: prevState.clicks + 1
+      clicks: prevState.clicks + 1,
+      answer: (this.state.clicks * this.state.initnum)
     }));
   }
 
   render() {
+    let equation = (this.state.clicks * this.state.answer);
+
+
     return (
       <div>
         <button onClick={this.wasClicked.bind(this)}>Click me!</button>
-        <p>{this.state.clicks} ' + ' {this.state.initnum}</p>
+        <p>{equation}</p>
       </div>
     );
   }
