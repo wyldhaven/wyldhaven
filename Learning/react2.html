@@ -143,18 +143,15 @@ class NumberMaker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      numbers: 0,
-      value: []
+      numbers: 0
     };
   }
 
   wasClicked() {
     var input = document.getElementById('inputr');
-    var whichNum = input.value
 
     this.setState((prevState) => ({
       numbers: prevState.numbers + 1,
-      value: [this.state.whichNum.value]
     }));
 
     input.value = '';
@@ -169,7 +166,7 @@ class NumberMaker extends React.Component {
         <input id="inputr" type="number"></input>
         <button onClick={this.wasClicked.bind(this)}>Add</button>
         <p>Total Numbers: {this.state.numbers}</p>
-        <p>Which Numbers: {this.state.value}</p>
+        <p>Which Numbers: </p>
         <p>Multiplied by 2: </p>
       </div>
     );
