@@ -36,11 +36,11 @@ var WholeThing = React.createClass ({
 });
 
 var Newday = React.createClass ({
-  let date = new Date().toLocaleTimeString();
+  var Mydate = new Date().toLocaleTimeString();
 
   render() {
     return (
-      <h1>Hello {this.props.name}. It is {date}</h1>
+      <h1>Hello {this.props.name}. It is {Mydate}</h1>
     );
   }
 
