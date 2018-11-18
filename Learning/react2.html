@@ -5,7 +5,7 @@
 
 <style>
 .reactdiv {
-  background-color: grey;
+  margin-top: 5rem;
 }
 
 </style>
@@ -35,7 +35,7 @@ var WholeThing = React.createClass ({
 
 });
 
-class Newday extends React.Component {
+var Newday = React.createClass ({
 
   render() {
     return (
@@ -43,7 +43,9 @@ class Newday extends React.Component {
     );
   }
 
-}
+});
+
+setInterval(Newday, 1000);
 
 
 
