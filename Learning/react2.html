@@ -67,8 +67,10 @@ class ButtonMultiplier extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {clicks: 0};
-    this.props.initnum = '';
+    this.state = {
+      clicks: 0,
+      initnum: ''
+    };
   }
 
   wasClicked() {
@@ -81,7 +83,7 @@ class ButtonMultiplier extends React.Component {
     return (
       <div>
         <button onClick={this.wasClicked.bind(this)}>Click me!</button>
-        <p>{this.state.clicks} ' + ' {this.props.initnum}</p>
+        <p>{this.state.clicks} ' + ' {this.state.initnum}</p>
       </div>
     );
   }
