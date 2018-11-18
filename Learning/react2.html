@@ -37,17 +37,33 @@ var WholeThing = React.createClass ({
 
 });
 
-var todaynow = setInterval( function() {
-  new Date();
-}, 1000);
-
-todaynow = todaynow.toLocaleTimeString();
-
 class Newday extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
 
   render() {
     return (
-      <h1>Hello {this.props.name}. It is {todaynow}.</h1>
+      <h1>Hello {this.props.name}. It is {this.state.date.toLocaleTimeString()}.</h1>
     );
   }
 
