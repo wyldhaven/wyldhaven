@@ -44,18 +44,16 @@ class Newday extends React.Component {
     this.state = {date: new Date()};
   }
 
-  tick() {
+  setInterval(tick() {
     this.setState({
       date: new Date()
     });
-  }
+  }, 1000);
 
   render() {
     return (
-      <h1>Hello {this.props.name}. It is {this.state.date.toLocaleTimeString()}.</h1>
+      <h1>Hello {this.props.name}. It is {this.state.date.toLocaleTimeString("en-US")}.</h1>
     );
-
-    setInterval(tick, 1000);
   }
 
 }
