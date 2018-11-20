@@ -27,23 +27,28 @@ var x = 0;
 var y = 0;
 
 $(document).ready(function() {
-  $(goAway).dblclick(function() {
-    $(goAway1).hide();
-  });
+  $(goAway).on ({
 
-  $(goAway).mouseenter(function() {
-    console.log('Hooray!');
-    x = x + 1;
-    $(result).text(x);
-  });
+    dblclick: function() {
+      $(goAway1).hide();
+    },
 
-  $(goAway).mouseleave(function() {
-    console.log('Boo!');
-    y = y + 1;
-    $(result1).text(y);
-  });
+    mouseenter: function() {
+      console.log('Hooray!');
+      x = x + 1;
+      $(result).text(x);
+    },
 
+    mouseleave: function() {
+      console.log('Boo!');
+      y = y + 1;
+      $(result1).text(y);
+    }
+});
 
+$(result1).focus(function() {
+  $(this).css("background-color" , "#ccc");
+});
 
 });
 
