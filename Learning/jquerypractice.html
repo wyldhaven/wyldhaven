@@ -9,6 +9,15 @@
 
 <body>
 
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background: green;
+      position: absolute;
+    }
+  </style>
+
 <p id="goaway">double click Me</p>
 
 <p id="goaway1">Hidden</p>
@@ -22,6 +31,10 @@
   <li>List</li>
   <li>List</li>
 </ul>
+
+<div id="butt">
+
+</div>
 
 
 <script>
@@ -63,6 +76,10 @@ $(result1).on ({
 $(expand).click(function () {
   $('li').slideToggle(800);
 });
+
+$('#butt').addClass('box');
+$('#butt').animate({left: '200px;'}, 'slow');
+
 
 });
 
