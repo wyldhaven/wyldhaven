@@ -18,8 +18,10 @@
 
 <script>
 
+var goAway = $('#goaway')[0];
+
 $(document).ready(function() {
-  $('#goaway')[0].click(function() {
+  $(goAway).click(function() {
     $(this).hide();
   });
 });
