@@ -9,9 +9,9 @@
 
 <body>
 
-<p id="goaway">Hidden</p>
+<p id="goaway">Click Me</p>
 
-
+<p id="goaway1">Hidden</p>
 
 
 
@@ -19,10 +19,11 @@
 <script>
 
 var goAway = $('#goaway')[0];
+var goAway1 = $('#goaway1')[0];
 
 $(document).ready(function() {
   $(goAway).click(function() {
-    $(this).hide();
+    $(goAway1).hide();
   });
 });
 
