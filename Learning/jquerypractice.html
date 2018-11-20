@@ -38,7 +38,7 @@ $(document).ready(function() {
   $(goAway).on ({
 
     dblclick: function() {
-      $(goAway1).hide();
+      $(goAway1).fadeToggle(700);
     },
 
     mouseenter: function() {
@@ -61,7 +61,7 @@ $(result1).on ({
 });
 
 $(expand).click(function () {
-  $('li').toggle(1000);
+  $('li').toggle(800);
 });
 
 });
