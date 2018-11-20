@@ -16,6 +16,13 @@
 <p class="result"></p>
 <p class="result1"></p>
 
+<p class="header">Header</p>
+<ul>
+  <li>List</li>
+  <li>List</li>
+  <li>List</li>
+</ul>
+
 
 <script>
 
@@ -23,6 +30,7 @@ var goAway = $('#goaway')[0];
 var goAway1 = $('#goaway1')[0];
 var result = $('.result')[0];
 var result1 = $('.result1')[0];
+var expand = $('.header')[0];
 var x = 0;
 var y = 0;
 
@@ -47,10 +55,14 @@ $(document).ready(function() {
 });
 
 $(result1).on ({
-
   hover: function() {
     $(this).css("background-color" , "#ccc");
   }
+});
+
+$(expand).click(function () {
+  $('ul').toggle(1000);
+});
 
 });
 
