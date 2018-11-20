@@ -578,6 +578,7 @@ h2 {
   display: block;
   justify-content: inherit;
   position: relative;
+  margin-top: 2rem;
 }
 
 .social-music-single p {
