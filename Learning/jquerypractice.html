@@ -46,9 +46,15 @@ $(document).ready(function() {
     }
 });
 
-$(result1).hover(function() {
-  $(this).css("background-color" , "#ccc");
-});
+$(result1).on ({
+
+  hover: function() {
+    $(this).css("background-color" , "#ccc");
+  }
+
+  !hover: function() {
+    $(this).css("background-color" , "#cfcfcf");
+  }
 
 });
 
