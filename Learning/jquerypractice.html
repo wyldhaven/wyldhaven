@@ -81,7 +81,9 @@ $('#butt').addClass('box');
 
 var box = $('.box');
   box.animate({left: '+=200px'}, 'slow');
-  box.animate({top:  '+=200px'}, 'slow');
+  box.animate({top:  '+=200px'}, 'slow', function() {
+    console.log('done');
+  });
 
 
 });
