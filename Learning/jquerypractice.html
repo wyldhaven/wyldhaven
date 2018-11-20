@@ -9,7 +9,7 @@
 
 <body>
 
-<p id="goaway">Click Me</p>
+<p id="goaway">double click Me</p>
 
 <p id="goaway1">Hidden</p>
 
@@ -24,6 +24,14 @@ var goAway1 = $('#goaway1')[0];
 $(document).ready(function() {
   $(goAway).dblclick(function() {
     $(goAway1).hide();
+  });
+
+  $(goAway).mouseenter(function() {
+    console.log('Hooray!');
+  });
+
+  $(goAway).mouseleave(function() {
+    console.log('Boo!');
   });
 });
 
