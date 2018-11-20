@@ -13,13 +13,18 @@
 
 <p id="goaway1">Hidden</p>
 
-
+<p class="result"></p>
+<p class="result1"></p>
 
 
 <script>
 
 var goAway = $('#goaway')[0];
 var goAway1 = $('#goaway1')[0];
+var result = $('.result')[0];
+var result1 = $('.result1')[0];
+var x = 0;
+var y = 0;
 
 $(document).ready(function() {
   $(goAway).dblclick(function() {
@@ -28,11 +33,18 @@ $(document).ready(function() {
 
   $(goAway).mouseenter(function() {
     console.log('Hooray!');
+    x = x + 1;
+    $(result).text(x);
   });
 
   $(goAway).mouseleave(function() {
     console.log('Boo!');
+    y = y + 1;
+    $(result1).text(y);
   });
+
+
+
 });
 
 
