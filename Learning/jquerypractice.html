@@ -79,7 +79,11 @@ $(expand).click(function () {
 
 $('#butt').addClass('box');
 
-$('.box').animate({left: '200px'}, 'slow');
+$('.box').animate({
+  left: '+=200px',
+  top:  '+=200px'
+
+}, 'slow');
 
 
 });
