@@ -201,8 +201,10 @@ var sum = 0;
 // Complete the aVeryBigSum function below.
 function aVeryBigSum(sum) {
     for (var i = 0; i < ar.length; i++) {
-        sum += ar[i];
+        sum = sum + ar[i];
         return sum;
+        console.log(ar[i]);
+        console.log(sum);
     }
 
 }
