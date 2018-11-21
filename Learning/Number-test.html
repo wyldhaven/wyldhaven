@@ -196,34 +196,16 @@ cityBtn.addEventListener('click', function() {
 
 <script>
 
-var finalScore = [];
-
-function compareTriplets(finalScore) {
-    var bob = [99, 16, 8];
-    var alice = [17, 28, 30];
-    var bobScore = 0;
-    var aliceScore = 0;
-
-    for (var i = 0; i < bob.length; i++) {
-
-        if (bob[i] > alice[i]) {
-            bobScore = bobScore + 1;
-        } else if (bob[i] < alice[i]) {
-            aliceScore = aliceScore + 1;
-        } else if (bob[i] == alice[i]) {
-            return;
-        }
-
-        return bobScore;
-        return aliceScore;
-        finalScore = [bobScore, aliceScore];
-        return finalScore;
-
+var ar = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005];
+var sum = 0;
+// Complete the aVeryBigSum function below.
+function aVeryBigSum(ar) {
+    for (var i = 0; i < ar.length; i++) {
+        sum += ar[i];
+        return sum;
     }
 
 }
-
-console.log(finalScore);
 
 </script>
 
