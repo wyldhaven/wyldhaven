@@ -197,7 +197,6 @@ cityBtn.addEventListener('click', function() {
 <script>
 
 var diagArray = [11, 2, 4, 4, 5, 6, 10, 8, -12];
-console.log(diagArray[0]);
 var sum1;
 var sum2;
 var arr;
@@ -207,6 +206,7 @@ function diagonalDifference() {
     sum1 = diagArray[0] + diagArray[4] + diagArray[8];
     sum2 = diagArray[2] + diagArray[4] + diagArray[6];
     arr = Math.abs(sum1 + sum2);
+    return arr;
     console.log(arr);
 
 
