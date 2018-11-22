@@ -196,36 +196,21 @@ cityBtn.addEventListener('click', function() {
 
 <script>
 
-var strg = [-4, 3, -9, 0, 4, 1];
-var pos = 0;
-var neg = 0;
-var zero = 0;
-var arr = [];
+var diagArray = [11, 2, 4, 4, 5, 6, 10, 8, -12];
+var sum1;
+var sum2;
 
-function plusMinus(arr) {
-    for (var i = 0; i < strg.length; i++) {
-        if (strg[i] > 0) {
-            pos = pos + 1;
-        } else if (strg[i] < 0) {
-            neg = neg + 1;
-        } else if (strg[i] == 0) {
-            zero = zero + 1;
-        }
-    }
-
-    pos = pos / 6;
-    console.log('pos = ' + pos);
-    neg = neg / 6;
-    console.log('neg = ' + neg);
-    zero = zero / 6;
-    console.log('zero = ' + zero);
-    arr = [pos, neg, zero];
+// Complete the diagonalDifference function below.
+function diagonalDifference(arr) {
+    sum1 = diagArray[0] + diagArray[4] + diagArray[8];
+    sum2 = diagArray[2] + diagArray[4] + diagArray[6];
+    var arr = Number(sum1) + Number(sum2);
+    arr = Math.abs(sum1 + sum2);
     console.log(arr);
-    //return arr;
 
 }
 
-console.log(plusMinus(arr));
+console.log(arr);
 
 
 </script>
