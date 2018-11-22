@@ -196,19 +196,35 @@ cityBtn.addEventListener('click', function() {
 
 <script>
 
-var ar = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005];
-var sum = 0;
-// Complete the aVeryBigSum function below.
-function aVeryBigSum(sum) {
-    for (var i = 0; i < ar.length; i++) {
-        sum = sum + ar[i];
-        console.log(ar[i]);
-        console.log(sum);
+var strg = [-4, 3, -9, 0, 4, 1];
+var pos = 0;
+var neg = 0;
+var zero = 0;
+var arr = [];
+
+function plusMinus(arr) {
+    for (var i = 0; i < strg.length; i++) {
+        if (strg[i] > 0) {
+            pos = pos + 1;
+        } else if (strg[i] < 0) {
+            neg = neg + 1;
+        } else if (strg[i] == 0) {
+            zero = zero + 1;
+        }
     }
+
+    pos = pos / 6;
+    console.log('pos = ' + pos);
+    neg = neg / 6;
+    console.log('neg = ' + neg);
+    zero = zero / 6;
+    console.log('zero = ' + zero);
+    arr = [pos, neg, zero];
+    return arr;
 
 }
 
-console.log(aVeryBigSum(sum));
+console.log(arr);
 
 </script>
 
