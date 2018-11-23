@@ -52,23 +52,21 @@
 <script> //timeout function
 
 
-
+let thisArray = [];
 
 function newarray() {
-  let thisArray = [];
 
   for (let i = 0; i < 5; i++) {
-    let thisArray = thisArray.push([i]);
+    thisArray.push([i]);
     //console.log(i);
     console.log(thisArray);
   }
 
-  console.log('ouside for loop = ' + thisArray);
 }
 
 
 newarray();
-//console.log('should be undefined' + thisArray);
+console.log('ouside function = ' + thisArray);
 
 
 let domtest = document.querySelectorAll('p');
