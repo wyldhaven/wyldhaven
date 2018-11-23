@@ -117,7 +117,7 @@ function timeConversion() {
 
     if (hour < 12) {
         hour += 12;
-        currentTime.splice(0, 2);
+        currentTime.slice(2);
         currentTime = hour + currentTime + 'PM';
 
     } else if (hour > 12) {
