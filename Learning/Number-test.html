@@ -196,24 +196,22 @@ cityBtn.addEventListener('click', function() {
 
 <script>
 
-var numArray = [1, 2, 3, 4, 5];
-var maxNum;
-var minNum;
+var maxArray = [1, 2, 3, 4, 5];
+var minArray = [1, 2, 3, 4, 5];
 var arr;
 
 // Complete the miniMaxSum function below.
 function miniMaxSum() {
-    maxNum = numArray.shift();
-    console.log(maxNum);
-    minNum = numArray.pop();
+    maxArray.shift();
+    console.log(maxArray);
+    minArray.pop();
+    console.log(minArray);
 
-    //var maxTotal = maxNum.reduce((a, b) => a + b, 0);
-    //var minTotal = minNum.reduce((a, b) => a + b, 0);
-    //console.log(maxTotal);
-    //arr = minTotal + ' ' + maxTotal;
+    var maxTotal = maxArray.reduce((a, b) => a + b, 0);
+    var minTotal = minArray.reduce((a, b) => a + b, 0);
 
-    //return arr;
-    //console.log(arr);
+    arr = minTotal + ' ' + maxTotal;
+    console.log(arr);
 
 }
 
