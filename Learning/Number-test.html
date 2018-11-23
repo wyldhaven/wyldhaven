@@ -196,19 +196,20 @@ cityBtn.addEventListener('click', function() {
 
 <script>
 
-var diagArray = [11, 2, 4, 4, 5, 6, 10, 8, -12];
-var sum1;
-var sum2;
+var numArray = [1, 2, 3, 4, 5];
+var maxNum;
+var minNum;
 var arr;
 
-// Complete the diagonalDifference function below.
-function diagonalDifference() {
-    sum1 = diagArray[0] + diagArray[4] + diagArray[8];
-    sum2 = diagArray[2] + diagArray[4] + diagArray[6];
-    arr = Math.abs(sum1 + sum2);
-    return arr;
-    console.log(arr);
+// Complete the miniMaxSum function below.
+function miniMaxSum(arr) {
+    maxNum = numArray.shift;
+    minNum = numArray.pop;
 
+    return maxNum;
+    return minNum;
+
+    console.log(maxNum + ' ' + minNum);
 
 }
 
