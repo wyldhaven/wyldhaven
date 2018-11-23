@@ -52,21 +52,13 @@
 <script> //timeout function
 
 
-let thisArray = [];
+let string = "This is a new string";
 
-function newarray() {
-
-  for (let i = 0; i < 5; i++) {
-    thisArray.push([i]);
-    //console.log(i);
-    console.log(thisArray);
-  }
-
+function valCalc() {
+  console.log(string.length);
 }
 
-console.log('ouside function = ' + thisArray);
-newarray();
-console.log('ouside function = ' + thisArray);
+valCalc();
 
 
 let domtest = document.querySelectorAll('p');
