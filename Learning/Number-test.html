@@ -75,9 +75,10 @@ let candleArray = [3, 2, 1, 3];
 
 // Complete the birthdayCakeCandles function below.
 function birthdayCakeCandles() {
-    let candlemax = Math.max.apply(null, array);
+    let candlemax = Math.max.apply(null, candleArray);
     console.log('candlemax = ' + candlemax);
     candleArray.sort();
+    console.log('sorted candleArray = ' + candleArray);
     let nrOfMaxValue = candleArray.lastIndexOf(candlemax) - candleArray.indexOf(candlemax);
     console.log(nrOfMaxValue);
 }
