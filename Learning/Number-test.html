@@ -51,22 +51,23 @@
 
 <script> //timeout function
 
-let a = 4;
 
-function foo() {
-  a = 5;
-  while (a < 6) {
-    let b = a + 3;
-    console.log(b);  //logs 8
-    a += 1;
+
+
+function newarray() {
+  let thisArray = [];
+
+  for (let i = 0; i < 5; i++) {
+    thisArray.push([i]);
+    console.log(i);
+    console.log(thisArray);
   }
-  console.log(a);  //logs 6
-  console.log(b);  // throws ReferenceError: b is not defined
+
+  console.log('ouside for loop = ' + thisArray);
 }
 
-console.log('outside' + a);
-
-foo();
+console.log('should be undefined' + thisArray);
+newarray();
 
 
 let domtest = document.querySelectorAll('p');
