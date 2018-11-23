@@ -71,25 +71,43 @@
 // valCalc();
 // console.log(stringArray[5]);
 
-let candleArray = [3, 2, 1, 3];
+//--------
 
-// Complete the birthdayCakeCandles function below.
-function birthdayCakeCandles() {
-    let candlemax = Math.max(...candleArray);
-    console.log('candlemax = ' + candlemax);
-    let finalNum = 0;
+// let candleArray = [3, 2, 1, 3];
+//
+// function birthdayCakeCandles() {
+//     let candlemax = Math.max(...candleArray);
+//     console.log('candlemax = ' + candlemax);
+//     let finalNum = 0;
+//
+//     for (let i = 0; i < candleArray.length; i++) {
+//       console.log('candlearray i = ' + candleArray[i]);
+//       if (candleArray[i] === candlemax) {
+//         finalNum += 1;
+//     }
+//   }
+//
+//   //return finalNum; for HackerRank shit
+//   console.log(finalNum);
+// }
+//
+// birthdayCakeCandles();
 
-    for (let i = 0; i < candleArray.length; i++) {
-      console.log('candlearray i = ' + candleArray[i]);
-      if (candleArray[i] === candlemax) {
-        finalNum += 1;
-    }
-  }
+let currentTime = new Date();
 
-  console.log(finalNum);
+function timeConversion() {
+    var currentHours = currentTime.getHours();
+    var currentMinutes = currentTime.getMinutes();
+    var currentSeconds = currentTime.getSeconds();
+    var timeOfDay = (currentHours < 12) ? "AM" : "PM";
+
+    var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+    //return currentTimeString;
+    console.log(currentTimeString);
+
 }
 
-birthdayCakeCandles();
+timeConversion();
 
 let domtest = document.querySelectorAll('p');
 console.log(domtest);
