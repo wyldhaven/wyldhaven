@@ -53,9 +53,19 @@
 
 
 let string = "This is a new string";
+let stringArray = [];
 
 function valCalc() {
   console.log(string.length);
+
+  if (string.length > 20) {
+    alert('Red Flag');
+  } else {
+    for (let i = 0; i > string.length; i++) {
+      stringArray.push([i]);
+      console.log(stringArray);
+    }
+  }
 }
 
 valCalc();
