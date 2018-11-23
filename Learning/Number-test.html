@@ -114,6 +114,7 @@ let currentTime = '07:05:45PM';
 
 function timeConversion() {
     let hour = currentTime.slice(0, 2);
+    hour = Number(hour);
     console.log('hour ' + hour);
 
     if (hour < 12) {
