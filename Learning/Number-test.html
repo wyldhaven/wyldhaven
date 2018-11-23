@@ -203,8 +203,8 @@ var arr;
 
 // Complete the miniMaxSum function below.
 function miniMaxSum(arr) {
-    maxNum = numArray.shift;
-    minNum = numArray.pop;
+    maxNum = numArray.shift();
+    minNum = numArray.pop();
 
     var maxTotal = maxNum.reduce((a, b) => a + b, 0);
     var minTotal = minNum.reduce((a, b) => a + b, 0);
