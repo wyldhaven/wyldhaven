@@ -52,7 +52,7 @@
 <script> //timeout function
 
 
-let string = "This is a new string ceheck it outttt";
+let string = "This is a new";
 let stringArray = [];
 
 function valCalc() {
@@ -62,7 +62,7 @@ function valCalc() {
     alert('Red Flag');
   } else {
     for (let i = 1; i < (string.length + 1); i++) {
-      stringArray.push([i]);
+      stringArray.push(string.charAt(i));
       console.log(stringArray);
     }
   }
