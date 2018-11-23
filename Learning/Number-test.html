@@ -51,7 +51,7 @@
 
 <script> //timeout function
 
-var a = 5;
+let a = 5;
 
 function foo() {
   while (a < 6) {
@@ -63,7 +63,7 @@ function foo() {
   console.log(b);  // throws ReferenceError: b is not defined
 }
 
-console.log('outside' + a);  
+console.log('outside' + a);
 
 foo();
 
