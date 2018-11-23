@@ -51,6 +51,27 @@
 
 <script> //timeout function
 
+var initArray = [1, 2, 3, 4, 5];
+//var min;
+
+
+// Complete the miniMaxSum function below.
+function miniMaxSum() {
+  console.log(Math.max(initArray));
+  console.log(Math.min(initArray));
+
+  var max = Math.min(initArray);
+  console.log(max);
+
+  var maxIndex = initArray.indexOf(5);
+  if (maxIndex > -1) {
+    initArray.splice(maxIndex, 1);
+    console.log(initArray);
+  }
+
+}
+
+
 let domtest = document.querySelectorAll('p');
 console.log(domtest);
 
@@ -191,31 +212,6 @@ cityBtn.addEventListener('click', function() {
 
 
 });
-
-</script>
-
-<script>
-
-var initArray = [1, 2, 3, 4, 5];
-//var min;
-
-
-// Complete the miniMaxSum function below.
-function miniMaxSum() {
-  console.log(Math.max(initArray));
-  console.log(Math.min(initArray));
-
-  var max = Math.min(initArray);
-  console.log(max);
-
-  var maxIndex = initArray.indexOf(5);
-  if (maxIndex > -1) {
-    initArray.splice(maxIndex, 1);
-    console.log(initArray);
-  }
-
-}
-
 
 </script>
 
