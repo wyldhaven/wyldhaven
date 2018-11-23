@@ -93,17 +93,39 @@
 //
 // birthdayCakeCandles();
 
-let currentTime = new Date();
+// let currentTime = new Date();
+//
+// function timeConversion() {
+//     var currentHours = currentTime.getHours();
+//     var currentMinutes = currentTime.getMinutes();
+//     var currentSeconds = currentTime.getSeconds();
+//     var timeOfDay = (currentHours < 12) ? "AM" : "PM";
+//
+//     var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+//     //return currentTimeString;
+//     console.log(currentTimeString);
+//
+// }
+// timeConversion();
+
+
+
+let currentTime = '07:05:45PM';
 
 function timeConversion() {
-    var currentHours = currentTime.getHours();
-    var currentMinutes = currentTime.getMinutes();
-    var currentSeconds = currentTime.getSeconds();
-    var timeOfDay = (currentHours < 12) ? "AM" : "PM";
+    let hour = currentTime.slice(0, 2);
 
-    var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-    //return currentTimeString;
-    console.log(currentTimeString);
+    if (hour < 12) {
+        hour += 12;
+        currentTime.splice(0, 2);
+        currentTime = hour + currentTime + 'PM';
+
+    } else if (hour > 12) {
+        currentTime = hour + currentTime + 'AM';
+    }
+
+    //return currentTime;
+    console.log(currentTime);
 
 }
 
