@@ -75,20 +75,17 @@ let candleArray = [3, 2, 1, 3];
 
 // Complete the birthdayCakeCandles function below.
 function birthdayCakeCandles() {
-  var result = {
-    max: null,
-    count: 0
-  };
+    let candlemax = Math.max(...candleArray);
+    console.log('candlemax = ' + candlemax);
+    let finalNum = 0;
 
-  result.max = Math.max(candleArray);
-
-    for (var l in candleArray) {
-      if (candleArray[l] == result.max)
-        result.count++;
+    for (let i = 0; i < candleArray.length; i++) {
+      if (candleArray[i] == candlemax) {
+        finalNum + 1;
     }
+  }
 
-    return result;
-    console.log(result.count);
+  console.log(finalNum);
 }
 
 birthdayCakeCandles();
