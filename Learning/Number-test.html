@@ -55,7 +55,7 @@
 
 var x = "outside";
 function foo() {
-  x = "inside";
+  var x = "inside";
   console.log(x);
 }
 foo(); // inside
@@ -71,6 +71,24 @@ console.log(x); // inside
 //   const i = 0;
 // }
 // console.log(i); // ReferenceError: i is not defined
+
+
+
+//--------Example of closure in JS
+
+function showName (firstName, lastName) { 
+  var nameIntro = "Your name is ";
+
+    // this inner function has access to the outer function's variables, including the parameter
+    function makeFullName () { 
+      return nameIntro + firstName + " " + lastName; 
+    }
+
+  return makeFullName (); 
+} 
+
+showName ("Michael", "Jackson"); // Your name is Michael Jackson
+
 
 
 
