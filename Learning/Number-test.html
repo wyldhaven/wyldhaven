@@ -53,13 +53,13 @@
 
 //-------- var getting overwritten from inside a block (they are not block scope), let is better
 
-let x = "outside";
-function foo() {
-   let x = "inside";
-  console.log(x);
-}
-foo(); // inside
-console.log(x); // inside
+// var x = "outside";
+// function foo() {
+//   x = "inside";
+//   console.log(x);
+// }
+// foo(); // inside
+// console.log(x); // inside
 
 // let i = 0;
 // if (true) {
@@ -74,7 +74,9 @@ console.log(x); // inside
 
 
 
-//--------Example of closure in JS
+//--------Example of closure in JS - refers to variables that are either global or private to the function that they are in.
+//Functions inside of other functions have access to the parent's variables and scope.
+//Closures are imporant because they provide data privacy and prevent code changes from breaking other code.
 
 function showName (firstName, lastName) { 
   var nameIntro = "Your name is ";
@@ -88,6 +90,27 @@ function showName (firstName, lastName) { 
 } 
 
 showName ("Michael", "Jackson"); // Your name is Michael Jackson
+
+//////////
+//This is an example of closure. Inside of createCounter, is counter = 0.
+//Since createCounter is stored inside of const = increment, everytime increment() is called
+//it will have stored and updated the value of counter. Counter only lives inside of createCounter but
+//that info is stored/updated inside of increment.
+
+function createCounter() {
+   let counter = 0;
+   const myFunction = function() {
+     counter = counter + 1;
+     return counter;
+   }
+   return myFunction;
+ }
+
+const increment = createCounter();
+const c1 = increment();
+const c2 = increment();
+const c3 = increment();
+console.log('example increment', c1, c2, c3);
 
 
 
