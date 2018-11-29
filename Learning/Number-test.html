@@ -63,6 +63,10 @@ let div3 = document.getElementById('div3');
 
 let alldivs = [div1, div2, div3];
 
+for (i = 0; i < alldivs.length; i++) {
+  alldivs[i].style.cssText = 'background-color: red;';
+}
+
 alldivs.onclick = function() {
   alert('click');
 }
