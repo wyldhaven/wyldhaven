@@ -67,10 +67,12 @@ for (i = 0; i < alldivs.length; i++) {
   alldivs[i].style.cssText = 'background-color: red; padding: 50px 100px; width: auto; border: 1px solid;';
 }
 
-div1.style.cssText = 'wbackground-color: red; padding: 50px 100px; width: auto; border: 1px solid;';
+div1.style.cssText = 'background-color: red; padding: 50px 100px; width: auto; border: 1px solid;';
 
-div1.onclick = function() {
-  alert('click');
+div1.addEventListener('click', function() {
+  alert('div 1 clicked!');
+});
+
 }
 
 //-------- var getting overwritten from inside a block (they are not block scope), let is better
