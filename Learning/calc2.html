@@ -32,14 +32,53 @@ let mxBtn = document.getElementById('mxBtn');
 let powBtn = document.getElementById('powBtn');
 let answer = document.getElementById('answer');
 
-let allInputs = document.querySelectorAll('input');
+let allButtons = document.querySelectorAll('button');
 
-allInputs.onchange = function() {
-  let calcInputValue = calcInput.value;
-  let calcInput2Value = calcInput.value;
+var calcInputValue;
+
+calcInput.onchange = function() {
+  calcInputValue = calcInput.value;
   console.log(calcInputValue);
-  console.log(calcInput2Value);
+  return calcInputValue;
 }
+
+var calcInput2Value;
+
+calcInputTwo.onchange = function() {
+  calcInput2Value = calcInput.value;
+  console.log(calcInput2Value);
+  return calcInput2Value;
+}
+
+function add() {
+  let answer = calcInputValue + calcInput2Value;
+  answer.textContent = 'answer = ' + answer;
+}
+
+for (let i = 0; i < allButtons.length; i++) {
+  allButtons[i].addEventListener('click', function() {
+
+    if (this.id == 'addBtn') {
+      add();
+      symbol.textContent = ' + ';
+    } else if (this.id == 'subBtn') {
+      sub();
+      symbol.textContent = ' + ';
+    } else if (this.id == 'divBtn') {
+      div();
+      symbol.textContent = ' + ';
+    } else if (this.id == 'mxBtn') {
+      mx();
+      symbol.textContent = ' + ';
+    } else if (this.id == 'powBtn') {
+      pow();
+      symbol.textContent = ' + ';
+    }
+
+  });
+}
+
+
 
 
 </script>
