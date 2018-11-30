@@ -69,9 +69,18 @@ let alldivs = [div1, div2, div3];
 div1.style.cssText = 'background-color: red; width: 1100px; height: 300px; border: 1px solid; position: absolute;';
 div2.style.cssText = 'background-color: blue; width: 900px; height: 220px; border: 1px solid; position: absolute; z-index: 2;';
 div3.style.cssText = 'background-color: green; width: 700px; height: 150px; border: 1px solid; position: absolute; z-index: 3;';
+container.style.cssText = 'position: relative; display: flex; justify-content: center; align-items: center; margin-top: 15rem;';
 
 div1.addEventListener('click', function() {
   alert('div 1 clicked!');
+});
+
+div2.addEventListener('click', function() {
+  alert('div 2 clicked!');
+});
+
+div3.addEventListener('click', function() {
+  alert('div 3 clicked!');
 });
 
 //-------- var getting overwritten from inside a block (they are not block scope), let is better
