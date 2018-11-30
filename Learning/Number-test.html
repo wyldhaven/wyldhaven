@@ -63,11 +63,9 @@ let div3 = document.getElementById('div3');
 
 let alldivs = [div1, div2, div3];
 
-for (i = 0; i < alldivs.length; i++) {
-  alldivs[i].style.cssText = 'background-color: red; padding: 50px 100px; width: auto; border: 1px solid;';
-}
-
 div1.style.cssText = 'background-color: red; padding: 50px 100px; width: auto; border: 1px solid;';
+div2.style.cssText = 'background-color: red; padding: 50px 100px; width: auto; border: 1px solid;';
+div3.style.cssText = 'background-color: red; padding: 50px 100px; width: auto; border: 1px solid;';
 
 div1.addEventListener('click', function() {
   alert('div 1 clicked!');
