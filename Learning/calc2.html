@@ -57,6 +57,26 @@ function add() {
   answer.textContent = 'answer = ' + answerCalc;
 }
 
+function sub() {
+  let answerCalc = calcInputValue - calcInput2Value;
+  answer.textContent = 'answer = ' + answerCalc;
+}
+
+function div() {
+  let answerCalc = calcInputValue / calcInput2Value;
+  answer.textContent = 'answer = ' + answerCalc;
+}
+
+function mx() {
+  let answerCalc = calcInputValue * calcInput2Value;
+  answer.textContent = 'answer = ' + answerCalc;
+}
+
+function pow() {
+  let answerCalc = Math.pow(calInputValue, calInput2Value);
+  answer.textContent = 'answer = ' + answerCalc;
+}
+
 for (let i = 0; i < allButtons.length; i++) {
   allButtons[i].addEventListener('click', function() {
     console.log('lcikc');
