@@ -20,7 +20,7 @@ class Clickcounter extends React.Component {
 
   newClick() {
     this.setState((prevState) => ({
-      clicks = prevState.clicks + 1
+      clicks: prevState.clicks + 1
     }));
   }
 
@@ -29,7 +29,7 @@ class Clickcounter extends React.Component {
       <div>
         <h1>New React stuff</h1>
         <button onclick={this.newClick.bind(this)}>Click</button>
-        <p>Clicks: {this.state.clicks}</p>
+        <p>Clicks = {this.state.clicks}</p>
       </div>
     );
   }
