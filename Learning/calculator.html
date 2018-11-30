@@ -36,6 +36,7 @@ let allButtons = document.querySelectorAll('button');
 let allInputs = document.querySelectorAll('input');
 
 for (z = 0; z < allInputs.length; z++) {
+  console.log('all inputs length = ' + allInputs.length);
 
   allInputs[z].onchange = function() {
   let calInputValue = calcInput.value;

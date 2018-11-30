@@ -569,3 +569,19 @@ h2 {
     bottom: -35rem;
   }
 }
+
+.new-single {
+  margin-bottom: 0;
+}
+
+.social-music-single {
+  display: block;
+  justify-content: inherit;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.social-music-single p {
+  margin-bottom: 1rem;
+  display: block;
+}
