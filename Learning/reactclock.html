@@ -20,7 +20,8 @@ class Clock extends React.Component {
 
   componentDidMount() {
     this.timerID = setInterval(
-      () => this.tick(), 1000
+      () => this.tick(),
+      1000
     );
   }
 
@@ -37,7 +38,7 @@ class Clock extends React.Component {
   render() {
     return(
       <div>
-        <p>Hello it is {this.state.date}.</p>
+        <p>Hello it is {this.state.date.toLocaleTimeString()}.</p>
       </div>
     );
   }
