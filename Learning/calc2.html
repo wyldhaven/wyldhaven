@@ -39,6 +39,7 @@ var calcInputValue;
 calcInput.onchange = function() {
   calcInputValue = calcInput.value;
   console.log(calcInputValue);
+  calcInputValue = Number(calcInputValue);
   return calcInputValue;
 }
 
@@ -47,6 +48,7 @@ var calcInput2Value;
 calcInputTwo.onchange = function() {
   calcInput2Value = calcInput.value;
   console.log(calcInput2Value);
+  calcInput2Value = Number(calcInput2Value);
   return calcInput2Value;
 }
 
