@@ -73,7 +73,7 @@ function mx() {
 }
 
 function pow() {
-  let answerCalc = Math.pow(calInputValue, calInput2Value);
+  let answerCalc = Math.pow(calcInputValue, calcInput2Value);
   answer.textContent = 'answer = ' + answerCalc;
 }
 
@@ -86,16 +86,16 @@ for (let i = 0; i < allButtons.length; i++) {
       symbol.textContent = ' + ';
     } else if (this.id == 'subBtn') {
       sub();
-      symbol.textContent = ' + ';
+      symbol.textContent = ' - ';
     } else if (this.id == 'divBtn') {
       div();
-      symbol.textContent = ' + ';
+      symbol.textContent = ' / ';
     } else if (this.id == 'mxBtn') {
       mx();
-      symbol.textContent = ' + ';
+      symbol.textContent = ' * ';
     } else if (this.id == 'powBtn') {
       pow();
-      symbol.textContent = ' + ';
+      symbol.textContent = ' ^ ';
     }
 
   });
