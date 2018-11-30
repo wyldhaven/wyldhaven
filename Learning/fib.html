@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<label type="number" for="fibInput">Enter a value:</label>
+<input id="fibInput"></input>
+
+<script>
+
+let fibInput = document.getElementById('fibInput');
+
+fibInput.onchange = function() {
+
+let userNumber = fibInput.value;
+userNumber = Number(userNumber);
+console.log('userNumber = ' + userNumber);
+let fibArray = [];
+var a = 1, b = 0, temp;
+let num = 200;
+
+function fibonacci(num){
+while (num >= 0) {
+
+  temp = a;
+  a = a + b;
+  b = temp;
+  num--;
+
+  //fibArray.push(fibSeq);
+  console.log('inside loop ' + b);
+
+}
+return b;
+
+console.log('outside loop ' + b);
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

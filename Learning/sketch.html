@@ -2,12 +2,88 @@
 <html>
 <body>
 
+<style>
+
+.hover {
+  background-color: grey !important;
+}
+
+</style>
+
+<label for="cell">Pick Grid size:</label>
+<input type="number" class="cell"></input>
+
+<button id="thisbuttonsucks">Reset</button>
+
+<div class="main-container">
+
+
+
+
+</div>
 
 
 <script>
 
+let button = document.getElementById('thisbuttonsucks');
+let input = document.querySelector('.cell');
+
+input.onchange = function() {
+  let setBoxAmount = input.value;
+
+  let mainContainer = document.querySelector('.main-container');
+  let divs = document.createElement('div');
+  let boxAmount = [];
+  let boxSize = 700 / setBoxAmount;
+
+
+  divs.style.cssText = 'background-color: #ccc; float: left; margin: 0; width: ' + boxSize + 'px; height: ' + boxSize + 'px;';
+  mainContainer.style.cssText = 'width: 700px; margin: 0 auto; height: 700px; display: block;';
+
+  button.addEventListener('click' , function() {
+    input.value = '';
+    //let boxAmount = [];
+    console.log('click');
+    let boxSelected = document.querySelectorAll('div:not(.main-container)');
+    console.log('boxselected length = ' + boxSelected.length);
+
+
+
+      // document.querySelectorAll('div').forEach(function(el) {
+      //   el.classList.remove("hover");
+      // });
+
+      for(i = 0; i < (setBoxAmount * setBoxAmount); i++){
+        console.log('setBoxAmount * setBoxAmount = ' + (setBoxAmount * setBoxAmount));
+        mainContainer.removeChild(boxSelected[i]);
+        console.log('i = ' + i);
+      }
+
+  });
+
+  for (var i = 0; i < (setBoxAmount * setBoxAmount); i++) {
+    boxAmount.push(i);
+    let cln = divs.cloneNode(true);
+    mainContainer.appendChild(cln);
+    cln.classList.add('selector');
+    console.log('cln length');
+
+  }
+
+  document.querySelectorAll('div:not(.main-container)').forEach(function(el) {
+    el.onmouseover = poodickfunction;
+  });
+
+  function poodickfunction(evt) {
+    var el = evt.target;
+    el.classList.add("hover");
+  }
+
+}
+
 
 </script>
+
 
 </body>
 </html>
