@@ -32,6 +32,8 @@
   <li>List</li>
 </ul>
 
+<input id="inputbears" type="text" value="Bears lost :("></input>
+
 <div id="butt">
 
 </div>
@@ -49,10 +51,9 @@ var y = 0;
 
 $(document).ready(function() {
 
-  let text1 = '<input type="text" value="Bears lost :("></input>';
-  $('body').append(text1);
+  let inputbears = document.getElementById('inputbears');
 
-  $(text1).focus(function() {
+  $(inputbears).focus(function() {
     $(this).val('Bear Down!');
   });
 
