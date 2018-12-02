@@ -55,22 +55,19 @@ var y = 0;
 let clickyswitcher = document.getElementById('clickyswitcher');
 let portumeLink = document.getElementById('portume-link');
 
-$(clickyswitcher).toggle(
-  function () {
+$(clickyswitcher).toggle(function() {
     $(portumeLink).attr({
       "href" : "https://graysonrandall.github.io/portfolio/Grayson-Randall_Resume.pdf"
     });
     $(portumeLink).text('resume');
     $(clickyswitcher).text('Click to see resume');
-  } , function () {
+  } , function() {
     $(portumeLink).attr({
       "href" : "https://graysonrandall.github.io/portfolio/"
     });
     $(portumeLink).text('Portfolio');
     $(clickyswitcher).text('Click to see portfolio');
-  }
-
-);
+  });
 
 $(document).ready(function() {
 
