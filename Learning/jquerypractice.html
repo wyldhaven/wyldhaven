@@ -32,10 +32,14 @@
   <li>List</li>
 </ul>
 
-<a id="portume-link" target="_blank" href="https://graysonrandall.github.io/portfolio/">Portfolio</a><br>
-<button id="clickyswitcher">Click to see portfolio</button><br>
+<a id="portume-link" target="_blank" href="https://graysonrandall.github.io/portfolio/">Portfolio</a><br><br>
+<button id="clickyswitcher">Click to see portfolio</button><br><br>
 
-<input id="inputbears" type="text" value="Bears lost :("></input><br>
+<input id="inputbears" type="text" value="Bears lost :("></input><br><br>
+
+<div id="target">
+  Click here
+</div>
 
 <div id="butt">
 
@@ -43,6 +47,12 @@
 
 
 <script>
+
+$( "#target" ).toggle(function() {
+  alert( "First handler for .toggle() called." );
+}, function() {
+  alert( "Second handler for .toggle() called." );
+});
 
 var goAway = $('#goaway')[0];
 var goAway1 = $('#goaway1')[0];
