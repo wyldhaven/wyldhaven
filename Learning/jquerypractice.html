@@ -52,6 +52,10 @@ $(document).ready(function() {
   let text1 = '<input type="text" value="Bears lost :("></input>';
   $('body').append(text1);
 
+  $(text1).hover(function() {
+    $(this).val('Bear Down!');
+  });
+
   $(goAway).on ({
 
     dblclick: function() {
