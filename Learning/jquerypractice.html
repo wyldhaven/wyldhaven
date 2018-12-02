@@ -32,6 +32,9 @@
   <li>List</li>
 </ul>
 
+<a id="portume-link" target="_blank" href="https://graysonrandall.github.io/portfolio/"></a>
+<button id="clickyswitcher">Click to see portfolio</button>
+
 <input id="inputbears" type="text" value="Bears lost :("></input>
 
 <div id="butt">
@@ -48,6 +51,17 @@ var result1 = $('.result1')[0];
 var expand = $('.header')[0];
 var x = 0;
 var y = 0;
+
+let clickyswitcher = document.getElementById('clickyswitcher');
+let portumeLink = document.getElementById('portume-link');
+
+$(clickyswitcher).click(function () {
+  $(portumeLink).attr({
+    "href" : "https://graysonrandall.github.io/portfolio/Grayson-Randall_Resume.pdf"
+  });
+
+  $(portumeLink).text('Click to see resume');
+});
 
 $(document).ready(function() {
 
