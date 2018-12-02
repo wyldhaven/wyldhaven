@@ -27,7 +27,7 @@
 
 <p class="header">Header</p>
 <ul>
-  <li>List</li>
+  <li class="newtext">List</li>
   <li>List</li>
   <li>List</li>
 </ul>
@@ -75,6 +75,10 @@ $(result1).on ({
 
 $(expand).click(function () {
   $('li').slideToggle(800);
+});
+
+$(document.querySelector('.newtext')).click(function () {
+  console.log('new text');
 });
 
 $('#butt').addClass('box');
