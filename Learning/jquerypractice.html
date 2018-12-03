@@ -37,9 +37,6 @@
 
 <input id="inputbears" type="text" value="Bears lost :("></input><br><br>
 
-<div id="target">
-  Click here
-</div>
 
 <div id="butt">
 
@@ -73,15 +70,17 @@ let portumeLink = document.getElementById('portume-link');
 //     $(clickyswitcher).text('Click to see portfolio');
 //   });
 
+$(document).ready(function() {
 $(clickyswitcher).toggle(
 
-  function() {
+  function () {
     $(portumeLink).attr({
       "href" : "https://graysonrandall.github.io/portfolio/Grayson-Randall_Resume.pdf"
     });
     $(portumeLink).text('resume');
     $(clickyswitcher).text('Click to see resume');
-  } , function() {
+  },
+  function () {
     $(portumeLink).attr({
       "href" : "https://graysonrandall.github.io/portfolio/"
     });
@@ -90,6 +89,8 @@ $(clickyswitcher).toggle(
   }
 );
 
+});
+
 $(document).ready(function() {
 
   let inputbears = document.getElementById('inputbears');
@@ -97,6 +98,8 @@ $(document).ready(function() {
   $(inputbears).focus(function() {
     $(this).val('Bear Down!');
   });
+
+  $(goaway1).prepend('<b>This is</b> ');
 
   $(goAway).on ({
 
