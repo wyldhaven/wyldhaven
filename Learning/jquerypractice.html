@@ -56,34 +56,13 @@ var y = 0;
 let clickyswitcher = document.getElementById('clickyswitcher');
 let portumeLink = document.getElementById('portume-link');
 
-$(document).ready(function(){
-    $("p").toggle(
-        function(){$("p").css({"color": "red"});},
-        function(){$("p").css({"color": "blue"});},
-        function(){$("p").css({"color": "green"});
+$(clickyswitcher).click(function () {
+    $(portumeLink).attr({
+      "href" : "https://graysonrandall.github.io/portfolio/Grayson-Randall_Resume.pdf"
     });
-});
-
-// $(document).ready(function() {
-// $(clickyswitcher).toggle(
-//
-//   function () {
-//     $(portumeLink).attr({
-//       "href" : "https://graysonrandall.github.io/portfolio/Grayson-Randall_Resume.pdf"
-//     });
-//     $(portumeLink).text('resume');
-//     $(clickyswitcher).text('Click to see resume');
-//   },
-//   function () {
-//     $(portumeLink).attr({
-//       "href" : "https://graysonrandall.github.io/portfolio/"
-//     });
-//     $(portumeLink).text('Portfolio');
-//     $(clickyswitcher).text('Click to see portfolio');
-//   }
-// );
-//
-// });
+    $(portumeLink).text('resume');
+    $(clickyswitcher).text('Click to see resume');
+  });
 
 $(document).ready(function() {
 
