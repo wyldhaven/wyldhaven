@@ -37,6 +37,17 @@
 
 <input id="inputbears" type="text" value="Bears lost :("></input><br><br>
 
+<div id="colordiv" style="padding: 20px; background-color: red; color: white;">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+</div>
+
+<button id="colorbutton">Click to empty</button><br><br>
+<button id="colorbutton1">Click to remove</button><br><br>
+
 
 <div id="butt">
 
@@ -55,6 +66,18 @@ var y = 0;
 
 let clickyswitcher = document.getElementById('clickyswitcher');
 let portumeLink = document.getElementById('portume-link');
+
+let colordiv = document.getElementById('colordiv');
+let colorbutton = document.getElementById('colorbutton');
+let colorbutton1 = document.getElementById('colorbutton');
+
+$(colorbutton).click(function() {
+  $(colordiv).empty();
+});
+
+$(colorbutton1).click(function() {
+  $(colordiv).remove();
+});
 
 $(clickyswitcher).click(function () {
     $(portumeLink).attr({
