@@ -73,6 +73,7 @@ let colorbutton1 = document.getElementById('colorbutton1');
 
 $(colorbutton).click(function() {
   $(colordiv).empty();
+  $(portumeLink).addClass('Asswipe');
 });
 
 $(colorbutton1).click(function() {
@@ -85,7 +86,7 @@ $(clickyswitcher).click(function () {
     });
     $(portumeLink).text('resume');
     $(clickyswitcher).text('Click to see resume');
-    $(portumeLink).before('<span> yay!</span>');
+    $(portumeLink).before('<span>yay!</span> ');
   });
 
 $(document).ready(function() {
