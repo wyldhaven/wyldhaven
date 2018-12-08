@@ -49,6 +49,35 @@
 
 <p id="timer">600</p>
 
+<hr>
+
+<br><br><br>
+
+<div class="onward-testimonial-dissolve">
+  <div class="testimonial hide">
+      <p>Test</p>
+  </div>
+
+  <div class="testimonial hide">
+      <p>Test</p>
+  </div>
+
+  <div class="testimonial hide">
+      <p>Test</p>
+  </div>
+
+  <div class="testimonial hide">
+      <p>Test</p>
+  </div>
+
+</div>
+
+<br><br><br>
+
+<hr>
+
+<br><br><br>
+
 <div id="container">
 
 <div id="div1"></div>
@@ -58,6 +87,20 @@
 </div>
 
 <script>
+
+let testimonials = document.querySelectorAll('.testimonial');
+
+window.onload = function() {
+
+  for (let i = 0; i < testimonials.length; i++) {
+
+    let intervalTimer = setInterval(function() {
+        testimonials[i].classList.remove('hide');
+    }, 1000);
+
+  }
+}
+
 
 let container = document.getElementById('container');
 let div1 = document.getElementById('div1');
