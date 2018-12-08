@@ -92,12 +92,13 @@ let testimonials = document.querySelectorAll('.testimonial');
 
 window.onload = function() {
 
-  for (let i = 0; i < testimonials.length; i++) {
-
-    let intervalTimer = setInterval(function() {
+  var rotatePictures = function (testimonials) {
+    var length = testimonials.length
+      , i = 0;
+    setInterval(function () {
+        i = (i + 1) % length;
         testimonials[i].classList.remove('hide');
-    }, 1000);
-
+    }, 4000)
   }
 }
 
