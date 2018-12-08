@@ -66,10 +66,6 @@
       <p>Test</p>
   </div>
 
-  <div class="testimonial hide">
-      <p>Test</p>
-  </div>
-
 </div>
 
 <br><br><br>
@@ -98,8 +94,8 @@ let testimonials = document.querySelectorAll('.testimonial');
         testimonials[i].classList.remove('hide');
 
         if (i == 0) {
-          testimonials[3].classList.add('hide');
-        } else if (i == 1 || i == 2 || i == 3) {
+          testimonials[2].classList.add('hide');
+        } else if (i == 1 || i == 2) {
           testimonials[i - 1].classList.add('hide');
         }
     }, 4000)
