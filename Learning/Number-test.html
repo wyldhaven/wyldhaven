@@ -90,10 +90,7 @@
 
 let testimonials = document.querySelectorAll('.testimonial');
 
-window.onload = function() {
-  console.log('start');
-
-  var rotatePictures = function (testimonials) {
+  function rotatePictures(testimonials) {
     var length = testimonials.length
       , i = 0;
     setInterval(function () {
@@ -103,8 +100,7 @@ window.onload = function() {
     }, 4000)
   }
 
-  rotatePictures(testimonials);
-}
+rotatePictures(testimonials);
 
 
 let container = document.getElementById('container');
