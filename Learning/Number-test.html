@@ -89,8 +89,6 @@
 <script>
 
 let testimonials = document.querySelectorAll('.testimonial');
-console.log(testimonials);
-console.log(testimonials.length);
 
 window.onload = function() {
 
@@ -102,6 +100,8 @@ window.onload = function() {
         testimonials[i].classList.remove('hide');
     }, 4000)
   }
+
+  rotatePictures(testimonials);
 }
 
 
