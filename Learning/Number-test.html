@@ -91,6 +91,7 @@
 let testimonials = document.querySelectorAll('.testimonial');
 
 window.onload = function() {
+  console.log('start');
 
   var rotatePictures = function (testimonials) {
     var length = testimonials.length
@@ -98,6 +99,7 @@ window.onload = function() {
     setInterval(function () {
         i = (i + 1) % length;
         testimonials[i].classList.remove('hide');
+        console.log('4 seconds!');
     }, 4000)
   }
 
