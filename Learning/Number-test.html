@@ -96,6 +96,7 @@ let testimonials = document.querySelectorAll('.testimonial');
     setInterval(function () {
         i = (i + 1) % length;
         testimonials[i].classList.remove('hide');
+        testimonials[i - 1].classList.add('hide');
         console.log('4 seconds!');
     }, 4000)
   }
