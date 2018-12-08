@@ -96,11 +96,13 @@ let testimonials = document.querySelectorAll('.testimonial');
     setInterval(function () {
         i = (i + 1) % length;
         testimonials[i].classList.remove('hide');
-        //testimonials[i - 1].classList.add('hide');
 
         if (i == 0) {
           testimonials[3].classList.add('hide');
+        } else {
+          testimonials[i].classList.add('hide');
         }
+
         console.log(i);
     }, 4000)
   }
