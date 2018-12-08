@@ -99,8 +99,8 @@ let testimonials = document.querySelectorAll('.testimonial');
 
         if (i == 0) {
           testimonials[3].classList.add('hide');
-        } else {
-          testimonials[i].classList.add('hide');
+        } else if (i == 1 || i == 2 || i == 3) {
+          testimonials[i - 1].classList.add('hide');
         }
 
         console.log(i);
