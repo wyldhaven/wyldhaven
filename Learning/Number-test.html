@@ -95,8 +95,12 @@ let testimonials = document.querySelectorAll('.testimonial');
       , i = 0;
     setInterval(function () {
         i = (i + 1) % length;
-        testimonials[i + 1].classList.remove('hide');
-        testimonials[i].classList.add('hide');
+        testimonials[i].classList.remove('hide');
+        testimonials[i - 1].classList.add('hide');
+
+        if (i == 0) {
+          testimonials[4].classList.add('hide');
+        }
         console.log('4 seconds!');
     }, 4000)
   }
