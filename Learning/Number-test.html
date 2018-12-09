@@ -53,7 +53,7 @@
 
 <br><br><br>
 
-<div class="onward-testimonial-dissolve three-testimonial">
+<div class="onward-testimonial-dissolve four-testimonial">
   <div class="testimonial">
       <p>Test</p>
   </div>
@@ -99,7 +99,10 @@ let y;
 
   function rotatePictures(testimonials) {
 
-    if (testcontainer.classList.contains('two-testimonial')) {
+    if (testcontainer.classList.contains('one-testimonial')) {
+      x = 4;
+      y = 1;
+    } else if (testcontainer.classList.contains('two-testimonial')) {
       x = 3;
       y = 1;
     } else if (testcontainer.classList.contains('three-testimonial')) {
