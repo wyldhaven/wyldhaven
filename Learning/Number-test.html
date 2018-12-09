@@ -53,7 +53,7 @@
 
 <br><br><br>
 
-<div class="onward-testimonial-dissolve">
+<div class="onward-testimonial-dissolve one-testimonial">
   <div class="testimonial">
       <p>Test</p>
   </div>
@@ -85,8 +85,14 @@
 <script>
 
 let testimonials = document.querySelectorAll('.testimonial');
+let container = document.getElementById('.onward-testimonial-dissolve');
 
   function rotatePictures(testimonials) {
+
+    if (container.classList.contains('.one-testimonial')) {
+      console.log('just one!');
+    }
+
     let length = testimonials.length
       , i = 0;
     setInterval(function () {
