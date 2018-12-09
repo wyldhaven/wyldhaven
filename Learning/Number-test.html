@@ -94,7 +94,7 @@
 
 let testimonials = document.querySelectorAll('.testimonial');
 let testcontainer = document.querySelector('.onward-testimonial-dissolve');
-//let x;
+let x = 3;
 
   function rotatePictures(testimonials) {
 
@@ -103,14 +103,14 @@ let testcontainer = document.querySelector('.onward-testimonial-dissolve');
     //   console.log('x = ' + x);
     // }
 
-    let length = (testimonials.length)
+    let length = (testimonials.length - 1)
       , i = 0;
     setInterval(function () {
         i = (i + 1) % length;
         testimonials[i].classList.remove('hide');
 
         if (i == 0) {
-          testimonials[4].classList.add('hide');
+          testimonials[x].classList.add('hide');
         } else if (i == 1 || i == 2 || i == 3 || i == 4) {
           testimonials[i - 1].classList.add('hide');
         }
