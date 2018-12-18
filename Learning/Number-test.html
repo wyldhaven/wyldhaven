@@ -28,14 +28,13 @@
 <hr>
 
 <ul>
-  <li onclick="complete()">Test I hate my life</li>
+  <li onclick="complete(this)">Test I hate my life</li>
 </ul>
 
 <script>
-  function complete() {
-      console.log('click');
-
-
+  function complete(ul) {
+      var tmpField = button.parentNode;
+      tmpField.classList.add("press-completed");
   }
 </script>
 
