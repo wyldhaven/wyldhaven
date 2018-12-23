@@ -30,7 +30,7 @@
                 data: $(this).serialize(),
                 success: function(data){
                     console.log(data);
-                    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums?q=' + str, true);
+                    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums', true);
                     xmlHttp.send();
                     console.log(xmlHttp);
 
