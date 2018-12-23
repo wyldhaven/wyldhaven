@@ -33,7 +33,7 @@ window.onload = function() {
       console.log('processing request');
     } else if (this.readyState == 4) {
       console.log('request finished and response is ready');
-      console.log(this.getResponseHeader('Title'));
+      console.log(this.responseText);
     }
 
 
@@ -50,10 +50,10 @@ function showHint(str) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
       if (this.readyState == 4) {
-        document.getElementById("txtHint").innerHTML = this.getResponseHeader('Title');
+        document.getElementById("txtHint").innerHTML = this.responseText;
       }
     }
-    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums' + str, true);
+    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums?q=' + str, true);
     xmlHttp.send();
   }
 }
