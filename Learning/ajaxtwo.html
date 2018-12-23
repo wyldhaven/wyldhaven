@@ -19,10 +19,15 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
-    (function($){
+    var xmlhttp = new XMLHttpRequest();
+    var url = "https://jsonplaceholder.typicode.com/albums";
 
-      var xmlhttp = new XMLHttpRequest();
-      var url = "https://jsonplaceholder.typicode.com/albums";
+    xmlhttp.onreadystatechange = function() {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    };
+
+    (function($){
 
         function processForm( e ){
             $.ajax({
@@ -30,13 +35,14 @@
                 dataType: 'json',
                 type: 'post',
                 data: $(this).serialize(),
-                success: function(){
-                  xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                      var myArr = JSON.parse(this.responseText);
-                      myFunction(myArr);
+                success: function(data){
+                    console.log(data);
+                    xmlhttp.open("GET", url, true);
+                    xmlhttp.send();
+
+                    function myFunction(arr) {
+                      console.log(arr);
                     }
-                  };
 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
@@ -44,20 +50,11 @@
                 }
             });
 
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
-
-            function myFunction(arr) {
-              console.log(arr);
-            }
-
             e.preventDefault();
         }
 
         $('#my-form').submit( processForm );
     })(jQuery);
-
-
 
 
 
