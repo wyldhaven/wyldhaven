@@ -28,9 +28,11 @@ window.onload = function() {
       console.log('processing request');
     } else if (this.readyState == 4) {
       console.log('request finished and response is ready');
+    } else if (this.status == 200) {
+      console.log('OK!');
     }
 
-    //console.log(this.responseText);
+    console.log(this.responseText);
   }
   requestInfo.open('GET', 'https://jsonplaceholder.typicode.com/albums?id=3', true);
   requestInfo.send();
