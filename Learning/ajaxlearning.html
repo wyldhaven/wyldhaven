@@ -52,7 +52,7 @@ function showHint(str) {
         document.getElementById("txtHint").innerHTML = this.responseText;
       }
     }
-    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums', true);
+    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums?title=' + str, true);
     xmlHttp.send();
   }
 }
