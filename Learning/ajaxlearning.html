@@ -50,10 +50,11 @@ function showHint(str) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
       if (this.readyState == 4) {
-        document.getElementById("txtHint").innerHTML = this.responseText;
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("txtHint").innerHTML = myObj.title;
       }
     }
-    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums?title=?q=' + str, true);
+    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums?q=' + str, true);
     xmlHttp.send();
   }
 }
