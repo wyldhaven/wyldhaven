@@ -27,7 +27,7 @@
                 type: 'post',
                 data: $(this).serialize(),
                 success: function( data, textStatus, jQxhr ){
-                    console.log(jQxhr);
+                    console.log(data[0]);
 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
