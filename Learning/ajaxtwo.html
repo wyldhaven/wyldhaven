@@ -26,8 +26,9 @@
                 dataType: 'json',
                 type: 'post',
                 data: $(this).serialize(),
-                success: function( url, data, textStatus, jQxhr ){
-                    console.log(url);
+                success: function( data, textStatus, jQxhr ){
+                  var json = $.parseJSON(data);
+                    console.log(json;
 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
