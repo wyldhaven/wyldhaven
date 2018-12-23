@@ -32,7 +32,8 @@
                     console.log(data);
                     xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums', true);
                     xmlHttp.send();
-                    console.log(xmlHttp);
+                    var testt = JSON.parse(xmlHttp)
+                    console.log(testt);
 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
