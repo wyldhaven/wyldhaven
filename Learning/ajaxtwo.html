@@ -40,14 +40,16 @@
                 }
             });
 
+            function ihateme() {
+              xmlhttp.open('GET', url);
+            }
+
             e.preventDefault();
         }
 
         $('#my-form').submit( processForm );
 
-        function ihateme() {
-          xmlhttp.open('GET', url);
-        }
+
 
     })(jQuery);
 
