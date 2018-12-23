@@ -38,7 +38,7 @@ window.onload = function() {
 
 
   }
-  requestInfo.open('GET', 'https://jsonplaceholder.typicode.com/albums?id=3', true);
+  requestInfo.open('GET', 'https://jsonplaceholder.typicode.com/albums', true);
   requestInfo.send();
 }
 
@@ -52,7 +52,7 @@ function showHint(str) {
         document.getElementById("txtHint").innerHTML = this.responseText;
       }
     }
-    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums?id=3', true);
+    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums', true);
     xmlHttp.send();
   }
 }
