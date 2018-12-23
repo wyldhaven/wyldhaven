@@ -76,22 +76,13 @@ var newData = {
   status: 'Awesome'
 }
 
-var myJSON, text, obj;
+var thisJson = JSON.stringify(newData);
+localStorage.setItem("data", newData);
 
-var myObj = {
-  name: 'Grayson',
-  sex: 'Male',
-  status: 'Awesome'
-}
+var text = localStorage.getItem("data");
+var display = JSON.parse(text);
+document.getElementById("jsonPara").innerHTML = display.name + ' and he is ' + display.status;
 
-// Storing data:
-myJSON = JSON.stringify(myObj);
-localStorage.setItem("testJSON", myJSON);
-
-// Retrieving data:
-text = localStorage.getItem("testJSON");
-obj = JSON.parse(text);
-document.getElementById("jsonPara").innerHTML = obj.name + ' and he is ' + obj.status;
 </script>
 
 </body>
