@@ -27,10 +27,8 @@
                 type: 'post',
                 data: $(this).serialize(),
                 success: function( data, textStatus, jQxhr ){
-                    $('#response pre').html( data );
-                    fetch('https://jsonplaceholder.typicode.com/albums')
-                      .then(responseOne => responseOne.json())
-                      .then(jsonOne => console.log(jsonOne))
+                    console.log(data);
+
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
                     console.log( errorThrown );
