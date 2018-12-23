@@ -19,44 +19,49 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
-    // (function($){
-    //
-    //     function processForm( e ){
-    //         $.ajax({
-    //             url: 'https://jsonplaceholder.typicode.com/albums',
-    //             dataType: 'json',
-    //             type: 'post',
-    //             data: $(this).serialize(),
-    //             success: function(data){
-    //                 console.log(data);
-    //
-    //             },
-    //             error: function( jqXhr, textStatus, errorThrown ){
-    //                 console.log( errorThrown );
-    //             }
-    //         });
-    //
-    //         e.preventDefault();
-    //     }
-    //
-    //     $('#my-form').submit( processForm );
-    // })(jQuery);
+    (function($){
 
-    var xmlhttp = new XMLHttpRequest();
-    var url = "https://jsonplaceholder.typicode.com/albums";
+      var xmlhttp = new XMLHttpRequest();
+      var url = "https://jsonplaceholder.typicode.com/albums";
 
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-      }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+        function processForm( e ){
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/albums',
+                dataType: 'json',
+                type: 'post',
+                data: $(this).serialize(),
+                success: function(){
+                  xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                      var myArr = JSON.parse(this.responseText);
+                      myFunction(myArr);
+                    }
+                  };
 
-    function myFunction(arr) {
-      console.log(arr);
-    }
+                },
+                error: function( jqXhr, textStatus, errorThrown ){
+                    console.log( errorThrown );
+                }
+            });
+
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+
+            function myFunction(arr) {
+              console.log(arr);
+            }
+
+            e.preventDefault();
+        }
+
+        $('#my-form').submit( processForm );
+    })(jQuery);
+
+
+
+
+
+
 </script>
 </body>
 </html>
