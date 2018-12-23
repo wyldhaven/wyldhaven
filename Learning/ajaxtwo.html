@@ -19,9 +19,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
-    var xmlhttp = new XMLHttpRequest();
-    var url = "https://jsonplaceholder.typicode.com/albums";
-
     (function($){
 
         function processForm( e ){
@@ -32,12 +29,6 @@
                 data: $(this).serialize(),
                 success: function(data){
                     console.log(data);
-                    xmlhttp.open("GET", url, true);
-                    xmlhttp.send();
-
-                    function myFunction(arr) {
-                      console.log(arr);
-                    }
 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
@@ -45,19 +36,25 @@
                 }
             });
 
-            xmlhttp.onreadystatechange = function() {
-                var myArr = JSON.parse(this.responseText);
-                myFunction(myArr);
-            };
-
             e.preventDefault();
         }
 
         $('#my-form').submit( processForm );
     })(jQuery);
 
+    var xmlhttp = new XMLHttpRequest();
+    var url = "https://jsonplaceholder.typicode.com/albums";
 
+    xmlhttp.onreadystatechange = function() {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 
+    function myFunction(arr) {
+      console.log(arr);
+    }
 
 </script>
 </body>
