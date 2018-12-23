@@ -19,33 +19,44 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
-    (function($){
-      var xmlHttp = new XMLHttpRequest();
+    // (function($){
+    //
+    //     function processForm( e ){
+    //         $.ajax({
+    //             url: 'https://jsonplaceholder.typicode.com/albums',
+    //             dataType: 'json',
+    //             type: 'post',
+    //             data: $(this).serialize(),
+    //             success: function(data){
+    //                 console.log(data);
+    //
+    //             },
+    //             error: function( jqXhr, textStatus, errorThrown ){
+    //                 console.log( errorThrown );
+    //             }
+    //         });
+    //
+    //         e.preventDefault();
+    //     }
+    //
+    //     $('#my-form').submit( processForm );
+    // })(jQuery);
 
-        function processForm( e ){
-            $.ajax({
-                url: 'https://jsonplaceholder.typicode.com/albums',
-                dataType: 'json',
-                type: 'post',
-                data: $(this).serialize(),
-                success: function(data){
-                    console.log(data);
-                    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums', true);
-                    xmlHttp.send();
-                    var testt = JSON.parse(xmlHttp)
-                    console.log(testt);
+    var xmlhttp = new XMLHttpRequest();
+    var url = "https://jsonplaceholder.typicode.com/albums";
 
-                },
-                error: function( jqXhr, textStatus, errorThrown ){
-                    console.log( errorThrown );
-                }
-            });
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+      }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 
-            e.preventDefault();
-        }
-
-        $('#my-form').submit( processForm );
-    })(jQuery);
+    function myFunction(arr) {
+      console.log(arr);
+    }
 </script>
 </body>
 </html>
