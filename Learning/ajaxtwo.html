@@ -21,6 +21,9 @@
 
     (function($){
 
+      var xmlhttp = new XMLHttpRequest();
+      var url = "https://jsonplaceholder.typicode.com/albums";
+
         function processForm( e ){
             $.ajax({
                 url: 'https://jsonplaceholder.typicode.com/albums',
@@ -30,7 +33,7 @@
                 success: function(data){
                     console.log(data);
                     var fuckmylife = JSON.parse(data);
-                    console.log(fuckmylife);
+                    console.log(xmlhttp.open("GET", https://jsonplaceholder.typicode.com/albums, true););
 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
