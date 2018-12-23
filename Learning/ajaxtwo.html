@@ -65,6 +65,8 @@
       }
     }).then(res => res.json())
     .then(response => console.log(response))
+    .then(responseOne => responseOne.json())
+    .then(jsonOne => console.log(jsonOne))
     .catch(error => console.error('Error:', error));
 
 
