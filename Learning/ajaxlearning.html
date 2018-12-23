@@ -51,7 +51,7 @@ function showHint(str) {
     xmlHttp.onreadystatechange = function() {
       if (this.readyState == 4) {
         var myObj = JSON.parse(this.responseText);
-        document.getElementById("txtHint").innerHTML = myObj[0].title;
+        document.getElementById("txtHint").innerHTML = myObj[0].title + ',' + myObj[0].id;
       }
     }
     xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums?q=' + str, true);
