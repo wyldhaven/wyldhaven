@@ -29,7 +29,7 @@
                 data: $(this).serialize(),
                 success: function(data){
                     console.log(data);
-                    logData()
+                    logData(data);
 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
@@ -46,7 +46,7 @@
 
     })(jQuery);
 
-    function logData() {
+    function logData(data) {
   fetch('https://jsonplaceholder.typicode.com/albums')
     .then(responseOne => responseOne.json())
     .then(jsonOne => console.log(jsonOne))
