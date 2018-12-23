@@ -22,11 +22,6 @@
     var xmlhttp = new XMLHttpRequest();
     var url = "https://jsonplaceholder.typicode.com/albums";
 
-    xmlhttp.onreadystatechange = function() {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-    };
-
     (function($){
 
         function processForm( e ){
@@ -49,6 +44,11 @@
                     console.log( errorThrown );
                 }
             });
+
+            xmlhttp.onreadystatechange = function() {
+                var myArr = JSON.parse(this.responseText);
+                myFunction(myArr);
+            };
 
             e.preventDefault();
         }
