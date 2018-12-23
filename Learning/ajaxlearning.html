@@ -18,9 +18,21 @@ var requestInfo = new XMLHttpRequest();
 
 window.onload = function() {
   requestInfo.onreadystatechange = function() {
-    console.log(this.responseText);
+    if (this.readyState == 0) {
+      console.log('request not initialized');
+    } else if (this.readyState == 1) {
+      console.log('server connection established');
+    } else if (this.readyState == 2) {
+      console.log('request received');
+    } else if (this.readyState == 3) {
+      console.log('processing request');
+    } else if (this.readyState == 4) {
+      console.log('request finished and response is ready');
+    }
+
+    //console.log(this.responseText);
   }
-  requestInfo.open('GET', 'https://jsonplaceholder.typicode.com/albums?title=sunt qui excepturi placeat culpa', true);
+  requestInfo.open('GET', 'https://jsonplaceholder.typicode.com/albums?id=3', true);
   requestInfo.send();
 }
 
