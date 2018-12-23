@@ -50,7 +50,7 @@ function showHint(str) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
       if (this.readyState == 4) {
-        document.getElementById("txtHint").innerHTML = this.responseText.title;
+        document.getElementById("txtHint").innerHTML = this.title.responseText;
       }
     }
     xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums?q=' + str, true);
