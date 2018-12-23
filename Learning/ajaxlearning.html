@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+
+<script>
+
+var requestInfo = new XMLHttpRequest();
+
+window.onload = function() {
+  requestInfo.onreadystatechange = function() {
+    console.log(this.responseText);
+  }
+  requestInfo.open('GET', https://jsonplaceholder.typicode.com/albums, true);
+  requestInfo.send();
+}
+
+</script>
+
+</body>
+
+</html>
