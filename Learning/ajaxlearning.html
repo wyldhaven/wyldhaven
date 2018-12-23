@@ -45,6 +45,7 @@ window.onload = function() {
 function showHint(str) {
   if (str.length == 0) {
     document.getElementById("txtHint").innerHTML = "";
+    return;
   } else {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
