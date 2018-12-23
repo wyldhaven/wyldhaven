@@ -51,7 +51,7 @@ function showHint(str) {
     xmlHttp.onreadystatechange = function() {
       if (this.readyState == 4) {
         var myObj = JSON.parse(this.responseText);
-        for (var i=0; i<parsedJSON.length; i++) {
+        for (var i=0; i<myObj.length; i++) {
           document.getElementById("txtHint").innerHTML = myObj[i].title + ' , ' + myObj[i].id;
         }
       }
