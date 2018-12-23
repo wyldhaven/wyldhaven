@@ -20,22 +20,31 @@
 <script>
 
     (function($){
-        function processForm( e ){
-            $.ajax({
-                url: 'https://jsonplaceholder.typicode.com/albums',
-                dataType: 'json',
-                type: 'post',
-                data: $(this).serialize(),
-                success: function(){
-                    console.log(url);
+        // function processForm( e ){
+        //     $.ajax({
+        //         url: 'https://jsonplaceholder.typicode.com/albums',
+        //         dataType: 'json',
+        //         type: 'post',
+        //         data: $(this).serialize(),
+        //         success: function(url){
+        //             console.log(url);
+        //
+        //         },
+        //         error: function( jqXhr, textStatus, errorThrown ){
+        //             console.log( errorThrown );
+        //         }
+        //     });
+        //
+        //     e.preventDefault();
+        // }
 
-                },
-                error: function( jqXhr, textStatus, errorThrown ){
-                    console.log( errorThrown );
-                }
-            });
-
-            e.preventDefault();
+        function testAjax(handleData) {
+          $.ajax({
+              url:"getvalue.php",
+              success:function(data) {
+              handleData(data);
+            }
+          });
         }
 
         $('#my-form').submit( processForm );
