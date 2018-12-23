@@ -80,8 +80,8 @@ var thisJson = JSON.stringify(newData);
 localStorage.setItem('data', newData);
 
 var text = localStorage.getItem('data');
-var display = JSON.parse(text);
-document.getElementById("jsonPara").innerHTML = display.name + ' and he is ' + display.status;
+//var display = JSON.parse(text);
+document.getElementById("jsonPara").innerHTML = text.name + ' and he is ' + text.status;
 </script>
 
 </body>
