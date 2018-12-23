@@ -9,6 +9,11 @@
 
 <body>
 
+  <p><b>Start typing an album:</b></p>
+  <form>
+  Name: <input type="text" onkeyup="showHint(this.value)">
+  </form>
+  <p>Suggestions: <span id="txtHint"></span></p>
 
 
 
@@ -35,6 +40,21 @@ window.onload = function() {
   }
   requestInfo.open('GET', 'https://jsonplaceholder.typicode.com/albums?id=3', true);
   requestInfo.send();
+}
+
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+  } else {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+      if (this.readyState == 4) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    }
+    xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums?id=3', true);
+    xmlHttp.send();
+  }
 }
 
 </script>
