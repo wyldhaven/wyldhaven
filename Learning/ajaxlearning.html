@@ -43,6 +43,7 @@ window.onload = function() {
 }
 
 function showHint(str) {
+  document.getElementById("txtHint").innerHTML = "";
   if (str.length == 0) {
     document.getElementById("txtHint").innerHTML = "";
     return;
@@ -52,8 +53,7 @@ function showHint(str) {
       if (this.readyState == 4) {
         var myObj = JSON.parse(this.responseText);
         for (var i=0; i<myObj.length; i++) {
-          document.getElementById("txtHint").innerHTML = "";
-          let text = myObj[i].title + ' , ' + myObj[i].id + ' <br />';
+          let text = myObj[i].title + ' , ' + myObj[i].id +  <br />;
           document.getElementById("txtHint").insertAdjacentText('afterend', text);
         }
       }
