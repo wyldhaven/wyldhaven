@@ -12,7 +12,6 @@
 
 <form id="my-form">
     <input type="text" id="first-name" name="first-name" placeholder="First Name" />
-    <input type="text" id="last-name" name="last-name" placeholder="Last Name" />
 
     <button type="submit">Submit</button>
 </form>
@@ -22,10 +21,9 @@
     (function($){
         function processForm( e ){
             $.ajax({
-                url: 'users.php',
-                dataType: 'text',
+                url: 'https://jsonplaceholder.typicode.com/albums',
+                dataType: 'json',
                 type: 'post',
-                contentType: 'application/x-www-form-urlencoded',
                 data: $(this).serialize(),
                 success: function( data, textStatus, jQxhr ){
                     $('#response pre').html( data );
