@@ -21,6 +21,9 @@
 
     (function($){
 
+      var xmlhttp = new XMLHttpRequest();
+      var url = "https://jsonplaceholder.typicode.com/albums";
+
         function processForm( e ){
             $.ajax({
                 url: 'https://jsonplaceholder.typicode.com/albums',
@@ -29,7 +32,7 @@
                 data: $(this).serialize(),
                 success: function(data){
                     console.log(data);
-                    myFunction(arr);
+                    console.log(ihateme());
 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
@@ -41,21 +44,26 @@
         }
 
         $('#my-form').submit( processForm );
+
+        function ihateme() {
+          xmlhttp.open('GET', url);
+        }
+
     })(jQuery);
 
-    var xmlhttp = new XMLHttpRequest();
-    var url = "https://jsonplaceholder.typicode.com/albums";
-
-    xmlhttp.onreadystatechange = function() {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-
-    function myFunction(arr) {
-      console.log(arr);
-    }
+    // var xmlhttp = new XMLHttpRequest();
+    // var url = "https://jsonplaceholder.typicode.com/albums";
+    //
+    // xmlhttp.onreadystatechange = function() {
+    //     var myArr = JSON.parse(this.responseText);
+    //     myFunction(myArr);
+    // };
+    // xmlhttp.open("GET", url, true);
+    // xmlhttp.send();
+    //
+    // function myFunction(arr) {
+    //   console.log(arr);
+    // }
 
 </script>
 </body>
