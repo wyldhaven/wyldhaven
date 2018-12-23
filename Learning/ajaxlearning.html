@@ -15,6 +15,10 @@
   </form>
   <p>Suggestions: <br/ ><span id="txtHint"></span></p>
 
+  <br />
+
+  <p>Programmer is <span id="jsonPara"></span></p>
+
 
 
 <script>
@@ -63,6 +67,21 @@ function showHint(str) {
   }
 }
 
+/////// ------ JSON
+
+
+var newData = {
+  name: 'Grayson',
+  sex: 'Male',
+  status: 'Awesome'
+}
+
+var thisJson = JSON.stringify(newData);
+localStorage.setItem('data', newData);
+
+var text = localStorage.getItem('data');
+var display = JSON.parse(text);
+document.getElementById("jsonPara").innerHTML = display.name + ' and he is ' + display.status;
 </script>
 
 </body>
