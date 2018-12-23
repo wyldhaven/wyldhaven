@@ -29,6 +29,7 @@
                 data: $(this).serialize(),
                 success: function(data){
                     console.log(data);
+                    myFunction(arr);
 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
