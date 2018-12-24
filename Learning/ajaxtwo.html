@@ -106,6 +106,7 @@
         return response.json();
       })
       .then(function(myJson) {
+      JSON.stringify(myJson);
       JSON.parse(myJson);
       console.log(myJson.title);
     });
