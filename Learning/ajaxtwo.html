@@ -100,15 +100,13 @@
     }
 
     fetch('https://jsonplaceholder.typicode.com/albums', {
-      method: 'GET',
-      body: data
+      method: 'GET'
 
     }).then(function(response) {
         return response.json();
-        var obj = JSON.parse(response);
       })
-      .then(function(obj) {
-      console.log(obj.title);
+      .then(function(myJson) {
+      console.log(myJson.title);
     });
 
 </script>
