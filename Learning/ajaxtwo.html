@@ -13,7 +13,7 @@
 <form id="my-form">
     <input type="text" id="first-name" name="title" />
 
-    <button type="submit">Submit</button>
+    <button id="button" type="submit">Submit</button>
 </form>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -90,12 +90,25 @@
     //   console.log(arr);
     // }
 
-    fetch('https://jsonplaceholder.typicode.com/albums')
-      .then(function(response) {
+    var submit = document.getElementById('first-name');
+    var button = document.getElementById('button');
+
+    let data;
+
+    function submitted() {
+      data = submit.value;
+    }
+
+    fetch('https://jsonplaceholder.typicode.com/albums', {
+      method: 'GET',
+      body: data
+
+    }).then(function(response) {
         return response.json();
+        var obj = JSON.parse(response);
       })
-      .then(function(myJson) {
-      console.log(myJson);
+      .then(function(obj) {
+      console.log(obj.title);
     });
 
 </script>
