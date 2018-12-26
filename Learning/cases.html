@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<input id="new-input"></input>
+<input type='number/text' id="new-input"></input>
 
 <button onclick="calculate()">Change Variable</button>
 
@@ -20,7 +20,6 @@ let text = document.getElementById('state');
 
 function calculate() {
   let value = input.value;
-  value = Number(value);
 
   console.log(value);
   console.log(input);
@@ -32,14 +31,14 @@ function calculate() {
       console.log('10');
       text.innerHTML = 'Value is 10!';
       break;
-    case 9:
+    case '9':
       text.innerHTML = 'Value is 9!';
       break;
     case 'Fuck Me':
       text.innerHTML = 'Fuck Me?! No Fuck me pal!';
       break;
     default:
-      text.innerHTML = '';
+      text.innerHTML = 'YOU CAN\'t DO THAT';
   }
 }
 
