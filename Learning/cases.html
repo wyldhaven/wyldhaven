@@ -20,6 +20,7 @@ let text = document.getElementById('state');
 
 function calculate() {
   let value = input.value;
+  value = Number(value);
 
   console.log(value);
   console.log(input);
@@ -27,15 +28,15 @@ function calculate() {
   console.log(text);
 
   switch(value) {
-    case '10':
+    case 10:
       console.log('10');
       text.innerHTML = 'Value is 10!';
       break;
-    case '9':
+    case 9:
       text.innerHTML = 'Value is 9!';
       break;
-    case '8':
-      text.innerHTML = 'Value is 8!';
+    case 'Fuck Me':
+      text.innerHTML = 'Fuck Me?! No Fuck me pal!';
       break;
     default:
       text.innerHTML = '';
