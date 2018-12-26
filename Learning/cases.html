@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="new-input"></input>
+
+<button onclick="calculate()">Change Variable</button>
+
+
+<p><span id="state"></span></p>
+
+
+</div>
+
+<script>
+
+let input = document.getElementById('new-input');
+let button = document.querySelector('button');
+let text = document.getElementById('state');
+
+function calculate() {
+  let value = input.value;
+
+  switch(value) {
+    case 10:
+      text.innerHTML = 'Value is 10!';
+      break;
+    case 9:
+      text.innerHTML = 'Value is 9!';
+      break;
+    case 8:
+      text.innerHTML = 'Value is 8!';
+      break;
+    default:
+      text.innerHTML = '';
+  }
+}
+
+
+</script>
+
+</body>
+</html>
