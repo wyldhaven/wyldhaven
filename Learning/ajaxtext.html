@@ -30,7 +30,8 @@ function loadTitles() {
       var obj = JSON.parse(this.responseText);
       for (let i = 0; i < obj.length; i++ ) {
         console.log(obj[i].title);
-        para.insertAdjacentHTML('beforeend', obj[i].title);
+        var text = obj[i].title + '<br />';
+        para.insertAdjacentHTML('beforeend', text);
       }
     }
   }
