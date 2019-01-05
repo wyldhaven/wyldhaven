@@ -26,13 +26,11 @@ let para = document.getElementById('para');
 function loadTitles() {
   newData.onreadystatechange = function() {
     if (this.readyState == 4) {
-      console.log('readystate 4');
       para.textContent = '';
       var obj = JSON.parse(this.responseText);
-      console.log(obj);
       for (let i = 0; i < obj.length; i++ ) {
         console.log(obj[i].title);
-        para.textContent = obj[i].title;
+        para.insertAdjacentHTML('beforeend', obj[i].title);
       }
     }
   }
