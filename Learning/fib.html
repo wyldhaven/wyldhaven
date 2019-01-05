@@ -10,34 +10,40 @@
 
 let fibInput = document.getElementById('fibInput');
 
-fibInput.onchange = function() {
-
-let userNumber = fibInput.value;
-userNumber = Number(userNumber);
-console.log('userNumber = ' + userNumber);
-let fibArray = [];
-var a = 1, b = 0, temp;
-let num = 200;
-
-function fibonacci(num){
-while (num >= 0) {
-
-  temp = a;
-  a = a + b;
-  b = temp;
-  num--;
-
-  //fibArray.push(fibSeq);
-  console.log('inside loop ' + b);
-
-}
-return b;
-
-console.log('outside loop ' + b);
-
+let testfib = fibbonacci(n) {
+  return n < 2 ? n : (n - 1) + (n - 2);
 }
 
-}
+console.log(fibbonacci(10));
+
+// fibInput.onchange = function() {
+//
+// let userNumber = fibInput.value;
+// userNumber = Number(userNumber);
+// console.log('userNumber = ' + userNumber);
+// let fibArray = [];
+// var a = 1, b = 0, temp;
+// let num = 200;
+//
+// function fibonacci(num){
+// while (num >= 0) {
+//
+//   temp = a;
+//   a = a + b;
+//   b = temp;
+//   num--;
+//
+//   //fibArray.push(fibSeq);
+//   console.log('inside loop ' + b);
+//
+// }
+// return b;
+//
+// console.log('outside loop ' + b);
+//
+// }
+//
+// }
 
 </script>
 
