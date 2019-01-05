@@ -24,7 +24,6 @@ var newData = new XMLHttpRequest();
 let para = document.getElementById('para');
 
 function loadTitles() {
-  console.log('woo!');
   newData.onreadystatechange = function() {
     if (this.readyState == 4) {
       console.log('readystate 4');
@@ -37,8 +36,8 @@ function loadTitles() {
       }
     }
   }
-  xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums', true);
-  xmlHttp.send();
+  newData.open('GET', 'https://jsonplaceholder.typicode.com/albums', true);
+  newData.send();
 }
 loadTitles();
 
