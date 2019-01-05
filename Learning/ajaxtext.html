@@ -9,29 +9,39 @@
 
 <body>
 
+<p><b>Loading with JS</b></p>
+
 <p id="para"></p>
 
+<p><b>Loading with jQuery</b></p>
 
+<p id="para1"></p>
 
 <script>
 
+//JS
 var newData = new XMLHttpRequest();
 let para = document.getElementById('para');
+console.log(para);
 
 function loadTitles() {
   newData.onreadystatechange = function() {
     if (this.readyState == 4) {
+      console.log('readystate 4');
       para.textContent = '';
       var obj = JSON.parse(this.responseText);
-
+      console.log(obj);
       for (let i = 0; i < obj.length; i++ ) {
+        console.log(obj[i].title);
         para.textContent = obj[i].title;
       }
     }
   }
 }
-
 loadTitles();
+
+
+//jQ
 
 </script>
 
