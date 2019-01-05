@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+
+</head>
+
+<body>
+
+<p></p>
+
+
+
+<script>
+
+var newData = new XMLHttpRequest();
+
+function loadTitles() {
+  newData.onreadystatechange = function() {
+    if (this.readyState == 4) {
+      document.querySelectorAll('p').textContent = '';
+      var obj = JSON.parse(this.responseText);
+
+      for (let i = 0; i < obj.length; i++ ) {
+        document.querySelectorAll('p').textContent = obj[i].title;
+      }
+    }
+  }
+}
+
+loadTitles();
+
+</script>
+
+</body>
+
+</html>
