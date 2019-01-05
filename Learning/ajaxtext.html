@@ -50,8 +50,11 @@ function loadTitlesjq() {
   $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
     var obj1 = JSON.stringify(data);
     var objParse = JSON.parse(obj1);
-    console.log(objParse);
-    //para1.insertAdjacentHTML('beforeend', data.title);
+
+    for (let i = 0; i < (objParse.length/2); i++ ) {
+      var text = obj[i].title + '<br />';
+      para1.insertAdjacentHTML('beforeend', text);
+    }
   });
 }
 loadTitlesjq();
