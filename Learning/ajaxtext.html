@@ -22,9 +22,9 @@
 //JS
 var newData = new XMLHttpRequest();
 let para = document.getElementById('para');
-console.log(para);
 
 function loadTitles() {
+  console.log('woo!');
   newData.onreadystatechange = function() {
     if (this.readyState == 4) {
       console.log('readystate 4');
