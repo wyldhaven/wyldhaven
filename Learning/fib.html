@@ -11,8 +11,9 @@
 let fibInput = document.getElementById('fibInput');
 
 let testfib = function fibbonacci(n) {
-  console.log('n = ' + n);
   return n < 2 ? n : fibbonacci(n - 1) + fibbonacci(n - 2);
+  console.log('n1 = ' + fibbonacci(n - 1));
+  console.log('n2 = ' + fibbonacci(n - 2));
 }
 
 console.log(testfib(5));
