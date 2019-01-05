@@ -13,7 +13,7 @@
 
 <p id="para"></p>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><hr>
+<br/><br/><br/><br/><br/><hr>
 
 <p><b>Loading with jQuery</b></p>
 
@@ -32,7 +32,6 @@ function loadTitles() {
       var obj = JSON.parse(this.responseText);
       //only loading half because it's too long
       for (let i = 0; i < (obj.length/2); i++ ) {
-        console.log(obj[i].title);
         var text = obj[i].title + '<br />';
         para.insertAdjacentHTML('beforeend', text);
       }
@@ -48,7 +47,11 @@ loadTitles();
 let para1 = document.getElementById('para1');
 
 function loadTitlesjq() {
-
+  console.log('woo');
+  $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
+    console.log(data);
+    //para1.insertAdjacentHTML('beforeend', data.title);
+  });
 }
 loadTitlesjq();
 
