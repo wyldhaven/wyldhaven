@@ -5,7 +5,7 @@
 
 <label type="number" for="fibInput">Enter a value:</label>
 <input id="fibInput"></input>
-<button id="button"></button>
+<button id="button">Run</button>
 
 <p id="para"></p>
 
@@ -29,10 +29,10 @@ button.addEventListener('click', function() {
    console.log('arr[n] = ' + arr[n]);
    return arr[n];
 
-   para.textContent = arr[n];
   }
 
   otherfib(n);
+  para.textContent = arr[n];
   console.log(otherfib(n));
 
 });
