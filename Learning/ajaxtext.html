@@ -43,46 +43,35 @@ function loadTitles() {
 loadTitles();
 
 
-//jQ
-let para1 = document.getElementById('para1');
-
-function loadTitlesjq() {
-  $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
-    var obj1 = JSON.stringify(data);
-    var objParse = JSON.parse(obj1);
-
-    for (let i = 0; i < (objParse.length/2); i++ ) {
-      var text = objParse[i].title + '<br />';
-      para1.insertAdjacentHTML('beforeend', text);
-    }
-  });
-}
-loadTitlesjq();
-
-//another way to do this in jQ
+//jQ using .get
+// let para1 = document.getElementById('para1');
+//
 // function loadTitlesjq() {
-//
-//   fetch('https://jsonplaceholder.typicode.com/albums', {
-//     method: 'GET',
-//     body: JSON.stringify(data),
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   }).then(res => res.json())
-//   .then(response => console.log('New POST data = ' + response))
-//
-//
 //   $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
 //     var obj1 = JSON.stringify(data);
 //     var objParse = JSON.parse(obj1);
 //
 //     for (let i = 0; i < (objParse.length/2); i++ ) {
-//       var text = obj[i].title + '<br />';
+//       var text = objParse[i].title + '<br />';
 //       para1.insertAdjacentHTML('beforeend', text);
 //     }
 //   });
 // }
 // loadTitlesjq();
+
+//jQ using fetch
+function loadTitlesjq() {
+
+  fetch('https://jsonplaceholder.typicode.com/albums')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
+
+}
+loadTitlesjq();
 
 </script>
 
