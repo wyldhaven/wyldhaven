@@ -9,22 +9,23 @@
 
 <body>
 
-<p></p>
+<p id="para"></p>
 
 
 
 <script>
 
 var newData = new XMLHttpRequest();
+let para = document.getElementById('para');
 
 function loadTitles() {
   newData.onreadystatechange = function() {
     if (this.readyState == 4) {
-      document.querySelectorAll('p').textContent = '';
+      para.textContent = '';
       var obj = JSON.parse(this.responseText);
 
       for (let i = 0; i < obj.length; i++ ) {
-        document.querySelectorAll('p').textContent = obj[i].title;
+        para.textContent = obj[i].title;
       }
     }
   }
