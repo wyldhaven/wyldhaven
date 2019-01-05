@@ -21,10 +21,12 @@ let fibInput = document.getElementById('fibInput');
 let otherfib = function fib(n){
   let arr = [0, 1];
   for (let i = 2; i < n + 1; i++){
-    console.log(i);
+    console.log('i = ' + i);
     arr.push(arr[i - 2] + arr[i - 1])
+    console.log('arr' + arr);
   }
- return arr[n]
+ console.log('arr[n]' + arr[n]);
+ return arr[n];
 }
 
 console.log(otherfib(7));
