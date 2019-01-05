@@ -51,10 +51,12 @@ button.addEventListener('click', function() {
   let testfib = function fibbonacci(n) {
     console.log(n);
     return n < 2 ? n : fibbonacci(n - 1) + fibbonacci(n - 2);
-    para.textContent = n;
+    //para.textContent = n;
   }
 
   testfib(n);
+  console.log(testfib(n));
+  para.textContent = testfib(n);
 });
 
 
