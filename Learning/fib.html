@@ -17,18 +17,12 @@ let para = document.getElementById('para');
 
 
 button.addEventListener('click', function() {
-  let n = 0;
-  console.log('n0 = ' +  n);
-  n = fibInput.value;
-  console.log('n = ' +  n);
-  let arr = [];
-  let i = 0;
-  console.log('first i = ' + i);
+  let n = Number(fibInput.value);
   console.log('n = ' +  n);
 
   let otherfib = function fib(n){
-    arr = [0, 1];
-    for (i = 2; i < n + 1; i++) {
+    let arr = [0, 1];
+    for (let i = 2; i < n + 1; i++) {
       console.log('i = ' + i);
       arr.push(arr[i - 2] + arr[i - 1])
       console.log('arr = ' + arr);
@@ -37,9 +31,11 @@ button.addEventListener('click', function() {
    console.log('arr[n] = ' + arr[n]);
    para.textContent = arr[n];
    return arr[n];
+
   }
 
   otherfib(n);
+
   console.log(otherfib(n));
 
 });
