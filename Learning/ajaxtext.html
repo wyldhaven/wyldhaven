@@ -47,10 +47,10 @@ loadTitles();
 let para1 = document.getElementById('para1');
 
 function loadTitlesjq() {
-  console.log('woo');
   $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
     var obj1 = JSON.stringify(data);
-    console.log(obj1);
+    var objParse = JSON.parse(obj1);
+    console.log(objParse);
     //para1.insertAdjacentHTML('beforeend', data.title);
   });
 }
