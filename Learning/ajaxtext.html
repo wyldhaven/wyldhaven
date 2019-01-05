@@ -13,7 +13,7 @@
 
 <p id="para"></p>
 
-<br/><br/><br/><br/><br/><hr>
+<br/><br/><br/><br/><hr>
 
 <p><b>Loading with jQuery</b></p>
 
@@ -44,32 +44,18 @@ loadTitles();
 
 
 //jQ using .get
-// let para1 = document.getElementById('para1');
-//
-// function loadTitlesjq() {
-//   $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
-//     var obj1 = JSON.stringify(data);
-//     var objParse = JSON.parse(obj1);
-//
-//     for (let i = 0; i < (objParse.length/2); i++ ) {
-//       var text = objParse[i].title + '<br />';
-//       para1.insertAdjacentHTML('beforeend', text);
-//     }
-//   });
-// }
-// loadTitlesjq();
+let para1 = document.getElementById('para1');
 
-//jQ using fetch
 function loadTitlesjq() {
+  $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
+    var obj1 = JSON.stringify(data);
+    var objParse = JSON.parse(obj1);
 
-  fetch('https://jsonplaceholder.typicode.com/albums')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(JSON.stringify(myJson));
+    for (let i = 0; i < (objParse.length/2); i++ ) {
+      var text = objParse[i].title + '<br />';
+      para1.insertAdjacentHTML('beforeend', text);
+    }
   });
-
 }
 loadTitlesjq();
 
