@@ -49,7 +49,7 @@ let para1 = document.getElementById('para1');
 function loadTitlesjq() {
   console.log('woo');
   $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
-    console.log(data);
+    console.log(data.title);
     //para1.insertAdjacentHTML('beforeend', data.title);
   });
 }
