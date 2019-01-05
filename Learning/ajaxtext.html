@@ -3,7 +3,7 @@
 
 <head>
 
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 </head>
 
@@ -12,6 +12,8 @@
 <p><b>Loading with JS</b></p>
 
 <p id="para"></p>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><hr>
 
 <p><b>Loading with jQuery</b></p>
 
@@ -28,7 +30,8 @@ function loadTitles() {
     if (this.readyState == 4) {
       para.textContent = '';
       var obj = JSON.parse(this.responseText);
-      for (let i = 0; i < obj.length; i++ ) {
+      //only loading half because it's too long
+      for (let i = 0; i < (obj.length/2); i++ ) {
         console.log(obj[i].title);
         var text = obj[i].title + '<br />';
         para.insertAdjacentHTML('beforeend', text);
@@ -42,6 +45,12 @@ loadTitles();
 
 
 //jQ
+let para1 = document.getElementById('para1');
+
+function loadTitlesjq() {
+
+}
+loadTitlesjq();
 
 </script>
 
