@@ -5,26 +5,21 @@
 
 <label type="number" for="fibInput">Enter a value:</label>
 <input id="fibInput"></input>
+<button id="button"></button>
 
-<p></p>
+<p id="para"></p>
 
 <script>
 
 let fibInput = document.getElementById('fibInput');
-let input =
+let button = document.getElementById('button');
+let para = document.getElementById('para');
 
-fibInput.onchange = function() {
+
+button.addEventListener('click', function() {
   let n = fibInput.value;
 
-  // let testfib = function fibbonacci(n) {
-  //   console.log(n);
-  //   return n < 2 ? n : fibbonacci(n - 1) + fibbonacci(n - 2);
-  // }
-  //
-  // console.log(testfib(5));
-
-
-  function fibTwo(n) {
+  let otherfib = function fib(n){
     let arr = [0, 1];
     for (let i = 2; i < n + 1; i++) {
       console.log('i = ' + i);
@@ -34,12 +29,24 @@ fibInput.onchange = function() {
    console.log('arr[n] = ' + arr[n]);
    return arr[n];
 
-   document.querySelector('p').textContent = arr[n];
+   para.textContent = arr[n];
   }
-  fibTwo(n);
-  console.log(fibTwo(n));
 
-}
+  otherfib(n);
+  console.log(otherfib(n));
+
+});
+
+
+  // let testfib = function fibbonacci(n) {
+  //   console.log(n);
+  //   return n < 2 ? n : fibbonacci(n - 1) + fibbonacci(n - 2);
+  // }
+  //
+  // console.log(testfib(5));
+
+
+
 
 </script>
 
