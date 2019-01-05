@@ -37,6 +37,8 @@ function loadTitles() {
       }
     }
   }
+  xmlHttp.open('GET', 'https://jsonplaceholder.typicode.com/albums', true);
+  xmlHttp.send();
 }
 loadTitles();
 
