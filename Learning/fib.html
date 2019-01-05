@@ -6,30 +6,40 @@
 <label type="number" for="fibInput">Enter a value:</label>
 <input id="fibInput"></input>
 
+<p></p>
+
 <script>
 
 let fibInput = document.getElementById('fibInput');
+let input =
 
-// let testfib = function fibbonacci(n) {
-//   console.log(n);
-//   return n < 2 ? n : fibbonacci(n - 1) + fibbonacci(n - 2);
-// }
-//
-// console.log(testfib(5));
+fibInput.onchange = function() {
+  let n = fibInput.value;
+
+  // let testfib = function fibbonacci(n) {
+  //   console.log(n);
+  //   return n < 2 ? n : fibbonacci(n - 1) + fibbonacci(n - 2);
+  // }
+  //
+  // console.log(testfib(5));
 
 
-let otherfib = function fib(n){
-  let arr = [0, 1];
-  for (let i = 2; i < n + 1; i++){
-    console.log('i = ' + i);
-    arr.push(arr[i - 2] + arr[i - 1])
-    console.log('arr' + arr);
+  let otherfib = function fib(n){
+    let arr = [0, 1];
+    for (let i = 2; i < n + 1; i++) {
+      console.log('i = ' + i);
+      arr.push(arr[i - 2] + arr[i - 1])
+      console.log('arr = ' + arr);
+    }
+   console.log('arr[n] = ' + arr[n]);
+   return arr[n];
+
+   document.querySelector('p').textContent = arr[n];
   }
- console.log('arr[n]' + arr[n]);
- return arr[n];
-}
 
-console.log(otherfib(7));
+  //console.log(otherfib(7));
+
+}
 
 </script>
 
