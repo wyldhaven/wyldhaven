@@ -49,6 +49,8 @@ let para1 = document.getElementById('para1');
 function loadTitlesjq() {
   console.log('woo');
   $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
+    var obj = JSON.parse(data);
+    console.log(obj);
     console.log(data.title);
     //para1.insertAdjacentHTML('beforeend', data.title);
   });
