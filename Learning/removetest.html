@@ -19,8 +19,10 @@ function removeList() {
   let listItems = document.getElementById('fuck');
   console.log(listItems);
   let parent = document.getElementById('piss');
-  console.log(parent);
-  parent.removeChild(listItems);
+
+  for (var i = 0; i < listItems.length; i++) {
+    parent.removeChild(listItems[i]);
+  }
 }
 
 
