@@ -16,9 +16,9 @@
 <script>
 
 function removeList() {
-  let listItems = document.getElementById('fuck');
+  let listItems = document.querySelectorAll('fuck');
   console.log(listItems);
-  let parent = document.getElementById('piss');
+  let parent = document.querySelectorAll('piss');
 
   for (var i = 0; i < listItems.length; i++) {
     parent.removeChild(listItems[i]);
