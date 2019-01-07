@@ -44,20 +44,45 @@ loadTitles();
 
 
 //jQ using .get
+// let para1 = document.getElementById('para1');
+//
+// function loadTitlesjq() {
+//   $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
+//     var obj1 = JSON.stringify(data);
+//     var objParse = JSON.parse(obj1);
+//
+//     for (let i = 0; i < (objParse.length/2); i++ ) {
+//       var text = objParse[i].title + '<br />';
+//       para1.insertAdjacentHTML('beforeend', text);
+//     }
+//   });
+// }
+// loadTitlesjq();
+
+//jQ using AJAX
 let para1 = document.getElementById('para1');
 
 function loadTitlesjq() {
-  $.get('https://jsonplaceholder.typicode.com/albums', function(data) {
-    var obj1 = JSON.stringify(data);
-    var objParse = JSON.parse(obj1);
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/albums',
+    type: 'GET',
+    success: function(data) {
+      var obj1 = JSON.stringify(data);
+      var objParse = JSON.parse(obj1);
 
-    for (let i = 0; i < (objParse.length/2); i++ ) {
-      var text = objParse[i].title + '<br />';
-      para1.insertAdjacentHTML('beforeend', text);
+      for (let i = 0; i < (objParse.length/2); i++ ) {
+        var text = objParse[i].title + '<br />';
+        para1.insertAdjacentHTML('beforeend', text);
+      }
+    },
+    error: function(data) {
+      alert('Error with data = ' + data);
     }
   });
 }
 loadTitlesjq();
+
+
 
 </script>
 
