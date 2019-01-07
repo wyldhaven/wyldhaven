@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Palindrome Console Test</h1>
+
+
+<script>
+
+function isPalindrome(str) {
+  str = str.replace(/\W/g, '').toLowerCase();
+  return (str == str.split('').reverse().join(''));
+}
+
+console.log(isPalindrome('levels'));
+console.log(isPalindrome('level'));
+console.log(isPalindrome('$__$'));
+
+</script>
+
+</body>
+</html>
