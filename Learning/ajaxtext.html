@@ -114,9 +114,6 @@ function loadTitlesjq() {
   $.post('https://jsonplaceholder.typicode.com/albums', dataInfo, function(result) {
       console.log(dataInfo);
       console.log(result);
-    },
-    function(data) {
-      alert('Error with data = ' + data);
     });
 }
 loadTitlesjq();
