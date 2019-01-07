@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="removeList()">Click</button>
+
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+</ul>
+
+
+<script>
+
+function removeList() {
+  let listItems = document.getElementsByTagName('li');
+  let parent = document.getElementsByTagName('ul');
+  parent.removeChild(listItems);
+}
+
+
+</script>
+
+</body>
+</html>
