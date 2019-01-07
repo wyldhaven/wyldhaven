@@ -4,8 +4,8 @@
 
 <button onclick="removeList()">Click</button>
 
-<ul>
-  <li>1</li>
+<ul id="piss">
+  <li id="fuck">1</li>
   <li>2</li>
   <li>3</li>
   <li>4</li>
@@ -16,9 +16,9 @@
 <script>
 
 function removeList() {
-  let listItems = document.getElementsByTagName('li');
+  let listItems = document.getElementById('fuck');
   console.log(listItems);
-  let parent = document.getElementsByTagName('ul');
+  let parent = document.getElementById('piss');
   console.log(parent);
   //parent.removeChild(listItems);
 }
