@@ -93,15 +93,18 @@ function loadTitlesjq() {
     url: 'https://jsonplaceholder.typicode.com/albums',
     type: 'POST',
     data: dataInfo
-    success: function(result) {
-      console.log(dataInfo);
-      console.log('marker');
-      console.log(result);
-    },
+    success: success,
     error: function(data) {
       alert('Error with data = ' + data);
     }
   });
+
+
+  function success(result) {
+    console.log(dataInfo);
+    console.log('marker');
+    console.log(result);
+  }
 }
 loadTitlesjq();
 
