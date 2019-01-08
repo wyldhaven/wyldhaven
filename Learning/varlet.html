@@ -3,32 +3,33 @@
 <body>
 
 <h1>Var vs Let</h1>
-<p>Using Var, </p>
+<p>Using Var, each button outputs 5. Using Let allows the 'counter' to be stored/updated.</p>
 
 <script>
 
-// for (let i = 0; i < 5; i++) {
-//   var btn = document.createElement('button');
-//   btn.appendChild(document.createTextNode('Button ' + i));
-//   btn.addEventListener('click', function(){ console.log(i); });
-//   document.body.appendChild(btn);
-// }
-
-for (var i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
   var btn = document.createElement('button');
   btn.appendChild(document.createTextNode('Button ' + i));
   btn.addEventListener('click', function(){ console.log(i); });
   document.body.appendChild(btn);
 }
 
+// for (var i = 0; i < 5; i++) {
+//   var btn = document.createElement('button');
+//   btn.appendChild(document.createTextNode('Button ' + i));
+//   btn.addEventListener('click', function(){ console.log(i); });
+//   document.body.appendChild(btn);
+// }
+
 //Check if num is a int, just divide by 1
 function isInt(num) {
   return num % 1 === 0;
 }
-
 console.log(isInt(4)); // true
 console.log(isInt(12.2)); // false
 console.log(isInt(0.3)); // false
+
+
 
 //Write a function that would allow you to do this..... multiply(5)(6);
 function multiply(a) {
@@ -36,8 +37,22 @@ function multiply(a) {
     return a * b;
   }
 }
-
 console.log(multiply(5)(6));
+
+
+//example of a 'callback function'
+function modifyArray(arr, callback) {
+  // do something to arr here
+  arr.push(100);
+  // then execute the callback function that was passed
+  callback();
+}
+
+var arr = [1, 2, 3, 4, 5];
+
+modifyArray(arr, function() {
+  console.log("array has been modified", arr);
+});
 
 
 </script>
