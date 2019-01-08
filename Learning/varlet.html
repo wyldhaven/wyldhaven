@@ -40,7 +40,7 @@ function multiply(a) {
 console.log(multiply(5)(6));
 
 
-//example of a 'callback function'
+//example of a 'callback function' - basically a function that is passed as an arguement in another function
 function modifyArray(arr, callback) {
   // do something to arr here
   arr.push(100);
@@ -55,6 +55,33 @@ modifyArray(arr, function() {
   console.log("array has been modified", arr);
 });
 
+
+// What is a “closure” in JavaScript?
+
+// A closure is a function defined inside another function (called the parent function),
+// and has access to variables that are declared and defined in the parent function scope.
+
+var globalVar = "abc";
+
+// Parent self invoking function
+function outerFunction (outerArg) { // begin of scope outerFunction
+    // Variable declared in outerFunction function scope
+    var outerFuncVar = 'x';
+    // Closure self-invoking function
+    function innerFunction (innerArg) { // begin of scope innerFunction
+        // variable declared in innerFunction function scope
+        var innerFuncVar = "y";
+        console.log(
+            "outerArg = " + outerArg + "\n" +
+            "outerFuncVar = " + outerFuncVar + "\n" +
+            "innerArg = " + innerArg + "\n" +
+            "innerFuncVar = " + innerFuncVar + "\n" +
+            "globalVar = " + globalVar);
+
+    }// end of scope innerFunction)(5); // Pass 5 as parameter
+}// end of scope outerFunction )(7); // Pass 7 as parameter
+
+console.log(outerFunction(7)(5));
 
 </script>
 
