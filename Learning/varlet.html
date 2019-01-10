@@ -88,6 +88,30 @@ var myObject = {
 };
 myObject.func();
 
+
+//best and easiest way to empty an array
+var emptyArray = [‘this’, ‘array’, ‘is’, ‘full’];
+emptyArray.length = 0;
+console.log(emptyArray);
+
+
+//how the delete method works
+var lorem = { ipsum : 1};
+var output = (function(){
+  delete lorem.ipsum;
+  return lorem.ipsum;
+})();
+
+console.log(output);
+
+// note how delete doesn't work here - delete is meant for properties, not variables
+var output1 = (function(x){
+  delete x;
+  return x;
+})(0);
+
+console.log(output1);
+
 </script>
 
 </body>
