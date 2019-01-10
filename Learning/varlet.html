@@ -5,7 +5,16 @@
 <h1>Var vs Let</h1>
 <p>Using Var, each button outputs 5. Using Let allows the 'counter' to be stored/updated.</p>
 
+<form>
+  <input type="button" value="Click" onclick="proveIt(event)">
+</form>
+
 <script>
+
+function proveIt(event) {
+  var nextEvent = event.type;
+  alert(event.type);
+}
 
 window.document.write('Hello');
 
