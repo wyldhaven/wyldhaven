@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Page Title</title>
+</head>
 <body>
 
 <h1>Var vs Let</h1>
@@ -11,12 +14,13 @@
 
 <script>
 
-function proveIt(event) {
-  var nextEvent = event.type;
-  alert(event.type);
-}
-
-window.document.write('Hello');
+// function proveIt(event) {
+//   var nextEvent = event.type;
+//   alert(event.type);
+// }
+//
+// window.document.write('Hello');
+window.document.title = 'Hello new title';
 
 for (let i = 0; i < 5; i++) {
   var btn = document.createElement('button');
