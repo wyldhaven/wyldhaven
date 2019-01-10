@@ -61,20 +61,32 @@ modifyArray(arr, function() {
 // A closure is a function defined inside another function (called the parent function),
 // and has access to variables that are declared and defined in the parent function scope.
 
-var globalVar = "abc";
+// var outerFunc = function() {
+//     //outer function variable
+//     var message = "Hello, World!";
+//     var innerFunc = function() {
+//         //can access message inside the second function
+//         return message;
+//     }
+//     return innerFunc;
+// }
+//
+// var myFunc = outerFunc();
+// myFunc();
 
-function outer() {
-   var b = 10;
-   function inner() {
-
-         var a = 20;
-         console.log(globalVar);
-         console.log(a+b);
-    }
-   return inner;
-}
-
-console.log(outer());
+var myObject = {
+      egg: “plant”,
+      func: function() {
+            var self = this;
+            console.log(“outer func: this.egg = “ + this.egg);
+            console.log(“outer func: self.egg = “ + self.egg);
+           (function() {
+            console.log(“inner func: this.egg = “ + this.egg);
+            console.log(“inner func: self.egg = “ + self.egg);
+            }());
+       }
+};
+myObject.func();
 
 </script>
 
