@@ -56,7 +56,7 @@ modifyArray(arr, function() {
 });
 
 
-// What is a “closure” in JavaScript?
+// What is a "closure” in JavaScript?
 
 // A closure is a function defined inside another function (called the parent function),
 // and has access to variables that are declared and defined in the parent function scope.
@@ -78,11 +78,11 @@ var myObject = {
       egg: "plant",
       func: function() {
             var self = this;
-            console.log(“outer func: this.egg = “ + this.egg);
-            console.log(“outer func: self.egg = “ + self.egg);
+            console.log("outer func: this.egg = " + this.egg);
+            console.log("outer func: self.egg = " + self.egg);
            (function() {
-            console.log(“inner func: this.egg = “ + this.egg);
-            console.log(“inner func: self.egg = “ + self.egg);
+            console.log("inner func: this.egg = " + this.egg);
+            console.log("inner func: self.egg = " + self.egg);
             }());
        }
 };
