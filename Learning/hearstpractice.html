@@ -9,6 +9,8 @@
 
 <body>
 
+<h1></h1>
+
 <div class="dropdown">
   <h3 class="title">Dropdown</h3>
   <div class="content">
@@ -45,10 +47,14 @@ para.classList.add('result');
 let dbInput = document.querySelector('input');
 let subButton = document.querySelector('.calc-button');
 
-let dropdown = $('.title')[0];
+let title = $('.title')[0];
 let content = $('.content')[0];
+let dropdown = $('.dropdown')[0];
+let ul = $('ul')[0];
+ul.css('margin', '0');
+dropdown.css('margin-bottom', '2rem');
 
-$(dropdown).click(function() {
+$(title).click(function() {
   $(content).slideToggle(300);
 });
 
@@ -69,6 +75,17 @@ function loadTitle(x) {
       for (var i = 0; i < objParse.length; i++) {
         let text = objParse[i].title + ', ';
         document.querySelector('p').insertAdjacentHTML('beforeend', text);
+      }
+
+      switch(x) {
+        case '10':
+        $('h1').text('Last option!');
+        break;
+        case '1':
+        $('h1').text('First option!');
+        break;
+        default:
+        $('h1').text('Which will it be loser?');
       }
     },
     error: function(data) {
