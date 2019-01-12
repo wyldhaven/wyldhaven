@@ -5,6 +5,13 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
+</head>
+
+<body>
+
+
+
+
 <script>
 
 $(document).ready(function() {
@@ -23,25 +30,17 @@ $(document).ready(function() {
   input.setAttributeNode(att);
   button.classList.add('calc-button');
   para.classList.add('result');
+
+  let subButton = document.querySelector('.calc-button');
+  console.log(subButton);
+
+  $(subButton).click(function() {
+    console.log('click');
+  });
+  
 });
 
-</script>
 
-</head>
-
-<body>
-
-
-
-
-<script>
-
-let subButton = document.querySelector('.calc-button');
-console.log(subButton);
-
-$(subButton).click(function() {
-  console.log('click');
-});
 
 </script>
 
