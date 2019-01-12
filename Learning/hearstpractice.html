@@ -14,32 +14,46 @@
 
 <script>
 
-$(document).ready(function() {
-  let body = document.querySelector('body');
-  let input = document.createElement('input');
-  let att = document.createAttribute('type');
-  let button = document.createElement('button');
-  let para = document.createElement('p');
+let body = document.querySelector('body');
+let input = document.createElement('input');
+let att = document.createAttribute('type');
+let button = document.createElement('button');
+let para = document.createElement('p');
 
-  body.appendChild(input);
-  body.appendChild(button);
-  body.appendChild(para);
+body.appendChild(input);
+body.appendChild(button);
+body.appendChild(para);
 
-  button.textContent = 'Submit';
-  att.value = 'number';
-  input.setAttributeNode(att);
-  button.classList.add('calc-button');
-  para.classList.add('result');
+button.textContent = 'Submit';
+att.value = 'number';
+input.setAttributeNode(att);
+button.classList.add('calc-button');
+para.classList.add('result');
 
-  let subButton = document.querySelector('.calc-button');
-  console.log(subButton);
+let dbInput = document.querySelector('input');
+let subButton = document.querySelector('.calc-button');
 
-  $(subButton).click(function() {
-    console.log('click');
+function loadTitle() {
+  $.ajax({
+    url: https://jsonplaceholder.typicode.com/albums,
+    type: 'GET',
+    success: function(data) {
+      var obj = JSON.stringify(data);
+      var objParse = JSON.parse(obj);
+      console.log(objParse);
+    },
+    error: function(data) {
+      alert('Error with data = ' + data);
+    }
   });
-  
-});
+}
 
+$(subButton).click(function() {
+  let query = dbInput.value;
+  console.log(query);
+  loadTitle();
+
+});
 
 
 </script>
