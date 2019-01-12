@@ -9,9 +9,16 @@
 
 <body>
 
-<!-- <div>
-
-</div> -->
+<div class="dropdown">
+  <h3 class="title">Dropdown</h3>
+  <div class="content">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+</div>
 
 
 <script>
@@ -38,6 +45,13 @@ para.classList.add('result');
 let dbInput = document.querySelector('input');
 let subButton = document.querySelector('.calc-button');
 
+let dropdown = $('.title')[0];
+let content = $('.content')[0];
+
+$(dropdown).click(function() {
+  $(content).slideToggle(300);
+});
+
 function loadTitle(x) {
   console.log(x);
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
@@ -51,7 +65,7 @@ function loadTitle(x) {
       console.log(objParse);
 
       document.querySelector('p').textContent = '';
-      
+
       for (var i = 0; i < objParse.length; i++) {
         let text = objParse[i].title + ', ';
         document.querySelector('p').insertAdjacentHTML('beforeend', text);
