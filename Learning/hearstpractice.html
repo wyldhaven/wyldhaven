@@ -32,9 +32,7 @@ let max = document.createAttribute('max');
 let button = document.createElement('button');
 let para = document.createElement('p');
 
-body.appendChild(input);
-body.appendChild(button);
-body.appendChild(para);
+body.appendChild(input).appendChild(button).appendChild(para);
 
 button.textContent = 'Submit';
 att.value = 'number';
@@ -81,9 +79,6 @@ function loadTitle(x) {
         break;
         case '1':
         $('h1').text('First option!');
-        break;
-        case (Number(x) > 10):
-        $('h1').text('Too high!');
         break;
         default:
         $('h1').text('Which will it be loser?');
