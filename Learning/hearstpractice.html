@@ -19,6 +19,7 @@
 let body = document.querySelector('body');
 let input = document.createElement('input');
 let att = document.createAttribute('type');
+let max = document.createAttribute('max');
 let button = document.createElement('button');
 let para = document.createElement('p');
 
@@ -28,6 +29,7 @@ body.appendChild(para);
 
 button.textContent = 'Submit';
 att.value = 'number';
+max.value = '5';
 input.setAttributeNode(att);
 button.classList.add('calc-button');
 para.classList.add('result');
@@ -47,9 +49,10 @@ function loadTitle(x) {
       var objParse = JSON.parse(obj);
       console.log(objParse);
 
-      // for (var i = 0; i < objParse.length; i++) {
-      //
-      // }
+      for (var i = 0; i < objParse.length; i++) {
+        let text = objParse[i].title + ', ';
+        $('p').html(text);
+      }
     },
     error: function(data) {
       alert('Error with data = ' + data);
