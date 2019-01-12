@@ -9,7 +9,7 @@
 
 <body>
 
-<h1></h1>
+<h1>Well?</h1>
 
 <div class="dropdown">
   <h3 class="title">Dropdown</h3>
@@ -81,6 +81,9 @@ function loadTitle(x) {
         break;
         case '1':
         $('h1').text('First option!');
+        break;
+        case (Number(x) > 10):
+        $('h1').text('Too high!');
         break;
         default:
         $('h1').text('Which will it be loser?');
