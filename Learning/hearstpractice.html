@@ -35,7 +35,7 @@ let subButton = document.querySelector('.calc-button');
 
 function loadTitle() {
   $.ajax({
-    url: https://jsonplaceholder.typicode.com/albums,
+    url: 'https://jsonplaceholder.typicode.com/albums',
     type: 'GET',
     success: function(data) {
       var obj = JSON.stringify(data);
