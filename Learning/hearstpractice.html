@@ -9,7 +9,9 @@
 
 <body>
 
+<!-- <div>
 
+</div> -->
 
 
 <script>
@@ -34,7 +36,9 @@ let dbInput = document.querySelector('input');
 let subButton = document.querySelector('.calc-button');
 
 function loadTitle(x) {
+  console.log(x);
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
+  console.log(url);
   $.ajax({
     url: url,
     type: 'GET',
@@ -55,6 +59,7 @@ function loadTitle(x) {
 
 $(subButton).click(function() {
   let query = dbInput.value;
+  console.log(query);
   loadTitle(query);
 
 });
