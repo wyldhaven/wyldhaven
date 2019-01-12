@@ -14,6 +14,13 @@
 
 <script>
 
+let subButton = document.querySelector('.calc-button');
+console.log(subButton);
+
+$(subButton).click(function() {
+  console.log('click');
+});
+
 $(document).ready(function() {
   let body = document.querySelector('body');
   let input = document.createElement('input');
@@ -30,13 +37,6 @@ $(document).ready(function() {
   input.setAttributeNode(att);
   button.classList.add('calc-button');
   para.classList.add('result');
-});
-
-let subButton = document.querySelector('.calc-button');
-console.log(subButton);
-
-$(subButton).click(function() {
-  console.log('click');
 });
 
 
