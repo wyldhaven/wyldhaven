@@ -50,6 +50,8 @@ function loadTitle(x) {
       var objParse = JSON.parse(obj);
       console.log(objParse);
 
+      document.querySelector('p').textContent = '';
+      
       for (var i = 0; i < objParse.length; i++) {
         let text = objParse[i].title + ', ';
         document.querySelector('p').insertAdjacentHTML('beforeend', text);
