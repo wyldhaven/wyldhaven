@@ -33,14 +33,19 @@ para.classList.add('result');
 let dbInput = document.querySelector('input');
 let subButton = document.querySelector('.calc-button');
 
-function loadTitle() {
+function loadTitle(x) {
+  let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
   $.ajax({
-    url: 'https://jsonplaceholder.typicode.com/albums',
+    url: url,
     type: 'GET',
     success: function(data) {
       var obj = JSON.stringify(data);
       var objParse = JSON.parse(obj);
       console.log(objParse);
+
+      // for (var i = 0; i < objParse.length; i++) {
+      //
+      // }
     },
     error: function(data) {
       alert('Error with data = ' + data);
@@ -50,8 +55,7 @@ function loadTitle() {
 
 $(subButton).click(function() {
   let query = dbInput.value;
-  console.log(query);
-  loadTitle();
+  loadTitle(query);
 
 });
 
