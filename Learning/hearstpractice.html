@@ -29,7 +29,7 @@ body.appendChild(para);
 
 button.textContent = 'Submit';
 att.value = 'number';
-max.value = '5';
+max.value = '11';
 input.setAttributeNode(att);
 input.setAttributeNode(max);
 button.classList.add('calc-button');
@@ -52,7 +52,7 @@ function loadTitle(x) {
 
       for (var i = 0; i < objParse.length; i++) {
         let text = objParse[i].title + ', ';
-        $('p').insertAdjacentHTML('beforeend', text);
+        document.querySelector('p').insertAdjacentHTML('beforeend', text);
       }
     },
     error: function(data) {
