@@ -17,12 +17,22 @@
 window.onload = function() {
   let body = document.querySelector('body');
   let input = document.createElement('input');
+  let att = document.createAttribute('type');
   let button = document.createElement('button');
+  let para = document.createElement('p');
 
   body.appendChild(input);
   body.appendChild(button);
+  body.appendChild(para);
+
   button.textContent = 'Submit';
+  att.value = 'number';
+  input.setAttributeNode(att);
+  button.classList.add('calc-button');
+  para.classList.add('result');
 }
+
+
 
 
 </script>
