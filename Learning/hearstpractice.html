@@ -14,7 +14,7 @@
 
 <script>
 
-document.onload = function() {
+$(document).ready(function() {
   let body = document.querySelector('body');
   let input = document.createElement('input');
   let att = document.createAttribute('type');
@@ -30,7 +30,7 @@ document.onload = function() {
   input.setAttributeNode(att);
   button.classList.add('calc-button');
   para.classList.add('result');
-}
+});
 
 let subButton = document.querySelector('.calc-button');
 console.log(subButton);
