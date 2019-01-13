@@ -51,9 +51,7 @@ function loadData(x) {
 
   xml.onreadystatechange = function() {
     if (this.readyState == 4) {
-      var obj = JSON.stringify(data);
-      var objParse = JSON.parse(obj);
-
+      var objParse = JSON.parse(this.responseText);
       document.querySelector('p').textContent = '';
 
       for (var i = 0; i < objParse.length; i++) {
