@@ -45,6 +45,8 @@ $(dropHeader).click(function() {
 
 function loadData(x) {
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
+  console.log(x);
+  console.log(url);
 
   $.ajax({
     url: url,
@@ -80,6 +82,7 @@ function loadData(x) {
 
 $(button).click(function() {
   let inputValue = input.value;
+  console.log(inputValue);
   loadData(inputValue);
 });
 
