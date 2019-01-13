@@ -151,20 +151,39 @@ console.log(isInt(.5));
 
 //Closure test
 
-let closure = {
-  car: 'ford',
-  func: function() {
-    let self = this;
-    console.log('outer function = ' + this.car);
-    console.log('outer function = ' + self.car);
-    (function() {
-      console.log('inner function = ' + this.car);
-      console.log('inner function = ' + self.car);
-    }());
-  }
-};
+// let closure = {
+//   car: 'ford',
+//   func: function() {
+//     let self = this;
+//     console.log('outer function = ' + this.car);
+//     console.log('outer function = ' + self.car);
+//     (function() {
+//       console.log('inner function = ' + this.car);
+//       console.log('inner function = ' + self.car);
+//     }());
+//   }
+// };
+//closure.func();
 
-closure.func();
+
+function counter() {
+  let counter = 0;
+
+  const aFunction = function() {
+    counter += 1;
+    return counter;
+  }
+  return counter;
+}
+
+let increment = counter();
+let c1 = increment();
+let c2 = increment();
+let c3 = increment();
+
+console.log(c1, c2, c3);
+
+
 
 </script>
 
