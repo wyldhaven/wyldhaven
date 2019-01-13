@@ -29,29 +29,28 @@
 
 <script>
 
-let input = $('input')[0];
-let button = $('button')[0];
-let dropdown = $('#dropdown')[0];
-let dropHeader = $('h3')[0];
-let content = $('.content')[0];
+let h1 = document.querySelector('h1');
+let input = document.querySelector('input');
+let button = document.querySelector('button');
+let dropdown = document.getElementById('dropdown');
+let dropHeader = document.querySelector('h3');
+let content = document.querySelector('.content');
+let ul = document.querySelector('ul');
 
-$(dropdown).css('margin-bottom', '0');
-$('ul').css('margin', '0');
+dropdown.style.cssText = 'margin-bottom: 0';
+ul.style.cssText = 'margin: 0';
 
-$(dropHeader).click(function() {
+dropHeader.addEventListener('click', function() {
   $(content).slideToggle(300);
 });
 
 
 function loadData(x) {
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
-  console.log(x);
-  console.log(url);
+  let xml = new XMLHttpRequest;
 
-  $.ajax({
-    url: url,
-    type: 'GET',
-    success: function(data) {
+  xml.onreadystatechange = function() {
+    if (this.readyState == 4) {
       var obj = JSON.stringify(data);
       var objParse = JSON.parse(obj);
 
@@ -64,27 +63,26 @@ function loadData(x) {
 
       switch(x) {
         case '1':
-          $('h1').text('First Option!');
+          h1.textContent = 'First Option!';
           break;
         case '10':
-          $('h1').text('Last Option!');
+          h1.textContent = 'Last Option!';
           break;
         case '0':
-          $('h1').text('nicetry');
+          h1.textContent = 'nicetry';
           break;
         default:
-          $('h1').text('Well?');
+          h1.textContent = 'Well?';
       }
-    },
-    error: function(data) {
-      alert('Sorry, error loading data:' + data);
     }
-  });
+
+    }
+    xml.open('GET', url, true);
+    xml.send();
 }
 
-$(button).click(function() {
+button.addEventListener('click', function() {
   let inputValue = input.value;
-  console.log(inputValue);
   loadData(inputValue);
 });
 
