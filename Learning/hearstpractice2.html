@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body>
+
+<h1>Well?</h1>
+
+<input type="number" max="11"></input>
+<button>Submit</button>
+
+<p></p>
+
+<div id="dropdown">
+  <h3>Dropdown</h3>
+  <div class="content">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+
+let input = $('input')[0];
+let button = $('buton')[0];
+let dropdown = $('#dropdown')[0];
+let dropHeader = $('h3')[0];
+let content = $('.content')[0];
+
+$(dropdown).css('margin-bottom', '0');
+$('ul').css('margin', '0');
+
+$(dropHeader).click(function() {
+  $(content).slideToggle(300);
+});
+
+
+function loadData(x) {
+  let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
+
+  $.ajax({
+    url: url,
+    type: 'GET',
+    success: function(data) {
+      var obj = JSON.stringify(data);
+      var objParse = JSON.parse(obj);
+
+      for (var i = 0; i < objParse.length; i++) {
+        let text = objParse[i].title + ', ';
+        $('p').insertAdjacentHTML('beforeend', text);
+      }
+
+      switch(x) {
+        case '1':
+          $('h1').text('First Option!');
+          break;
+        case '10':
+          $('h1').text('Last Option!');
+          break;
+        case '0':
+          $('h1').text('nicetry');
+          break;
+        default:
+          $('h1').text('Well?');
+      }
+    },
+    error: function(data) {
+      alert('Sorry, error loading data:' + data);
+    }
+  });
+}
+
+$(button).click(function() {
+  let inputValue = input.value;
+  loadData(inputValue);
+});
+
+
+</script>
+
+</body>
+
+</html>
