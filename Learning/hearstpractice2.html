@@ -57,7 +57,7 @@ function loadData(x) {
 
       for (var i = 0; i < objParse.length; i++) {
         let text = objParse[i].title + ', ';
-        $('p').insertAdjacentHTML('beforeend', text);
+        document.querySelector('p').insertAdjacentHTML('beforeend', text);
       }
 
       switch(x) {
