@@ -11,8 +11,8 @@
 
 <h1>Well?</h1>
 
-<input type="number" max="11"></input>
-<button>Submit</button>
+<input type="number" max="11" onkeyup="loadData(this.value)"></input>
+<!-- <button>Submit</button> -->
 
 <p></p>
 
@@ -79,10 +79,10 @@ function loadData(x) {
     xml.send();
 }
 
-button.addEventListener('click', function() {
-  let inputValue = input.value;
-  loadData(inputValue);
-});
+// button.addEventListener('click', function() {
+//   let inputValue = input.value;
+//   loadData(inputValue);
+// });
 
 
 </script>
