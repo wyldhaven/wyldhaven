@@ -157,10 +157,10 @@ let closure = {
     var self = this;
     console.log('outer function = ' + this.car);
     console.log('outer function = ' + self.car);
-    function() {
+    (function() {
       console.log('inner function = ' + this.car);
       console.log('inner function = ' + self.car);
-    };
+    }());
   }
 };
 
