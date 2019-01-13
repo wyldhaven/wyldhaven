@@ -16,7 +16,7 @@ let button = document.getElementById('button');
 let para = document.getElementById('para');
 
 button.addEventListener('click', function() {
-  let n = fibInput.value;
+  let n = Number(fibInput.value);
 
   let fibCalc = function fib(n) {
     let arr = [0, 1];
