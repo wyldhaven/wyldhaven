@@ -148,6 +148,24 @@ console.log(isInt(10.1));
 console.log(isInt(20.0));
 console.log(isInt(.5));
 
+
+///Closure test
+
+let closure = {
+  car: 'ford',
+  func: function() {
+    var self = this;
+    console.log('outer function = ' + this.car);
+    console.log('outer function = ' + self.car);
+    function() {
+      console.log('inner function = ' + this.car);
+      console.log('inner function = ' + self.car);
+    };
+  }
+};
+
+closure.func();
+
 </script>
 
 </body>
