@@ -23,7 +23,7 @@ function dataValue(x) {
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?id=' + x;
 
   if (Number(x) < 101 && Number(x) > 0) {
-    var xml = new XMLHTTPRequest;
+    var xml = new XMLHttpRequest;
 
     xml.readystatechange = function() {
       if (this.readyState == 4) {
