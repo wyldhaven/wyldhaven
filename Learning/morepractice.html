@@ -22,21 +22,26 @@ let para = $('p')[0];
 function dataValue(x) {
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?id=' + x;
 
-  $.ajax({
-    url: url,
-    type: 'GET',
-    success: function(data) {
-      var obj = JSON.stringify(data);
-      var objParse = JSON.parse(obj);
+  if (Number(x) < 101) {
+    $.ajax({
+      url: url,
+      type: 'GET',
+      success: function(data) {
+        var obj = JSON.stringify(data);
+        var objParse = JSON.parse(obj);
 
-      for (var i = 0; i < objParse.length; i++) {
-        $(para).html(objParse[i].title + '</br>');
+        for (var i = 0; i < objParse.length; i++) {
+          $(para).html(objParse[i].title + '</br>');
+        }
+      },
+      error: function() {
+        alert('Error');
       }
-    },
-    error: function() {
-      alert('Error');
-    }
-  });
+    });
+
+  } else {
+    $(para).html('No Titles Found');
+  }
 }
 
 
