@@ -22,7 +22,7 @@ let para = $('p')[0];
 function dataValue(x) {
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?id=' + x;
 
-  if (Number(x) < 101) {
+  if (Number(x) < 101 && Number(x) > 0) {
     $.ajax({
       url: url,
       type: 'GET',
