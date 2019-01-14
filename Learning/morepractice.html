@@ -21,14 +21,14 @@ let para = $('p')[0];
 
 function dataValue(x) {
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?id=' + x;
+  $(para).html('');
 
   if (Number(x) < 101 && Number(x) > 0) {
     var xml = new XMLHttpRequest;
 
-    xml.readystatechange = function() {
+    xml.onreadystatechange = function() {
       if (this.readyState == 4) {
         var obj = JSON.parse(this.responseText);
-        $(para).html('');
 
         for (var i = 0; i < obj.length; i++) {
           $(para).html(obj[i].title + '!');
