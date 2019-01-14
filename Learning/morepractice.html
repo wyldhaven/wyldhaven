@@ -39,7 +39,7 @@ function dataValue(x) {
       }
     });
 
-  } else {
+  } else if (Number(x) == 0 || Number(x) > 100) {
     $(para).html('No Titles Found');
   }
 }
