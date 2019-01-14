@@ -23,21 +23,20 @@ function dataValue(x) {
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?id=' + x;
 
   if (Number(x) < 101 && Number(x) > 0) {
-    $.ajax({
-      url: url,
-      type: 'GET',
-      success: function(data) {
-        var obj = JSON.stringify(data);
-        var objParse = JSON.parse(obj);
+    var xml = new XMLHTTPRequest;
 
-        for (var i = 0; i < objParse.length; i++) {
-          $(para).html(objParse[i].title + '</br>');
+    xml.readystatechange = function() {
+      if (this.readyState == 4) {
+        var obj = JSON.parse(this.responseText);
+        $(para).html('');
+
+        for (var i = 0; i < obj.length; i++) {
+          $(para).html(obj[i].title + '!');
         }
-      },
-      error: function() {
-        alert('Error');
       }
-    });
+    }
+    xml.open('GET', url, true);
+    xml.send();
 
   } else if (Number(x) == 0 || Number(x) > 100) {
     $(para).html('No Titles Found');
