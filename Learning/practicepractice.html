@@ -36,10 +36,10 @@ let input2 = document.getElementById('input2');
 let para2 = document.getElementById('para2');
 let button2 = document.getElementById('button2');
 
-button1.addEventListener('click', function() {
+button1.addEventListener('click', () => {
   let x = input1.value;
 
-  function fib1(x) {
+  let fib1 = (x) => {
     var arr = [0, 1];
 
     for(var i = 2; i < x + 1; i++) {
