@@ -46,11 +46,10 @@ dropHeader.addEventListener('click', () => {
 
 
 let loadData = (x) => {
-  console.log('woo')
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
   let xml = new XMLHttpRequest;
 
-  xml.onreadystatechange = () => {
+  xml.onreadystatechange = function() {
     if (this.readyState == 4) {
       var objParse = JSON.parse(this.responseText);
       document.querySelector('p').textContent = '';
