@@ -40,16 +40,16 @@ let ul = document.querySelector('ul');
 dropdown.style.cssText = 'margin-bottom: 0';
 ul.style.cssText = 'margin: 0';
 
-dropHeader.addEventListener('click', function() {
+dropHeader.addEventListener('click', () => {
   $(content).slideToggle(300);
 });
 
 
-function loadData(x) {
+let loadData = (x) => {
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
   let xml = new XMLHttpRequest;
 
-  xml.onreadystatechange = function() {
+  xml.onreadystatechange = () => {
     if (this.readyState == 4) {
       var objParse = JSON.parse(this.responseText);
       document.querySelector('p').textContent = '';
