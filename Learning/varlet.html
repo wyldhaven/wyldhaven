@@ -37,9 +37,8 @@ for (let i = 0; i < 5; i++) {
 // }
 
 //Check if num is a int, just divide by 1
-function isInt(num) {
-  return num % 1 === 0;
-}
+var isInt = (num) => return num % 1 === 0;
+
 console.log(isInt(4)); // true
 console.log(isInt(12.2)); // false
 console.log(isInt(0.3)); // false
@@ -47,7 +46,7 @@ console.log(isInt(0.3)); // false
 
 
 //Write a function that would allow you to do this..... multiply(5)(6);
-function multiply(a) {
+let multiply = (a) => {
   return function(b) {
     return a * b;
   }
