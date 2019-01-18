@@ -46,6 +46,7 @@ dropHeader.addEventListener('click', () => {
 
 
 let loadData = (x) => {
+  console.log('woo')
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
   let xml = new XMLHttpRequest;
 
