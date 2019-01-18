@@ -55,7 +55,7 @@ console.log(multiply(5)(6));
 
 
 //example of a 'callback function' - basically a function that is passed as an arguement in another function
-function modifyArray(arr, callback) {
+let modifyArray = (arr, callback) => {
   // do something to arr here
   arr.push(100);
   // then execute the callback function that was passed
