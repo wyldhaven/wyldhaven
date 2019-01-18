@@ -49,7 +49,7 @@ let loadData = (x) => {
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + x;
   let xml = new XMLHttpRequest;
 
-  xml.onreadystatechange = function() {
+  xml.onreadystatechange = () => {
     if (this.readyState == 4) {
       var objParse = JSON.parse(this.responseText);
       document.querySelector('p').textContent = '';
