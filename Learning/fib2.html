@@ -138,21 +138,19 @@ let div1 = $('.div1')[0];
 let div2 = $('.div2')[0];
 let div3 = $('.div3')[0];
 
-$(div1).click(function() {
+$(div1).click(() => {
   alert('div1 clicked');
 });
 
-$(div2).click(function() {
+$(div2).click(() => {
   alert('div2 clicked');
 });
 
-$(div3).click(function() {
+$(div3).click(() => {
   alert('div3 clicked');
 });
 
-function isInt(x) {
-  return x % 1 === 0;
-}
+let isInt = (x) => x % 1 === 0;
 
 console.log(isInt(2));
 console.log(isInt(10.1));
@@ -177,7 +175,7 @@ console.log(isInt(.5));
 //closure.func();
 
 
-function createCounter() {
+let createCounter = () => {
   let counter = 0;
 
   let aFunction = function() {
