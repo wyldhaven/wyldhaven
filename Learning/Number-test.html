@@ -388,7 +388,7 @@ window.onload = function() {
   let pootest = document.createElement('p');
   let poodiv = document.querySelector('.poodiv');
 
-  input.onchange = function() {
+  input.onchange = () => {
     let age = input.value;
     console.log(age);
     let parentsPlan = (age >= 18) ? "Yes" : "No";
