@@ -100,10 +100,10 @@ stateSearch.addEventListener('click', () => {
 
   for (var i = 0; i < statesArr.length; i++) {
     let choice = statesArr[i];
-    console.log(choice);
 
     if (choice === input) {
       statesShow.innerHTML = input + ' is a covered state!';
+      break;
     } else {
       statesShow.innerHTML = input + ' is not a covered state. Sorry!';
     }
