@@ -29,7 +29,8 @@
 <p>Are you in <span class="states-span"></span></p>
 
 <label for="state-select">Search for your state</label>
-<input id="state-select" onkeyup="selectState(this.value)"></input>
+<input id="state-select"></input>
+<button id="state-search">Search</button>
 
 <p class="states-show"></p>
 
@@ -85,22 +86,23 @@ calcButton.addEventListener('click', () => {
 
 let statesSpan = document.querySelector('.states-span');
 let statesArr = ['Illinois', 'New York', 'Wisonsin', 'Florida'];
+
 let statesShow = document.querySelector('.states-show');
+let stateSearch = document.getElementById('state-search');
+let stateSelect = document.getElementById('state-select');
 
-let selectState = (x) => {
-    x = x.toString();
+stateSearch.addEventListener('click', () => {
+  let input = stateSelect.value;
 
-   for (var i = 0; i < statesArr.length; i++) {
-     statesArr[i].toString();
+  for (var i = 0; i < statesArr.length; i++) {
 
-     if (x == statesArr[i]) {
-       statesShow.innerHTML = x + ' is a covered state!';
-     } else {
-       statesShow.innerHTML = x + ' is not a covered state. Sorry!';
-     }
-
-   }
-}
+    if (input == statesArr[i]) {
+      statesShow.innerHTML = input + ' is a covered state!';
+    } else {
+      statesShow.innerHTML = input + ' is not a covered state. Sorry!';
+    }
+  }
+});
 
 window.onload = () => {
 
