@@ -28,10 +28,14 @@
 
 <p>Are you in <span class="states-span"></span></p>
 
+<label for="state-select">Search for your state</label>
+<input id="state-select" onkeyup="selectState(this.value)"></input>
+
 <script>
 
 let topSelect = document.getElementById('top-select');
 let h1 = document.querySelector('h1');
+
 
 topSelect.onchange = () => {
   let value = topSelect.value;
@@ -80,6 +84,21 @@ calcButton.addEventListener('click', () => {
 let statesSpan = document.querySelector('.states-span');
 let statesArr = ['Illinois', 'New York', 'Wisonsin', 'Florida'];
 
+let selectState = (x) => {
+   x = x.toLowerCase;
+
+   for (var i = 0; i < statesArr.length; i++) {
+     console.log(statesArr[i]);
+     statesArr[i].toLowerCase;
+     console.log(statesArr[i]);
+
+     if (x == statesArr[i]) {
+       console.log('yay');
+     }
+
+   }
+}
+
 window.onload = () => {
 
   let officeHours = document.querySelector('.office-hours');
@@ -96,7 +115,6 @@ window.onload = () => {
     officeHours.innerHTML = 'The office is currently <b>closed</b>';
   }
 
-
   for (var i = 0; i < statesArr.length; i++) {
 
     if (i == statesArr.length - 1) {
@@ -109,6 +127,8 @@ window.onload = () => {
 
   }
 }
+
+
 
 
 
