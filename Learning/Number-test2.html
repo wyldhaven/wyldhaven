@@ -14,7 +14,9 @@
 <input class="input1" type="number/text"></input>
 <button class="calculate-button">Calculate</button>
 
-<p></p>
+<p id="rounded-total"></p>
+<p id="decimal-total"></p>
+
 
 
 <script>
@@ -32,9 +34,6 @@ topSelect.onchange = () => {
     case 'blue':
       h1.style.cssText = "color: blue;"
       break;
-    // case '':
-    //   h1.style.cssText = "color: black;"
-    //   break;
     default:
       h1.style.cssText = "color: black;"
       break;
@@ -45,15 +44,17 @@ let input1 = document.querySelector('.input1');
 let calcButton = document.querySelector('.calculate-button');
 
 calcButton.addEventListener('click', () => {
-  console.log('click');
+  let decTotal = document.getElementById('decimal-total');
+  let roundTotal = document.getElementById('rounded-total');
 
   let value = input1.value;
   let interest = .12;
   let initial = value * interest;
-  let final = initial + value;
-  console.log(value);
-  console.log(initial);
-  console.log(final);
+  let final = Number(initial) + Number(value);
+  final = Number(final);
+
+  decTotal.innerHMTL = 'Your exact payment is ' + final;
+  roundTotal.innerHMTL = 'Your payment is ' + final.toFixed(0);
 
 });
 
