@@ -11,7 +11,7 @@
 
 <h1>Enter your monthly Payment</h1>
 
-<input type="number/text"></input>
+<input class="input1" type="number/text"></input>
 <button class="calculate-button">Calculate</button>
 
 <p></p>
@@ -32,13 +32,30 @@ topSelect.onchange = () => {
     case 'blue':
       h1.style.cssText = "color: blue;"
       break;
-    case '':
-      h1.style.cssText = "color: black;"
-      break;
+    // case '':
+    //   h1.style.cssText = "color: black;"
+    //   break;
     default:
+      h1.style.cssText = "color: black;"
       break;
   }
 }
+
+let input1 = document.querySelector('.input1');
+let calcButton = document.querySelector('.calculate-button');
+
+calcButton.addEventListener('click', () => {
+  console.log('click');
+
+  let value = input1.value;
+  let interest = .12;
+  let initial = value * interest;
+  let final = initial + value;
+  console.log(value);
+  console.log(initial);
+  console.log(final);
+
+});
 
 </script>
 
