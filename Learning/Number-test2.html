@@ -90,11 +90,11 @@ window.onload = () => {
   console.log(hours);
   console.log(day);
 
-  // if (day ) {
-  //
-  // } else {
-  //
-  // }
+  if (day < 1 && day > 5 && hours > 9 && hours < 17) {
+    officeHours.innerHTML = 'The office is currently <b>closed</b>';
+  } else {
+    officeHours.innerHTML = 'The office is currently <b>open</b>';
+  }
 
 
   for (var i = 0; i < statesArr.length; i++) {
@@ -106,6 +106,7 @@ window.onload = () => {
       let text = statesArr[i] + ', ';
       statesSpan.insertAdjacentHTML('beforeend', text);
     }
+
   }
 }
 
