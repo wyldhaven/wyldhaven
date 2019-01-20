@@ -86,9 +86,11 @@ window.onload = () => {
   for (var i = 0; i < statesArr.length; i++) {
 
     if (i == statesArr.length - 1) {
-      statesSpan.innerHTML = statesArr[i] + '?';
+      let text = statesArr[i] + '?'
+      statesSpan.insertAdjacentHTML('beforeend', text);
     } else {
-      statesSpan.innerHTML = statesArr[i] + ', ';
+      let text = statesArr[i] + ', ';
+      statesSpan.insertAdjacentHTML('beforeend', text);
     }
   }
 }
