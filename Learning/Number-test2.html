@@ -38,6 +38,8 @@
 <br>
 <br>
 
+<p class="counter"></p>
+
 <script>
 
 let topSelect = document.getElementById('top-select');
@@ -97,12 +99,17 @@ let stateSelect = document.getElementById('state-select');
 
 stateSearch.addEventListener('click', () => {
   let input = stateSelect.value;
+  input = input.toLowerCase();
 
   for (var i = 0; i < statesArr.length; i++) {
     let choice = statesArr[i];
+    choice = choice.toLowerCase();
+
+    let firstLetter = input.slice(0, 1);
+    firstLetter = firstLetter.toUpperCase();
 
     if (choice === input) {
-      statesShow.innerHTML = input + ' is a covered state!';
+      statesShow.innerHTML = firstLetter + input + ' is a covered state!';
       break;
     } else {
       statesShow.innerHTML = input + ' is not a covered state. Sorry!';
@@ -139,8 +146,17 @@ window.onload = () => {
   }
 }
 
+let paraCounter = document.querySelector('.counter');
+let timer = 10;
 
+let counter = setInterval(() => {
 
+  --timer;
+  paraCounter.innerHTML = timer;
+
+}, 1000);
+
+counter();
 
 
 </script>
