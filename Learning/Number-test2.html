@@ -42,10 +42,11 @@ topSelect.onchange = () => {
 
 let input1 = document.querySelector('.input1');
 let calcButton = document.querySelector('.calculate-button');
+let decTotal = document.getElementById('decimal-total');
+let roundTotal = document.getElementById('rounded-total');
 
 calcButton.addEventListener('click', () => {
-  let decTotal = document.getElementById('decimal-total');
-  let roundTotal = document.getElementById('rounded-total');
+  console.log('click');
 
   let value = input1.value;
   let interest = .12;
@@ -53,8 +54,10 @@ calcButton.addEventListener('click', () => {
   let final = Number(initial) + Number(value);
   final = Number(final);
 
-  decTotal.innerHMTL = 'Your exact payment is ' + final;
-  roundTotal.innerHMTL = 'Your payment is ' + final.toFixed(0);
+  console.log(final);
+
+  // decTotal.innerHMTL = 'Your exact payment is ' + final;
+  // roundTotal.innerHMTL = 'Your payment is ' + final.toFixed(0);
 
 });
 
