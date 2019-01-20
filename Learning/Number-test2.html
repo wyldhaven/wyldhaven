@@ -158,8 +158,9 @@ let counter = setInterval(() => {
     paraCounter.innerHTML = timer;
   }
 
-  --timer;
   paraCounter.innerHTML = timer;
+  --timer;
+
 
   if (timer == 0) {
     paraCounter.innerHTML = 0;
