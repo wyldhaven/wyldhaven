@@ -177,35 +177,20 @@ console.log(fib1(10));
 
 let body = document.querySelector('body');
 let para = document.createElement('p');
-let para1 = document.createElement('p');
 
 function fib2(x) {
   let arr = [0, 1];
 
-  for (let i = 0; i < x + 1; i++) {
+  for (let i = 2; i < x; i++) {
     arr.push(arr[i - 2] + arr[i - 1]);
   }
 
   body.appendChild(para);
-  para.innerHTML = arr[x - 1];
+  para.innerHTML = arr[x];
 
-}
-
-function fibIt(n) {
-  let arr = [0, 1];
-
-  for (let i = 2; i < n + 1; i++) {
-    console.log('i = ' + i);
-    arr.push(arr[i - 2] + arr[i - 1]);
-    console.log(arr);
-  }
-
-  body.appendChild(para1);
-  para1.textContent = arr[n - 1];
 }
 
 fib2(10);
-fibIt(10);
 // console.log('fib2 ' + fib2(5));
 // console.log(fib2(8));
 // console.log(fib2(10));
