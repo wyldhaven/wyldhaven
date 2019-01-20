@@ -19,10 +19,12 @@
 
 <p class="insurance"></p>
 
+<br>
+<hr>
+<br>
+
 <p>The office is open Monday-Friday, 9am-5pm</p>
 <p class="office-hours"></p>
-
-<hr>
 
 <p>Are you in <span class="states-span"></span></p>
 
@@ -56,7 +58,6 @@ let insuranceText = document.querySelector('.insurance');
 let date = new Date();
 
 calcButton.addEventListener('click', () => {
-  console.log('click');
 
   let value = input1.value;
   let interest = .12;
@@ -83,10 +84,11 @@ let statesArr = ['Illinois', 'New York', 'Wisonsin', 'Florida'];
 window.onload = () => {
 
   for (var i = 0; i < statesArr.length; i++) {
+
     if (i == statesArr.length - 1) {
-      statesSpan.innerHTML = statesSpan[i] + '?';
+      statesSpan.innerHTML = statesArr[i] + '?';
     } else {
-      statesSpan.innerHTML = statesSpan[i] + ', ';
+      statesSpan.innerHTML = statesArr[i] + ', ';
     }
   }
 }
