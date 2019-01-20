@@ -149,12 +149,12 @@ window.onload = () => {
 }
 
 let paraCounter = document.querySelector('.counter');
-let timer = 10;
+let timer = 100;
 
 let counter = setInterval(() => {
 
   document.onmousemove = () => {
-    timer = 10;
+    timer = 100;
     paraCounter.innerHTML = timer;
   }
 
@@ -162,7 +162,7 @@ let counter = setInterval(() => {
   paraCounter.innerHTML = timer;
 
   if (timer == 0) {
-    //paraCounter.innerHTML = timer;
+    paraCounter.innerHTML = 0;
     alert('Keep session active');
   }
 
