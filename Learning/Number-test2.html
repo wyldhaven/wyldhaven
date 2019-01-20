@@ -19,6 +19,11 @@
 
 <p class="insurance"></p>
 
+<p>The office is open Monday-Friday, 9am-5pm</p>
+<p class="office-hours"></p>
+
+<hr>
+
 <p>Are you in <span class="states-span"></span></p>
 
 <script>
@@ -48,6 +53,8 @@ let decTotal = document.getElementById('decimal-total');
 let roundTotal = document.getElementById('rounded-total');
 let insuranceText = document.querySelector('.insurance');
 
+let date = new Date();
+
 calcButton.addEventListener('click', () => {
   console.log('click');
 
@@ -57,10 +64,9 @@ calcButton.addEventListener('click', () => {
   let final = Number(initial) + Number(value);
   final = Number(final);
 
-  decTotal.innerHTML = 'Your exact payment is ' + final.toFixed(2) + 'dollars';
-  roundTotal.innerHTML = 'Your payment is ' + final.toFixed(0) + 'dollars';
+  decTotal.innerHTML = 'Your exact payment is ' + final.toFixed(2) + ' dollars';
+  roundTotal.innerHTML = 'Your payment is ' + final.toFixed(0) + ' dollars';
 
-  let date = new Date();
   date = date.toLocaleDateString('en-US');
 
   if (final > 1000 && final < 10000) {
@@ -71,10 +77,11 @@ calcButton.addEventListener('click', () => {
 
 });
 
-let statesSpan = document.querySelector('states-span');
+let statesSpan = document.querySelector('.states-span');
 let statesArr = ['Illinois', 'New York', 'Wisonsin', 'Florida'];
 
 window.onload = () => {
+
   for (var i = 0; i < statesArr.length; i++) {
     if (i == statesArr.length - 1) {
       statesSpan.innerHTML = statesSpan[i] + '?';
