@@ -54,7 +54,8 @@ calcButton.addEventListener('click', () => {
   let final = Number(initial) + Number(value);
   final = Number(final);
 
-  console.log(final);
+  decTotal.innerHMTL = 'Your exact payment is ' + final;
+  roundTotal.innerHMTL = 'Your payment is ' + final.toFixed(0);
 
   if (final > 1400 && final < 10000) {
     console.log('not');
@@ -62,8 +63,7 @@ calcButton.addEventListener('click', () => {
     console.log('yep');
   }
 
-  // decTotal.innerHMTL = 'Your exact payment is ' + final;
-  // roundTotal.innerHMTL = 'Your payment is ' + final.toFixed(0);
+
 
 });
 
