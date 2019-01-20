@@ -34,6 +34,10 @@
 
 <p class="states-show"></p>
 
+<br>
+<br>
+<br>
+
 <script>
 
 let topSelect = document.getElementById('top-select');
@@ -93,13 +97,13 @@ let stateSelect = document.getElementById('state-select');
 
 stateSearch.addEventListener('click', () => {
   let input = stateSelect.value;
-  input = input.toString();
   console.log(typeof input);
 
   for (var i = 0; i < statesArr.length; i++) {
     console.log(typeof statesArr[i])
+    let choice = statesArr[i];
 
-    if (input == statesArr[i]) {
+    if (input == choice) {
       statesShow.innerHTML = input + ' is a covered state!';
     } else {
       statesShow.innerHTML = input + ' is not a covered state. Sorry!';
