@@ -97,13 +97,12 @@ let stateSelect = document.getElementById('state-select');
 
 stateSearch.addEventListener('click', () => {
   let input = stateSelect.value;
-  console.log(typeof input);
 
   for (var i = 0; i < statesArr.length; i++) {
-    console.log(typeof statesArr[i])
     let choice = statesArr[i];
+    console.log(choice);
 
-    if (input == choice) {
+    if (input === choice) {
       statesShow.innerHTML = input + ' is a covered state!';
     } else {
       statesShow.innerHTML = input + ' is not a covered state. Sorry!';
