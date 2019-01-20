@@ -109,7 +109,9 @@ stateSearch.addEventListener('click', () => {
     firstLetter = firstLetter.toUpperCase();
 
     if (choice === input) {
-      statesShow.innerHTML = firstLetter + input + ' is a covered state!';
+      let newinput = input.slice(1, input.length);
+
+      statesShow.innerHTML = firstLetter + newinput + ' is a covered state!';
       break;
     } else {
       statesShow.innerHTML = input + ' is not a covered state. Sorry!';
