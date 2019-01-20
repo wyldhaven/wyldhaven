@@ -31,6 +31,8 @@
 <label for="state-select">Search for your state</label>
 <input id="state-select" onkeyup="selectState(this.value)"></input>
 
+<p class="states-show"></p>
+
 <script>
 
 let topSelect = document.getElementById('top-select');
@@ -83,17 +85,21 @@ calcButton.addEventListener('click', () => {
 
 let statesSpan = document.querySelector('.states-span');
 let statesArr = ['Illinois', 'New York', 'Wisonsin', 'Florida'];
+let statesShow = document.querySelector('.states-show');
 
 let selectState = (x) => {
    x = x.toLowerCase;
+   console.log(x);
 
    for (var i = 0; i < statesArr.length; i++) {
      console.log(statesArr[i]);
-     statesArr[i].toLowerCase;
+     statesArr[i] = statesArr[i].toLowerCase;
      console.log(statesArr[i]);
 
      if (x == statesArr[i]) {
-       console.log('yay');
+       statesShow.innerHTML = x + 'is not a covered state. Sorry!';
+     } else {
+       statesShow.innerHTML = x + 'is not a covered state. Sorry!';
      }
 
    }
