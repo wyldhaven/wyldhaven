@@ -149,12 +149,12 @@ window.onload = () => {
 }
 
 let paraCounter = document.querySelector('.counter');
-let timer = 30;
+let timer = 300;
 
 let counter = setInterval(() => {
 
   document.onmousemove = () => {
-    timer = 30;
+    timer = 300;
     paraCounter.innerHTML = timer;
   }
 
@@ -169,6 +169,13 @@ let counter = setInterval(() => {
 
 }, 1000);
 
+let fib1 = (x) => {
+  return x ? x < 2 : fib1(x - 2) + fib1(x - 1);
+}
+
+console.log(fib1(5));
+console.log(fib1(8));
+console.log(fib1(10));
 
 
 </script>
