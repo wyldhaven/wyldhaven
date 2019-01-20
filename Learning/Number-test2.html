@@ -90,7 +90,7 @@ window.onload = () => {
   console.log(hours);
   console.log(day);
 
-  if (hours >= 9 && hours < 11 ) {
+  if (hours >= 9 && hours < 17 && day >= 1 && day <= 5) {
     officeHours.innerHTML = 'The office is currently <b>open</b>';
   } else {
     officeHours.innerHTML = 'The office is currently <b>closed</b>';
