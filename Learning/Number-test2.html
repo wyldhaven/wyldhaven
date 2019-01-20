@@ -19,7 +19,7 @@
 
 <p class="insurance"></p>
 
-
+<p>Are you in <span class="states-span"></span></p>
 
 <script>
 
@@ -57,8 +57,8 @@ calcButton.addEventListener('click', () => {
   let final = Number(initial) + Number(value);
   final = Number(final);
 
-  decTotal.innerHTML = 'Your exact payment is ' + final;
-  roundTotal.innerHTML = 'Your payment is ' + final.toFixed(0);
+  decTotal.innerHTML = 'Your exact payment is ' + final.toFixed(2) + 'dollars';
+  roundTotal.innerHTML = 'Your payment is ' + final.toFixed(0) + 'dollars';
 
   let date = new Date();
   date = date.toLocaleDateString('en-US');
@@ -69,9 +69,22 @@ calcButton.addEventListener('click', () => {
     insuranceText.innerHTML = 'You are <strong>not covered</strong> by your insurance as of ' + date;
   }
 
-
-
 });
+
+let statesSpan = document.querySelector('states-span');
+let statesArr = ['Illinois', 'New York', 'Wisonsin', 'Florida'];
+
+window.onload = () => {
+  for (var i = 0; i < statesArr.length; i++) {
+    if (i == statesArr.length - 1) {
+      statesSpan.innerHTML = statesSpan[i] + '?';
+    } else {
+      statesSpan.innerHTML = statesSpan[i] + ', ';
+    }
+  }
+}
+
+
 
 </script>
 
