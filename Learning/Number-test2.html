@@ -108,13 +108,13 @@ stateSearch.addEventListener('click', () => {
     let firstLetter = input.slice(0, 1);
     firstLetter = firstLetter.toUpperCase();
 
-    if (choice === input) {
-      let newinput = input.slice(1, input.length);
+    let newinput = input.slice(1, input.length);
 
+    if (choice === input) {
       statesShow.innerHTML = firstLetter + newinput + ' is a covered state!';
       break;
     } else {
-      statesShow.innerHTML = input + ' is not a covered state. Sorry!';
+      statesShow.innerHTML = firstLetter + newinput + ' is not a covered state. Sorry!';
     }
   }
 });
@@ -153,8 +153,18 @@ let timer = 10;
 
 let counter = setInterval(() => {
 
+  document.onmousemove = () => {
+    timer = 10;
+    paraCounter.innerHTML = timer;
+  }
+
   --timer;
   paraCounter.innerHTML = timer;
+
+  if (timer = 0) {
+    //paraCounter.innerHTML = timer;
+    alert('Keep session active');
+  }
 
 }, 1000);
 
