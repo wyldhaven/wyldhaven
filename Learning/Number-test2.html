@@ -177,17 +177,16 @@ console.log(fib1(10));
 
 let body = document.querySelector('body');
 let para = document.createElement('p');
-let para1 = document.createElement('p');
 
 function fib2(x) {
   let arr = [0, 1];
 
-  for (let i = 2; i < x + 1; i++) {
+  for (let i = 2; i < x; i++) {
     arr.push(arr[i - 2] + arr[i - 1]);
   }
 
   body.appendChild(para);
-  para.innerHTML = arr[x - 1];
+  para.innerHTML = arr[x];
 
 }
 fib2(10);
