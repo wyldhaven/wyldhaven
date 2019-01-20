@@ -88,9 +88,10 @@ let statesArr = ['Illinois', 'New York', 'Wisonsin', 'Florida'];
 let statesShow = document.querySelector('.states-show');
 
 let selectState = (x) => {
-   console.log(x);
+    x = x.toString();
 
    for (var i = 0; i < statesArr.length; i++) {
+     statesArr[i].toString();
 
      if (x == statesArr[i]) {
        statesShow.innerHTML = x + ' is a covered state!';
