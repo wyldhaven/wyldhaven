@@ -175,18 +175,24 @@ console.log('fib1 ' + fib1(5));
 console.log(fib1(8));
 console.log(fib1(10));
 
+let para = document.createElement('p');
+
 let fib2 = (x) => {
   let arr = [0, 1];
 
   for (let i = 0; i < x + 1; i++) {
     arr.push(arr[i - 2] + arr[i - 1]);
   }
-  return arr[x];
+
+  body.appendChild(para);
+  para.innerHTML = arr[x];
+
 }
 
-console.log('fib2 ' + fib2(5));
-console.log(fib2(8));
-console.log(fib2(10));
+fib2(10);
+// console.log('fib2 ' + fib2(5));
+// console.log(fib2(8));
+// console.log(fib2(10));
 
 </script>
 
