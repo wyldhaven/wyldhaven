@@ -34,29 +34,59 @@ let button = document.querySelector('button');
 let input = document.querySelector('input');
 let para = document.querySelector('p');
 
+// button.addEventListener('click', () => {
+//   let value = input.value;
+//   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + value;
+//   let xml = new XMLHttpRequest;
+//
+//   xml.onreadystatechange = function() {
+//     if (this.readyState == 4) {
+//       var obj = JSON.parse(this.responseText);
+//       para.innerHTML = '';
+//
+//       for (var i = 0; i < obj.length; i++) {
+//         if (i == obj.length - 1) {
+//           var text = obj[i].title;
+//           para.insertAdjacentHTML('beforeend', text);
+//         } else {
+//           var text = obj[i].title + ', ';
+//           para.insertAdjacentHTML('beforeend', text);
+//         }
+//       }
+//     }
+//   }
+//   xml.open('GET', url, true);
+//   xml.send();
+//
+// });
+
 button.addEventListener('click', () => {
   let value = input.value;
   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + value;
-  let xml = new XMLHttpRequest;
 
-  xml.onreadystatechange = function() {
-    if (this.readyState == 4) {
-      var obj = JSON.parse(this.responseText);
+  $.ajax({
+    url: url,
+    type: 'GET',
+    success: function(data) {
+      var obj = JSON.stringify(data);
+      var objParse = JSON.parse(obj);
       para.innerHTML = '';
 
-      for (var i = 0; i < obj.length; i++) {
-        if (i == obj.length - 1) {
-          var text = obj[i].title;
+      for (var i = 0; i < objParse.length; i++) {
+        if (i == objParse.length - 1) {
+          var text = objParse[i].title;
           para.insertAdjacentHTML('beforeend', text);
         } else {
-          var text = obj[i].title + ', ';
+          var text = objParse[i].title + ', ';
           para.insertAdjacentHTML('beforeend', text);
         }
       }
+
+    },
+    error: function(data) {
+      alert('Prrrrrr' + data);
     }
-  }
-  xml.open('GET', url, true);
-  xml.send();
+  });
 
 });
 
