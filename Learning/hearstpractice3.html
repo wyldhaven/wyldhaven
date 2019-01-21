@@ -1,103 +1,75 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-</head>
-
 <body>
 
-  <br>
+<label for="calc-input">Enter 2 Values</label>
+<input type="number" id="calc-input"></input>
+<span id="spanyspan"></span>
+<input type="number" id="calc-input2"></input>
+<button id="addBtn">Add</button>
+<button id="subBtn">Subtract</button>
+<button id="divBtn">Divide</button>
+<button id="mxBtn">Multiply</button>
+<button id="powBtn">Power</button>
 
-<input type="number"></input>
-<button>Submit</button>
+<p id="answer"></p>
 
-<p></p>
-
-<div id="dropdown">
-  <h3>Dropdown</h3>
-  <div class="content">
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
-  </div>
-</div>
 
 <script>
 
+let input1 = document.getElementById('calc-input');
+let input2 = document.getElementById('calc-input2');
+let addBtn = document.getElementById('addBtn');
+let subBtn = document.getElementById('subBtn');
+let divBtn = document.getElementById('divBtn');
+let mxBtn = document.getElementById('mxBtn');
+let powBtn = document.getElementById('powBtn');
+let para = document.getElementById('answer');
 
-let button = document.querySelector('button');
-let input = document.querySelector('input');
-let para = document.querySelector('p');
+let allButtons = document.querySelectorAll('button');
 
-// button.addEventListener('click', () => {
-//   let value = input.value;
-//   let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + value;
-//   let xml = new XMLHttpRequest;
-//
-//   xml.onreadystatechange = function() {
-//     if (this.readyState == 4) {
-//       var obj = JSON.parse(this.responseText);
-//       para.innerHTML = '';
-//
-//       for (var i = 0; i < obj.length; i++) {
-//         if (i == obj.length - 1) {
-//           var text = obj[i].title;
-//           para.insertAdjacentHTML('beforeend', text);
-//         } else {
-//           var text = obj[i].title + ', ';
-//           para.insertAdjacentHTML('beforeend', text);
-//         }
-//       }
-//     }
-//   }
-//   xml.open('GET', url, true);
-//   xml.send();
-//
-// });
+let add = () => {
+  console.log('click');
+}
 
-button.addEventListener('click', () => {
-  let value = input.value;
-  let url = 'https://jsonplaceholder.typicode.com/albums' + '?userId=' + value;
+let sub = () => {
+  console.log('click');
+}
 
-  $.ajax({
-    url: url,
-    type: 'GET',
-    success: function(data) {
-      var obj = JSON.stringify(data);
-      var objParse = JSON.parse(obj);
-      para.innerHTML = '';
+let div = () => {
+  console.log('click');
+}
 
-      for (var i = 0; i < objParse.length; i++) {
-        if (i == objParse.length - 1) {
-          var text = objParse[i].title;
-          para.insertAdjacentHTML('beforeend', text);
-        } else {
-          var text = objParse[i].title + ', ';
-          para.insertAdjacentHTML('beforeend', text);
-        }
-      }
+let mx = () => {
+  console.log('click');
+}
 
-    },
-    error: function(data) {
-      alert('Prrrrrr' + data);
+let pow = () => {
+  console.log('click');
+}
+
+for (var i = 0; i < allButtons.length; i++) {
+  allButtons[i].addEventListener('click', () => {
+    if (this.id == 'addBtn') {
+      add();
+
+    } else if (this.id == 'subBtn') {
+      sub();
+
+    } else if (this.id == 'divBtn') {
+      div();
+
+    } else if (this.id == 'mxBtn') {
+      mx();
+
+    } else if (this.id == 'powBtn') {
+      pow();
+
     }
   });
+}
 
-});
-
-
-let dropdown = document.getElementById('dropdown');
-let h3 = document.querySelector('h3');
-let content = document.querySelector('.content');
-
-$(h3).click(function() {
-  $(content).slideToggle(300);
-});
 
 </script>
 
