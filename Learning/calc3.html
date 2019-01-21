@@ -29,24 +29,44 @@ let para = document.getElementById('answer');
 
 let allButtons = document.querySelectorAll('button');
 
+let value1;
+let value2;
+
+input1.onchange = function() {
+  value1 = input1.value;
+  value1 = Number(value1);
+  return value1;
+}
+
+input2.onchange = function() {
+  value2 = input2.value;
+  value2 = Number(value2);
+  return value2;
+}
+
 let add = () => {
-  console.log('click');
+  let answer = value1 + value2;
+  para.innerHTML = "Answer = " + answer;
 }
 
 let sub = () => {
-  console.log('click');
+  let answer = value1 - value2;
+  para.innerHTML = "Answer = " + answer;
 }
 
 let div = () => {
-  console.log('click');
+  let answer = value1 / value2;
+  para.innerHTML = "Answer = " + answer;
 }
 
 let mx = () => {
-  console.log('click');
+  let answer = value1 * value2;
+  para.innerHTML = "Answer = " + answer;
 }
 
 let pow = () => {
-  console.log('click');
+  let answer = Math.pow(value1, value2);
+  para.innerHTML = "Answer = " + answer;
 }
 
 for (var i = 0; i < allButtons.length; i++) {
