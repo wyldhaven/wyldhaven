@@ -45,12 +45,13 @@ button.addEventListener('click', () => {
       para.innerHTML = '';
 
       for (var i = 0; i < obj.length; i++) {
-        var text = obj[i].title + ', ';
-        para.insertAdjacentHTML('beforeend', text);
-
-        // if () {
-        //
-        // }
+        if (i = obj.length - 1) {
+          var text = obj[i].title;
+          para.insertAdjacentHTML('beforeend', text);
+        } else {
+          var text = obj[i].title + ', ';
+          para.insertAdjacentHTML('beforeend', text);
+        }
       }
     }
   }
