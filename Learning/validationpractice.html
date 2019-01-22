@@ -114,33 +114,17 @@ points.onchange = () => {
   sliderOutput.innerHTML = value;
 }
 
-// let button2 = document.getElementById('button2');
-// let check1 = document.getElementById('check1');
-// let check2 = document.getElementById('check2');
-//
-// button2.addEventListener('click', function() {
-//
-// let check1Value = check1.value;
-// let check2Value = check2.value;
-//
-// console.log(check1Value);
-// console.log(check2Value);
-//
-// });
-
 let button2 = document.getElementById('button2');
+let check1 = document.getElementById('check1');
+let check2 = document.getElementById('check2');
 
 button2.addEventListener('click', function() {
 
-let checks = document.querySelectorAll('.check');
-let arr = [];
+let check1Value = check1.checked;
+let check2Value = check2.checked;
 
-for (let i = 0; i < checks.length; i++) {
-  let checksValue = checks[i].value;
-  console.log(checksValue);
-  arr.push(checksValue[i]);
-  console.log(arr);
-}
+console.log(check1Value);
+console.log(check2Value);
 
 });
 
