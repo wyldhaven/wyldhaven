@@ -36,27 +36,27 @@ button {
 
   <label for="email-input">Email:</label>
   <input type="email" id="email-input" required autofocus placeholder="suq madiq" />
-  <label for="password-input">Password:</label>
-  <input type="password" id="password-input" minlength="5" maxlength="10" />
+  <!-- <label for="password-input">Password:</label>
+  <input type="password" id="password-input" minlength="5" maxlength="10" /> -->
 
   <!-- disabled -->
-  <input type="text/number" placeholder="disabled" disabled />
-  <br />
+  <!-- <input type="text/number" placeholder="disabled" disabled />
+  <br /> -->
 
   <!-- Dates: Use max for before -->
-  <label for="max-bday">Max:</label>
-  <input type="date" id="max-bday" name="bday" max="1979-12-31" />
+  <!-- <label for="max-bday">Max:</label>
+  <input type="date" id="max-bday" name="bday" max="1979-12-31" /> -->
 
   <!-- Dates: Use min for after -->
-  <label for="min-bday">Min:</label>
-  <input type="date" id="min-bday" min="2017-01-02" />
+  <!-- <label for="min-bday">Min:</label>
+  <input type="date" id="min-bday" min="2017-01-02" /> -->
 
   <!-- read only can't be edited -->
-  <input type="date" value="2000-01-02" readonly />
-  <br>
+  <!-- <input type="date" value="2000-01-02" readonly />
+  <br> -->
 
   <!-- submit multiple files -->
-  <input type="file" multiple />
+  <!-- <input type="file" multiple /> -->
   <input type="submit" value="Send" id="button1" />
   <input class="reset" type="reset" />
 
@@ -104,19 +104,19 @@ button1.addEventListener('click', function() {
 //  console.log('Min BDAY = ' + minBdayValue);
 });
 
-let points = document.getElementById('points');
-let sliderOutput = document.querySelector('.slider-output');
-
-points.onchange = () => {
-  let value = points.value;
-  sliderOutput.innerHTML = value;
-}
-
-let button2 = document.getElementById('button2');
-
-button2.addEventListener('click', function() {
-  console.log('click');
-});
+// let points = document.getElementById('points');
+// let sliderOutput = document.querySelector('.slider-output');
+//
+// points.onchange = () => {
+//   let value = points.value;
+//   sliderOutput.innerHTML = value;
+// }
+//
+// let button2 = document.getElementById('button2');
+//
+// button2.addEventListener('click', function() {
+//   console.log('click');
+// });
 
 </script>
 </body>
