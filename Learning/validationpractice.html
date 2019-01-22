@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+
+</style>
+</head>
+<body>
+
+<form>
+
+  <label for="email-input">Email:</label>
+  <input type="email" id="email-input" required autofocus placeholder="suq madiq"/>
+  <label for="email-input">Password:</label>
+  <input type="password" id="password-input" minlength="5" maxlength="10" required />
+  <!-- disabled -->
+  <input type="text/number" disabled />
+  <!-- Dates: Use max for before -->
+  <input type="date" name="bday" max="1979-12-31" />
+  <!-- Dates: Use min for after -->
+  <input type="date" min="2000-01-02">
+  <!-- read only can't be edited -->
+  <input type="date" placeholder="2000-01-02" readonly>
+  <!-- submit multiple files -->
+  <input type="file" multiple>
+  <button id="button1">Submit<button/>
+  <input class="reset" type="reset" />
+
+</form>
+
+<form>
+
+  <input type="checkbox" value="Bike">I have a bike</input>
+  <input type="checkbox" value="Car">I have a car</input>
+  <!-- range = slider -->
+  <input type="range" name="points" min="0" max="10">
+  <button id="button2">Submit<button/>
+    
+</form>
+
+<script>
+
+
+</script>
+</body>
+</html>
