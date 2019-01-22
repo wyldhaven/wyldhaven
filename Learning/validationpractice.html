@@ -35,13 +35,13 @@ button {
 <form>
 
   <label for="email-input">Email:</label>
-  <input type="email" id="email-input" required autofocus placeholder="suq madiq"/>
+  <input type="email" id="email-input" required autofocus placeholder="suq madiq" />
   <label for="password-input">Password:</label>
   <input type="password" id="password-input" minlength="5" maxlength="10" />
 
   <!-- disabled -->
   <input type="text/number" placeholder="disabled" disabled />
-  <br>
+  <br />
 
   <!-- Dates: Use max for before -->
   <label for="max-bday">Max:</label>
@@ -89,6 +89,7 @@ let minBday = document.getElementById('min-bday');
 
 button1.addEventListener('click', function() {
 
+  console.log(emailInput);
   let emailValue = emailInput.value;
   console.log(emailValue);
   console.log('Email = ' + emailValue);
