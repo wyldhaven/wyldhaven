@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--
+
 <style>
 
 form {
@@ -28,41 +28,41 @@ button {
   margin-right: 0.5rem;
 }
 
-</style> -->
+</style>
 </head>
 <body>
 
-<form>
+<!-- <form> -->
 
   <label for="email-input">Email:</label>
   <input id="email-input"></input>
-  <!-- <label for="password-input">Password:</label>
+  <label for="password-input">Password:</label>
   <input type="password" id="password-input" minlength="5" maxlength="10" /> -->
 
   <!-- disabled -->
-  <!-- <input type="text/number" placeholder="disabled" disabled />
-  <br /> -->
+  <input type="text/number" placeholder="disabled" disabled />
+  <br />
 
   <!-- Dates: Use max for before -->
-  <!-- <label for="max-bday">Max:</label>
-  <input type="date" id="max-bday" name="bday" max="1979-12-31" /> -->
+  <label for="max-bday">Max:</label>
+  <input type="date" id="max-bday" name="bday" max="1979-12-31" />
 
   <!-- Dates: Use min for after -->
-  <!-- <label for="min-bday">Min:</label>
-  <input type="date" id="min-bday" min="2017-01-02" /> -->
+  <label for="min-bday">Min:</label>
+  <input type="date" id="min-bday" min="2017-01-02" />
 
   <!-- read only can't be edited -->
-  <!-- <input type="date" value="2000-01-02" readonly />
-  <br> -->
+  <input type="date" value="2000-01-02" readonly />
+  <br>
 
   <!-- submit multiple files -->
-  <!-- <input type="file" multiple /> -->
+  <input type="file" multiple />
   <button id="button1">Submit</button>
-  <!-- <input class="reset" type="reset"></input> -->
+  <input class="reset" type="reset"></input>
 
-</form>
+<!-- </form> -->
 
-<!-- <br>
+<br>
 <br>
 
 <form>
@@ -75,7 +75,7 @@ button {
   <p class="slider-output"></p>
   <button id="button2">Submit</button>
 
-</form> -->
+</form>
 
 <br>
 <br>
@@ -84,9 +84,9 @@ button {
 
 let button1 = document.getElementById('button1');
 let emailInput = document.getElementById('email-input');
-// let passwordInput = document.getElementById('password-input');
-// let maxBday = document.getElementById('max-bday');
-// let minBday = document.getElementById('min-bday');
+let passwordInput = document.getElementById('password-input');
+let maxBday = document.getElementById('max-bday');
+let minBday = document.getElementById('min-bday');
 
 button1.addEventListener('click', () => {
 
@@ -96,29 +96,29 @@ button1.addEventListener('click', () => {
   console.log(emailValue);
   console.log('Email = ' + emailValue);
 
-  //let passValue = passwordInput.value;
-  //console.log('Password = ' + passValue);
+  let passValue = passwordInput.value;
+  console.log('Password = ' + passValue);
 
-  //let maxBdayValue = maxBday.value;
-  //console.log('Max BDAY = ' + maxBdayValue);
+  let maxBdayValue = maxBday.value;
+  console.log('Max BDAY = ' + maxBdayValue);
 
-  //let minBdayValue = minBday.value;
-//  console.log('Min BDAY = ' + minBdayValue);
+  let minBdayValue = minBday.value;
+ console.log('Min BDAY = ' + minBdayValue);
 });
 
-// let points = document.getElementById('points');
-// let sliderOutput = document.querySelector('.slider-output');
-//
-// points.onchange = () => {
-//   let value = points.value;
-//   sliderOutput.innerHTML = value;
-// }
-//
-// let button2 = document.getElementById('button2');
-//
-// button2.addEventListener('click', function() {
-//   console.log('click');
-// });
+let points = document.getElementById('points');
+let sliderOutput = document.querySelector('.slider-output');
+
+points.onchange = () => {
+  let value = points.value;
+  sliderOutput.innerHTML = value;
+}
+
+let button2 = document.getElementById('button2');
+
+button2.addEventListener('click', function() {
+  console.log('click');
+});
 
 </script>
 </body>
