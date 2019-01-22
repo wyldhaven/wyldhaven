@@ -40,7 +40,6 @@ button {
   <input type="password" id="password-input" minlength="5" maxlength="10" required />
 
   <!-- disabled -->
-  <br>
   <input type="text/number" placeholder="disabled" disabled />
   <br>
 
@@ -54,6 +53,8 @@ button {
 
   <!-- read only can't be edited -->
   <input type="date" value="2000-01-02" readonly />
+  <br>
+
   <!-- submit multiple files -->
   <input type="file" multiple />
   <button id="button1">Submit</button>
@@ -66,7 +67,7 @@ button {
 
 <form>
 
-  <input class="check" type="checkbox" value="Bike">I have a bike</input>
+  <input class="check" type="checkbox" value="Bike">I have a bike</input><br/>
   <input class="check" type="checkbox" value="Car">I have a car</input>
   <!-- range = slider -->
   <input type="range" id="points" min="0" max="10" />
@@ -84,6 +85,8 @@ let maxBday = document.getElementById('max-bday');
 let minBday = document.getElementById('min-bday');
 
 button1.addEventListener('click', () => {
+  console.log('click');
+
   let emailValue = emailInput.value;
   console.log('Email = ' + emailValue);
 
@@ -104,6 +107,12 @@ points.onchange = () => {
   let value = points.value;
   sliderOutput.innerHTML = value;
 }
+
+let button2 = document.getElementById('button2');
+
+button2.addEventListener('click', () => {
+  console.log('click');
+});
 
 </script>
 </body>
