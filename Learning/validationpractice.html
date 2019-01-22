@@ -23,6 +23,11 @@ button {
   margin: 1rem 0;
 }
 
+.check {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
 </style>
 </head>
 <body>
@@ -33,14 +38,22 @@ button {
   <input type="email" id="email-input" required autofocus placeholder="suq madiq"/>
   <label for="email-input">Password:</label>
   <input type="password" id="password-input" minlength="5" maxlength="10" required />
+
   <!-- disabled -->
-  <input type="text/number" disabled />
+  <br>
+  <input type="text/number" placeholder="disabled" disabled />
+  <br>
+
   <!-- Dates: Use max for before -->
-  <input type="date" name="bday" max="1979-12-31" />
+  <label for="max-bday">Max:</label>
+  <input type="date" id="max-bday" name="bday" max="1979-12-31" required />
+
   <!-- Dates: Use min for after -->
-  <input type="date" min="2000-01-02" />
+  <label for="min-bday">Min:</label>
+  <input type="date" id="min-bday" min="2017-01-02" required />
+
   <!-- read only can't be edited -->
-  <input type="date" placeholder="2000-01-02" readonly />
+  <input type="date" value="2000-01-02" readonly />
   <!-- submit multiple files -->
   <input type="file" multiple />
   <button id="button1">Submit</button>
@@ -48,18 +61,49 @@ button {
 
 </form>
 
+<br>
+<br>
+
 <form>
 
-  <input type="checkbox" value="Bike">I have a bike</input>
-  <input type="checkbox" value="Car">I have a car</input>
+  <input class="check" type="checkbox" value="Bike">I have a bike</input>
+  <input class="check" type="checkbox" value="Car">I have a car</input>
   <!-- range = slider -->
-  <input type="range" name="points" min="0" max="10" />
+  <input type="range" id="points" min="0" max="10" />
+  <p class="slider-output"></p>
   <button id="button2">Submit</button>
 
 </form>
 
 <script>
 
+let button1 = document.getElementById('button1');
+let emailInput = document.getElementById('email-input');
+let passwordInput = document.getElementById('password-input');
+let maxBday = document.getElementById('max-bday');
+let minBday = document.getElementById('min-bday');
+
+button1.addEventListener('click', () => {
+  let emailValue = emailInput.value;
+  console.log('Email = ' + emailValue);
+
+  let passValue = passwordInput.value;
+  console.log('Password = ' + passValue);
+
+  let maxBdayValue = maxBday.value;
+  console.log('Max BDAY = ' + maxBdayValue);
+
+  let minBdayValue = minBday.value;
+  console.log('Min BDAY = ' + minBdayValue);
+});
+
+let points = document.getElementById('points');
+let sliderOutput = document.querySelector('.slider-output');
+
+points.onchange = () => {
+  let value = points.value;
+  sliderOutput.innerHTML = value;
+}
 
 </script>
 </body>
