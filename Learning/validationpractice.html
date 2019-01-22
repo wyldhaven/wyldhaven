@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<!--
 <style>
 
 form {
@@ -28,7 +28,7 @@ button {
   margin-right: 0.5rem;
 }
 
-</style>
+</style> -->
 </head>
 <body>
 
@@ -62,19 +62,20 @@ button {
 
 </form>
 
-<br>
+<!-- <br>
 <br>
 
 <form>
 
   <input class="check" type="checkbox" value="Bike">I have a bike</input><br/>
   <input class="check" type="checkbox" value="Car">I have a car</input>
-  <!-- range = slider -->
+
+
   <input type="range" id="points" min="0" max="10" />
   <p class="slider-output"></p>
   <button id="button2">Submit</button>
 
-</form>
+</form> -->
 
 <br>
 <br>
@@ -87,8 +88,9 @@ let emailInput = document.getElementById('email-input');
 // let maxBday = document.getElementById('max-bday');
 // let minBday = document.getElementById('min-bday');
 
-button1.addEventListener('click', function() {
+button1.addEventListener('click', () => {
 
+  console.log('click');
   console.log(emailInput);
   let emailValue = emailInput.value;
   console.log(emailValue);
