@@ -37,7 +37,7 @@ button {
   <label for="email-input">Email:</label>
   <input type="email" id="email-input" required autofocus placeholder="suq madiq"/>
   <label for="email-input">Password:</label>
-  <input type="password" id="password-input" minlength="5" maxlength="10" required />
+  <input type="password" id="password-input" minlength="5" maxlength="10" />
 
   <!-- disabled -->
   <input type="text/number" placeholder="disabled" disabled />
@@ -45,11 +45,11 @@ button {
 
   <!-- Dates: Use max for before -->
   <label for="max-bday">Max:</label>
-  <input type="date" id="max-bday" name="bday" max="1979-12-31" required />
+  <input type="date" id="max-bday" name="bday" max="1979-12-31" />
 
   <!-- Dates: Use min for after -->
   <label for="min-bday">Min:</label>
-  <input type="date" id="min-bday" min="2017-01-02" required />
+  <input type="date" id="min-bday" min="2017-01-02" />
 
   <!-- read only can't be edited -->
   <input type="date" value="2000-01-02" readonly />
@@ -57,7 +57,7 @@ button {
 
   <!-- submit multiple files -->
   <input type="file" multiple />
-  <button id="button1">Submit</button>
+  <input type="submit" id="button1" />
   <input class="reset" type="reset" />
 
 </form>
@@ -76,6 +76,9 @@ button {
 
 </form>
 
+<br>
+<br>
+
 <script>
 
 let button1 = document.getElementById('button1');
@@ -84,20 +87,19 @@ let passwordInput = document.getElementById('password-input');
 let maxBday = document.getElementById('max-bday');
 let minBday = document.getElementById('min-bday');
 
-button1.addEventListener('click', () => {
-  console.log('click');
+button1.addEventListener('click', function() {
 
   let emailValue = emailInput.value;
   console.log('Email = ' + emailValue);
 
-  let passValue = passwordInput.value;
-  console.log('Password = ' + passValue);
+  //let passValue = passwordInput.value;
+  //console.log('Password = ' + passValue);
 
-  let maxBdayValue = maxBday.value;
-  console.log('Max BDAY = ' + maxBdayValue);
+  //let maxBdayValue = maxBday.value;
+  //console.log('Max BDAY = ' + maxBdayValue);
 
-  let minBdayValue = minBday.value;
-  console.log('Min BDAY = ' + minBdayValue);
+  //let minBdayValue = minBday.value;
+//  console.log('Min BDAY = ' + minBdayValue);
 });
 
 let points = document.getElementById('points');
@@ -110,7 +112,7 @@ points.onchange = () => {
 
 let button2 = document.getElementById('button2');
 
-button2.addEventListener('click', () => {
+button2.addEventListener('click', function() {
   console.log('click');
 });
 
