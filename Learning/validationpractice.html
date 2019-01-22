@@ -34,10 +34,10 @@ button {
 
 <!-- <form> -->
 
-  <label for="email-input">Email:</label>
-  <input id="email-input"></input>
+  <label for="email-input" placeholder="Email@email.com">Email:</label>
+  <input id="email-input" autocomplete="off"></input>
   <label for="password-input">Password:</label>
-  <input type="password" id="password-input" minlength="5" maxlength="10" /> -->
+  <input type="password" id="password-input" required autofocus minlength="5" maxlength="10" />
 
   <!-- disabled -->
   <input type="text/number" placeholder="disabled" disabled />
@@ -56,8 +56,8 @@ button {
   <br>
 
   <!-- submit multiple files -->
-  <input type="file" multiple />
-  <button id="button1">Submit</button>
+  <input id="files" type="file" multiple />
+  <input type="submit" value="Submit" id="button1" />
   <input class="reset" type="reset"></input>
 
 <!-- </form> -->
@@ -87,13 +87,11 @@ let emailInput = document.getElementById('email-input');
 let passwordInput = document.getElementById('password-input');
 let maxBday = document.getElementById('max-bday');
 let minBday = document.getElementById('min-bday');
+let files = document.getElementById('files');
 
 button1.addEventListener('click', () => {
 
-  console.log('click');
-  console.log(emailInput);
   let emailValue = emailInput.value;
-  console.log(emailValue);
   console.log('Email = ' + emailValue);
 
   let passValue = passwordInput.value;
@@ -103,7 +101,10 @@ button1.addEventListener('click', () => {
   console.log('Max BDAY = ' + maxBdayValue);
 
   let minBdayValue = minBday.value;
- console.log('Min BDAY = ' + minBdayValue);
+  console.log('Min BDAY = ' + minBdayValue);
+
+  let filesValue = files.value;
+  console.log('Files = ' + filesValue);
 });
 
 let points = document.getElementById('points');
