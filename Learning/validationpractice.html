@@ -67,9 +67,8 @@ button {
 
 <form>
 
-  <input class="check" type="checkbox" value="Bike">I have a bike</input><br/>
-  <input class="check" type="checkbox" value="Car">I have a car</input>
-
+  <input class="check" id="check1" type="checkbox" value="Bike">I have a bike</input><br/>
+  <input class="check" id="check2" type="checkbox" value="Car">I have a car</input>
 
   <input type="range" id="points" min="0" max="10" />
   <p class="slider-output"></p>
@@ -118,7 +117,17 @@ points.onchange = () => {
 let button2 = document.getElementById('button2');
 
 button2.addEventListener('click', function() {
-  console.log('click');
+
+let checks = document.querySelectorAll('.check');
+let arr = [];
+
+for (let i = 0; i < checks.length; i++) {
+  let checksValue = checks[i].value;
+  console.log(checksValue);
+  arr.push(checksValue[i]);
+  console.log(arr);
+}
+
 });
 
 </script>
