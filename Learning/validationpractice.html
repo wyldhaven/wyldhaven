@@ -93,9 +93,9 @@ let files = document.getElementById('files');
 
 button1.addEventListener('click', (e) => {
 
-  if (passwordInput.value == '') {
+  if (passwordInput.value == '' || passwordInput.value.length < 5) {
     console.log('e');
-    
+
   } else {
 
     //this is the reason the form element was breaking my submitting - because I am custom validating
