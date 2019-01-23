@@ -88,7 +88,8 @@ let maxBday = document.getElementById('max-bday');
 let minBday = document.getElementById('min-bday');
 let files = document.getElementById('files');
 
-button1.addEventListener('click', () => {
+button1.addEventListener('click', (e) => {
+  e.preventDefault();
 
   let emailValue = emailInput.value;
   console.log('Email = ' + emailValue);
