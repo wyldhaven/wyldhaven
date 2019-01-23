@@ -32,10 +32,12 @@ button {
 </head>
 <body>
 
+<!-- action can tell the form where to send data, can use GET or POST here -->
+<!-- <form action="/action_page.php"> -->
 <form>
 
-  <label for="email-input" placeholder="Email@email.com">Email:</label>
-  <input id="email-input" autocomplete="off"></input>
+  <label for="email-input">Email:</label>
+  <input type="email" id="email-input" placeholder="Email@email.com" autocomplete="off"></input>
   <label for="password-input">Password:</label>
   <input type="password" id="password-input" required autofocus minlength="5" maxlength="10" />
 
@@ -57,6 +59,7 @@ button {
 
   <!-- submit multiple files -->
   <input id="files" type="file" multiple />
+
   <input type="submit" value="Submit" id="button1" />
   <input class="reset" type="reset"></input>
 
@@ -92,6 +95,7 @@ button1.addEventListener('click', (e) => {
 
   if (passwordInput.value == '') {
     console.log('e');
+    
   } else {
 
     //this is the reason the form element was breaking my submitting - because I am custom validating
