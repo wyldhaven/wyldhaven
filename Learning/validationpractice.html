@@ -89,22 +89,30 @@ let minBday = document.getElementById('min-bday');
 let files = document.getElementById('files');
 
 button1.addEventListener('click', (e) => {
-  e.preventDefault();
 
-  let emailValue = emailInput.value;
-  console.log('Email = ' + emailValue);
+  if (passwordInput == '' || emailInput == '') {
 
-  let passValue = passwordInput.value;
-  console.log('Password = ' + passValue);
+  } else {
 
-  let maxBdayValue = maxBday.value;
-  console.log('Max BDAY = ' + maxBdayValue);
+    //this is the reason the form element was breaking my submitting - because I am custom validating
+    e.preventDefault();
 
-  let minBdayValue = minBday.value;
-  console.log('Min BDAY = ' + minBdayValue);
+    let emailValue = emailInput.value;
+    console.log('Email = ' + emailValue);
 
-  let filesValue = files.value;
-  console.log('Files = ' + filesValue);
+    let passValue = passwordInput.value;
+    console.log('Password = ' + passValue);
+
+    let maxBdayValue = maxBday.value;
+    console.log('Max BDAY = ' + maxBdayValue);
+
+    let minBdayValue = minBday.value;
+    console.log('Min BDAY = ' + minBdayValue);
+
+    let filesValue = files.value;
+    console.log('Files = ' + filesValue);
+  }
+
 });
 
 let points = document.getElementById('points');
