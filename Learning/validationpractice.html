@@ -90,8 +90,8 @@ let files = document.getElementById('files');
 
 button1.addEventListener('click', (e) => {
 
-  if (passwordInput == '' || emailInput == '') {
-
+  if (passwordInput.value == '') {
+    console.log('e');
   } else {
 
     //this is the reason the form element was breaking my submitting - because I am custom validating
