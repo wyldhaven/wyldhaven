@@ -40,7 +40,7 @@ insertButton.addEventListener('click', (e) => {
     let li = document.createElement('li');
     li.innerHTML = insertField.value;
     list.appendChild(li);
-    insertField.focus();
+    insertField.value = '';
   }
 
 });
