@@ -33,16 +33,15 @@ let insertButton = document.querySelector('.insert-button');
 let insertField = document.querySelector('.insert-field');
 let list = document.querySelector('ul');
 
-insertButton.addEventListener('click', () => {
-  console.log('click');
+insertButton.addEventListener('click', (e) => {
 
-  // if (insertField.value !== '') {
-  //   e.preventDefault();
-  //   console.log('click');
-  //   console.log(insertField.value);
-  //   let li = document.createElement('li');
-  //   list.appendChild(li);
-  // }
+  if (insertField.value !== '') {
+    e.preventDefault();
+    console.log('click');
+    console.log(insertField.value);
+    let li = document.createElement('li');
+    list.appendChild(li);
+  }
 
 });
 
