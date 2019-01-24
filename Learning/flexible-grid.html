@@ -8,13 +8,13 @@
 
 <style>
 
-#main-container {
+#main-container , #inner-main-container {
   display: block;
   justify-content: center;
   align-items: center;
 }
 
-.cell-container {
+.cell-container , .inner-cell-container {
   display: block;
   align-items: center;
   justify-content: center;
@@ -26,14 +26,20 @@
   height: 25vh;
 }
 
+.inner-cell-container .cell {
+  border: 1px solid #000000;
+  width: calc(25vw / 4);
+  height: calc(25vh / 4);
+}
+
 @media only screen and (min-width: 22.5rem) {
-  .cell-container {
+  .cell-container , .inner-cell-container {
     display: flex;
   }
 }
 
 @media only screen and (min-width: 45rem) {
-  #main-container {
+  #main-container , #inner-main-container {
     display: flex;
   }
 }
@@ -43,27 +49,27 @@
 </head>
 <body>
 
-  <div id="main-container">
-    <div class="cell-container">
-      <div class="cell">
-        <div id="inner-main-container">
-          <div class="inner-cell-container">
-            <div class="cell"></div>
-            <div class="cell"></div>
-          </div>
-          <div class="cell-container">
-            <div class="cell"></div>
-            <div class="cell"></div>
-          </div>
+<div id="main-container">
+  <div class="cell-container">
+    <div class="cell">
+      <div id="inner-main-container">
+        <div class="inner-cell-container">
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="inner-cell-container">
+          <div class="cell"></div>
+          <div class="cell"></div>
         </div>
       </div>
-      <div class="cell"></div>
     </div>
-    <div class="cell-container">
-      <div class="cell"></div>
-      <div class="cell"></div>
-    </div>
+    <div class="cell"></div>
   </div>
+  <div class="cell-container">
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+</div>
 
 
 </body>
