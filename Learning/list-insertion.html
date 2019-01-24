@@ -32,16 +32,13 @@ ul li {
 let insertButton = document.querySelector('.insert-button');
 let insertField = document.querySelector('.insert-field');
 let list = document.querySelector('ul');
-console.log(insertButton);
-console.log(insertField);
 
 insertButton.addEventListener('click', () => {
-  let value = insertField.value;
-  console.log(value);
 
-  if (value !== '') {
+  if (insertField.value !== '') {
     e.preventDefault();
     console.log('click');
+    console.log(insertField.value);
     let li = document.createElement('li');
     list.appendChild(li);
   }
