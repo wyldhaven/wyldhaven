@@ -32,14 +32,17 @@ ul li {
 let insertButton = document.querySelector('.insert-button');
 let insertField = document.querySelector('.insert-field');
 let list = document.querySelector('ul');
+let value = insertField.value;
 
 insertButton.addEventListener('click', (e) => {
 
-  if (insertField.value !== '') {
+  if (value !== '') {
     e.preventDefault();
     let li = document.createElement('li');
-    li.innerHTML = insertField.value;
+    li.innerHTML = value;
     list.appendChild(li);
+    value = '';
+    insertField.focus();
   }
 
 });
