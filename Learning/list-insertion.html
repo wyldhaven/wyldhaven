@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Grayson Randall List Insertion Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+
+ul li {
+  
+}
+
+</style>
+
+<script>
+
+let insertButton = document.querySelector('.insert-button');
+let insertField = document.querySelector('.insert-field');
+let list = document.querySelector('ul');
+
+insertButton.addEventListener('click', () => {
+  let value = insertField.value;
+  let li = document.createElement('li');
+
+  list.appendChild(li);
+
+});
+
+</script>
+
+</head>
+<body>
+
+<div id="container">
+  <input class="insert-field" type="text" required autofocus/>
+  <input class="insert-button" type="submit" name="insert" value="Insert" />
+
+  <br> />
+  <ul></ul>
+</div>
+
+
+</body>
+</html>
