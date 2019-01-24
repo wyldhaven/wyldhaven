@@ -33,16 +33,13 @@ let insertButton = document.querySelector('.insert-button');
 let insertField = document.querySelector('.insert-field');
 let list = document.querySelector('ul');
 
-insertButton.addEventListener('click', (event) => {
+insertButton.addEventListener('click', (e) => {
   if (insertField.value !== '') {
-    //prevent default with IE Support
-    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-    //event.returnValue = false;
-    console.log('click');
-    // let li = document.createElement('li');
-    // li.innerHTML = insertField.value;
-    // list.appendChild(li);
-    // insertField.value = '';
+    e.preventDefault();
+    let li = document.createElement('li');
+    li.innerHTML = insertField.value;
+    list.appendChild(li);
+    insertField.value = '';
   }
 });
 
