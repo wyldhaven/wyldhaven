@@ -35,6 +35,7 @@ let list = document.querySelector('ul');
 
 insertButton.addEventListener('click', (e) => {
   if (insertField.value !== '') {
+    //prevent default with IE Support
     e.preventDefault ? e.preventDefault() : (e.returnValue = false);
     let li = document.createElement('li');
     li.innerHTML = insertField.value;
