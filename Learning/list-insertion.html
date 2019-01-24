@@ -37,9 +37,8 @@ insertButton.addEventListener('click', (e) => {
 
   if (insertField.value !== '') {
     e.preventDefault();
-    console.log('click');
-    console.log(insertField.value);
     let li = document.createElement('li');
+    li.innerHTML = insertField.value;
     list.appendChild(li);
   }
 
