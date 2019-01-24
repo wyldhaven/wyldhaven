@@ -22,11 +22,13 @@ let list = document.querySelector('ul');
 
 insertButton.addEventListener('click', (e) => {
   let value = insertField.value;
-  let li = document.createElement('li');
+  console.log(value);
 
   if (value !== '') {
     e.preventDefault();
-    list.appendChild(li);
+    console.log('click');
+    // let li = document.createElement('li');
+    // list.appendChild(li);
   }
 
 });
