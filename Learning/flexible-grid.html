@@ -8,32 +8,32 @@
 
 <style>
 
-#outer-container {
+#main-container {
   display: block;
   justify-content: center;
   align-items: center;
 }
 
-.inner-container {
+.cell-container {
   display: block;
   align-items: center;
   justify-content: center;
 }
 
-.box {
+.cell {
   border: 1px solid #000000;
   width: 25vw;
   height: 25vh;
 }
 
 @media only screen and (min-width: 22.5rem) {
-  .inner-container {
+  .cell-container {
     display: flex;
   }
 }
 
 @media only screen and (min-width: 45rem) {
-  #outer-container {
+  #main-container {
     display: flex;
   }
 }
@@ -43,14 +43,25 @@
 </head>
 <body>
 
-  <div id="outer-container">
-    <div class="inner-container">
-      <div class="box"></div>
-      <div class="box"></div>
+  <div id="main-container">
+    <div class="cell-container">
+      <div class="cell">
+        <div id="inner-main-container">
+          <div class="inner-cell-container">
+            <div class="cell"></div>
+            <div class="cell"></div>
+          </div>
+          <div class="cell-container">
+            <div class="cell"></div>
+            <div class="cell"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cell"></div>
     </div>
-    <div class="inner-container">
-      <div class="box"></div>
-      <div class="box"></div>
+    <div class="cell-container">
+      <div class="cell"></div>
+      <div class="cell"></div>
     </div>
   </div>
 
