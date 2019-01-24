@@ -18,10 +18,10 @@ ul li {
 <body>
 
 <div id="container">
-
+  <form>
     <input class="insert-field" type="text" required autofocus/>
     <input class="insert-button" type="submit" name="insert" value="Insert" />
-
+  </form>
 
   <br />
   <ul></ul>
@@ -40,10 +40,10 @@ insertButton.addEventListener('click', () => {
   console.log(value);
 
   if (value !== '') {
-    //e.preventDefault();
+    e.preventDefault();
     console.log('click');
-    // let li = document.createElement('li');
-    // list.appendChild(li);
+    let li = document.createElement('li');
+    list.appendChild(li);
   }
 
 });
