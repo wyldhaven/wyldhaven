@@ -11,7 +11,7 @@
 
 <div id="container">
   <form>
-    <input class="insert-field" type="text" required/>
+    <input class="insert-field" type="text" name="field" autofocus required/>
     <input class="insert-button" type="submit" name="insert" value="Insert" />
   </form>
 
@@ -26,7 +26,6 @@ let insertField = document.querySelector('.insert-field');
 let list = document.querySelector('ul');
 
 insertButton.addEventListener('click', (e) => {
-
   if (insertField.value !== '') {
     e.preventDefault();
     let li = document.createElement('li');
@@ -34,7 +33,6 @@ insertButton.addEventListener('click', (e) => {
     list.appendChild(li);
     insertField.value = '';
   }
-
 });
 
 </script>
