@@ -34,9 +34,8 @@
 	let forecastDiv = document.getElementById('forecast');
 
 	function hdnWeatherJsonpCallback(data) {
-		//currentDiv.innerHTML = '<span>' + data + '</span>';
-		console.log(data.cities);
-		console.log(data.cities[5]);
+		currentDiv.innerHTML = '<span>' + data.cities[9].current.temp + '</span>' + '<span>' + data.cities[9].current.condition + '</span>';
+		console.log(data.cities[9]);
 	}
 </script>
 <script type="text/javascript" src="https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback"></script>
