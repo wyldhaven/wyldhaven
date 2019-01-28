@@ -31,17 +31,18 @@
 
 
 
+
+<script type="text/javascript" src="https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback"></script>
 <script>
 
 	let currentDiv = document.getElementById('current');
 	let forecastDiv = document.getElementById('forecast');
 
 	function hdnWeatherJsonpCallback(data) {
-		currentDiv.innerHTML = '<span>' + data. '</span>';
+		currentDiv.innerHTML = '<span>' + data + '</span>';
 	}
 
 </script>
-<script type="text/javascript" src="https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback"></script>
 
 </body>
 </html>
