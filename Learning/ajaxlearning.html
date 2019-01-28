@@ -37,7 +37,7 @@ window.onload = function() {
       console.log('processing request');
     } else if (this.readyState == 4) {
       console.log('request finished and response is ready');
-      console.log(this.responseText);
+      //console.log(this.responseText);
     }
 
 
@@ -56,6 +56,7 @@ function showHint(str) {
       if (this.readyState == 4) {
         document.getElementById("txtHint").innerHTML = "";
         var myObj = JSON.parse(this.responseText);
+        console.log(myObj);
         for (var i=0; i<myObj.length; i++) {
           let text = myObj[i].title + ' , ' + myObj[i].id +  '<br />';
           document.getElementById("txtHint").insertAdjacentHTML('beforeend', text);
@@ -73,7 +74,8 @@ function showHint(str) {
 var newData = {
   name: "Grayson",
   sex: "Male",
-  status: "Awesome"
+  status: "Awesome",
+  isAlive: true
 }
 
 var thisJson = JSON.stringify(newData);
