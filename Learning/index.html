@@ -34,11 +34,19 @@
 	let forecastDiv = document.getElementById('forecast');
 
 	function hdnWeatherJsonpCallback(data) {
-		let temp = '<p>' + 'The current temperature is: ' + data.cities[9].current[0].temp + '&deg;' + '</p>';
-		let condition = '<p>' + 'The current condition is: ' + data.cities[9].current[0].condition + '</p>';
+		let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[9].current[0].temp + '</strong>' + '&deg;' + '</p>';
+		let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[9].current[0].condition + '</strong>' + '</p>';
 		currentDiv.innerHTML =  temp + condition;
+
 		console.log(data.cities[9]);
-		console.log(data.cities[9].current[0].temp);
+		console.log(data.cities[9].weekly.length);
+
+		// for (let i = 0; i < data.cities[9].weekly.length; i++;) {
+		// 
+		// }
+		//
+		// currentDiv.innerHTML =  data.cities[9].weekly[0].temp;
+
 	}
 </script>
 <script type="text/javascript" src="https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback"></script>
