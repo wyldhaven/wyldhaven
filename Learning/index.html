@@ -1,0 +1,44 @@
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Part 1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+	<style>
+		html,
+		body {
+			margin:  0;
+			padding: 0;
+			background-color: white;
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size:   18px;
+			line-height: 1.36em;
+			color: black;
+		}
+	</style>
+
+	<script type="text/javascript" src="https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback"></script>
+
+</head>
+<body>
+
+	<div id="menu"></div>
+
+	<div id="content">
+		<div id="current"></div>
+		<div id="forecast"></div>
+	</div>
+
+<script>
+
+let currentDiv = document.getElementById('current');
+let forecastDiv = document.getElementById('forecast');
+
+function hdnWeatherJsonpCallback(data) {
+	currentDiv.innerHTML = '<span>' + '</span>';
+}
+
+</script>
+</body>
+</html>
