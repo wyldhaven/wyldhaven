@@ -34,7 +34,7 @@
 	let forecastDiv = document.getElementById('forecast');
 
 	function hdnWeatherJsonpCallback(data) {
-		//currentDiv.innerHTML = '<span>' + data.cities[9].current.temp + '</span>' + '<span>' + data.cities[9].current.condition + '</span>';
+		currentDiv.innerHTML = '<span>' + data.cities[9].current[0].temp + '&#8451' + '</span>' + '<span>' + data.cities[9].current[0].condition + '</span>';
 		console.log(data.cities[9]);
 		console.log(data.cities[9].current[0].temp);
 	}
