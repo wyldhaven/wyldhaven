@@ -24,11 +24,11 @@ function weatherData() {
   xml.onreadystatechange = function() {
     if (this.readyState == 4) {
        let obj = this.responseText;
-       console.log(obj);
+       console.log(obj.city);
 
-       for (var i = 0; i < obj.length; i++) {
-         console.log(obj[i].city);
-       }
+       // for (var i = 0; i < obj.length; i++) {
+       //   console.log(obj[i].city);
+       // }
     }
   }
   xml.open('GET', 'https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback', true);
