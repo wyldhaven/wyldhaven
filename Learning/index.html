@@ -34,18 +34,22 @@
 	let forecastDiv = document.getElementById('forecast');
 
 	function hdnWeatherJsonpCallback(data) {
-		let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[9].current[0].temp + '</strong>' + '&deg;' + '</p>';
-		let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[9].current[0].condition + '</strong>' + '</p>';
+		let temp = data.cities[9].current[0].temp;
+		let condition = data.cities[9].current[0].condition;
+		let tempText = '<p>' + 'The current temperature is: ' + '<strong>' + temp + '&deg;' + '</strong>' + '</p>';
+		let conditionText = '<p>' + 'The current condition is: ' + '<strong>' + condition + '</strong>' + '</p>';
+
 		currentDiv.innerHTML =  temp + condition;
 
 		console.log(data.cities[9]);
 		console.log(data.cities[9].weekly.length);
 
-		// for (let i = 0; i < data.cities[9].weekly.length; i++;) {
-		// 
-		// }
-		//
-		// currentDiv.innerHTML =  data.cities[9].weekly[0].temp;
+		for (let i = 0; i < data.cities[9].weekly.length; i++;) {
+			let text = data.cities[9].weekly[i].day + ': ' + data.cities[9].weekly[i].condition + '<br />';
+      currentDiv.insertAdjacentHTML('beforeend', text);
+		}
+
+
 
 	}
 </script>
