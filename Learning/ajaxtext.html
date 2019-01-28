@@ -30,6 +30,7 @@ function loadTitles() {
     if (this.readyState == 4) {
       para.textContent = '';
       var obj = JSON.parse(this.responseText);
+      console.log(obj);
       //only loading half because it's too long
       for (let i = 0; i < (obj.length/2); i++ ) {
         var text = obj[i].title + '<br />';
