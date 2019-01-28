@@ -23,12 +23,10 @@ function weatherData() {
 
   xml.onreadystatechange = function() {
     if (this.readyState == 4) {
-       //console.log(this.responseText);
        let objParse = JSON.parse(JSON.stringify(this.responseText));
-       //console.log(objParse);
 
        for (var i = 0; i < objParse.length; i++) {
-         console.log(objParse[i].cities);
+         console.log(objParse[i].hdnWeatherJsonpCallback.cities.geoloc.city);
        }
     }
   }
