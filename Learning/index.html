@@ -46,8 +46,6 @@
 
 		currentDiv.innerHTML =  temp + condition;
 
-		console.log(data.cities[9]);
-
 		for (let i = 0; i < data.cities[9].weekly.length; i++) {
 			let li = document.createElement('li');
 			let text = '<strong>' + data.cities[9].weekly[i].day + ': ' + '</strong>' + data.cities[9].weekly[i].condition;
