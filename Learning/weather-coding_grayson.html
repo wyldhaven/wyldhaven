@@ -18,26 +18,17 @@
 
 <script>
 
-function weatherData() {
-  let xml = new XMLHttpRequest;
-
-  xml.onreadystatechange = function() {
-    if (this.readyState == 4) {
-      function hdnWeatherJsonpCallback(result) {
-        alert(result[0].city);
-      }
-      hdnWeatherJsonpCallback(result);
-
-       // let obj = this.responseText;
-       // console.log(obj.city);
-
-    }
-  }
-  xml.open('GET', 'https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback', true);
-  xml.send();
+function response(data) {
+    // JSON data in form of a JavaScript object
+    console.log(data);
 }
 
-weatherData();
+// create a script tag with the external request URL
+// include "response" as value of the GET param "callback" in the URL
+var script = document.createElement('script');
+script.src = 'https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback';
+document.body.appendChild(script);
+
 
 </script>
 </body>
