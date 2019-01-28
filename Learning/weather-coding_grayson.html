@@ -23,12 +23,13 @@ function weatherData() {
 
   xml.onreadystatechange = function() {
     if (this.readyState == 4) {
-       let obj = this.responseText;
-       console.log(obj.city);
+      function hdnWeatherJsonpCallback(result) {
+        alert(result[0].city);
+      }
 
-       // for (var i = 0; i < obj.length; i++) {
-       //   console.log(obj[i].city);
-       // }
+       // let obj = this.responseText;
+       // console.log(obj.city);
+
     }
   }
   xml.open('GET', 'https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback', true);
