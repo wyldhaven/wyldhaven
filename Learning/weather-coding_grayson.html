@@ -23,8 +23,8 @@ function weatherData() {
 
   xml.onreadystatechange = function() {
     if (this.readyState == 4) {
-       let objString = JSON.stringify(this.responseText);
-       let objParse = JSON.parse(objString);
+       //let objString = JSON.stringify(this.responseText);
+       let objParse = JSON.parse(this.responseText);
        console.log(objParse);
 
     }
