@@ -26,7 +26,7 @@ function weatherData() {
        let objParse = JSON.parse(JSON.stringify(this.responseText));
 
        for (var i = 0; i < objParse.length; i++) {
-         console.log(objParse[i].hdnWeatherJsonpCallback.cities.geoloc.city);
+         console.log(objParse[i].cities.citykey);
        }
     }
   }
