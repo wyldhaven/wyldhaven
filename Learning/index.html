@@ -35,7 +35,7 @@
 
 	function hdnWeatherJsonpCallback(data) {
 		//currentDiv.innerHTML = '<span>' + data + '</span>';
-		console.log(data.cities.geoloc);
+		console.log(data.cities[0]);
 	}
 </script>
 <script type="text/javascript" src="https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback"></script>
