@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Grayson Randall Weather Coding Exercise</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+
+
+
+</style>
+
+</head>
+<body>
+
+
+<script>
+
+function weatherData() {
+  let xml = new XMLHttpRequest;
+
+  xml.onreadystatechange = function() {
+    if (this.readyState == 4) {
+      //var obj = JSON.parse(this.responseText);
+       console.log(this.responseText);
+
+    }
+  }
+  xml.open('GET', https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback, true);
+  xml.send();
+});
+
+weatherData();
+
+</script>
+</body>
+</html>
