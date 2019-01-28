@@ -26,20 +26,17 @@
 	<div id="content">
 		<div id="current"></div>
 		<div id="forecast">
-			<ul>
-			</ul>
+			<ul></ul>
 		</div>
 	</div>
 
 <script>
 
-	let currentDiv = document.getElementById('current');
-	let forecastDiv = document.getElementById('forecast');
-	let weeklyList = document.querySelector('ul');
-
 	// Load and display data
 	function hdnWeatherJsonpCallback(data) {
-
+		let currentDiv = document.getElementById('current');
+		let forecastDiv = document.getElementById('forecast');
+		let weeklyList = document.querySelector('ul');
 		//I went with <p> and <ul><li> just to keep the HTML semantic. The <stong> tags are just for readibility
 		let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[9].current[0].temp + '&deg;' + '</strong>' + '</p>';
 		let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[9].current[0].condition+ '</strong>' + '</p>';
