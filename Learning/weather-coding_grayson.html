@@ -6,7 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<script>
+
+function hdnWeatherJsonpCallback(data) {
+    console.log(data);
+}
+
+</script>
+<script type="text/javascript" src="https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback"></script>
 
 <style>
 
@@ -18,19 +25,6 @@
 <body>
 
 
-<script>
 
-function hdnWeatherJsonpCallback(data) {
-    console.log(data);
-}
-
-// create a script tag with the external request URL
-// include "response" as value of the GET param "callback" in the URL
-var script = document.createElement('script');
-script.src = 'https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback';
-document.body.appendChild(script);
-
-
-</script>
 </body>
 </html>
