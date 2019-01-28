@@ -34,8 +34,8 @@
 	let forecastDiv = document.getElementById('forecast');
 
 	function hdnWeatherJsonpCallback(data) {
-		let temp = '<p>' + 'The current temperature is: ' + data.cities[9].current[0].temp + '&#8451' + '</p>';
-		let condition = '<p>' + 'The current condition is: ' + data.cities[9].current[0].condition + '&#8451' + '</p>';
+		let temp = '<p>' + 'The current temperature is: ' + data.cities[9].current[0].temp + '&deg;' + '</p>';
+		let condition = '<p>' + 'The current condition is: ' + data.cities[9].current[0].condition + '&deg;' + '</p>';
 		currentDiv.innerHTML =  temp + condition;
 		console.log(data.cities[9]);
 		console.log(data.cities[9].current[0].temp);
