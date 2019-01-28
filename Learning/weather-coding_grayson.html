@@ -25,7 +25,7 @@ function weatherData() {
     if (this.readyState == 4) {
        let objParse = JSON.parse(JSON.stringify(this.responseText));
        console.log(objParse.length);
-       console.log(objParse);
+       console.log(typeof objParse);
 
        // for (var i = 0; i < objParse.length; i++) {
        //   console.log(objParse[i].cities.geoloc.city);
