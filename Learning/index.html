@@ -7,14 +7,16 @@
 	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
 
 	<script>
+		window.onload = function () {
 
-		let currentDiv = document.getElementById('content');
-		let forecastDiv = document.getElementById('forecast');
+			let currentDiv = document.getElementById('current');
+			let forecastDiv = document.getElementById('forecast');
 
-		function hdnWeatherJsonpCallback(data) {
-			currentDiv.innerHTML = '<span>' + data + '</span>';
-		}
+			function hdnWeatherJsonpCallback(data) {
+				currentDiv.innerHTML = '<span>' + data + '</span>';
+			}
 
+	}
 	</script>
 	<script type="text/javascript" src="https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback"></script>
 
