@@ -52,6 +52,11 @@
 		.weather-icon {
 			margin-left: 1rem;
 		}
+
+		.darkmode #current {
+			background-color: black;
+			color: #fff;
+		}
 	</style>
 
 </head>
@@ -139,7 +144,7 @@
 			hours = hours - 3;
 			console.log(hours);
 
-			if (hours >= 20 && hours <= 7) {
+			if (hours >= 18 && hours <= 7) {
 				body.classList.add('darkmode');
 			} else {
 				body.classList.remove('darkmode');
