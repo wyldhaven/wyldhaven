@@ -90,15 +90,12 @@
 
 			if (optValue == 'Palo Alto') {
 				console.log('click');
-				option.setAttribute('selected');
+				option.setAttribute('selected', 'selected');
 			}
 
 			option.innerHTML = optValue;
 			option.value = optValue;
 			selectCity.appendChild(option);
-
-			city = i;
-			console.log(city);
 		}
 
 		currentDiv.innerHTML =  temp + condition;
