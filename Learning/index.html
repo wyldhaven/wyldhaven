@@ -107,6 +107,11 @@
 			li.innerHTML = text;
 			weeklyList.appendChild(li);
 		}
+
+		selectCity.onchange = () => {
+			city = selectCity.value;
+			console.log(city);
+		}
 	}
 
 </script>
