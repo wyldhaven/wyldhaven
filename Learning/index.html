@@ -127,6 +127,9 @@
 			currentDiv.innerHTML =  temp + condition;
 
 			console.log(data.cities);
+			let caliTime = new Date().toLocaleString("en-US", {timeZone: "America/California"});
+			caliTime = new Date(caliTime);
+			console.log('USA time: '+caliTime.toLocaleString())
 			// let hour = data.cities[city].hourly
 			// if (hour >= 20 && hour <= 7) {
 			//
