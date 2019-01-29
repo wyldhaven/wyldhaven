@@ -83,14 +83,20 @@
 		//initially populate the page
 		window.onload = () => {
 			populateSelect();
-			displayCurrent(city);
+			displayCurrent();
 			weeklyForecast();
 		}
 
-		//Update data based on city change
+		//Update data based on city change and remove previous data
 		selectCity.onchange = () => {
 			city = selectCity.value;
-			displayCurrent(city);
+			let allListItems = document.querySelectorAll('li');
+
+			for (var i = 0; i < allListItems.length; i++) {
+		    weeklyList.removeChild(allListItems[i]);
+		  }
+
+			displayCurrent();
 			weeklyForecast();
 		}
 
@@ -112,7 +118,7 @@
 		}
 
 		//Display current temp and condition
-		function displayCurrent(city) {
+		function displayCurrent() {
 			//I went with <p> and <ul><li> just to keep the HTML semantic. The <stong> tags are just for readibility
 			let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + '</p>';
 			let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition+ '</strong>' + '</p>';
