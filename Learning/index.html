@@ -78,7 +78,7 @@
 		let forecastDiv = document.getElementById('forecast');
 		let weeklyList = document.querySelector('ul');
 		let selectCity = document.getElementById('selectCity');
-		let city = 8;
+		let city = 9;
 
 
 		//initially populate the page
@@ -108,7 +108,7 @@
 				let optValue = i;
 				let optCity = data.cities[i].geoloc.city;
 
-				if (optValue == 8) {
+				if (optValue == 9) {
 					option.setAttribute('selected', 'selected');
 				}
 
@@ -129,13 +129,17 @@
 
 		//Populate list with weekly forecast
 		function weeklyForecast() {
-			for (let i = 0; i < data.cities[9].weekly.length; i++) {
+			for (let i = 0; i < data.cities[city].weekly.length; i++) {
 				let li = document.createElement('li');
 				let text = '<strong>' + data.cities[city].weekly[i].day + ': ' + '</strong>' + data.cities[city].weekly[i].condition;
 				li.innerHTML = text;
 				weeklyList.appendChild(li);
 			}
 		}
+
+		let date = new Date();
+		let hours = date.getHours();
+		console.log(hours);
 	}
 
 
