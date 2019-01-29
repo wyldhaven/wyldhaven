@@ -78,10 +78,17 @@
 		let forecastDiv = document.getElementById('forecast');
 		let weeklyList = document.querySelector('ul');
 		let selectCity = document.getElementById('selectCity');
-		//I went with <p> and <ul><li> just to keep the HTML semantic. The <stong> tags are just for readibility
-		let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[9].current[0].temp + '&deg;' + '</strong>' + '</p>';
-		let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[9].current[0].condition+ '</strong>' + '</p>';
 		let city;
+
+		//Change data based on city
+		selectCity.onchange = () => {
+			city = selectCity.value;
+			console.log(city);
+		}
+
+		//I went with <p> and <ul><li> just to keep the HTML semantic. The <stong> tags are just for readibility
+		let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + '</p>';
+		let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition+ '</strong>' + '</p>';
 
 		//Populate select with all cities
 		for (let i = 0; i < data.cities.length; i++) {
@@ -89,7 +96,6 @@
 			let optValue = data.cities[i].geoloc.city;
 
 			if (optValue == 'Palo Alto') {
-				console.log('click');
 				option.setAttribute('selected', 'selected');
 			}
 
@@ -106,11 +112,6 @@
 			let text = '<strong>' + data.cities[9].weekly[i].day + ': ' + '</strong>' + data.cities[9].weekly[i].condition;
 			li.innerHTML = text;
 			weeklyList.appendChild(li);
-		}
-
-		selectCity.onchange = () => {
-			city = selectCity.value;
-			console.log(city);
 		}
 	}
 
