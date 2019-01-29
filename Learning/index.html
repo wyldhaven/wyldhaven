@@ -132,23 +132,18 @@
 
 			currentDiv.innerHTML =  temp + condition;
 
-			let date = new Date();
-			console.log(date);
-			let time = date.getHours();
-			console.log(time);
-
 			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
 			nyTime = new Date(nyTime);
 			let hours = nyTime.getHours();
 			console.log(hours);
-			// nyhours = new Date(nyTime);
-			// console.log(nyTime.toLocaleString())
+			hours = hours - 3;
+			console.log(hours);
 
-			// if (hour >= 20 && hour <= 7) {
-			// 	body.classList.add('darkmode');
-			// } else {
-			// 	body.classList.remove('darkmode');
-			// }
+			if (hours >= 20 && hours <= 7) {
+				body.classList.add('darkmode');
+			} else {
+				body.classList.remove('darkmode');
+			}
 		}
 
 		//Populate list with weekly forecast
