@@ -115,6 +115,10 @@
 			weeklyForecast();
 		}
 
+		setInterval(function() {
+			console.log('click');
+		}, 4000);
+
 		//Populate the select element with all cities
 		function populateSelect() {
 			for (let i = 0; i < data.cities.length; i++) {
