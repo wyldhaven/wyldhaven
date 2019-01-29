@@ -78,7 +78,7 @@
 		let forecastDiv = document.getElementById('forecast');
 		let weeklyList = document.querySelector('ul');
 		let selectCity = document.getElementById('selectCity');
-		var city = 8;
+		let city = 8;
 
 
 		//initially populate the page
@@ -108,7 +108,7 @@
 				let optValue = i;
 				let optCity = data.cities[i].geoloc.city;
 
-				if (optCity == 'Palo Alto') {
+				if (optValue == 8) {
 					option.setAttribute('selected', 'selected');
 				}
 
