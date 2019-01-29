@@ -2,7 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Part 2</title>
+	<title>Part 3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
 
@@ -78,6 +78,7 @@
 		let forecastDiv = document.getElementById('forecast');
 		let weeklyList = document.querySelector('ul');
 		let selectCity = document.getElementById('selectCity');
+		let body = document.querySelector('body');
 		let city = 9;
 
 
@@ -118,23 +119,49 @@
 			}
 		}
 
-		//Display current temp and condition
+		//Display current temp and condition and set dark mode
 		function displayCurrent() {
 			//I went with <p> and <ul><li> just to keep the HTML semantic. The <strong> tags are for readibility
 			let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + '</p>';
 			let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition+ '</strong>' + '</p>';
 
 			currentDiv.innerHTML =  temp + condition;
+
+			let date = new Date();
+			let time = date.getHours();
+			let caliTime;
+
+			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+			//let hours = nyTime.getHours();
+			//console.log(nyTime);
+			//nyhours = new Date(nyTime);
+			//console.log(nyTime.toLocaleString())
+
+			// if (hour >= 20 && hour <= 7) {
+			// 	body.classList.add('darkmode');
+			// } else {
+			// 	body.classList.remove('darkmode');
+			// }
 		}
 
 		//Populate list with weekly forecast
 		function weeklyForecast() {
 			for (let i = 0; i < data.cities[city].weekly.length; i++) {
 				let li = document.createElement('li');
-				let text = '<strong>' + data.cities[city].weekly[i].day + ': ' + '</strong>' + data.cities[city].weekly[i].condition;
+				let day = data.cities[city].weekly[i].day;
+				let week = data.cities[city].weekly[i].condition;
+				let text;
 
-				if (data.cities[city].weekly[i].day) {
-
+				if (day == 'Thu') {
+					text = '<strong>' + day + 'rsday: ' + '</strong>' + week;
+				} else if (day == 'Sat') {
+					text = '<strong>' + day + 'urday: ' + '</strong>' + week;
+				} else if (day == 'Tue') {
+					text = '<strong>' + day + 'sday: ' + '</strong>' + week;
+				} else if (day == 'Wed') {
+					text = '<strong>' + day + 'nesday: ' + '</strong>' + week;
+				} else {
+					text = '<strong>' + day + 'day: ' + '</strong>' + week;
 				}
 
 				li.innerHTML = text;
