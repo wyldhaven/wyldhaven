@@ -17,7 +17,7 @@
 			color: black;
 		}
 
-		#content {
+		#container {
 			margin: 2rem;
 		}
 
@@ -49,7 +49,10 @@
 </head>
 <body>
 
+<div id="container">
+
 	<div id="menu">
+		<label for="selectCity">Choose a city:</label>
 		<select id="selectCity">
 		  <option value="volvo">Volvo</option>
 		  <option value="saab">Saab</option>
@@ -65,6 +68,8 @@
 			<ul></ul>
 		</div>
 	</div>
+
+</div>
 
 <script>
 
@@ -89,10 +94,9 @@
 		}
 
 		console.log(data.cities);
-		console.log(data.cities.length);
 		//Populate select with all cities
 		for (let i = 0; i < data.cities.length; i++) {
-			console.log(data.cities[i].geoloc[0].city);
+			console.log(data.cities[i].geoloc.city);
 			//let li = document.createElement('li');
 			// let text = '<strong>' + data.cities[9].weekly[i].day + ': ' + '</strong>' + data.cities[9].weekly[i].condition;
 			// li.innerHTML = text;
