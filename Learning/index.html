@@ -128,14 +128,14 @@
 
 			currentDiv.innerHTML =  temp + condition;
 
-			let date = new Date();
-			let time = date.getHours();
-			let caliTime;
-
-			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-			console.log(nyTime);
-			let hours = nyTime.getHours();
-			console.log(hours);
+			// let date = new Date();
+			// let time = date.getHours();
+			// let caliTime;
+			//
+			// let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+			// console.log(nyTime);
+			// let hours = nyTime.getHours();
+			// console.log(hours);
 			//nyhours = new Date(nyTime);
 			//console.log(nyTime.toLocaleString())
 
@@ -152,6 +152,8 @@
 				let li = document.createElement('li');
 				let day = data.cities[city].weekly[i].day;
 				let week = data.cities[city].weekly[i].condition;
+				let iconUrl = '/not/a/really/thing/' + data.cities[city].weekly[i].icon + '.png'
+				console.log(iconUrl);
 				let text;
 
 				if (day == 'Thu') {
