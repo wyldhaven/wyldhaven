@@ -119,29 +119,13 @@
 			}
 		}
 
-		//Display current temp and condition and set dark mode
+		//Display current temp and condition
 		function displayCurrent() {
 			//I went with <p> and <ul><li> just to keep the HTML semantic. The <strong> tags are for readibility
 			let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + '</p>';
 			let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition+ '</strong>' + '</p>';
 
 			currentDiv.innerHTML =  temp + condition;
-
-			let date = new Date();
-			let time = date.getHours();
-			let caliTime;
-
-			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-			//let hours = nyTime.getHours();
-			//console.log(nyTime);
-			//nyhours = new Date(nyTime);
-			//console.log(nyTime.toLocaleString())
-
-			// if (hour >= 20 && hour <= 7) {
-			// 	body.classList.add('darkmode');
-			// } else {
-			// 	body.classList.remove('darkmode');
-			// }
 		}
 
 		//Populate list with weekly forecast
