@@ -118,13 +118,19 @@
 			}
 		}
 
-		//Display current temp and condition
+		//Display current temp and condition and set dark mode
 		function displayCurrent() {
 			//I went with <p> and <ul><li> just to keep the HTML semantic. The <stong> tags are just for readibility
 			let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + '</p>';
 			let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition+ '</strong>' + '</p>';
 
 			currentDiv.innerHTML =  temp + condition;
+
+			console.log(data.cities);
+			// let hour = data.cities[city].hourly
+			// if (hour >= 20 && hour <= 7) {
+			//
+			// }
 		}
 
 		//Populate list with weekly forecast
@@ -137,9 +143,7 @@
 			}
 		}
 
-		let date = new Date();
-		let hours = date.getHours();
-		console.log(hours);
+		}
 	}
 
 
