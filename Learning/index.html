@@ -115,8 +115,11 @@
 			weeklyForecast();
 		}
 
+		//Reset data every 10 minutes
 		setInterval(function() {
-			console.log('click');
+			console.log('Reset');
+			displayCurrent();
+			weeklyForecast();
 		}, 4000);
 
 		//Populate the select element with all cities
@@ -138,6 +141,7 @@
 
 		//Display current temp and condition and set dark mode
 		function displayCurrent() {
+			console.log('reset currnet');
 			//I went with <p> and <ul><li> just to keep the HTML semantic. The <strong> tags are for readibility
 			let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + '</p>';
 			let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition+ '</strong>' + '</p>';
@@ -148,7 +152,7 @@
 			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
 			nyTime = new Date(nyTime);
 			let hours = nyTime.getHours();
-			hours = hours - 15;
+			hours = hours - 3;
 			console.log(hours);
 
 			if (hours >= 20 || hours <= 7) {
@@ -160,6 +164,7 @@
 
 		//Populate list with weekly forecast and icons
 		function weeklyForecast() {
+			console.log('reset forecast');
 			for (let i = 0; i < data.cities[city].weekly.length; i++) {
 				let li = document.createElement('li');
 				let day = data.cities[city].weekly[i].day;
