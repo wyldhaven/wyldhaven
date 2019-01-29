@@ -147,10 +147,9 @@
 
 		//Display current temp and condition and set dark mode
 		function displayCurrent() {
-			console.log('reset currnet');
 			//I went with <p> and <ul><li> just to keep the HTML semantic. The <strong> tags are for readibility
 			let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + '</p>';
-			let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition+ '</strong>' + '</p>';
+			let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition + '</strong>' + '</p>';
 
 			currentDiv.innerHTML =  temp + condition;
 
@@ -169,7 +168,6 @@
 
 		//Populate list with weekly forecast and icons
 		function weeklyForecast() {
-			console.log('reset forecast');
 			for (let i = 0; i < data.cities[city].weekly.length; i++) {
 				let li = document.createElement('li');
 				let day = data.cities[city].weekly[i].day;
@@ -203,3 +201,15 @@
 
 </body>
 </html>
+
+<!-- Bonus questions:
+
+1) I believe that has to do with the Web Storage API. To persist data even with a refresh,
+you can use localStorage.setItem and .getItem to keep and retrive information even if the user refreshes.
+With a timer, you can manually refresh the data after 10 minutes
+
+5) Aside from design improvements, I think a Weather App should have a built-in radar!
+Some things I've used in other weather apps before like 'Feels Like' (meaning wind chill)
+and sunrise/sunset time would be cool to add.
+
+ -->
