@@ -137,6 +137,7 @@
 
 			currentDiv.innerHTML =  temp + condition;
 
+			//For dark mode, I just converted NY time to West Coast time. Going further than this would require asking the user for their location
 			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
 			nyTime = new Date(nyTime);
 			let hours = nyTime.getHours();
@@ -144,14 +145,14 @@
 			hours = hours - 3;
 			console.log(hours);
 
-			if (hours >= 18 && hours <= 7) {
+			if (hours >= 18 || hours <= 7) {
 				body.classList.add('darkmode');
 			} else {
 				body.classList.remove('darkmode');
 			}
 		}
 
-		//Populate list with weekly forecast
+		//Populate list with weekly forecast and icons
 		function weeklyForecast() {
 			for (let i = 0; i < data.cities[city].weekly.length; i++) {
 				let li = document.createElement('li');
