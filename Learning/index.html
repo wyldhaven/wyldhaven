@@ -80,7 +80,14 @@
 		let selectCity = document.getElementById('selectCity');
 		let city = selectCity.value;
 
-		//Change data based on city
+		//initially populate the page
+		window.onload = () => {
+			populateSelect();
+			displayCurrent();
+			weeklyForecast();
+		}
+
+		//Update data based on city change
 		selectCity.onchange = () => {
 			city = selectCity.value;
 			populateSelect();
@@ -88,7 +95,7 @@
 			weeklyForecast();
 		}
 
-		//Populate select with all cities
+		//Populate the select element with all cities
 		function populateSelect() {
 			for (let i = 0; i < data.cities.length; i++) {
 				let option = document.createElement('option');
