@@ -78,6 +78,7 @@
 		let forecastDiv = document.getElementById('forecast');
 		let weeklyList = document.querySelector('ul');
 		let selectCity = document.getElementById('selectCity');
+		let body = document.querySelector('body');
 		let city = 9;
 
 
@@ -126,13 +127,18 @@
 
 			currentDiv.innerHTML =  temp + condition;
 
-			console.log(data.cities);
-			let caliTime = new Date().toLocaleString("en-US", {timeZone: "America/San_Jose"});
-			caliTime = new Date(caliTime);
-			console.log('USA time: '+caliTime.toLocaleString())
-			// let hour = data.cities[city].hourly
+			let date = new Date();
+			let time = date.getHours();
+			let caliTime;
+
+			var usaTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+usaTime = new Date(usaTime);
+console.log('USA time: '+usaTime.toLocaleString())
+
 			// if (hour >= 20 && hour <= 7) {
-			//
+			// 	body.classList.add('darkmode');
+			// } else {
+			// 	body.classList.remove('darkmode');
 			// }
 		}
 
