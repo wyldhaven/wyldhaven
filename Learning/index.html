@@ -102,15 +102,11 @@
 			weeklyForecast();
 		}
 
-		//Update data based on city change and remove previous data
+		//Update data based on city change
 		selectCity.onchange = () => {
 			city = selectCity.value;
-			let allListItems = document.querySelectorAll('li');
 
-			for (var i = 0; i < allListItems.length; i++) {
-		    weeklyList.removeChild(allListItems[i]);
-		  }
-
+			removeListItems();
 			displayCurrent();
 			weeklyForecast();
 		}
@@ -118,9 +114,19 @@
 		//Reset data every 10 minutes
 		setInterval(function() {
 			console.log('Reset');
+			removeListItems();
 			displayCurrent();
 			weeklyForecast();
 		}, 4000);
+
+		//remove previous data before populating new list items
+		function removeListItems() {
+			let allListItems = document.querySelectorAll('li');
+
+			for (var i = 0; i < allListItems.length; i++) {
+		    weeklyList.removeChild(allListItems[i]);
+		  }
+		}
 
 		//Populate the select element with all cities
 		function populateSelect() {
@@ -153,7 +159,6 @@
 			nyTime = new Date(nyTime);
 			let hours = nyTime.getHours();
 			hours = hours - 3;
-			console.log(hours);
 
 			if (hours >= 20 || hours <= 7) {
 				body.classList.add('darkmode');
