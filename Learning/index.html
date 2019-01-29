@@ -78,7 +78,23 @@
 		let forecastDiv = document.getElementById('forecast');
 		let weeklyList = document.querySelector('ul');
 		let selectCity = document.getElementById('selectCity');
-		let city;
+
+		//Populate select with all cities
+		for (let i = 0; i < data.cities.length; i++) {
+			let option = document.createElement('option');
+			let optValue = i;
+			let optCity = data.cities[i].geoloc.city;
+
+			if (optcity == 'Palo Alto') {
+				option.setAttribute('selected', 'selected');
+			}
+
+			option.innerHTML = optCity;
+			option.value = optValue;
+			selectCity.appendChild(option);
+		}
+
+		let city = selectCity.value;
 
 		//Change data based on city
 		selectCity.onchange = () => {
@@ -90,20 +106,7 @@
 		let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + '</p>';
 		let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition+ '</strong>' + '</p>';
 
-		//Populate select with all cities
-		for (let i = 0; i < data.cities.length; i++) {
-			let option = document.createElement('option');
-			let optValue = data.cities[i].geoloc.city;
-
-			if (optValue == 'Palo Alto') {
-				option.setAttribute('selected', 'selected');
-			}
-
-			option.innerHTML = optValue;
-			option.value = optValue;
-			selectCity.appendChild(option);
-		}
-
+		//Display current temp and condition
 		currentDiv.innerHTML =  temp + condition;
 
 		//Populate list with weekly forecast
