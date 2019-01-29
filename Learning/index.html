@@ -158,8 +158,9 @@
 				let li = document.createElement('li');
 				let day = data.cities[city].weekly[i].day;
 				let week = data.cities[city].weekly[i].condition;
-				let iconUrl = '/not/a/really/thing/' + data.cities[city].weekly[i].icon + '.png'
-				let img = '<img class="weather-icon" src=\"' + iconUrl + '\"' + 'alt=\"' + data.cities[city].weekly[i].icon +' Weather Icon\"' + '>' + '</img>';
+				let icon = data.cities[city].weekly[i].icon;
+				let iconUrl = '/not/a/really/thing/' + icon + '.png'
+				let img = '<img class="weather-icon" src=\"' + iconUrl + '\"' + 'alt=\"' + icon +' Weather Icon\"' + '>' + '</img>';
 				let text;
 
 				if (day == 'Thu') {
