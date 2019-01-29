@@ -102,6 +102,7 @@
 
 		//Populate the select element with all cities
 		function populateSelect() {
+			city = selectCity.value;
 			for (let i = 0; i < data.cities.length; i++) {
 				let option = document.createElement('option');
 				let optValue = i;
