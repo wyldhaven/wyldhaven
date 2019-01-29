@@ -122,7 +122,7 @@
 		function displayCurrent() {
 			//I went with <p> and <ul><li> just to keep the HTML semantic. The <strong> tags are for readibility
 			let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + '</p>';
-			let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition+ '</strong>' + '</p>';
+			let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[city].current[0].condition + '</strong>' + '</p>';
 
 			currentDiv.innerHTML =  temp + condition;
 		}
@@ -132,10 +132,6 @@
 			for (let i = 0; i < data.cities[city].weekly.length; i++) {
 				let li = document.createElement('li');
 				let text = '<strong>' + data.cities[city].weekly[i].day + ': ' + '</strong>' + data.cities[city].weekly[i].condition;
-
-				if (data.cities[city].weekly[i].day) {
-
-				}
 
 				li.innerHTML = text;
 				weeklyList.appendChild(li);
