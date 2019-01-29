@@ -21,7 +21,21 @@
 			margin: 2rem;
 		}
 
+		#current {
+			padding-bottom: 1rem;
+		}
+
+		#current p {
+			font-size: 24px;
+		}
+
+		#forecast p {
+			margin-bottom: .5rem;
+			font-style: italic;
+		}
+
 		#forecast ul {
+			margin-top: 0;
 			padding-left: 0;
 	    list-style-type: none;
 		}
@@ -35,13 +49,19 @@
 </head>
 <body>
 
-	<div>
-
-	<div id="menu"></div>
+	<div id="menu">
+		<select id="selectCity">
+		  <option value="volvo">Volvo</option>
+		  <option value="saab">Saab</option>
+		  <option value="mercedes">Mercedes</option>
+		  <option value="audi">Audi</option>
+		</select>
+	</div>
 
 	<div id="content">
 		<div id="current"></div>
 		<div id="forecast">
+			<p>Weekly Forecast:</p>
 			<ul></ul>
 		</div>
 	</div>
@@ -53,17 +73,30 @@
 		let currentDiv = document.getElementById('current');
 		let forecastDiv = document.getElementById('forecast');
 		let weeklyList = document.querySelector('ul');
+		let selectCity = document.getElementById('selectCity');
 		//I went with <p> and <ul><li> just to keep the HTML semantic. The <stong> tags are just for readibility
 		let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[9].current[0].temp + '&deg;' + '</strong>' + '</p>';
 		let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[9].current[0].condition+ '</strong>' + '</p>';
 
 		currentDiv.innerHTML =  temp + condition;
 
+		//Populate list with weekly forecast
 		for (let i = 0; i < data.cities[9].weekly.length; i++) {
 			let li = document.createElement('li');
 			let text = '<strong>' + data.cities[9].weekly[i].day + ': ' + '</strong>' + data.cities[9].weekly[i].condition;
 			li.innerHTML = text;
 			weeklyList.appendChild(li);
+		}
+
+		console.log(data.cities);
+		console.log(data.cities.length);
+		//Populate select with all cities
+		for (let i = 0; i < data.cities.length; i++) {
+			console.log(data.cities[i].geoloc[0].city);
+			//let li = document.createElement('li');
+			// let text = '<strong>' + data.cities[9].weekly[i].day + ': ' + '</strong>' + data.cities[9].weekly[i].condition;
+			// li.innerHTML = text;
+			// weeklyList.appendChild(li);
 		}
 	}
 
