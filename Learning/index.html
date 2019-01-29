@@ -104,6 +104,7 @@
 
 		//Populate the select element with all cities
 		function populateSelect() {
+			console.log(data.cities);
 			for (let i = 0; i < data.cities.length; i++) {
 				let option = document.createElement('option');
 				let optValue = i;
@@ -132,8 +133,9 @@
 			let caliTime;
 
 			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-			//let hours = nyTime.getHours();
-			//console.log(nyTime);
+			console.log(nyTime);
+			let hours = nyTime.getHours();
+			console.log(hours);
 			//nyhours = new Date(nyTime);
 			//console.log(nyTime.toLocaleString())
 
