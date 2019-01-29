@@ -153,19 +153,19 @@
 				let day = data.cities[city].weekly[i].day;
 				let week = data.cities[city].weekly[i].condition;
 				let iconUrl = '/not/a/really/thing/' + data.cities[city].weekly[i].icon + '.png'
-				console.log(iconUrl);
+				let img = '<img class="weather-icon" src=\"' + iconUrl + '\"' + 'alt=\"\" />';
 				let text;
 
 				if (day == 'Thu') {
-					text = '<strong>' + day + 'rsday: ' + '</strong>' + week;
+					text = '<strong>' + day + 'rsday: ' + '</strong>' + week + img;
 				} else if (day == 'Sat') {
-					text = '<strong>' + day + 'urday: ' + '</strong>' + week;
+					text = '<strong>' + day + 'urday: ' + '</strong>' + week + img;
 				} else if (day == 'Tue') {
-					text = '<strong>' + day + 'sday: ' + '</strong>' + week;
+					text = '<strong>' + day + 'sday: ' + '</strong>' + week + img;
 				} else if (day == 'Wed') {
-					text = '<strong>' + day + 'nesday: ' + '</strong>' + week;
+					text = '<strong>' + day + 'nesday: ' + '</strong>' + week + img;
 				} else {
-					text = '<strong>' + day + 'day: ' + '</strong>' + week;
+					text = '<strong>' + day + 'day: ' + '</strong>' + week + img;
 				}
 
 				li.innerHTML = text;
