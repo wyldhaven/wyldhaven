@@ -132,15 +132,16 @@
 			let caliTime;
 
 			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-			console.log(nyTime);
-			nyhours = new Date(nyTime);
+			//let hours = nyTime.getHours();
+			//console.log(nyTime);
+			//nyhours = new Date(nyTime);
 			//console.log(nyTime.toLocaleString())
 
-			if (hour >= 20 && hour <= 7) {
-				body.classList.add('darkmode');
-			} else {
-				body.classList.remove('darkmode');
-			}
+			// if (hour >= 20 && hour <= 7) {
+			// 	body.classList.add('darkmode');
+			// } else {
+			// 	body.classList.remove('darkmode');
+			// }
 		}
 
 		//Populate list with weekly forecast
@@ -148,6 +149,11 @@
 			for (let i = 0; i < data.cities[city].weekly.length; i++) {
 				let li = document.createElement('li');
 				let text = '<strong>' + data.cities[city].weekly[i].day + ': ' + '</strong>' + data.cities[city].weekly[i].condition;
+
+				if (data.cities[city].weekly[i].day) {
+
+				}
+
 				li.innerHTML = text;
 				weeklyList.appendChild(li);
 			}
