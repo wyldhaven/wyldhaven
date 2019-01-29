@@ -138,6 +138,7 @@
 			console.log(time);
 
 			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+			nyTime = new Date(nyTime);
 			console.log(nyTime);
 			//let hours = nyTime.getHours();
 			// console.log(hours);
@@ -158,7 +159,7 @@
 				let day = data.cities[city].weekly[i].day;
 				let week = data.cities[city].weekly[i].condition;
 				let iconUrl = '/not/a/really/thing/' + data.cities[city].weekly[i].icon + '.png'
-				let img = '<img class="weather-icon" src=\"' + iconUrl + '\"' + 'alt=\"Weather Icon\"' + '>' + '</img>';
+				let img = '<img class="weather-icon" src=\"' + iconUrl + '\"' + 'alt=\"' + data.cities[city].weekly[i].icon +' Weather Icon\"' + '>' + '</img>';
 				let text;
 
 				if (day == 'Thu') {
