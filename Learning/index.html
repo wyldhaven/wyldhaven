@@ -132,8 +132,9 @@
 			let caliTime;
 
 			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-			let nyhours = nyTime.getHours();
-			console.log(nyhours)
+			console.log(nyTime);
+			nyhours = new Date(nyTime);
+			//console.log(nyTime.toLocaleString())
 
 			if (hour >= 20 && hour <= 7) {
 				body.classList.add('darkmode');
