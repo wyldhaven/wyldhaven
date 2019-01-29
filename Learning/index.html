@@ -48,6 +48,10 @@
 			padding: .5rem 0;
 	    border-bottom: 1px solid black;
 		}
+
+		.weather-icon {
+			margin-left: 1rem;
+		}
 	</style>
 
 </head>
@@ -128,16 +132,17 @@
 
 			currentDiv.innerHTML =  temp + condition;
 
-			// let date = new Date();
-			// let time = date.getHours();
-			// let caliTime;
-			//
-			// let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-			// console.log(nyTime);
-			// let hours = nyTime.getHours();
+			let date = new Date();
+			console.log(date);
+			let time = date.getHours();
+			console.log(time);
+
+			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+			console.log(nyTime);
+			//let hours = nyTime.getHours();
 			// console.log(hours);
-			//nyhours = new Date(nyTime);
-			//console.log(nyTime.toLocaleString())
+			// nyhours = new Date(nyTime);
+			// console.log(nyTime.toLocaleString())
 
 			// if (hour >= 20 && hour <= 7) {
 			// 	body.classList.add('darkmode');
