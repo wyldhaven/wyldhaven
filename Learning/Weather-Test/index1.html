@@ -1,0 +1,58 @@
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Part 1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+	<style>
+		html, body {
+			margin:  0;
+			padding: 0;
+			background-color: white;
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size:   18px;
+			line-height: 1.36em;
+			color: black;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="menu"></div>
+
+	<div id="content">
+		<div id="current"></div>
+		<div id="forecast">
+			<ul></ul>
+		</div>
+	</div>
+
+<script>
+
+	// Load and display data
+	function hdnWeatherJsonpCallback(data) {
+		let currentDiv = document.getElementById('current');
+		let forecastDiv = document.getElementById('forecast');
+		let weeklyList = document.querySelector('ul');
+		//I went with <p> and <ul><li> just to keep the HTML semantic. The <stong> tags are for readibility
+		let temp = '<p>' + 'The current temperature is: ' + '<strong>' + data.cities[9].current[0].temp + '&deg;' + '</strong>' + '</p>';
+		let condition = '<p>' + 'The current condition is: ' + '<strong>' + data.cities[9].current[0].condition + '</strong>' + '</p>';
+
+		currentDiv.innerHTML =  temp + condition;
+
+		for (let i = 0; i < data.cities[9].weekly.length; i++) {
+			let li = document.createElement('li');
+			let text = '<strong>' + data.cities[9].weekly[i].day + ': ' + '</strong>' + data.cities[9].weekly[i].condition;
+			li.innerHTML = text;
+			weeklyList.appendChild(li);
+		}
+	}
+
+</script>
+<script type="text/javascript" src="https://www.sfchronicle.com/external/weather/weather.json?callback=hdnWeatherJsonpCallback"></script>
+
+</body>
+</html>
