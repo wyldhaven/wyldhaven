@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+    <input type="number" id="input1"></input>
+    <input type="number" id="input2"></input>
+
+    <p id="final"></p>
+
+  </body>
+
+    <script>
+
+    //object , JS object, practice, this
+
+    var person = {
+      name: {
+        first: 'bob', last: 'smith'
+      },
+      age: 32, gender: 'male', interests: ['music', 'fucking'],
+      bio: function() {
+        alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+      },
+      greeting: function() {
+        alert('Hi I\'m ' + this.name.first + '.');
+      }
+
+    };
+
+    let user = { name: 'John' };
+
+let admin = user;
+
+admin.name = 'Pete'; // changed by the "admin" reference
+
+alert(user.name);
+
+let input1 = document.getElementById('input1');
+let input2 = document.getElementById('input2');
+let allInputs = document.querySelectorAll('input');
+
+//get width and height of rectangle
+
+for (z = 0; z < allInputs.length; z++) {
+
+  allInputs[z].onchange = function() {
+    var x = input1.value;
+    x = Number(x);
+    var y = input2.value;
+    y = Number(y);
+
+    //console.log(x + ' , ' + y);
+
+    class Rectangle {
+      constructor(height, width) {
+        this.height = height;
+        this.width = width;
+      }
+
+      get area() {
+        return this.calcArea();
+      }
+
+      calcArea() {
+        return this.height * this.width;
+      }
+    }
+
+    const newRect = new Rectangle(x, y);
+    document.getElementById('final').textContent = newRect.area;
+
+  }
+
+}
+
+
+
+
+
+
+
+    </script>
+</html>

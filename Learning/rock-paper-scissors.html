@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Rock, Paper, Scissors</h1>
+
+<button id="rockBtn">Rock</button>
+
+<button id="paperBtn">Paper</button>
+
+<button id="scissorsBtn">Scissors</button>
+
+<div id="coomputerPlay"></div>
+
+<br>
+
+<div id="contentPlay"></div>
+
+<br>
+
+<div id="contentScore"></div>
+
+
+<script>
+
+// rock, paper, scissors, rock paper scissors
+let rpsArray = ['rock' , 'paper' , 'scissors'];
+let playerScore = 0;
+let computerScore = 0;
+let rockBtn = document.getElementById('rockBtn');
+let paperBtn = document.getElementById('paperBtn');
+let scissorsBtn = document.getElementById('scissorsBtn');
+
+let contentPlay = document.getElementById('contentPlay');
+let contentScore = document.getElementById('contentScore');
+let computer = document.getElementById('coomputerPlay');
+
+
+function gameRock() {
+  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+
+  function computerPlay() {
+    return playArray;
+  }
+
+  if (playerScore <= 4 && computerScore <= 4 ) {
+  computerPlay();
+  computer.textContent = '';
+
+  if (playArray == '0') {
+    computer.textContent = 'Computer chooses Rock';
+    contentPlay.textContent = 'Rock to Rock is a tie';
+  } else if (playArray == '1') {
+    computer.textContent = 'Computer chooses Paper';
+    contentPlay.textContent = 'Paper beats Rock';
+    computerScore = computerScore + 1;
+  } else if (playArray == '2') {
+    computer.textContent = 'Computer chooses Scissors';
+    contentPlay.textContent = 'Rock Beats Scissors';
+    playerScore = playerScore + 1;
+  }
+
+  contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
+
+} else {
+  alert('Game over!');
+  playerScore = 0;
+  computerScore = 0;
+  contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
+}
+}
+
+function gamePaper() {
+  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+
+  function computerPlay() {
+    return playArray;
+  }
+
+  if (playerScore <= 4 && computerScore <= 4 ) {
+  computerPlay();
+  computer.textContent = '';
+
+  if (playArray == '0') {
+    computer.textContent = 'Computer chooses Rock';
+    contentPlay.textContent = 'Paper beats Rock';
+    playerScore = playerScore + 1;
+  } else if (playArray == '1') {
+    computer.textContent = 'Computer chooses Paper';
+    contentPlay.textContent = 'Paper to Paper is a tie';
+  } else if (playArray == '2') {
+    computer.textContent = 'Computer chooses Scissors';
+    contentPlay.textContent = 'Scissors Beat Paper';
+    computerScore = computerScore + 1;
+
+  }
+
+  contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
+} else {
+  alert('Game over!');
+  playerScore = 0;
+  computerScore = 0;
+  contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
+}
+}
+
+function gameScissors() {
+  let playArray = [Math.floor(Math.random() * rpsArray.length )];
+
+  function computerPlay() {
+    return playArray;
+  }
+
+  if (playerScore <= 4 && computerScore <= 4 ) {
+  computerPlay();
+  computer.textContent = '';
+
+  if (playArray == '0') {
+    computer.textContent = 'Computer chooses Rock';
+    contentPlay.textContent = 'Rock beats Scissors';
+    computerScore = computerScore + 1;
+  } else if (playArray == '1') {
+    computer.textContent = 'Computer chooses Paper';
+    contentPlay.textContent = 'Scissors beat Paper';
+    playerScore = playerScore + 1;
+  } else if (playArray == '2') {
+    computer.textContent = 'Computer chooses Scissors';
+    contentPlay.textContent = 'Scissors to Scissors is a tie';
+  }
+
+  contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
+} else {
+  alert('Game over!');
+  playerScore = 0;
+  computerScore = 0;
+  contentScore.textContent = 'Computer: ' + computerScore + ' Player: ' + playerScore;
+}
+}
+
+
+rockBtn.addEventListener('click', gameRock);
+paperBtn.addEventListener('click', gamePaper);
+scissorsBtn.addEventListener('click', gameScissors);
+
+
+
+</script>
+
+</body>
+</html>

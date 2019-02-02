@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<style>
+  #container {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    top: 12rem;
+    left: 10rem;
+  }
+
+  #container div {
+    position: absolute;
+  }
+
+  .div1 {
+    background-color: red;
+    z-index: 0;
+    width: 20rem;
+    height: 25rem;
+  }
+
+  .div2 {
+    background-color: green;
+    width: 16rem;
+    height: 21rem;
+    z-index: 1;
+  }
+
+  .div3 {
+    background-color: blue;
+    width: 12rem;
+    height: 16rem;
+    z-index: 2;
+  }
+
+  @media only screen and (min-width: 40rem) {
+    #container {
+      top: 7rem;
+      left: 15rem;
+    }
+
+    .div1 {
+      width: 30rem;
+      height: 15rem;
+    }
+
+    .div2 {
+      width: 24rem;
+      height: 11rem;
+    }
+
+    .div3 {
+      width: 18rem;
+      height: 7rem;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<label type="number" for="fibInput">Enter a value:</label>
+<input type="number" id="fibInput"></input>
+<button id="button">Run</button>
+
+<p id="para"></p>
+
+<div class="dropdown">
+  <h3>Click to dropdown</h3>
+  <div class="content">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+
+<div id="container">
+  <div class="div1"></div>
+  <div class="div2"></div>
+  <div class="div3"></div>
+</div>
+
+<script>
+
+let fibInput = document.getElementById('fibInput');
+let button = document.getElementById('button');
+let para = document.getElementById('para');
+
+button.addEventListener('click', function() {
+
+let n = Number(fibInput.value);
+
+//Iterative fibbon
+function fibIt(n) {
+  let arr = [0, 1];
+
+  for (let i = 2; i < n + 1; i++) {
+    console.log('i = ' + i);
+    arr.push(arr[i - 2] + arr[i - 1]);
+    console.log(arr);
+  }
+
+  para.textContent = arr[n];
+}
+
+fibIt(n);
+
+});
+
+//Recursive fibbon
+$(button).click(function() {
+  let n = Number(fibInput.value);
+
+  function fibRec(n) {
+    return n < 2 ? n : fibRec(n - 2) + fibRec(n - 1);
+  }
+
+  fibRec(n);
+  para.textContent = fibRec(n);
+});
+
+
+///////////////////////////////////////
+
+
+// 3 divs alert test, jquery
+// let div1 = $('.div1')[0];
+// let div2 = $('.div2')[0];
+// let div3 = $('.div3')[0];
+//
+// $(div1).click(() => {
+//   alert('div1 clicked');
+// });
+//
+// $(div2).click(() => {
+//   alert('div2 clicked');
+// });
+//
+// $(div3).click(() => {
+//   alert('div3 clicked');
+// });
+
+
+//test for integer, integer true
+let isInt = (x) => x % 1 === 0;
+
+console.log(isInt(2));
+console.log(isInt(10.1));
+console.log(isInt(20.0));
+console.log(isInt(.5));
+
+
+//Closure test
+
+// let closure = {
+//   car: 'ford',
+//   func: function() {
+//     let self = this;
+//     console.log('outer function = ' + this.car);
+//     console.log('outer function = ' + self.car);
+//     (function() {
+//       console.log('inner function = ' + this.car);
+//       console.log('inner function = ' + self.car);
+//     }());
+//   }
+// };
+//closure.func();
+
+//closure counter, increment
+let createCounter = () => {
+  let counter = 0;
+
+  let aFunction = function() {
+    counter += 1;
+    return counter;
+  }
+  return aFunction;
+}
+
+let increment = createCounter();
+let c1 = increment();
+let c2 = increment();
+let c3 = increment();
+
+console.log(c1, c2, c3);
+
+
+
+//jQuery dropdown, expand/collapse, slideToggle, click
+var header = $('h3')[0];
+var content = $('.content')[0];
+var ul = $('ul')[0];
+
+$(ul).css('margin', '0');
+
+$(header).click(function() {
+  $(content).slideToggle(300);
+});
+
+
+
+</script>
+
+</body>
+
+</html>

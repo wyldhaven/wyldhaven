@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Grayson Randall Flex-Grid Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+
+#main-container , #inner-main-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell-container , .inner-cell-container {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell {
+  border: 1px solid #000;
+  width: calc(25vw - 3px);
+  height: 25vh;
+  margin: auto;
+}
+
+.inner-cell-container .cell {
+  border: 1px solid #000000;
+  width: calc((25vw / 1) - 4.5px);
+  height: calc((25vh / 4) - 1.5px);
+}
+
+@media only screen and (min-width: 22.5rem) {
+  .cell-container , .inner-cell-container {
+    display: flex;
+  }
+
+  .inner-cell-container .cell {
+    width: calc((25vw / 2) - 2px);
+    height: calc((25vh / 2) - 1px);
+  }
+
+  .cell {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 45rem) {
+  #main-container , #inner-main-container {
+    display: flex;
+  }
+
+  .inner-cell-container .cell {
+    width: calc((25vw / 4) - 2px);
+    height: calc((25vh / 1) - 1px);
+  }
+}
+
+
+</style>
+
+</head>
+<body>
+
+  <!-- flex grid, cell grid, flexible grid -->
+
+<div id="main-container">
+  <div class="cell-container">
+    <div class="cell">
+      <!-- Each cell can have another grid inside, by adding 'inner-' to the container's class -->
+      <div id="inner-main-container">
+        <div class="inner-cell-container">
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="inner-cell-container">
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cell"></div>
+  </div>
+  <div class="cell-container">
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<label for="top-select"></label>
+<select id="top-select">
+  <option value="">-Select one-</option>
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+</select>
+
+<h1>Enter your monthly Payment</h1>
+
+<input class="input1" type="number/text"></input>
+<button class="calculate-button">Calculate</button>
+
+<p id="rounded-total"></p>
+<p id="decimal-total"></p>
+
+<p class="insurance"></p>
+
+<br>
+<hr>
+<br>
+
+<p>The office is open Monday-Friday, 9am-5pm</p>
+<p class="office-hours"></p>
+
+<p>Are you in <span class="states-span"></span></p>
+
+<label for="state-select">Search for your state</label>
+<input id="state-select"></input>
+<button id="state-search">Search</button>
+
+<p class="states-show"></p>
+
+<br>
+<br>
+<br>
+
+<p class="counter"></p>
+
+<script>
+
+let topSelect = document.getElementById('top-select');
+let h1 = document.querySelector('h1');
+
+
+topSelect.onchange = () => {
+  let value = topSelect.value;
+
+  switch(value) {
+    case 'red':
+      h1.style.cssText = "color: red;"
+      break;
+    case 'blue':
+      h1.style.cssText = "color: blue;"
+      break;
+    default:
+      h1.style.cssText = "color: black;"
+      break;
+  }
+}
+
+let input1 = document.querySelector('.input1');
+let calcButton = document.querySelector('.calculate-button');
+let decTotal = document.getElementById('decimal-total');
+let roundTotal = document.getElementById('rounded-total');
+let insuranceText = document.querySelector('.insurance');
+
+calcButton.addEventListener('click', () => {
+
+  let value = input1.value;
+  let interest = .12;
+  let initial = value * interest;
+  let final = Number(initial) + Number(value);
+  final = Number(final);
+
+  decTotal.innerHTML = 'Your exact payment is ' + final.toFixed(2) + ' dollars';
+  roundTotal.innerHTML = 'Your payment is ' + final.toFixed(0) + ' dollars';
+
+  let date = new Date();
+  date = date.toLocaleDateString('en-US');
+
+  if (final > 1000 && final < 10000) {
+    insuranceText.innerHTML = 'You are <strong>covered</strong> by your insurance as of ' + date;
+  } else {
+    insuranceText.innerHTML = 'You are <strong>not covered</strong> by your insurance as of ' + date;
+  }
+
+});
+
+let statesSpan = document.querySelector('.states-span');
+let statesArr = ['Illinois', 'New York', 'Wisonsin', 'Florida'];
+
+let statesShow = document.querySelector('.states-show');
+let stateSearch = document.getElementById('state-search');
+let stateSelect = document.getElementById('state-select');
+
+stateSearch.addEventListener('click', () => {
+  let input = stateSelect.value;
+  input = input.toLowerCase();
+
+  for (var i = 0; i < statesArr.length; i++) {
+    let choice = statesArr[i];
+    choice = choice.toLowerCase();
+
+    let firstLetter = input.slice(0, 1);
+    firstLetter = firstLetter.toUpperCase();
+
+    let newinput = input.slice(1, input.length);
+
+    if (choice === input) {
+      statesShow.innerHTML = firstLetter + newinput + ' is a covered state!';
+      break;
+    } else {
+      statesShow.innerHTML = firstLetter + newinput + ' is not a covered state. Sorry!';
+    }
+  }
+});
+
+window.onload = () => {
+
+  let officeHours = document.querySelector('.office-hours');
+  let date = new Date();
+  let hours = date.getHours();
+  let day = date.getDay();
+
+  // console.log(hours);
+  // console.log(day);
+
+  if (hours >= 9 && hours < 17 && day >= 1 && day <= 5) {
+    officeHours.innerHTML = 'The office is currently <b>open</b>';
+  } else {
+    officeHours.innerHTML = 'The office is currently <b>closed</b>';
+  }
+
+  for (var i = 0; i < statesArr.length; i++) {
+
+    if (i == statesArr.length - 1) {
+      let text = 'or ' + statesArr[i] + '?'
+      statesSpan.insertAdjacentHTML('beforeend', text);
+    } else {
+      let text = statesArr[i] + ', ';
+      statesSpan.insertAdjacentHTML('beforeend', text);
+    }
+
+  }
+}
+
+let paraCounter = document.querySelector('.counter');
+let timer = 300;
+
+let counter = setInterval(() => {
+
+  document.onmousemove = () => {
+    timer = 300;
+    paraCounter.innerHTML = timer;
+  }
+
+  paraCounter.innerHTML = timer;
+  --timer;
+
+
+  if (timer <= 0) {
+    paraCounter.innerHTML = 0;
+    alert('Keep session active');
+  }
+
+}, 1000);
+
+let fib1 = (x) => x < 2 ? x : fib1(x - 2) + fib1(x - 1);
+
+console.log('fib1 ' + fib1(5));
+console.log(fib1(8));
+console.log(fib1(10));
+
+let fib2 = (x) => {
+  let arr = [0, 1];
+
+  for (let i = 2; i < x + 1; i++) {
+    arr.push(arr[i - 2] + arr[i - 1]);
+  }
+
+  return arr[x];
+}
+
+console.log('fib2 ' + fib2(0));
+console.log(fib2(2));
+console.log(fib2(10));
+
+</script>
+
+</body>
+</html>

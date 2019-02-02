@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div id="root"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+
+<script type="text/babel">
+
+//react clicker counter
+
+class Clickcounter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {clicks: 0};
+  }
+
+  newClick() {
+    this.setState((prevState) => ({
+      clicks: prevState.clicks + 1
+    }));
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>New React stuff</h1>
+        <button onClick={this.newClick.bind(this)}>Click</button>
+        <p>Clicks = {this.state.clicks}</p>
+      </div>
+    );
+  }
+
+}
+
+ReactDOM.render(
+  <Clickcounter />,
+  document.getElementById('root')
+);
+
+</script>
+
+</body>
+
+</html>
