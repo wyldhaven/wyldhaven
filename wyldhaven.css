@@ -191,7 +191,7 @@ h1 {
   font-family: 'Hiragino Kaku Gothic Std';
 }
 
-._2020 {
+.oh_boy {
   position: absolute;
   left: 0;
   margin: 0 auto;
@@ -199,15 +199,15 @@ h1 {
   z-index: 10000;
 }
 
-._2020 .h3 {
+.oh_boy .h3 {
   font-size: 15rem;
   font-family: 'Hiragino Kaku Gothic Std';
   margin: 0;
   padding: 0;
 }
 
-._2020 .h3:after {
-  content: 'U+1F918';
+.oh_boy .h3:after {
+  content: '🤘';
   position: relative;
   display: inline-block;
   font-size: 15rem;
