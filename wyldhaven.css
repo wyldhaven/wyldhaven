@@ -191,6 +191,28 @@ h1 {
   font-family: 'Hiragino Kaku Gothic Std';
 }
 
+._2020 {
+  position: absolute;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 10000;
+}
+
+._2020 .h3 {
+  font-size: 15rem;
+  font-family: 'Hiragino Kaku Gothic Std';
+  margin: 0;
+  padding: 0;
+}
+
+._2020 .h3:after {
+  content: 'U+1F918';
+  position: relative;
+  display: inline-block;
+  font-size: 15rem;
+}
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   h1 {
     font-family: 'Roboto';
@@ -310,7 +332,7 @@ h2 {
         opacity: 0.3;
     }
     50% {
-        opacity: 0.7;
+        opacity: 0.5;
     }
 }
 
