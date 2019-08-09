@@ -199,14 +199,14 @@ h1 {
   z-index: 10000;
 }
 
-.oh_boy .h3 {
+.oh_boy h3 {
   font-size: 15rem;
   font-family: 'Hiragino Kaku Gothic Std';
   margin: 0;
   padding: 0;
 }
 
-.oh_boy .h3:after {
+.oh_boy h3:after {
   content: '🤘';
   position: relative;
   display: inline-block;
