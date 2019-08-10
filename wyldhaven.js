@@ -5,17 +5,12 @@ var WYLD = (function($, WYLD) {
 
 $(document).ready(function() {
     $("a").on('click', function(event) {
-
         if (this.hash !== "") {
             event.preventDefault();
-
             var hash = this.hash;
-
-
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 500, function() {
-
+              $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+              }, 500, function() {
             });
         }
     });
@@ -54,3 +49,19 @@ WYLD.scrolling = {
     return WYLD;
 
 }($, WYLD || {}));
+
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    console.log('docViewTop = ' + docViewTop + 'docViewBottom = ' + docViewBottom + 'elemTop = ' + elemTop + 'elemBottom = ' + elemBottom);
+    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+$(window).scroll(function() {
+    if(isScrolledIntoView($('#theTarget')))
+    {
+        alert('visible');
+    }
+});
