@@ -62,6 +62,6 @@ function isScrolledIntoView(elem) {
 $(window).scroll(function() {
     if(isScrolledIntoView($('.oh_boy')))
     {
-        alert('visible');
+        console.log('VVVVVVVVV');
     }
 });
