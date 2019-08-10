@@ -60,7 +60,7 @@ function isScrolledIntoView(elem) {
 }
 
 $(window).scroll(function() {
-    if(isScrolledIntoView($('h3')))
+    if(isScrolledIntoView($('.oh_boy')))
     {
         alert('visible');
     }
