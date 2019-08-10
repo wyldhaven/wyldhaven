@@ -55,13 +55,16 @@ function isScrolledIntoView(elem) {
     var docViewBottom = docViewTop + $(window).height();
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
-    console.log('docViewTop = ' + docViewTop + 'docViewBottom = ' + docViewBottom + 'elemTop = ' + elemTop + 'elemBottom = ' + elemBottom);
+
+
+    
+    // console.log('docViewTop = ' + docViewTop + 'docViewBottom = ' + docViewBottom + 'elemTop = ' + elemTop + 'elemBottom = ' + elemBottom);
     return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 $(window).scroll(function() {
     if(isScrolledIntoView($('.oh_boy')))
     {
-        console.log('VVVVVVVVV');
+        console.log('1');
     }
 });
