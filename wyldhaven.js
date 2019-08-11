@@ -66,10 +66,11 @@ $(window).scroll(function() {
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
   var elemToppy = $(elem).offset().top;
-  var elemBottom = elemTop + $(elem).height();
+
 
   var correction = (docViewBottom - elemToppy);
   var elemTop = (Number(elemToppy) + correction);
+  // var elemBottom = elemTop + $(elem).height();
 
     // if (docViewBottom >= (Number(elemBottom) + 50)) {
       isScrolledIntoView(elem);
