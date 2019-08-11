@@ -57,14 +57,11 @@ function isScrolledIntoView(elem) {
     var elemBottom = elemTop + $(elem).height();
 
 
-    
-    // console.log('docViewTop = ' + docViewTop + 'docViewBottom = ' + docViewBottom + 'elemTop = ' + elemTop + 'elemBottom = ' + elemBottom);
-    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+
+    console.log('docViewTop = ' + docViewTop + 'docViewBottom = ' + docViewBottom + 'elemTop = ' + elemTop + 'elemBottom = ' + elemBottom);
+    // return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 $(window).scroll(function() {
-    if(isScrolledIntoView($('.oh_boy')))
-    {
-        console.log('1');
-    }
+    isScrolledIntoView($('.oh_boy'));
 });
