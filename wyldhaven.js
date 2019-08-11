@@ -16,8 +16,6 @@ $(document).ready(function() {
     });
 });
 
-
-
 var setupValues = function() {
   scrollArrow = document.querySelector('.arrow-container');
   scrollCopy = document.querySelector('.scroll');
@@ -40,11 +38,9 @@ var init = function() {
   animateIntro();
 };
 
-
-
 WYLD.scrolling = {
-        init: init
-    };
+  init: init
+};
 
     return WYLD;
 
@@ -56,11 +52,15 @@ function isScrolledIntoView(elem) {
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
 
-    elem.css("clip", "rect(0px,1000px,176px,0px)");
+    if (docViewBottom >= (Number(elemBottom) + 176)) {
+      for (i=0; i<(elemBottom); i++) {
+        elem.css("clip", "rect(0px,1000px," + (176 - i) + "px,0px)");
+      }
 
-    // console.log('docViewTop = ' + docViewTop + 'docViewBottom = ' + docViewBottom + 'elemTop = ' + elemTop + 'elemBottom = ' + elemBottom);
+    }
+    console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemTop + ' elemBottom = ' + elemBottom);
 }
 
 $(window).scroll(function() {
-    isScrolledIntoView($('.oh_boy'));
+    isScrolledIntoView($('h3'));
 });
