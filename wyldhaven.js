@@ -64,13 +64,13 @@ function isScrolledIntoView(elem) {
 
 $(window).scroll(function() {
   var elem = $('h3');
-  var docViewTop = $(window).scrollTop();
-  var docViewBottom = docViewTop + $(window).height();
-  var elemToppy = $(elem).offset().top;
-
-
-  var correction = (docViewBottom - elemToppy);
-  var elemTop = (Number(elemToppy) + correction);
+  // var docViewTop = $(window).scrollTop();
+  // var docViewBottom = docViewTop + $(window).height();
+  // var elemToppy = $(elem).offset().top;
+  //
+  //
+  // var correction = (docViewBottom - elemToppy);
+  // var elemTop = (Number(elemToppy) + correction);
   // var elemBottom = elemTop + $(elem).height();
 
     // if (docViewBottom >= (Number(elemBottom) + 50)) {
