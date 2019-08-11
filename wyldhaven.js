@@ -54,6 +54,8 @@ $(window).scroll(function() {
   let correction = (docViewBottom - elemToppy);
   let elemTop = (Number(elemToppy) + correction);
 
+  let elem;
+
     if (docViewBottom >= elemBottom) {
       isScrolledIntoView($('h3'));
     }
