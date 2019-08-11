@@ -52,10 +52,11 @@ function isScrolledIntoView(elem) {
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
 
-    if (docViewBottom >= (Number(elemBottom) + 176)) {
-      for (i=0; i<(elemBottom); i++) {
-        elem.css("clip", "rect(0px,1000px," + (176 - i) + "px,0px)");
-      }
+    if ((docViewBottom - docViewTop) >= (elemTop)) {
+      // for (i=0; i<(elemBottom); i++) {
+      //   elem.css("clip", "rect(0px,1000px," + (176 - i) + "px,0px)");
+      // }
+      console.log('woo');
 
     }
     console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemTop + ' elemBottom = ' + elemBottom);
