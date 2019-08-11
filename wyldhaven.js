@@ -56,10 +56,9 @@ function isScrolledIntoView(elem) {
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
 
+    elem.css("clip", "rect(0px,1000px,176px,0px)");
 
-
-    console.log('docViewTop = ' + docViewTop + 'docViewBottom = ' + docViewBottom + 'elemTop = ' + elemTop + 'elemBottom = ' + elemBottom);
-    // return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    // console.log('docViewTop = ' + docViewTop + 'docViewBottom = ' + docViewBottom + 'elemTop = ' + elemTop + 'elemBottom = ' + elemBottom);
 }
 
 $(window).scroll(function() {
