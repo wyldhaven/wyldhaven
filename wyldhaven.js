@@ -48,13 +48,11 @@ WYLD.scrolling = {
 
 function isScrolledIntoView(elem) {
     var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
+    var docViewBottom = docViewTop + $(window).clientHeight();
     var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
+    var elemBottom = elemTop + $(elem).clientHeight();
 
-    console.log('new var = ' + (docViewBottom - docViewTop));
-
-    if ((docViewBottom - docViewTop) >= (elemTop)) {
+    if () {
       // for (i=0; i<(elemBottom); i++) {
       //   elem.css("clip", "rect(0px,1000px," + (176 - i) + "px,0px)");
       // }
