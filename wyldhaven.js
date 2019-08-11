@@ -71,7 +71,7 @@ $(window).scroll(function() {
   var correction = (docViewBottom - elemToppy);
   var elemTop = (Number(elemToppy) + correction);
 
-    if (docViewBottom >= (Number(elemBottom) + 50)) {
+    // if (docViewBottom >= (Number(elemBottom) + 50)) {
       isScrolledIntoView(elem);
-    }
+    // }
 });
