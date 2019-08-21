@@ -184,12 +184,12 @@
   WYLD.scrolling.init();
 </script>
 <script>
-  let counter = 0.01;
+  let counter = 0;
   function show(elem) {
     var test = elem[0].style.opacity;
     console.log(test + ' show');
     if (test < 1) {
-      elem.css('opacity', (counter += counter));
+      elem.css('opacity', (counter += .01));
     }
   }
 
@@ -197,7 +197,7 @@
     var test = elem[0].style.opacity;
     console.log(test + ' erase');
     if (test > 0) {
-      elem.css('opacity', (counter -= counter));
+      elem.css('opacity', (counter -= .01));
     }
   }
 
