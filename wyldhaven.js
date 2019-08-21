@@ -91,7 +91,7 @@ $(window).scroll(function() {
 
   // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
 
-  if (docViewBottom >= (Number(elemBottom)) && docViewTop >= (Number(elemBottom)) - 300) {
+  if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
     console.log('in view');
     // var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
     //  if (st > lastScrollTop) {
