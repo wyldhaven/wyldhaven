@@ -72,8 +72,10 @@ $(window).scroll(function() {
 
   var scroll = $(window).scrollTop();
   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) + 50) {
-    if (docViewTop >= (Number(elemBottom)) - 350) {
-      erase($('h3'));
+    if (docViewTop >= (Number(elemBottom)) - 400) {
+      if (scroll < position) {
+        erase($('h3'));
+      }
     } else {
         if (scroll > position) {
            show($('h3'));
