@@ -215,7 +215,9 @@
        } else {
           erase($('h3'));
        }
-      }
+     } else if (docViewBottom >= (Number(elemBottom) - 10) && docViewTop <= (Number(elemBottom)) - 25) {
+       console.log('yay');
+     }
       position = scroll;
   });
 </script>
