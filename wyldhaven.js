@@ -78,11 +78,11 @@ function erase(elem) {
       counter -= 0.01;
       elem.css("opacity", counter);
     } else {
-      console.log('2020!!!!');
+      // console.log('2020!!!!');
     }
 }
 
-let lastScrollTop = 0;
+// let lastScrollTop = 0;
 $(window).scroll(function() {
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
@@ -93,11 +93,11 @@ $(window).scroll(function() {
 
   if (docViewBottom >= (Number(elemBottom) - 300) && docViewTop >= (Number(elemBottom)) - 50) {
     console.log('in view');
-    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-     if (st > lastScrollTop) {
-        erase($('h3'));
-     } else {
-        show($('h3'));
-     }
+    // var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    //  if (st > lastScrollTop) {
+    //     erase($('h3'));
+    //  } else {
+    //     show($('h3'));
+    //  }
    }
 });
