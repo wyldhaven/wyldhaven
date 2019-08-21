@@ -72,7 +72,7 @@ $(window).scroll(function() {
 
   var scroll = $(window).scrollTop();
   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 50) {
-    if (docViewTop >= (Number(elemBottom)) - 50) {
+    if (docViewTop >= (Number(elemBottom)) - 100) {
       console.log('wooooooo');
     } else {
         if (scroll > position) {
