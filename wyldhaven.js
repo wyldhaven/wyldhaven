@@ -55,9 +55,9 @@ function show(elem) {
 
     // var correction = (docViewBottom - elemToppy);
     // var elemTop = (Number(elemToppy) + correction);
-    counter += 0.01;
-    if (counter < .7) {
-      counter += 0.01;
+    counter += 0.02;
+    if (counter <= .7) {
+      counter += 0.02;
       elem.css("opacity", counter);
     } else {
       console.log('yeeeaaaahhhhh broooo');
@@ -73,9 +73,9 @@ function erase(elem) {
     // var correction = (docViewBottom - elemToppy);
     // var elemTop = (Number(elemToppy) + correction);
     //
-    counter -= 0.01;
-    if (counter > 0) {
-      counter -= 0.01;
+    counter -= 0.02;
+    if (counter >= 0) {
+      counter -= 0.02;
       elem.css("opacity", counter);
     } else {
       console.log('2020!!!!');
