@@ -46,14 +46,21 @@ WYLD.scrolling = {
 
 }($, WYLD || {}));
 
+let counter = 0.01;
 function show(elem) {
-    var docViewTop = $(window).scrollTop();
-    console.log(docViewTop + ' show');
+  var test = elem.style.opacity;
+  console.log(test + ' show');
+  if (elem.style.opacity < 1) {
+    elem.css('opacity', (counter += counter));
+  }
 }
 
 function erase(elem) {
-    var docViewTop = $(window).scrollTop();
-    console.log(docViewTop + ' erase');
+  var test = elem.style.opacity;
+  console.log(test + ' erase');
+  if (elem.style.opacity > 0) {
+    elem.css('opacity', (counter -= counter));
+  }
 }
 
 var position = $(window).scrollTop();
@@ -64,10 +71,9 @@ $(window).scroll(function() {
   var elemBottom = elemToppy + $('h3').height();
 
   // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
-  
-  var scroll = $(window).scrollTop(); 
+
+  var scroll = $(window).scrollTop();
   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
-    // console.log('in view');
      if (scroll > position) {
         show($('h3'));
      } else {
