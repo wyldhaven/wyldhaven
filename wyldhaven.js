@@ -46,34 +46,17 @@ WYLD.scrolling = {
 
 }($, WYLD || {}));
 
+
+let scrollElem = 0;
+
 function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-    var elemToppy = $(elem).offset().top;
-    var elemBottom = elemToppy + $(elem).height();
-
-    var correction = (docViewBottom - elemToppy);
-    var elemTop = (Number(elemToppy) + correction);
-
-    if (elemBottom >= elemTop) {
-      console.log('woo');
-        elem.css("clip", "rect(0px,1000px," + (176 - 1) + "px,0px)");
-    }
-    console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
+  console.log('yay');
+  scrollElem += .01;
+  console.log(scrollElem);
+  elem.setAttribute("style", "opacity:" + scrollElem + ";");
 }
-
 $(window).scroll(function() {
-  // var elem = $('h3');
-  // var docViewTop = $(window).scrollTop();
-  // var docViewBottom = docViewTop + $(window).height();
-  // var elemToppy = $(elem).offset().top;
-  //
-  //
-  // var correction = (docViewBottom - elemToppy);
-  // var elemTop = (Number(elemToppy) + correction);
-  // var elemBottom = elemTop + $(elem).height();
-
-    // if (docViewBottom >= (Number(elemBottom) + 50)) {
+    if (docViewBottom >= (Number(elemBottom) + 220)) {
       isScrolledIntoView($('h3'));
-    // }
+    }
 });
