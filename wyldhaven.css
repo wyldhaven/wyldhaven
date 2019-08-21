@@ -194,7 +194,8 @@ h1 {
 .oh_boy {
   width: 100%;
   z-index: 10000;
-  top: 61rem;
+  position: relative;
+  top: 11rem;
 }
 
 .oh_boy h3 {
