@@ -82,7 +82,7 @@ function erase(elem) {
     // }
 }
 
-let lastScrollTop = 0;
+var lastScrollTop = 0;
 $(window).scroll(function(event) {
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
@@ -91,7 +91,7 @@ $(window).scroll(function(event) {
 
   // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
   
-  if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
+//   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
     // console.log('in view');
     var st = $(this).scrollTop();
      if (st > lastScrollTop) {
@@ -99,5 +99,5 @@ $(window).scroll(function(event) {
      } else {
         show($('h3'));
      }
-   }
+   // }
 });
