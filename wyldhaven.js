@@ -46,40 +46,14 @@ WYLD.scrolling = {
 
 }($, WYLD || {}));
 
-let counter = 0;
 function show(elem) {
-    // var docViewTop = $(window).scrollTop();
-    // var docViewBottom = docViewTop + $(window).height();
-    // var elemToppy = $('h3').offset().top;
-    // var elemBottom = elemToppy + $('h3').height();
-
-    // var correction = (docViewBottom - elemToppy);
-    // var elemTop = (Number(elemToppy) + correction);
-    counter += 0.01;
-    if (counter < 0.7) {
-      counter += 0.01;
-      elem.css("opacity", counter);
-    } else {
-      elem.css("opacity", 0.7);
-    }
+    var docViewTop = $(window).scrollTop();
+    console.log(docViewTop + ' show');
 }
 
 function erase(elem) {
-    // var docViewTop = $(window).scrollTop();
-    // var docViewBottom = docViewTop + $(window).height();
-    // var elemToppy = $('h3').offset().top;
-    // var elemBottom = elemToppy + $('h3').height();
-
-    // var correction = (docViewBottom - elemToppy);
-    // var elemTop = (Number(elemToppy) + correction);
-    //
-    counter -= 0.01;
-    if (counter > 0) {
-      counter -= 0.01;
-      elem.css("opacity", counter);
-    } else {
-      elem.css("opacity", 0);
-    }
+    var docViewTop = $(window).scrollTop();
+    console.log(docViewTop + ' erase');
 }
 
 var position = $(window).scrollTop();
@@ -95,9 +69,9 @@ $(window).scroll(function() {
   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
     // console.log('in view');
      if (scroll > position) {
-        erase($('h3'));
-     } else {
         show($('h3'));
+     } else {
+        erase($('h3'));
      }
    }
     position = scroll;
