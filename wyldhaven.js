@@ -82,8 +82,8 @@ function erase(elem) {
     // }
 }
 
-var lastScrollTop = 0;
-$(window).scroll(function(event) {
+var position = $(window).scrollTop();
+$(window).scroll(function() {
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
   var elemToppy = $('h3').offset().top;
@@ -91,13 +91,14 @@ $(window).scroll(function(event) {
 
   // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
   
+    var scroll = $(window).scrollTop(); 
 //   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
     // console.log('in view');
-    var st = $(this).scrollTop();
-     if (st > lastScrollTop) {
+     if (scroll > position) {
         erase($('h3'));
      } else {
         show($('h3'));
      }
+    position = scroll;
    // }
 });
