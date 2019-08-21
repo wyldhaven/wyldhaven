@@ -46,7 +46,7 @@ WYLD.scrolling = {
 
 }($, WYLD || {}));
 
-let counter = 0;
+// let counter = 0;
 function show(elem) {
     // var docViewTop = $(window).scrollTop();
     // var docViewBottom = docViewTop + $(window).height();
@@ -55,13 +55,13 @@ function show(elem) {
 
     // var correction = (docViewBottom - elemToppy);
     // var elemTop = (Number(elemToppy) + correction);
-    counter += 0.01;
-    if (counter < .7) {
-      counter += 0.01;
-      elem.css("opacity", counter);
-    } else {
+    // counter += 0.01;
+    // if (counter < .7) {
+    //   counter += 0.01;
+    //   elem.css("opacity", counter);
+    // } else {
       console.log('yeeeaaaahhhhh broooo');
-    }
+    // }
 }
 
 function erase(elem) {
@@ -73,16 +73,16 @@ function erase(elem) {
     // var correction = (docViewBottom - elemToppy);
     // var elemTop = (Number(elemToppy) + correction);
     //
-    counter -= 0.01;
-    if (counter > 0) {
-      counter -= 0.01;
-      elem.css("opacity", counter);
-    } else {
-      // console.log('2020!!!!');
-    }
+    // counter -= 0.01;
+    // if (counter > 0) {
+    //   counter -= 0.01;
+    //   elem.css("opacity", counter);
+    // } else {
+      console.log('2020!!!!');
+    // }
 }
 
-// let lastScrollTop = 0;
+let lastScrollTop = 0;
 $(window).scroll(function() {
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
@@ -92,12 +92,12 @@ $(window).scroll(function() {
   // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
 
   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
-    console.log('in view');
-    // var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-    //  if (st > lastScrollTop) {
-    //     erase($('h3'));
-    //  } else {
-    //     show($('h3'));
-    //  }
+    // console.log('in view');
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+     if (st > lastScrollTop) {
+        erase($('h3'));
+     } else {
+        show($('h3'));
+     }
    }
 });
