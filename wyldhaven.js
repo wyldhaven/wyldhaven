@@ -56,11 +56,12 @@ function show(elem) {
     // var correction = (docViewBottom - elemToppy);
     // var elemTop = (Number(elemToppy) + correction);
     counter += 0.01;
-    if (counter >= 1) {
-      counter = 1;
-    } else {
+    if (counter < 1) {
       counter += 0.01;
       elem.css("opacity", counter);
+    } else {
+      break;
+      console.log(yeeeaaaahhhhh broooo);
     }
 }
 
@@ -74,11 +75,12 @@ function erase(elem) {
     // var elemTop = (Number(elemToppy) + correction);
     //
     counter -= 0.01;
-    if (counter >= 1) {
-      counter = 1;
-    } else {
+    if (counter < 1) {
       counter -= 0.01;
       elem.css("opacity", counter);
+    } else {
+      break;
+      console.log('2020!!!!');
     }
 }
 
@@ -90,7 +92,7 @@ $(window).scroll(function() {
 
   console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
 
-    if (docViewBottom >= (Number(elemBottom) + 80)) {
+    if (docViewBottom >= (Number(elemBottom) - 80)) {
       show($('h3'));
     } else if (docViewBottom <= (Number(elemBottom) + 275)) {
       erase($('h3'));
