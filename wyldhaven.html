@@ -188,7 +188,7 @@
   function show(elem) {
     var test = elem[0].style.opacity;
     if (test < 1) {
-      elem.css('opacity', (counter += 0.03));
+      elem.css('opacity', (counter += 0.01));
     }
   }
 
@@ -209,16 +209,19 @@
     // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
 
     var scroll = $(window).scrollTop();
-    if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
-       if (scroll > position) {
-          show($('h3'));
-       } else {
-          erase($('h3'));
-       }
-     } else if (docViewBottom >= (Number(elemBottom) - 10) && docViewTop <= (Number(elemBottom)) - 25) {
-       console.log('yay');
-     }
-      position = scroll;
+    if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 50) {
+      if (docViewTop >= (Number(elemBottom)) - 75) {
+        console.log('wooooooo');
+      } else {
+          if (scroll > position) {
+             show($('h3'));
+          } else if {
+             erase($('h3'));
+          }
+        }
+      }
+
+    position = scroll;
   });
 </script>
 
