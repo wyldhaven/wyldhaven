@@ -56,7 +56,7 @@ function show(elem) {
     // var correction = (docViewBottom - elemToppy);
     // var elemTop = (Number(elemToppy) + correction);
     counter += 0.01;
-    if (counter < 1) {
+    if (counter < .7) {
       counter += 0.01;
       elem.css("opacity", counter);
     } else {
@@ -74,7 +74,7 @@ function erase(elem) {
     // var elemTop = (Number(elemToppy) + correction);
     //
     counter -= 0.01;
-    if (counter < 1) {
+    if (counter > 0) {
       counter -= 0.01;
       elem.css("opacity", counter);
     } else {
@@ -82,17 +82,22 @@ function erase(elem) {
     }
 }
 
+let lastScrollTop = 0;
 $(window).scroll(function() {
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
   var elemToppy = $('h3').offset().top;
   var elemBottom = elemToppy + $('h3').height();
 
-  console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
+  // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
 
-    if (docViewBottom >= (Number(elemBottom) - 80)) {
-      show($('h3'));
-    } else if (docViewBottom <= (Number(elemBottom) + 275)) {
-      erase($('h3'));
-    }
+  if (docViewBottom >= (Number(elemBottom) - 300) && docViewTop >= (Number(elemBottom)) - 50) {
+    console.log('in view');
+    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+     if (st > lastScrollTop) {
+        erase($('h3'));
+     } else {
+        show($('h3'));
+     }
+   }
 });
