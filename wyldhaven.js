@@ -56,9 +56,12 @@ function show(elem) {
     // var correction = (docViewBottom - elemToppy);
     // var elemTop = (Number(elemToppy) + correction);
     counter += 0.01;
-    console.log(counter);
-    console.log('woo');
-    elem.css("opacity", counter);
+    if (counter >= 1) {
+      counter = 1;
+    } else {
+      counter += 0.01;
+      elem.css("opacity", counter);
+    }
 }
 
 function erase(elem) {
@@ -71,10 +74,12 @@ function erase(elem) {
     // var elemTop = (Number(elemToppy) + correction);
     //
     counter -= 0.01;
-    console.log(counter);
-    console.log('woo');
-    elem.css("opacity", counter);
-
+    if (counter >= 1) {
+      counter = 1;
+    } else {
+      counter -= 0.01;
+      elem.css("opacity", counter);
+    }
 }
 
 $(window).scroll(function() {
@@ -87,7 +92,7 @@ $(window).scroll(function() {
 
     if (docViewBottom >= (Number(elemBottom) + 80)) {
       show($('h3'));
-    } else if (docViewBottom <= (Number(elemBottom) + 80)) {
+    } else if (docViewBottom <= (Number(elemBottom) + 275)) {
       erase($('h3'));
     }
 });
