@@ -60,7 +60,7 @@ function show(elem) {
       counter += 0.01;
       elem.css("opacity", counter);
     } else {
-      console.log(yeeeaaaahhhhh broooo);
+      console.log('yeeeaaaahhhhh broooo');
     }
 }
 
