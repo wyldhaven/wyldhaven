@@ -46,17 +46,29 @@ WYLD.scrolling = {
 
 }($, WYLD || {}));
 
-
-let scrollElem = 0;
-
 function isScrolledIntoView(elem) {
-  console.log('yay');
-  scrollElem += .01;
-  console.log(scrollElem);
-  elem.setAttribute("style", "opacity:" + scrollElem + ";");
+    // var docViewTop = $(window).scrollTop();
+    // var docViewBottom = docViewTop + $(window).height();
+    // var elemToppy = $(elem).offset().top;
+    // var elemBottom = elemToppy + $(elem).height();
+    //
+    // var correction = (docViewBottom - elemToppy);
+    // var elemTop = (Number(elemToppy) + correction);
+    //
+    // if (elemBottom >= elemTop) {
+      console.log('woo');
+      elem.css("opacity", "1");
+    // }
+    // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
 }
+
 $(window).scroll(function() {
-    if (docViewBottom >= (Number(elemBottom) + 220)) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+  var elemToppy = $(elem).offset().top;
+  var elemBottom = elemToppy + $(elem).height();
+
+    if (docViewBottom >= (Number(elemBottom) + 250)) {
       isScrolledIntoView($('h3'));
     }
 });
