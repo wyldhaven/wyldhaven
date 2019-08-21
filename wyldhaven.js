@@ -57,7 +57,7 @@ function show(elem) {
 function erase(elem) {
   var test = elem[0].style.opacity;
   if (test > 0) {
-    elem.css('opacity', (counter -= 0.03));
+    elem.css('opacity', (counter -= 0.02));
   }
 }
 
@@ -67,8 +67,6 @@ $(window).scroll(function() {
   var docViewBottom = docViewTop + $(window).height();
   var elemToppy = $('h3').offset().top;
   var elemBottom = elemToppy + $('h3').height();
-
-  // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
 
   var scroll = $(window).scrollTop();
   if (docViewBottom >= (Number(elemBottom) - 80) && docViewTop <= (Number(elemBottom)) - 120) {
