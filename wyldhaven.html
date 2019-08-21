@@ -183,6 +183,44 @@
 <script>
   WYLD.scrolling.init();
 </script>
+<script>
+  let counter = 0.01;
+  function show(elem) {
+    var test = elem.style.opacity;
+    console.log(test + ' show');
+    if (elem.style.opacity < 1) {
+      elem.css('opacity', (counter += counter));
+    }
+  }
+
+  function erase(elem) {
+    var test = elem.style.opacity;
+    console.log(test + ' erase');
+    if (elem.style.opacity > 0) {
+      elem.css('opacity', (counter -= counter));
+    }
+  }
+
+  var position = $(window).scrollTop();
+  $(window).scroll(function() {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemToppy = $('h3').offset().top;
+    var elemBottom = elemToppy + $('h3').height();
+
+    // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
+
+    var scroll = $(window).scrollTop();
+    if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
+       if (scroll > position) {
+          show($('h3'));
+       } else {
+          erase($('h3'));
+       }
+     }
+      position = scroll;
+  });
+</script>
 
 </body>
 
