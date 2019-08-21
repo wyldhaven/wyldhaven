@@ -188,7 +188,7 @@
   function show(elem) {
     var test = elem[0].style.opacity;
     console.log(test + ' show');
-    if (elem.style.opacity < 1) {
+    if (test < 1) {
       elem.css('opacity', (counter += counter));
     }
   }
@@ -196,7 +196,7 @@
   function erase(elem) {
     var test = elem[0].style.opacity;
     console.log(test + ' erase');
-    if (elem.style.opacity > 0) {
+    if (test > 0) {
       elem.css('opacity', (counter -= counter));
     }
   }
