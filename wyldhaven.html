@@ -187,17 +187,15 @@
   let counter = 0;
   function show(elem) {
     var test = elem[0].style.opacity;
-    console.log(test + ' show');
     if (test < 1) {
-      elem.css('opacity', (counter += .01));
+      elem.css('opacity', (counter += .02));
     }
   }
 
   function erase(elem) {
     var test = elem[0].style.opacity;
-    console.log(test + ' erase');
     if (test > 0) {
-      elem.css('opacity', (counter -= .01));
+      elem.css('opacity', (counter -= .02));
     }
   }
 
