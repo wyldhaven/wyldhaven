@@ -71,11 +71,9 @@ $(window).scroll(function() {
   // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
 
   var scroll = $(window).scrollTop();
-  if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) + 50) {
+  if (docViewBottom >= (Number(elemBottom) - 80) && docViewTop <= (Number(elemBottom)) - 120) {
     if (docViewTop >= (Number(elemBottom)) - 400) {
-      if (scroll < position) {
         erase($('h3'));
-      }
     } else {
         if (scroll > position) {
            show($('h3'));
