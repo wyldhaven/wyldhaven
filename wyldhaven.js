@@ -82,17 +82,18 @@ function erase(elem) {
     // }
 }
 
-$(window).scroll(function() {
+let lastScrollTop = 0;
+$(window).scroll(function(event) {
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
   var elemToppy = $('h3').offset().top;
   var elemBottom = elemToppy + $('h3').height();
 
   // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
-  let lastScrollTop = 0;
+  
   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
     // console.log('in view');
-    var st = window.pageYOffset || document.documentElement.scrollTop;
+    var st = $(this).scrollTop();
      if (st > lastScrollTop) {
         erase($('h3'));
      } else {
