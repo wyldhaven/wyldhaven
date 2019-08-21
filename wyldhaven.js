@@ -82,7 +82,6 @@ function erase(elem) {
     // }
 }
 
-let lastScrollTop = 0;
 $(window).scroll(function() {
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
@@ -90,7 +89,7 @@ $(window).scroll(function() {
   var elemBottom = elemToppy + $('h3').height();
 
   // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
-
+  let lastScrollTop = 0;
   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
     // console.log('in view');
     var st = window.pageYOffset || document.documentElement.scrollTop;
