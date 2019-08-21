@@ -60,7 +60,6 @@ function show(elem) {
       counter += 0.01;
       elem.css("opacity", counter);
     } else {
-      break;
       console.log(yeeeaaaahhhhh broooo);
     }
 }
@@ -79,7 +78,6 @@ function erase(elem) {
       counter -= 0.01;
       elem.css("opacity", counter);
     } else {
-      break;
       console.log('2020!!!!');
     }
 }
