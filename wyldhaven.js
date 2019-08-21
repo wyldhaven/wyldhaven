@@ -91,14 +91,14 @@ $(window).scroll(function() {
 
   // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
   
-    var scroll = $(window).scrollTop(); 
-//   if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
+  var scroll = $(window).scrollTop(); 
+  if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
     // console.log('in view');
      if (scroll > position) {
         erase($('h3'));
      } else {
         show($('h3'));
      }
+   }
     position = scroll;
-   // }
 });
