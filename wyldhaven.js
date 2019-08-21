@@ -70,7 +70,10 @@ function erase(elem) {
     // var correction = (docViewBottom - elemToppy);
     // var elemTop = (Number(elemToppy) + correction);
     //
-    alert('Yay');
+    counter -= 0.01;
+    console.log(counter);
+    console.log('woo');
+    elem.css("opacity", counter);
 
 }
 
