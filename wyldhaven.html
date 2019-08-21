@@ -188,14 +188,14 @@
   function show(elem) {
     var test = elem[0].style.opacity;
     if (test < 1) {
-      elem.css('opacity', (counter += .02));
+      elem.css('opacity', (counter += 0.02));
     }
   }
 
   function erase(elem) {
     var test = elem[0].style.opacity;
     if (test > 0) {
-      elem.css('opacity', (counter -= .02));
+      elem.css('opacity', (counter -= 0.02));
     }
   }
 
@@ -212,10 +212,10 @@
     if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 25) {
        if (scroll > position) {
           show($('h3'));
-       } else {
+       } else if (scroll < position) {
           erase($('h3'));
        }
-     }
+      }
       position = scroll;
   });
 </script>
