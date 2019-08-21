@@ -186,17 +186,17 @@
 <script>
   let counter = 0.01;
   function show(elem) {
-    // var test = elem.style.opacity;
-    console.log($('h3').style.opacity);
-    if ($('h3').style.opacity < 1) {
+    var test = elem[0].style.opacity;
+    console.log(test + ' show');
+    if (elem.style.opacity < 1) {
       elem.css('opacity', (counter += counter));
     }
   }
 
   function erase(elem) {
-    // var test = elem.style.opacity;
-    console.log($('h3').style.opacity);
-    if ($('h3').style.opacity > 0) {
+    var test = elem[0].style.opacity;
+    console.log(test + ' erase');
+    if (elem.style.opacity > 0) {
       elem.css('opacity', (counter -= counter));
     }
   }
