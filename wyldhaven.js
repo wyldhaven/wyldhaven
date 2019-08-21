@@ -59,7 +59,6 @@ function isScrolledIntoView(elem) {
       console.log('woo');
       elem.css("opacity", "1");
     // }
-    // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
 }
 
 $(window).scroll(function() {
@@ -68,7 +67,9 @@ $(window).scroll(function() {
   var elemToppy = $('h3').offset().top;
   var elemBottom = elemToppy + $('h3').height();
 
-    if (docViewBottom >= (Number(elemBottom) + 250)) {
+  console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
+
+    if (docViewBottom >= (Number(elemBottom) + 80)) {
       isScrolledIntoView($('h3'));
     }
 });
