@@ -45,3 +45,42 @@ WYLD.scrolling = {
     return WYLD;
 
 }($, WYLD || {}));
+
+let counter = 0;
+function show(elem) {
+  var test = elem[0].style.opacity;
+  if (test < 1) {
+    elem.css('opacity', (counter += 0.01));
+  }
+}
+
+function erase(elem) {
+  var test = elem[0].style.opacity;
+  if (test > 0) {
+    elem.css('opacity', (counter -= 0.03));
+  }
+}
+
+var position = $(window).scrollTop();
+$(window).scroll(function() {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+  var elemToppy = $('h3').offset().top;
+  var elemBottom = elemToppy + $('h3').height();
+
+  // console.log('docViewTop = ' + docViewTop + ' docViewBottom = ' + docViewBottom + ' elemTop = ' + elemToppy + ' elemToppy = ' + elemBottom);
+
+  var scroll = $(window).scrollTop();
+  if (docViewBottom >= (Number(elemBottom) - 50) && docViewTop <= (Number(elemBottom)) - 50) {
+    if (docViewTop >= (Number(elemBottom)) - 50) {
+      console.log('wooooooo');
+    } else {
+        if (scroll > position) {
+           show($('h3'));
+        } else {
+           erase($('h3'));
+        }
+      }
+    }
+  position = scroll;
+});
