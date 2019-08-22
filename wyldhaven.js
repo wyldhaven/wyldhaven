@@ -55,7 +55,7 @@ function show(elem) {
     }
   } else {
     if (test < 1) {
-      elem.css('opacity', (counter += 0.005));
+      elem.css('opacity', (counter += 0.05));
     }
   }
 }
