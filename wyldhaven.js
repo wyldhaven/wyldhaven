@@ -68,7 +68,7 @@ function erase(elem) {
     }
   } else {
       if (test > 0) {
-        elem.css('opacity', (counter -= 0.005));
+        elem.css('opacity', (counter -= 0.06));
       }
     }
   }
