@@ -57,7 +57,7 @@ function show(elem) {
 function erase(elem) {
   var test = elem[0].style.opacity;
   if (test > 0) {
-    elem.css('opacity', (counter -= 0.02));
+    elem.css('opacity', (counter -= 0.01));
   }
 }
 
