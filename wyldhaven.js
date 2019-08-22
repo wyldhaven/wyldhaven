@@ -49,17 +49,29 @@ WYLD.scrolling = {
 let counter = 0;
 function show(elem) {
   var test = elem[0].style.opacity;
-  if (test < 1) {
-    elem.css('opacity', (counter += 0.01));
+  if ($(window).width() >= 680) {
+    if (test < 1) {
+      elem.css('opacity', (counter += 0.01));
+    }
+  } else {
+    if (test < 1) {
+      elem.css('opacity', (counter += 0.005));
+    }
   }
 }
 
 function erase(elem) {
   var test = elem[0].style.opacity;
-  if (test > 0) {
-    elem.css('opacity', (counter -= 0.01));
+  if ($(window).width() >= 680) {
+    if (test > 0) {
+      elem.css('opacity', (counter -= 0.02));
+    }
+  } else {
+      if (test > 0) {
+        elem.css('opacity', (counter -= 0.005));
+      }
+    }
   }
-}
 
 var position = $(window).scrollTop();
 $(window).scroll(function() {
