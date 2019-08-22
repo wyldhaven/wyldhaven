@@ -358,7 +358,7 @@ h2 {
     }
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 66.7rem) {
   .arrow {
     display: inline;
   }
