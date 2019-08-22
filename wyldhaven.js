@@ -64,11 +64,11 @@ function erase(elem) {
   var test = elem[0].style.opacity;
   if ($(window).width() >= 680) {
     if (test > 0) {
-      elem.css('opacity', (counter -= 0.02));
+      elem.css('opacity', (counter -= 0.04));
     }
   } else {
       if (test > 0) {
-        elem.css('opacity', (counter -= 0.06));
+        elem.css('opacity', (counter -= 0.05));
       }
     }
   }
