@@ -195,24 +195,44 @@ h1 {
   width: 100%;
   z-index: 10000;
   position: relative;
-  top: 11rem;
+  top: 4rem;
 }
 
 .oh_boy h3 {
-  font-size: 9rem;
+  font-size: 3.5rem;
   font-family: 'Hiragino Kaku Gothic Std';
   left: 0;
   right: 0;
   margin: 0 auto;
   position: absolute;
-  height: 11rem;
 }
 
 .oh_boy h3:after {
   content: '🤘';
   position: relative;
   display: inline-block;
-  font-size: 9rem;
+  font-size: 3.5rem;
+}
+
+@media only screen and (min-width: 27rem) {
+  .oh_boy h3 {
+    font-size: 6rem;
+  }
+  .oh_boy h3:after {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 66.7rem) {
+  .oh_boy {
+    top: 11rem;
+  }
+  .oh_boy h3 {
+    font-size: 9rem;
+  }
+  .oh_boy h3:after {
+    font-size: 9rem;
+  }
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -338,7 +358,7 @@ h2 {
     }
 }
 
-@media only screen and (min-width: 26.25rem) {
+@media only screen and (min-width: 50rem) {
   .arrow {
     display: inline;
   }
