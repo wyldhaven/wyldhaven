@@ -348,10 +348,10 @@ h2 {
 
 @keyframes pulse {
     0%, 100% {
-        opacity: 0.3;
+        opacity: 0.09;
     }
     50% {
-        opacity: 0.5;
+        opacity: 0.35;
     }
 }
 
