@@ -21,10 +21,10 @@ var setupValues = function() {
 
 var animateIntro = function() {
   $(".scroll").delay(1900).animate({
-        opacity: .6
+        opacity: .25
     }, 2300, function() {
         $(".arrow-container").animate({
-            opacity: .6
+            opacity: .35
         }, 1500);
     });
 
