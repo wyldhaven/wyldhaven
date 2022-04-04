@@ -36,7 +36,8 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-color: black;
-    background-position: 50% 0;
+    background-position: center;
+    background-size: cover;
     display: inherit;
 }
 
