@@ -498,7 +498,7 @@ h2 {
 
 .music-section .cover {
   background-color: #000;
-  opacity: .63;
+  opacity: .72;
   box-shadow: black 0px 0 22px 23px;
   z-index: 0;
   width: 96%;
@@ -549,7 +549,7 @@ h2 {
 .about-section .cover {
   background-color: #000;
   box-shadow: black 0px 0 22px 23px;
-  opacity: .63;
+  opacity: .72;
   z-index: 0;
   width: 96%;
   margin: auto;
