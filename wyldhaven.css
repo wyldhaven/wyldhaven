@@ -11,15 +11,19 @@
 }
 
 body {
-  background-image: none;
-  background-color: black;
   margin: 0;
   font-family: 'Adobe Heiti Std', sans-serif;
 }
 
+.newnew {
+  background-image: none;
+  max-width: 2800px;
+  margin: auto;
+}
+
 @media only screen and (min-width: 64.375rem) {
-  body {
-    background-image: url(/wyldhaven/WyldhavenEP_Momentary-3000x3000.png);
+ .newnew {
+    background-image: url(/wyldhaven/kinesis.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -27,7 +31,7 @@ body {
 }
 
 .mobile-background {
-    background-image: url(/wyldhaven/WyldhavenEP_Momentary-3000x3000_mobile.png);
+    background-image: url(/wyldhaven/kinesis.png);
     position: fixed;
     width: 100%;
     z-index: -1;
@@ -43,7 +47,7 @@ body {
 
 @media only screen and (min-width: 26.25rem) {
   .mobile-background {
-    background-image: url(/wyldhaven/WyldhavenEP_Momentary-3000x3000_mobile.png);
+    background-image: url(/wyldhaven/kinesis_small.png);
   }
 }
 
