@@ -13,6 +13,7 @@
 body {
   margin: 0;
   font-family: 'Adobe Heiti Std', sans-serif;
+  background: black;
 }
 
 .newnew {
@@ -21,16 +22,7 @@ body {
   margin: auto;
 }
 
-@media only screen and (min-width: 64.375rem) {
- .newnew {
-    background-image: url(/wyldhaven/kinesis.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
-}
-
-.mobile-background {
+/* .mobile-background {
     background-image: url(/wyldhaven/kinesis.png);
     position: fixed;
     width: 100%;
@@ -43,19 +35,48 @@ body {
     background-position: center;
     background-size: cover;
     display: inherit;
-}
+} */
 
-@media only screen and (min-width: 26.25rem) {
+@media only screen and (min-width: 400px) {
   .mobile-background {
-    background-image: url(/wyldhaven/kinesis_small.png);
+    /* 500px square IMG */
   }
 }
 
-@media only screen and (min-width: 64.375rem) {
-  .mobile-background {
-    display: none;
+@media only screen and (min-width: 600px) {
+ .newnew {
+    /* 700px square IMG */
   }
 }
+
+@media only screen and (min-width: 800px) {
+ .newnew {
+    /* 950px IMG */
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+ .newnew {
+    /*   1200px Image   */
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+ .newnew {
+    /*   2k Image   */
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+ .newnew {
+    /*   3k Image   */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+
 
 .outer-wrapper {
   max-width: 1366px;
