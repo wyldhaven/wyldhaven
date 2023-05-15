@@ -17,7 +17,7 @@ body {
 }
 
 .mobile-background {
-    background-image: url(/wyldhaven/kinesis.png);
+    background-image: url(/wyldhaven/BG-mobile.png);
     position: fixed;
     width: 100%;
     z-index: -1;
@@ -31,30 +31,10 @@ body {
     display: inherit;
 }
 
-@media only screen and (min-width: 400px) {
-  .mobile-background {
-    /* 500px square IMG */
-          background-image: url(/wyldhaven/BG-3000.JPG);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
-}
-
-@media only screen and (min-width: 600px) {
- .mobile-background {
-    /* 700px square IMG */
-         background-image: url(/wyldhaven/BG-3000.JPG);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
-}
-
 @media only screen and (min-width: 800px) {
  .mobile-background {
     /* 950px IMG */
-         background-image: url(/wyldhaven/BG-3000.JPG);
+    background-image: url(/wyldhaven/BG-square-1000.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -65,9 +45,6 @@ body {
  .mobile-background {
     /*   1200px Image   */
     background-image: url(/wyldhaven/BG-1200.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
   }
 }
 
@@ -75,9 +52,6 @@ body {
  .mobile-background {
     /*   2k Image   */
     background-image: url(/wyldhaven/BG-2000.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
   }
 }
 
@@ -85,9 +59,6 @@ body {
  .mobile-background {
     /*   3k Image   */
     background-image: url(/wyldhaven/BG-3000.JPG);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
   }
 }
 
