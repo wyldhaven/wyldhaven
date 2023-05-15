@@ -82,7 +82,7 @@ body {
 }
 
 @media only screen and (min-width: 2500px) {
- .newnew {
+ .mobile-background {
     /*   3k Image   */
     background-image: url(/wyldhaven/BG-3000.JPG);
     background-size: cover;
