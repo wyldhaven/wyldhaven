@@ -22,7 +22,7 @@ body {
   margin: auto;
 }
 
-/* .mobile-background {
+.mobile-background {
     background-image: url(/wyldhaven/kinesis.png);
     position: fixed;
     width: 100%;
@@ -35,7 +35,7 @@ body {
     background-position: center;
     background-size: cover;
     display: inherit;
-} */
+}
 
 @media only screen and (min-width: 400px) {
   .mobile-background {
