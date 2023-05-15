@@ -70,6 +70,7 @@ body {
 @media only screen and (min-width: 2500px) {
  .newnew {
     /*   3k Image   */
+    background-image: url(/wyldhaven/BG-3000.JPG);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
