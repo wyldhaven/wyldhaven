@@ -64,7 +64,7 @@ body {
 @media only screen and (min-width: 1030px) {
  .mobile-background {
     /*   1200px Image   */
-         background-image: url(/wyldhaven/BG-3000.JPG);
+    background-image: url(/wyldhaven/BG-1200.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -74,7 +74,7 @@ body {
 @media only screen and (min-width: 1700px) {
  .mobile-background {
     /*   2k Image   */
-         background-image: url(/wyldhaven/BG-3000.JPG);
+    background-image: url(/wyldhaven/BG-2000.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
